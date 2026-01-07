@@ -1,0 +1,601 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    :root {
+        --nuu-blue: #0a3d6d;
+        --nuu-light-blue: #1a6ca1;
+        --nuu-gold: #d4af37;
+        --nuu-white: #ffffff;
+        --nuu-light-gray: #f5f7fa;
+        --nuu-dark-gray: #333333;
+        --nuu-green: #2e7d32;
+        --nuu-red: #c62828;
+        --nuu-purple: #6a1b9a;
+        --nuu-gradient: linear-gradient(135deg, #0a3d6d 0%, #1a6ca1 100%);
+        --nuu-gradient-hover: linear-gradient(135deg, #1a6ca1 0%, #2c8bc8 100%);
+        --shadow-sm: 0 4px 12px rgba(10, 61, 109, 0.08);
+        --shadow-md: 0 8px 24px rgba(10, 61, 109, 0.12);
+        --shadow-lg: 0 12px 36px rgba(10, 61, 109, 0.15);
+        --border-radius: 16px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Page Header */
+    .page-header {
+        background: var(--nuu-gradient);
+        color: var(--nuu-white);
+        padding: 60px 0;
+        margin-bottom: 60px;
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+    }
+    
+    .page-header::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left: -50%;
+        background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+        animation: float 20s linear infinite;
+        z-index: 0;
+    }
+    
+    .page-header-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .page-header h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 25px;
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(to right, #ffffff, #f0f7ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -0.5px;
+    }
+    
+    .page-header p {
+        font-size: 1.25rem;
+        opacity: 0.95;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .university-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        padding: 12px 25px;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    @keyframes float {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        100% { transform: translate(20px, 20px) rotate(360deg); }
+    }
+    
+    /* Categories */
+    .categories-container {
+        background: var(--nuu-white);
+        padding: 30px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-sm);
+        margin-bottom: 50px;
+        border: 1px solid rgba(10, 61, 109, 0.1);
+    }
+    
+    .category-btn {
+        padding: 12px 28px;
+        border: 2px solid var(--nuu-light-blue);
+        border-radius: 50px;
+        color: var(--nuu-blue);
+        font-weight: 600;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .category-btn:hover,
+    .category-btn.active {
+        background: var(--nuu-gradient);
+        color: var(--nuu-white);
+        border-color: transparent;
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md);
+    }
+    
+    .category-btn::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
+    
+    .category-btn:hover::before {
+        width: 300px;
+        height: 300px;
+    }
+    
+    /* Cards */
+    .post-card {
+        background: var(--nuu-white);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        border: 1px solid rgba(10, 61, 109, 0.1);
+        transition: var(--transition);
+        height: 100%;
+        box-shadow: var(--shadow-sm);
+    }
+    
+    .post-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--nuu-light-blue);
+    }
+    
+    .post-card-image {
+        height: 240px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .post-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .post-card:hover img {
+        transform: scale(1.1);
+    }
+    
+    .post-card-badge {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: var(--nuu-gradient);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 25px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(10, 61, 109, 0.3);
+        z-index: 2;
+    }
+    
+    .post-card-content {
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    
+    .post-meta {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+    }
+    
+    .post-date {
+        color: var(--nuu-blue);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .post-views {
+        color: var(--nuu-gold);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-weight: 600;
+    }
+    
+    .post-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--nuu-blue);
+        margin-bottom: 15px;
+        line-height: 1.4;
+        transition: color 0.3s;
+    }
+    
+    .post-card:hover .post-title {
+        color: var(--nuu-light-blue);
+    }
+    
+    .post-excerpt {
+        color: #666;
+        line-height: 1.7;
+        margin-bottom: 25px;
+        flex-grow: 1;
+    }
+    
+    .post-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+    }
+    
+    .read-more-btn {
+        background: var(--nuu-gradient);
+        color: white;
+        padding: 10px 24px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition);
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .read-more-btn:hover {
+        background: var(--nuu-gradient-hover);
+        transform: translateX(5px);
+        color: white;
+        box-shadow: 0 6px 20px rgba(10, 61, 109, 0.2);
+    }
+    
+    /* Pagination */
+    .pagination-container {
+        margin-top: 60px;
+        padding: 40px 0;
+        border-top: 1px solid rgba(10, 61, 109, 0.1);
+    }
+    
+    .custom-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .page-link {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        border: 2px solid var(--nuu-light-blue);
+        color: var(--nuu-blue);
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition);
+        background: white;
+    }
+    
+    .page-link:hover:not(.disabled):not(.active) {
+        background: var(--nuu-light-blue);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md);
+    }
+    
+    .page-item.active .page-link {
+        background: var(--nuu-gradient);
+        border-color: transparent;
+        color: white;
+        box-shadow: var(--shadow-md);
+    }
+    
+    .page-item.disabled .page-link {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    
+    .page-item:first-child .page-link,
+    .page-item:last-child .page-link {
+        width: auto;
+        padding: 0 20px;
+        border-radius: 25px;
+    }
+    
+    /* No Posts */
+    .no-posts {
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+        border-radius: var(--border-radius);
+        margin: 40px 0;
+    }
+    
+    .no-posts-icon {
+        font-size: 4rem;
+        color: var(--nuu-light-blue);
+        margin-bottom: 20px;
+        opacity: 0.7;
+    }
+    
+    .no-posts h4 {
+        color: var(--nuu-blue);
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    
+    .no-posts p {
+        color: #666;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    /* Animations */
+    .wow.fadeInUp {
+        animation-delay: calc(var(--animation-order) * 0.1s);
+    }
+    
+    /* Responsive */
+    @media (max-width: 1200px) {
+        .page-header h1 { font-size: 3rem; }
+    }
+    
+    @media (max-width: 992px) {
+        .page-header { padding: 50px 0; }
+        .page-header h1 { font-size: 2.5rem; }
+        .page-header p { font-size: 1.1rem; }
+    }
+    
+    @media (max-width: 768px) {
+        .page-header { 
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+        .page-header h1 { 
+            font-size: 2rem;
+            line-height: 1.3;
+        }
+        .categories-container {
+            padding: 20px;
+        }
+        .category-btn {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+        .post-card-image { height: 200px; }
+        .post-card-content { padding: 20px; }
+        .custom-pagination { flex-wrap: wrap; }
+        .page-link {
+            width: 42px;
+            height: 42px;
+            font-size: 0.9rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .page-header h1 { font-size: 1.8rem; }
+        .post-meta { flex-direction: column; align-items: flex-start; gap: 5px; }
+        .post-footer { flex-direction: column; gap: 15px; align-items: flex-start; }
+        .read-more-btn { width: 100%; justify-content: center; }
+    }
+</style>
+
+<div class="container">
+    <div class="page-header">
+        <div class="page-header-content">
+            <h1>So'nggi Yangiliklar va E'lonlar</h1>
+            <p>Sharof Rashidov nomidagi Samarqand davlat universitetining Urgut filialining eng so'nggi yangiliklari, muhim e'lonlari va tadbirlari haqida ma'lumotlar</p>
+            <div class="university-badge">
+                <i class="fas fa-university"></i>
+                <span>SAMDU Urgut Filiali</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Categories -->
+    <div class="categories-container">
+        <div class="row g-3">
+            <div class="col-12">
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="{% url 'post_list' %}"
+                       class="category-btn {% if not current_category %}active{% endif %}">
+                        <i class="fas fa-th-large me-2"></i>Barchasi
+                    </a>
+                    {% for category in categories %}
+                    <a href="{% url 'post_list_by_category' category.slug %}"
+                       class="category-btn {% if current_category == category.slug %}active{% endif %}">
+                        <i class="fas fa-folder me-2"></i>{{ category.name }}
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Posts Grid -->
+    {% if posts %}
+    <div class="row g-4" id="postsGrid">
+        {% for post in posts %}
+        <div class="col-12 col-md-6 col-lg-3 wow fadeInUp" style="--animation-order: {{ forloop.counter }}">
+            <div class="post-card">
+                <div class="post-card-image">
+                    <img src="{{ post.image.url }}" 
+                         alt="{{ post.title }}"
+                         loading="lazy">
+                    <div class="post-card-badge">
+                        {{ post.category.name }}
+                    </div>
+                </div>
+                
+                <div class="post-card-content">
+                    <div class="post-meta">
+                        <span class="post-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            {{ post.published_date|date:"d M Y" }}
+                        </span>
+                        <span class="post-views">
+                            <i class="fas fa-eye"></i>
+                            {{ post.views }}
+                        </span>
+                    </div>
+                    
+                    <h3 class="post-title">
+                        <a href="{{ post.get_absolute_url }}" class="text-decoration-none">
+                            {{ post.title }}
+                        </a>
+                    </h3>
+                    
+                    <p class="post-excerpt">
+                        {{ post.excerpt|truncatewords:25 }}
+                    </p>
+                    
+                    <div class="post-footer">
+                        <a href="{{ post.get_absolute_url }}" class="read-more-btn">
+                            Batafsil
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    {% if page_obj.has_other_pages %}
+    <div class="pagination-container">
+        <nav aria-label="Page navigation">
+            <ul class="custom-pagination list-unstyled">
+                <!-- Previous -->
+                <li class="page-item {% if not page_obj.has_previous %}disabled{% endif %}">
+                    {% if page_obj.has_previous %}
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+                        <i class="fas fa-chevron-left me-2"></i>Oldingi
+                    </a>
+                    {% else %}
+                    <span class="page-link"><i class="fas fa-chevron-left me-2"></i>Oldingi</span>
+                    {% endif %}
+                </li>
+
+                <!-- First Page -->
+                {% if page_obj.number > 3 %}
+                <li class="page-item">
+                    <a class="page-link" href="?page=1">1</a>
+                </li>
+                <li class="page-item disabled">
+                    <span class="page-link">...</span>
+                </li>
+                {% endif %}
+
+                <!-- Middle Pages -->
+                {% for num in page_obj.paginator.page_range %}
+                    {% if num >= page_obj.number|add:'-2' and num <= page_obj.number|add:'2' %}
+                        {% if num == page_obj.number %}
+                        <li class="page-item active">
+                            <span class="page-link">{{ num }}</span>
+                        </li>
+                        {% else %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                        </li>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+
+                <!-- Last Page -->
+                {% if page_obj.number < page_obj.paginator.num_pages|add:'-2' %}
+                <li class="page-item disabled">
+                    <span class="page-link">...</span>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">
+                        {{ page_obj.paginator.num_pages }}
+                    </a>
+                </li>
+                {% endif %}
+
+                <!-- Next -->
+                <li class="page-item {% if not page_obj.has_next %}disabled{% endif %}">
+                    {% if page_obj.has_next %}
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">
+                        Keyingi<i class="fas fa-chevron-right ms-2"></i>
+                    </a>
+                    {% else %}
+                    <span class="page-link">Keyingi<i class="fas fa-chevron-right ms-2"></i></span>
+                    {% endif %}
+                </li>
+            </ul>
+        </nav>
+    </div>
+    {% endif %}
+
+    {% else %}
+    <!-- No Posts -->
+    <div class="no-posts">
+        <div class="no-posts-icon">
+            <i class="fas fa-newspaper"></i>
+        </div>
+        <h4>Hozircha yangiliklar mavjud emas</h4>
+        <p>Tez orada yangi yangiliklar va e'lonlar qo'shiladi. Iltimos, keyinroq tekshirib ko'ring.</p>
+    </div>
+    {% endif %}
+</div>
+
+<script>
+    // Add hover effects and animations
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize animations
+        if (typeof WOW !== 'undefined') {
+            new WOW().init();
+        }
+        
+        // Add smooth scrolling to pagination
+        document.querySelectorAll('.page-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (!this.classList.contains('disabled')) {
+                    e.preventDefault();
+                    const url = this.getAttribute('href');
+                    if (url) {
+                        document.body.classList.add('page-transition');
+                        setTimeout(() => {
+                            window.location.href = url;
+                        }, 300);
+                    }
+                }
+            });
+        });
+        
+        // Add card hover effects
+        const cards = document.querySelectorAll('.post-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.zIndex = '10';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.zIndex = '1';
+            });
+        });
+    });
+</script>
+
+{% endblock %}

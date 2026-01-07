@@ -1,0 +1,917 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    :root {
+        --nuu-blue: #0a3d6d;
+        --nuu-light-blue: #1a6ca1;
+        --nuu-gold: #d4af37;
+        --nuu-white: #ffffff;
+        --nuu-light-gray: #f5f7fa;
+        --nuu-dark-gray: #333333;
+        --nuu-green: #2e7d32;
+        --nuu-red: #c62828;
+        --nuu-purple: #6a1b9a;
+        --nuu-orange: #f57c00;
+        
+        --gradient-primary: linear-gradient(135deg, #0a3d6d 0%, #1a6ca1 100%);
+        --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f7d469 100%);
+        --gradient-success: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+        
+        --shadow-sm: 0 4px 12px rgba(10, 61, 109, 0.08);
+        --shadow-md: 0 8px 24px rgba(10, 61, 109, 0.12);
+        --shadow-lg: 0 12px 36px rgba(10, 61, 109, 0.15);
+        --shadow-xl: 0 20px 50px rgba(10, 61, 109, 0.2);
+        
+        --border-radius: 16px;
+        --border-radius-sm: 8px;
+        --border-radius-lg: 24px;
+        
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    :root {
+        --nuu-blue: #0a3d6d;
+        --nuu-light-blue: #1a6ca1;
+        --nuu-gold: #d4af37;
+        --nuu-white: #ffffff;
+        --nuu-light-gray: #f5f7fa;
+        --nuu-dark-gray: #333333;
+        --nuu-green: #2e7d32;
+        --nuu-red: #c62828;
+        --nuu-purple: #6a1b9a;
+        --nuu-gradient: linear-gradient(135deg, #0a3d6d 0%, #1a6ca1 100%);
+        --nuu-gradient-hover: linear-gradient(135deg, #1a6ca1 0%, #2c8bc8 100%);
+        --shadow-sm: 0 4px 12px rgba(10, 61, 109, 0.08);
+        --shadow-md: 0 8px 24px rgba(10, 61, 109, 0.12);
+        --shadow-lg: 0 12px 36px rgba(10, 61, 109, 0.15);
+        --border-radius: 16px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Page Header */
+    .page-header {
+        background: var(--nuu-gradient);
+        color: var(--nuu-white);
+        padding: 60px 0;
+        margin-bottom: 60px;
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+    }
+    
+    .page-header::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left: -50%;
+        background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+        animation: float 20s linear infinite;
+        z-index: 0;
+    }
+    
+    .page-header-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .page-header h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 25px;
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(to right, #ffffff, #f0f7ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -0.5px;
+    }
+    
+    .page-header p {
+        font-size: 1.25rem;
+        opacity: 0.95;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .university-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        padding: 12px 25px;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    @keyframes float {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        100% { transform: translate(20px, 20px) rotate(360deg); }
+    }
+    /* Stats Cards */
+    .stats-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+    
+    .stat-card {
+        background: var(--nuu-white);
+        padding: 30px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-sm);
+        border: 1px solid rgba(10, 61, 109, 0.1);
+        transition: var(--transition);
+        text-align: center;
+    }
+    
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--nuu-light-blue);
+    }
+    
+    .stat-icon {
+        width: 70px;
+        height: 70px;
+        background: var(--gradient-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 1.8rem;
+        color: white;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--nuu-blue);
+        margin-bottom: 10px;
+        line-height: 1;
+    }
+    
+    .stat-label {
+        color: #666;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    
+    /* Main Content */
+    .main-content {
+        background: var(--nuu-white);
+        border-radius: var(--border-radius);
+        padding: 50px;
+        margin-bottom: 60px;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid rgba(10, 61, 109, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .main-content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--gradient-gold);
+    }
+    
+    .section-title {
+        color: var(--nuu-blue);
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+    }
+    
+    .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100px;
+        height: 4px;
+        background: var(--gradient-gold);
+        border-radius: 2px;
+    }
+    
+    .section-title i {
+        color: var(--nuu-gold);
+    }
+    
+    /* Documents List */
+    .documents-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .document-item {
+        background: rgba(10, 61, 109, 0.02);
+        border-radius: var(--border-radius-sm);
+        padding: 25px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(10, 61, 109, 0.1);
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .document-item:hover {
+        background: rgba(10, 61, 109, 0.05);
+        border-color: var(--nuu-light-blue);
+        transform: translateX(10px);
+        box-shadow: var(--shadow-sm);
+    }
+    
+    .document-number {
+        position: absolute;
+        top: 20px;
+        left: 25px;
+        width: 40px;
+        height: 40px;
+        background: var(--gradient-primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 12px rgba(10, 61, 109, 0.3);
+    }
+    
+    .document-content {
+        padding-left: 60px;
+    }
+    
+    .document-title {
+        color: var(--nuu-blue);
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .document-title i {
+        color: var(--nuu-gold);
+        font-size: 1.2rem;
+    }
+    
+    .document-details {
+        color: #666;
+        line-height: 1.7;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    .document-requirements {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    
+    .requirement-badge {
+        padding: 8px 16px;
+        background: rgba(212, 175, 55, 0.1);
+        color: #b8860b;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    /* Important Notice */
+    .important-notice {
+        background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+        padding: 40px;
+        border-radius: var(--border-radius);
+        margin-bottom: 40px;
+        border: 2px solid var(--nuu-gold);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .important-notice::before {
+        content: "📝";
+        position: absolute;
+        top: -30px;
+        right: -30px;
+        font-size: 8rem;
+        opacity: 0.1;
+        transform: rotate(15deg);
+    }
+    
+    .notice-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .notice-icon {
+        font-size: 2.5rem;
+        color: var(--nuu-gold);
+    }
+    
+    .notice-title {
+        color: var(--nuu-blue);
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    
+    .notice-content {
+        color: #555;
+        line-height: 1.8;
+        font-size: 1.1rem;
+    }
+    
+    .notice-content ul {
+        margin-top: 20px;
+        padding-left: 20px;
+    }
+    
+    .notice-content li {
+        margin-bottom: 12px;
+        padding-left: 10px;
+        position: relative;
+    }
+    
+    .notice-content li::before {
+        content: "•";
+        color: var(--nuu-gold);
+        font-weight: bold;
+        position: absolute;
+        left: -15px;
+        font-size: 1.5rem;
+    }
+    
+    /* Checklist Section */
+    .checklist-section {
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+        padding: 40px;
+        border-radius: var(--border-radius);
+        margin-bottom: 40px;
+        border: 1px solid rgba(10, 61, 109, 0.1);
+    }
+    
+    .checklist-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .checklist-icon {
+        font-size: 2.5rem;
+        color: var(--nuu-green);
+    }
+    
+    .checklist-title {
+        color: var(--nuu-blue);
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    
+    .checklist-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    
+    .checklist-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px;
+        background: white;
+        border-radius: var(--border-radius-sm);
+        border: 1px solid rgba(10, 61, 109, 0.1);
+        transition: var(--transition);
+    }
+    
+    .checklist-item:hover {
+        border-color: var(--nuu-light-blue);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-sm);
+    }
+    
+    .checklist-checkbox {
+        width: 24px;
+        height: 24px;
+        border: 2px solid var(--nuu-light-blue);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        flex-shrink: 0;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+    
+    .checklist-item.checked .checklist-checkbox {
+        background: var(--gradient-success);
+        border-color: var(--nuu-green);
+    }
+    
+    .checklist-text {
+        color: #555;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    
+    /* Download Section */
+    .download-section {
+        text-align: center;
+        padding: 50px;
+        background: var(--gradient-primary);
+        color: white;
+        border-radius: var(--border-radius);
+        margin-bottom: 60px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .download-section::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: 
+            radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 70% 70%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+    }
+    
+    .download-content {
+        position: relative;
+        z-index: 2;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .download-title {
+        font-size: 2.2rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .download-text {
+        font-size: 1.2rem;
+        opacity: 0.95;
+        margin-bottom: 30px;
+        line-height: 1.7;
+    }
+    
+    .download-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .download-btn {
+        padding: 16px 35px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        transition: var(--transition);
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .download-btn:hover {
+        background: white;
+        color: var(--nuu-blue);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Responsive */
+    @media (max-width: 1200px) {
+        .hero-title { font-size: 3rem; }
+    }
+    
+    @media (max-width: 992px) {
+        .hero-section { padding: 80px 0; }
+        .hero-title { font-size: 2.5rem; }
+        .hero-subtitle { font-size: 1.3rem; }
+        .main-content { padding: 40px; }
+        .checklist-content { grid-template-columns: 1fr; }
+    }
+    
+    @media (max-width: 768px) {
+        .hero-section { 
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        .hero-title { 
+            font-size: 2.2rem;
+            line-height: 1.3;
+        }
+        .hero-badge { 
+            padding: 12px 20px; 
+            font-size: 1rem; 
+        }
+        .stats-container { 
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .stat-card { padding: 20px; }
+        .stat-number { font-size: 2rem; }
+        .main-content { padding: 30px 20px; }
+        .section-title { font-size: 2rem; }
+        .document-item { padding: 20px; }
+        .document-content { padding-left: 50px; }
+        .document-number { 
+            width: 35px; 
+            height: 35px; 
+            font-size: 1rem; 
+        }
+        .download-section { padding: 40px 20px; }
+        .download-buttons { flex-direction: column; align-items: center; }
+        .download-btn { width: 100%; max-width: 300px; justify-content: center; }
+    }
+    
+    @media (max-width: 576px) {
+        .hero-title { font-size: 1.9rem; }
+        .stats-container { grid-template-columns: 1fr; }
+        .section-title { font-size: 1.7rem; flex-direction: column; align-items: flex-start; gap: 10px; }
+        .section-title::after { display: none; }
+        .document-title { font-size: 1.2rem; }
+        .document-details { font-size: 1rem; }
+        .important-notice, .checklist-section { padding: 25px; }
+        .notice-title, .checklist-title { font-size: 1.5rem; }
+    }
+</style>
+
+<!-- Hero Section -->
+<div> 
+    <div class="container">
+    <div class="page-header">
+        <div class="page-header-content">
+            <h1>HUJJATLAR TO'PLAMI</h1>
+            <p> 1-kursga qabul qilinayotgan talabalardan talab etiladigan barcha zarur hujjatlar ro'yxati</p>
+            <div class="university-badge">
+                <i class="fas fa-university"></i>
+                <span>SAMDU Urgut Filiali</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Stats Cards -->
+    <div class="stats-container">
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-file-signature"></i>
+            </div>
+            <div class="stat-number">8</div>
+            <div class="stat-label">Asosiy Hujjatlar</div>
+        </div>
+        
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-copy"></i>
+            </div>
+            <div class="stat-number">4+</div>
+            <div class="stat-label">Nusxalar Talabi</div>
+        </div>
+        
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-images"></i>
+            </div>
+            <div class="stat-number">6</div>
+            <div class="stat-label">Rasm Miqdori</div>
+        </div>
+        
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-certificate"></i>
+            </div>
+            <div class="stat-number">1</div>
+            <div class="stat-label">Qo'shimcha Sertifikat</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2 class="section-title">
+            <i class="fas fa-list-check"></i>
+            1-KURSGA QABUL QILINAYOTGAN TALABALARDAN TALAB ETILADIGAN HUJJATLAR
+        </h2>
+        
+        <ul class="documents-list">
+            <!-- Document 1 -->
+            <li class="document-item">
+                <div class="document-number">1</div>
+                <div class="document-content">
+                    <h3 class="document-title">
+                        <i class="fas fa-envelope"></i>
+                        Direktor nomiga ariza
+                    </h3>
+                    <p class="document-details">
+                        O'qishga qabul qilish uchun universitet direktori nomiga rasmiy ariza.
+                        Ariza qo'lda yoki kompyuterda yozilishi mumkin.
+                    </p>
+                    <div class="document-requirements">
+                        <span class="requirement-badge">
+                            <i class="fas fa-font"></i>
+                            Qo'lda yozilgan
+                        </span>
+                        <span class="requirement-badge">
+                            <i class="fas fa-print"></i>
+                            Kompyuterda
+                        </span>
+                    </div>
+                </div>
+            </li>
+            
+            <!-- Document 2 -->
+            <li class="document-item">
+                <div class="document-number">2</div>
+                <div class="document-content">
+                    <h3 class="document-title">
+                        <i class="fas fa-id-card"></i>
+                        Pasportning 4 ta nusxasi
+                    </h3>
+                    <p class="document-details">
+                        Asosiy sahifa va propiska sahifasidan 4 ta nusxa. 
+                        Har bir nusxa aniq va o'qiladigan bo'lishi kerak.
+                    </p>
+                    <div class="document-requirements">
+                        <span class="requirement-badge">
+                            <i class="fas fa-copy"></i>
+                            4 nusxa
+                        </span>
+                        <span class="requirement-badge">
+                            <i class="fas fa-file-image"></i>
+                            Asosiy sahifalar
+                        </span>
+                    </div>
+                </div>
+            </li>
+            
+            <!-- Document 3 -->
+            <li class="document-item">
+                <div class="document-number">3</div>
+                <div class="document-content">
+                    <h3 class="document-title">
+                        <i class="fas fa-camera"></i>
+                        Rasm 3,5×4,5 - 6 dona
+                    </h3>
+                    <p class="document-details">
+                        Rangli, fonda oq rang, yaxshi sifati, yaqinda olingan 6 dona rasm.
+                        Rasm orqasiga familiya va ismingiz yozilishi kerak.
+                    </p>
+                    <div class="document-requirements">
+                        <span class="requirement-badge">
+                            <i class="fas fa-palette"></i>
+                            Rangli
+                        </span>
+                        <span class="requirement-badge">
+                            <i class="fas fa-ruler-combined"></i>
+                            3.5×4.5
+                        </span>
+                        <span class="requirement-badge">
+                            <i class="fas fa-images"></i>
+                            6 dona
+                        </span>
+                    </div>
+                </div>
+            </li>
+            
+            <!-- Document 4 -->
+            <li class="document-item">
+                <div class="document-number">4</div>
+                <div class="document-content">
+                    <h3 class="document-title">
+                        <i class="fas fa-certificate"></i>
+                        IELTS sertifikati (mavjud bo'lsa)
+                    </h3>
+                    <p class="document-details">
+                        Xalqaro IELTS sertifikati mavjud bo'lsa, asl nusxasi va nusxasi.
+                        Bu sertifikat qo'shimcha imtiyoz beradi.
+                    </p>
+                    <div class="document-requirements">
+                        <span class="requirement-badge">
+                            <i class="fas fa-globe"></i>
+                            Xalqaro
+                        </span>
+                        <span class="requirement-badge">
+                            <i class="fas fa-star"></i>
+                            Qo'shimcha
+                        </span>
+                    </div>
+                </div>
+            </li>
+            
+            <!-- Document 5 -->
+            <li class="document-item">
+                <div class="document-number">5</div>
+                <div class="document-content">
+                    <h3 class="document-title">
+                        <i class="fas fa-folder"></i>
+                        Qog'ozlar uchun papka
+                    </h3>
+                    <p class="document-details">
+                        Barcha hujjatlarni bir joyga to'plash uchun standart ofis papkasi.
+                        Papka uzun muddatli saqlash uchun mos bo'lishi kerak.
+                    </p>
+                </div>
+            </li>
+            
+            <!-- Document 6 -->
+            <li class="document-item">
+                <div class="document-number">6</div>
+                <div class="document-content">
+                    <h3 class="document-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        Abituriyent ruxsatnomasi
+                    </h3>
+                    <p class="document-details">
+                        Davlat test markazi tomonidan berilgan abituriyent ruxsatnomasining asl nusxasi.
+                        Bu test topshirganligingizni tasdiqlovchi hujjat.
+                    </p>
+                </div>
+            </li>
+            
+            <!-- Document 7 -->
+            <li class="document-item">
+                <div class="document-number">7</div>
+                <div class="document-content">
+                    <h3 class="document-title">
+                        <i class="fas fa-envelope-open"></i>
+                        Qog'oz konvert
+                    </h3>
+                    <p class="document-details">
+                        Barcha hujjatlarni saqlash va topshirish uchun A4 formatidagi konvert.
+                        Konvertda sizning ma'lumotlaringiz yozilgan bo'lishi kerak.
+                    </p>
+                </div>
+            </li>
+            
+            <!-- Document 8 -->
+            <li class="document-item">
+                <div class="document-number">8</div>
+                <div class="document-content">
+                    <h3 class="document-title">
+                        <i class="fas fa-file-alt"></i>
+                        Javoblar varaqasi
+                    </h3>
+                    <p class="document-details">
+                        Davlat test markazi tomonidan berilgan javoblar varaqasining asl nusxasi.
+                        Bu test natijalaringizni ko'rsatuvchi rasmiy hujjat.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Important Notice -->
+    <div class="important-notice">
+        <div class="notice-header">
+            <div class="notice-icon">📌</div>
+            <h3 class="notice-title">Muhim Eslatmalar</h3>
+        </div>
+        <div class="notice-content">
+            <p>Hujjatlarni tayyorlash va topshirishda quyidagilarga e'tibor bering:</p>
+            <ul>
+                <li>Barcha hujjatlar to'liq va to'g'ri to'ldirilgan bo'lishi kerak</li>
+                <li>Hujjatlarning nusxalari aniq va o'qiladigan bo'lishi lozim</li>
+                <li>Rasmlar yaqinda olingan, fonda oq rang bo'lgan bo'lishi kerak</li>
+                <li>IELTS sertifikati ixtiyoriy, lekin qo'shimcha imtiyoz beradi</li>
+                <li>Hujjatlar topshirilgandan so'ng qaytarib olinmaydi</li>
+                <li>Muddati o'tgan hujjatlar qabul qilinmaydi</li>
+            </ul>
+        </div>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Checklist functionality
+        const checklistItems = document.querySelectorAll('.checklist-item');
+        
+        checklistItems.forEach(item => {
+            item.addEventListener('click', function() {
+                this.classList.toggle('checked');
+                
+                // Count checked items
+                const checkedCount = document.querySelectorAll('.checklist-item.checked').length;
+                const totalCount = checklistItems.length;
+                
+                // Update progress if needed
+                if (typeof updateProgress === 'function') {
+                    updateProgress(checkedCount, totalCount);
+                }
+            });
+        });
+        
+        // Document item hover effects
+        const documentItems = document.querySelectorAll('.document-item');
+        
+        documentItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.zIndex = '10';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.zIndex = '1';
+            });
+        });
+        
+        // Print functionality
+        const printBtn = document.createElement('button');
+        printBtn.innerHTML = '<i class="fas fa-print me-2"></i>Hujjatlar Ro\'yxatini Chop etish';
+        printBtn.className = 'btn btn-primary btn-lg d-block mx-auto mb-5';
+        printBtn.style.padding = '15px 40px';
+        printBtn.style.fontSize = '1.1rem';
+        printBtn.onclick = () => {
+            // Before print, hide some elements
+            document.querySelectorAll('.checklist-checkbox').forEach(cb => {
+                cb.style.display = 'none';
+            });
+            window.print();
+            // After print, show again
+            setTimeout(() => {
+                document.querySelectorAll('.checklist-checkbox').forEach(cb => {
+                    cb.style.display = 'flex';
+                });
+            }, 100);
+        };
+        
+        document.querySelector('.download-section').after(printBtn);
+        
+        // Smooth scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Animate stats cards
+        const statCards = document.querySelectorAll('.stat-card');
+        statCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+        
+        // Animate document items
+        documentItems.forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateX(-30px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            item.style.transitionDelay = `${index * 0.1}s`;
+            observer.observe(item);
+        });
+    });
+</script>
+
+</div>
+
+{% endblock %}
+    

@@ -1,5 +1,5 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import ListView, DetailView
+from django.shortcuts import render, get_object_or_404
+from django.views.generic import ListView
 from django.db.models import Q
 from .models import Post, Category
 
@@ -54,9 +54,7 @@ def post_detail(request, slug):
     # Ko'rishlar sonini oshirish
     post.increase_views()
     
-    # Kommentariyalar
     
-    # Yangi kommentariya qo'shish=
     
     # O'xshash postlar
     similar_posts = Post.objects.filter(

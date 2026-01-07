@@ -10,7 +10,8 @@ def about(request):
     
     return render(request, 'about.html', {'about': about})
 
-
+def hujjatlar(request):
+    return render(request, 'hujjatlar.html' )
 
 from django.shortcuts import render
 from .models import QabulJadvali

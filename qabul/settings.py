@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'qabul_kom',
     'news',
     'employees',
+    'Abituriyent',
 ]
 
 MIDDLEWARE = [

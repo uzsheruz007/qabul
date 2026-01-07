@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+
+<div> 
+    
+<div class="container my-5">
+    <div class="card shadow-lg border-0">
+        <div class="card-body text-center p-5">
+            <h2 class="mb-4 text-primary fw-bold">
+                📄 Qabul kvotasi
+            </h2>
+
+            {% if kvota %}
+                <p class="fs-5 mb-4">
+                    <strong>{{ kvota.title }}</strong>
+                </p>
+
+                <a href="{{ kvota.file.url }}" 
+                   class="btn btn-lg btn-success"
+                   target="_blank">
+                    ⬇️ Word faylni ochish
+                </a>
+            {% else %}
+                <p class="text-danger fs-5">
+                    Qabul kvotasi hali yuklanmagan
+                </p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

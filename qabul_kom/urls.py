@@ -2,19 +2,22 @@ from django.urls import path
 from . import views
 from news.views import PostListView, post_detail
 from news.views import index
+from news.views import index
+from Abituriyent.views import PrivilegeListView, qabul_kvotasi
+
 from employees.views import KomissiyaView
 
 
 urlpatterns = [
     path('', index, name='home'),
-    path("about/", views.about, name='about'),
     path("meyor/", views.RegulatoryDocumentsView.as_view(), name='meyor'),
     path("documents/download/<int:pk>/", views.download_document, name='download_document'),
     path("documents/view/<int:pk>/", views.view_document, name='view_document'),
     path("qabul/", views.qabul_kunlari, name='qabul'),
-
+    path('qabul_kvotasi/', qabul_kvotasi, name='qabul_kvotasi'),
     path('komissiya/', KomissiyaView.as_view(), name='komissiya'),
-    
+    path('privileges/', PrivilegeListView.as_view(), name='privileges'),
+    path('hujjatlar/', views.hujjatlar, name='hujjatlar'),
     path('yangiliklar/', PostListView.as_view(), name='post_list'),
     path('category/<slug:category_slug>/', PostListView.as_view(), name='post_list_by_category'),
     path('<slug:slug>/', post_detail, name='post_detail'),
