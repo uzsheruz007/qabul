@@ -1,0 +1,811 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    :root {
+        --nuu-blue: #0a3d6d;
+        --nuu-light-blue: #1a6ca1;
+        --nuu-gold: #d4af37;
+        --nuu-white: #ffffff;
+        --nuu-light-gray: #f5f7fa;
+        --nuu-dark-gray: #333333;
+        --nuu-green: #2e7d32;
+        --nuu-red: #c62828;
+        --nuu-purple: #6a1b9a;
+        --nuu-gradient: linear-gradient(135deg, #0a3d6d 0%, #1a6ca1 100%);
+        --nuu-gradient-light: linear-gradient(135deg, #1a6ca1 0%, #2c8bc8 100%);
+        --shadow-sm: 0 4px 12px rgba(10, 61, 109, 0.08);
+        --shadow-md: 0 8px 24px rgba(10, 61, 109, 0.12);
+        --shadow-lg: 0 12px 36px rgba(10, 61, 109, 0.15);
+        --border-radius: 20px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Hero Header */
+    .commission-hero {
+        background: linear-gradient(135deg, 
+            rgba(10, 61, 109, 0.95) 0%, 
+            rgba(26, 108, 161, 0.95) 100%),
+            url('{% static "img/university-bg.jpg" %}') center/cover no-repeat;
+        padding: 100px 0 80px;
+        margin-bottom: 80px;
+        border-radius: var(--border-radius);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .commission-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+        animation: floatBackground 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatBackground {
+        0% { transform: scale(1) rotate(0deg); }
+        100% { transform: scale(1.1) rotate(1deg); }
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 25px;
+        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(to right, #ffffff, #d4e7ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+        line-height: 1.8;
+        opacity: 0.95;
+        margin-bottom: 30px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .university-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        padding: 15px 30px;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    /* Chairman Section */
+    .chairman-section {
+        margin-bottom: 100px;
+        position: relative;
+    }
+
+    .section-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    .label-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--nuu-gradient);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        box-shadow: var(--shadow-md);
+    }
+
+    .label-text {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--nuu-blue);
+        position: relative;
+    }
+
+    .label-text::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--nuu-gradient);
+        border-radius: 2px;
+    }
+
+    /* Chairman Card */
+    .chairman-card {
+        background: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-lg);
+        overflow: hidden;
+        max-width: 600px;
+        margin: 0 auto;
+        border: 1px solid rgba(10, 61, 109, 0.1);
+        transition: var(--transition);
+        position: relative;
+    }
+
+    .chairman-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(10, 61, 109, 0.2);
+    }
+
+    .chairman-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: var(--nuu-gradient);
+    }
+
+    .chairman-content {
+        padding: 40px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 40px;
+        align-items: center;
+    }
+
+    @media (max-width: 768px) {
+        .chairman-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 30px;
+        }
+    }
+
+    .chairman-photo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 5px solid var(--nuu-light-blue);
+        box-shadow: var(--shadow-md);
+        position: relative;
+    }
+
+    .chairman-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.7s ease;
+    }
+
+    .chairman-card:hover .chairman-photo img {
+        transform: scale(1.1);
+    }
+
+    .chairman-photo::after {
+        content: "⚜";
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: var(--nuu-gold);
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .chairman-info {
+        flex: 1;
+    }
+
+    .chairman-name {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: var(--nuu-blue);
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+
+    .chairman-position {
+        display: inline-block;
+        background: linear-gradient(135deg, #43a047 0%, #66bb6a 100%);
+        color: white;
+        padding: 10px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+        box-shadow: 0 6px 15px rgba(67, 160, 71, 0.2);
+    }
+
+    .chairman-description {
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+    }
+
+    .chairman-contacts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 20px;
+        background: rgba(10, 61, 109, 0.05);
+        border-radius: 12px;
+        transition: var(--transition);
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .contact-item:hover {
+        background: rgba(10, 61, 109, 0.1);
+        transform: translateY(-3px);
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--nuu-gradient);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.1rem;
+    }
+
+    .contact-text {
+        font-weight: 500;
+        color: var(--nuu-blue);
+    }
+
+    /* Members Section */
+    .members-section {
+        margin-bottom: 100px;
+    }
+
+    .members-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 50px;
+    }
+
+    .members-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+        .members-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Member Card */
+    .member-card {
+        background: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-md);
+        overflow: hidden;
+        border: 1px solid rgba(10, 61, 109, 0.1);
+        transition: var(--transition);
+        position: relative;
+    }
+
+    .member-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--nuu-light-blue);
+    }
+
+    .member-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(to right, var(--nuu-blue), var(--nuu-light-blue));
+    }
+
+    .member-content {
+        padding: 35px;
+        position: relative;
+    }
+
+    .member-badge {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        background: var(--nuu-gradient);
+        color: white;
+        padding: 10px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .member-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto 30px;
+        border: 4px solid white;
+        box-shadow: var(--shadow-md);
+        position: relative;
+    }
+
+    .member-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.7s ease;
+    }
+
+    .member-card:hover .member-photo img {
+        transform: scale(1.1);
+    }
+
+    .member-info {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .member-name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--nuu-blue);
+        margin-bottom: 10px;
+        line-height: 1.3;
+    }
+
+    .member-position {
+        color: var(--nuu-light-blue);
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        display: inline-block;
+        padding: 8px 20px;
+        background: rgba(26, 108, 161, 0.1);
+        border-radius: 25px;
+    }
+
+    .member-contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .member-contact {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 15px;
+        background: rgba(10, 61, 109, 0.04);
+        border-radius: 10px;
+        transition: var(--transition);
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .member-contact:hover {
+        background: rgba(10, 61, 109, 0.1);
+        transform: translateX(5px);
+    }
+
+    .member-contact i {
+        color: var(--nuu-blue);
+        font-size: 1.1rem;
+        width: 30px;
+    }
+
+    .member-contact span {
+        color: #555;
+        font-weight: 500;
+        flex: 1;
+    }
+
+    /* Stats Section */
+    .stats-section {
+        background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+        padding: 80px 0;
+        border-radius: var(--border-radius);
+        margin-bottom: 80px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .stats-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 10% 10%, rgba(10, 61, 109, 0.03) 0%, transparent 40%),
+            radial-gradient(circle at 90% 90%, rgba(26, 108, 161, 0.03) 0%, transparent 40%);
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .stat-card {
+        background: white;
+        padding: 40px 30px;
+        border-radius: var(--border-radius);
+        text-align: center;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid rgba(10, 61, 109, 0.1);
+        transition: var(--transition);
+    }
+
+    .stat-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--nuu-light-blue);
+    }
+
+    .stat-icon {
+        width: 70px;
+        height: 70px;
+        background: var(--nuu-gradient);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        color: white;
+        font-size: 1.8rem;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--nuu-blue);
+        margin-bottom: 10px;
+        line-height: 1;
+    }
+
+    .stat-label {
+        color: #666;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+        .hero-title { font-size: 3rem; }
+        .members-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 992px) {
+        .commission-hero { padding: 80px 0 60px; }
+        .hero-title { font-size: 2.5rem; }
+        .hero-subtitle { font-size: 1.2rem; }
+        .chairman-name { font-size: 1.8rem; }
+        .members-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+    }
+
+    @media (max-width: 768px) {
+        .commission-hero { 
+            padding: 60px 0 40px; 
+            margin-bottom: 60px;
+            border-radius: 15px;
+        }
+        .hero-title { font-size: 2rem; }
+        .hero-subtitle { font-size: 1.1rem; }
+        .label-text { font-size: 1.5rem; }
+        .label-icon { width: 50px; height: 50px; font-size: 1.3rem; }
+        .chairman-content { padding: 30px; }
+        .chairman-photo { width: 150px; height: 150px; }
+        .chairman-name { font-size: 1.6rem; }
+        .stats-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+        .stat-number { font-size: 2.5rem; }
+    }
+
+    @media (max-width: 576px) {
+        .hero-title { font-size: 1.8rem; }
+        .chairman-content { padding: 20px; }
+        .chairman-contacts { flex-direction: column; }
+        .contact-item { width: 100%; }
+        .member-content { padding: 25px; }
+        .members-grid { gap: 30px; }
+    }
+
+    /* Animation Classes */
+    .fade-in-up {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.6s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+
+    /* Scroll Animations */
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+    }
+
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+<!-- Hero Section -->
+<div class="commission-hero">
+    <div class="hero-content">
+        <h1 class="hero-title fade-in-up">Qabul Komissiyasi Tarkibi</h1>
+        <p class="hero-subtitle fade-in-up delay-1">
+            Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali oliy ta'lim muassasasiga 
+            qabul jarayonini tashkil etuvchi mas'ullar jamoasi
+        </p>
+        <div class="university-badge fade-in-up delay-2">
+            <i class="fas fa-university"></i>
+            <span>🔸 SAMDU Urgut Filiali Qabul Komissiyasi 🔸</span>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Chairman Section -->
+    <div class="chairman-section reveal">
+        <div class="section-label">
+            <div class="label-icon">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <h2 class="label-text">Komissiya Raisi</h2>
+        </div>
+
+        {% if rais %}
+        <div class="chairman-card">
+            <div class="chairman-content">
+                <div class="chairman-photo">
+                    {% if rais.rasm %}
+                        <img src="{{ rais.rasm.url }}" alt="{{ rais.familiya }} {{ rais.ism }}" loading="lazy">
+                    {% else %}
+                        <img src="{% static 'img/default-avatar.png' %}" alt="Default Avatar" loading="lazy">
+                    {% endif %}
+                </div>
+                <div class="chairman-info">
+                    <h3 class="chairman-name">{{ rais.familiya }} {{ rais.ism }}</h3>
+                    <div class="chairman-position">
+                        <i class="fas fa-crown me-2"></i> {{ rais.lavozim }}
+                    </div>
+                   
+                    <div class="chairman-contacts">
+                        {% if rais.email %}
+                        <a href="mailto:{{ rais.email }}" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">{{ rais.email }}</div>
+                        </a>
+                        {% endif %}
+                        {% if rais.telefon %}
+                        <a href="tel:{{ rais.telefon }}" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">{{ rais.telefon }}</div>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Members Section -->
+    <div class="members-section reveal">
+        <div class="members-label">
+            <div class="label-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <h2 class="label-text">Komissiya A'zolari</h2>
+        </div>
+
+        <div class="members-grid">
+            {% for azo in azolar %}
+            <div class="member-card reveal delay-{{ forloop.counter }}">
+                <div class="member-content">
+                    <div class="member-badge"><br>
+                        <i class="fas fa-id-card"></i> A'zo
+                    </div>
+                    <div class="member-photo">
+                        {% if azo.rasm %}
+                            <img src="{{ azo.rasm.url }}" alt="{{ azo.familiya }} {{ azo.ism }}" loading="lazy">
+                        {% else %}
+                            <img src="{% static 'img/default-avatar.png' %}" alt="Default Avatar" loading="lazy">
+                        {% endif %}
+                    </div>
+                    <div class="member-info">
+                        <h4 class="member-name">{{ azo.familiya }} {{ azo.ism }}</h4>
+                        <div class="member-position">{{ azo.lavozim }}</div>
+                    </div>
+                    <div class="member-contacts">
+                        {% if azo.email %}
+                        <a href="mailto:{{ azo.email }}" class="member-contact">
+                            <i class="fas fa-envelope"></i>
+                            <span>{{ azo.email }}</span>
+                        </a>
+                        {% endif %}
+                        {% if azo.telefon %}
+                        <a href="tel:{{ azo.telefon }}" class="member-contact">
+                            <i class="fas fa-phone"></i>
+                            <span>{{ azo.telefon }}</span>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section reveal">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <div class="stat-number">{{ azolar|length|add:1 }}</div>
+                    <div class="stat-label">Jami Komissiya A'zolari</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-number">2024</div>
+                    <div class="stat-label">Faoliyat Yili</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="stat-number">7/24</div>
+                    <div class="stat-label">Ish Rejimi</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Mas'uliyat</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Scroll Reveal Animation
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const revealOnScroll = () => {
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (elementTop < windowHeight - 100) {
+                element.classList.add('active');
+            }
+        });
+    };
+    
+    // Initial check
+    revealOnScroll();
+    
+    // Check on scroll
+    window.addEventListener('scroll', revealOnScroll);
+    
+    // Smooth hover effects
+    document.querySelectorAll('.member-card, .chairman-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.zIndex = '100';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.zIndex = '1';
+        });
+    });
+    
+    // Contact item animations
+    document.querySelectorAll('.contact-item, .member-contact').forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateX(8px)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateX(0)';
+        });
+    });
+    
+    // Page load animation
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease';
+        
+        setTimeout(() => {
+            document.body.style.opacity = '1';
+        }, 100);
+        
+        // Add loading animation to images
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        images.forEach(img => {
+            img.addEventListener('load', function() {
+                this.classList.add('loaded');
+            });
+        });
+    });
+</script>
+
+{% endblock %}

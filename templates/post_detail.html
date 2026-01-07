@@ -1,0 +1,772 @@
+<!-- templates/blog/post_detail.html -->
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}{{ post.title }} - SDU Urgut filiali{% endblock %}
+
+{% block content %}
+<style>
+    :root {
+        --nuu-blue: #0a3d6d;
+        --nuu-light-blue: #1a6ca1;
+        --nuu-gold: #d4af37;
+        --nuu-white: #ffffff;
+        --nuu-light-gray: #f5f7fa;
+        --nuu-dark-gray: #333333;
+        --nuu-gradient: linear-gradient(135deg, #0a3d6d 0%, #1a6ca1 100%);
+        --nuu-gradient-light: linear-gradient(135deg, #1a6ca1 0%, #2c8bc8 100%);
+        --shadow-sm: 0 4px 12px rgba(10, 61, 109, 0.08);
+        --shadow-md: 0 8px 24px rgba(10, 61, 109, 0.12);
+        --shadow-lg: 0 12px 36px rgba(10, 61, 109, 0.15);
+        --border-radius: 16px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Hero Section */
+    .hero-section {
+        background: linear-gradient(rgba(10, 61, 109, 0.9), rgba(26, 108, 161, 0.9)),
+                    url('{% static 'img/breadcrumb-bg.jpg' %}') center/cover no-repeat;
+        padding: 100px 0 60px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        animation: patternMove 20s linear infinite;
+    }
+
+    @keyframes patternMove {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(60px, 60px); }
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 25px;
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        line-height: 1.2;
+    }
+
+    .breadcrumb-nav {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        padding: 15px 30px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .breadcrumb-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 500;
+    }
+
+    .breadcrumb-item.active {
+        color: var(--nuu-gold);
+        font-weight: 600;
+    }
+
+    .breadcrumb-divider {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Article Section */
+    .article-container {
+        padding: 80px 0;
+        background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 100%);
+    }
+
+    .article-card {
+        background: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-lg);
+        overflow: hidden;
+        border: 1px solid rgba(10, 61, 109, 0.1);
+        transition: var(--transition);
+    }
+
+    .article-card:hover {
+        box-shadow: 0 20px 40px rgba(10, 61, 109, 0.15);
+        transform: translateY(-5px);
+    }
+
+    /* Featured Image */
+    .featured-image {
+        height: 600px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .featured-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .article-card:hover .featured-image img {
+        transform: scale(1.05);
+    }
+
+    .image-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        padding: 40px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .category-badge {
+        background: var(--nuu-gradient);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 8px 20px rgba(10, 61, 109, 0.3);
+        transition: var(--transition);
+    }
+
+    .category-badge:hover {
+        background: var(--nuu-gradient-light);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 25px rgba(10, 61, 109, 0.4);
+    }
+
+    .importance-badge {
+        background: linear-gradient(135deg, #dc3545 0%, #ff6b6b 100%);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+    }
+
+    /* Article Body */
+    .article-body {
+        padding: 60px;
+    }
+
+    .article-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid rgba(10, 61, 109, 0.1);
+    }
+
+    .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 25px;
+        background: rgba(10, 61, 109, 0.05);
+        border-radius: 12px;
+        transition: var(--transition);
+    }
+
+    .meta-item:hover {
+        background: rgba(10, 61, 109, 0.1);
+        transform: translateY(-3px);
+    }
+
+    .meta-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--nuu-gradient);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .meta-content h6 {
+        color: #666;
+        margin: 0;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .meta-content strong {
+        color: var(--nuu-blue);
+        font-size: 1.1rem;
+        margin-top: 5px;
+    }
+
+    .article-title {
+        color: var(--nuu-blue);
+        font-size: 2.8rem;
+        font-weight: 800;
+        line-height: 1.3;
+        margin-bottom: 40px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    .article-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: var(--nuu-gradient);
+        border-radius: 2px;
+    }
+
+    .excerpt-box {
+        background: linear-gradient(135deg, rgba(10, 61, 109, 0.05) 0%, rgba(26, 108, 161, 0.05) 100%);
+        border-left: 4px solid var(--nuu-blue);
+        padding: 35px;
+        border-radius: 12px;
+        margin: 40px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .excerpt-box::before {
+        content: "📌";
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 2rem;
+        opacity: 0.2;
+    }
+
+    .excerpt-box h5 {
+        color: var(--nuu-blue);
+        font-weight: 700;
+        margin-bottom: 15px;
+        padding-left: 40px;
+    }
+
+    .excerpt-box p {
+        color: #444;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin: 0;
+        padding-left: 40px;
+        font-weight: 500;
+    }
+
+    /* Article Content Styling */
+    .article-content {
+        color: #333;
+        line-height: 1.8;
+        font-size: 1.15rem;
+    }
+
+    .article-content h2 {
+        color: var(--nuu-blue);
+        font-weight: 700;
+        margin: 60px 0 25px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid rgba(10, 61, 109, 0.1);
+        position: relative;
+    }
+
+    .article-content h2::before {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 80px;
+        height: 2px;
+        background: var(--nuu-gradient);
+    }
+
+    .article-content h3 {
+        color: var(--nuu-light-blue);
+        font-weight: 600;
+        margin: 40px 0 20px;
+        padding-left: 20px;
+        border-left: 4px solid var(--nuu-gold);
+    }
+
+    .article-content p {
+        margin-bottom: 30px;
+        text-align: justify;
+        color: #444;
+    }
+
+    .article-content ul, 
+    .article-content ol {
+        margin: 25px 0 30px 30px;
+        padding: 0;
+    }
+
+    .article-content li {
+        margin-bottom: 12px;
+        padding-left: 10px;
+        position: relative;
+    }
+
+    .article-content li::marker {
+        color: var(--nuu-blue);
+        font-weight: bold;
+    }
+
+    .article-content blockquote {
+        background: linear-gradient(135deg, rgba(10, 61, 109, 0.05) 0%, rgba(26, 108, 161, 0.05) 100%);
+        border-left: 4px solid var(--nuu-blue);
+        padding: 35px;
+        margin: 40px 0;
+        border-radius: 12px;
+        font-style: italic;
+        color: #444;
+        font-size: 1.3rem;
+        line-height: 1.7;
+        position: relative;
+    }
+
+    .article-content blockquote::before {
+        content: "❝";
+        position: absolute;
+        top: -20px;
+        left: 20px;
+        font-size: 3rem;
+        color: var(--nuu-blue);
+        opacity: 0.3;
+    }
+
+    .article-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: var(--border-radius);
+        margin: 40px auto;
+        display: block;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+    }
+
+    .article-content img:hover {
+        transform: scale(1.02);
+        box-shadow: var(--shadow-lg);
+    }
+
+    /* Navigation Buttons */
+    .article-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 60px;
+        padding-top: 40px;
+        border-top: 1px solid rgba(10, 61, 109, 0.1);
+    }
+
+    .nav-btn {
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        transition: var(--transition);
+        min-width: 200px;
+        justify-content: center;
+    }
+
+    .btn-all-news {
+        background: var(--nuu-gradient);
+        color: white;
+        box-shadow: 0 8px 20px rgba(10, 61, 109, 0.2);
+    }
+
+    .btn-all-news:hover {
+        background: var(--nuu-gradient-light);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 25px rgba(10, 61, 109, 0.3);
+        color: white;
+    }
+
+    /* Floating Actions */
+    .floating-actions {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .floating-btn {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: var(--nuu-gradient);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: 0 8px 20px rgba(10, 61, 109, 0.3);
+        transition: var(--transition);
+        position: relative;
+    }
+
+    .floating-btn:hover {
+        transform: translateY(-5px) scale(1.1);
+        box-shadow: 0 12px 25px rgba(10, 61, 109, 0.4);
+    }
+
+    .floating-btn .tooltip {
+        position: absolute;
+        right: 70px;
+        background: var(--nuu-blue);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .floating-btn:hover .tooltip {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Back to Top */
+    .back-to-top {
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        z-index: 999;
+    }
+
+    /* Progress Bar */
+    .reading-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: rgba(10, 61, 109, 0.1);
+        z-index: 1001;
+    }
+
+    .progress-bar {
+        height: 100%;
+        background: var(--nuu-gradient);
+        width: 0%;
+        transition: width 0.3s ease;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+        .hero-title { font-size: 3rem; }
+        .article-title { font-size: 2.5rem; }
+        .featured-image { height: 500px; }
+    }
+
+    @media (max-width: 992px) {
+        .hero-title { font-size: 2.5rem; }
+        .article-title { font-size: 2.2rem; }
+        .article-body { padding: 40px; }
+        .featured-image { height: 400px; }
+        .image-overlay { padding: 30px; }
+    }
+
+    @media (max-width: 768px) {
+        .hero-section { padding: 80px 0 40px; }
+        .hero-title { font-size: 2rem; }
+        .article-title { font-size: 1.8rem; }
+        .article-body { padding: 30px; }
+        .featured-image { height: 300px; }
+        .article-meta { flex-direction: column; gap: 15px; }
+        .meta-item { width: 100%; }
+        .article-navigation { flex-direction: column; gap: 20px; }
+        .nav-btn { width: 100%; }
+        .excerpt-box { padding: 25px; }
+        .excerpt-box p { font-size: 1.1rem; }
+        .floating-actions { bottom: 20px; right: 20px; }
+        .back-to-top { bottom: 90px; right: 20px; }
+    }
+
+    @media (max-width: 576px) {
+        .hero-title { font-size: 1.8rem; }
+        .article-title { font-size: 1.6rem; }
+        .article-body { padding: 20px; }
+        .featured-image { height: 250px; }
+        .image-overlay { padding: 20px; flex-direction: column; align-items: flex-start; }
+        .category-badge, .importance-badge { font-size: 0.9rem; padding: 10px 20px; }
+        .breadcrumb-nav { flex-wrap: wrap; justify-content: center; }
+    }
+</style>
+
+<!-- Reading Progress Bar -->
+<div class="reading-progress">
+    <div class="progress-bar" id="readingProgress"></div>
+</div>
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">{{ post.title }}</h1>
+            <nav class="breadcrumb-nav">
+                <a href="{% url 'home' %}" class="breadcrumb-item">
+                    <i class="fas fa-home"></i> Bosh sahifa
+                </a>
+                <span class="breadcrumb-divider">›</span>
+                <a href="{% url 'post_list' %}" class="breadcrumb-item">
+                    <i class="fas fa-newspaper"></i> Yangiliklar
+                </a>
+                <span class="breadcrumb-divider">›</span>
+                <a href="{% url 'post_list_by_category' post.category.slug %}" class="breadcrumb-item">
+                    <i class="fas fa-folder"></i> {{ post.category.name }}
+                </a>
+                <span class="breadcrumb-divider">›</span>
+                <span class="breadcrumb-item active">
+                    <i class="fas fa-file-alt"></i> {{ post.title|truncatewords:3 }}
+                </span>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- Article Section -->
+<div class="article-container">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <article class="article-card">
+                    <!-- Featured Image -->
+                    <div class="featured-image">
+                        <img src="{{ post.image.url }}" 
+                             alt="{{ post.title }}"
+                             loading="eager">
+                        <div class="image-overlay">
+                            <a href="{% url 'post_list_by_category' post.category.slug %}" 
+                               class="category-badge">
+                                <i class="fas fa-folder"></i>
+                                {{ post.category.name }}
+                            </a>
+                            {% if post.is_main %}
+                            <span class="importance-badge">
+                                <i class="fas fa-star"></i>
+                                Muhim Yangilik
+                            </span>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-body">
+                        <!-- Meta Information -->
+                        <div class="article-meta">
+                            <div class="meta-item">
+                                <div class="meta-icon">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="meta-content">
+                                    <h6>Muallif</h6>
+                                    <strong>{{ post.author.get_full_name|default:post.author.username }}</strong>
+                                </div>
+                            </div>
+
+                            <div class="meta-item">
+                                <div class="meta-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="meta-content">
+                                    <h6>Nashr sanasi</h6>
+                                    <strong>{{ post.published_date|date:"d F Y, H:i" }}</strong>
+                                </div>
+                            </div>
+
+                            <div class="meta-item">
+                                <div class="meta-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div class="meta-content">
+                                    <h6>Ko'rishlar soni</h6>
+                                    <strong>{{ post.views }} marta</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article Title -->
+                        <h1 class="article-title">{{ post.title }}</h1>
+
+                        <!-- Excerpt Section -->
+                        {% if post.excerpt %}
+                        <div class="excerpt-box">
+                            <h5><i class="fas fa-quote-left me-2"></i> Maqola haqida qisqacha:</h5>
+                            <p>{{ post.excerpt }}</p>
+                        </div>
+                        {% endif %}
+
+                        <!-- Article Content -->
+                        <div class="article-content">
+                            {{ post.content|safe }}
+                        </div>
+
+                        <!-- Navigation -->
+                        <div class="article-navigation">
+                            <a href="{% url 'post_list' %}" 
+                               class="nav-btn btn-all-news">
+                                <i class="fas fa-list me-2"></i>
+                                Barcha yangiliklar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Floating Actions -->
+<div class="floating-actions">
+    <a href="#top" class="floating-btn" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+        <span class="tooltip">Yuqoriga</span>
+    </a>
+    
+    <a href="{% url 'post_list' %}" class="floating-btn">
+        <i class="fas fa-newspaper"></i>
+        <span class="tooltip">Yangiliklar</span>
+    </a>
+    
+    <button class="floating-btn" onclick="window.print()">
+        <i class="fas fa-print"></i>
+        <span class="tooltip">Chop etish</span>
+    </button>
+</div>
+
+<!-- Back to Top -->
+<a href="#top" class="back-to-top floating-btn">
+    <i class="fas fa-chevron-up"></i>
+</a>
+
+<script>
+    // Reading Progress Bar
+    window.addEventListener('scroll', function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("readingProgress").style.width = scrolled + "%";
+    });
+
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.style.display = 'flex';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Smooth Scroll for All Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Image Lazy Loading
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.article-content img');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        images.forEach(img => {
+            if (img.dataset.src) {
+                imageObserver.observe(img);
+            }
+        });
+    });
+
+    // Copy Link Function
+    function copyToClipboard() {
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+            alert('Havola nusxalandi!');
+        });
+    }
+
+    // Add print styles
+    const style = document.createElement('style');
+    style.textContent = `
+        @media print {
+            .floating-actions, .back-to-top, .reading-progress, 
+            .breadcrumb-nav, .article-meta {
+                display: none !important;
+            }
+            .article-card {
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+</script>
+
+{% endblock %}
