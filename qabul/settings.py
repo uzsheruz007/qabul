@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'Abituriyent',
     'django_ckeditor_5',
     'xorijiy',
+    'magister',   
 ]
 
 MIDDLEWARE = [

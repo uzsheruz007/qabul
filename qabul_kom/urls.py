@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from magister.views import hujjatlar_t,  Qabul_Rijasi, Magistratura_Natijalari
 from news.views import PostListView, post_detail, index
 from Abituriyent.views import PrivilegeListView, qabul_kvotasi
 from employees.views import KomissiyaView
@@ -12,7 +13,10 @@ urlpatterns = [
     # STATIK SAHIFALAR
     path("meyor/", views.RegulatoryDocumentsView.as_view(), name='meyor'),
     path("qabul/", views.qabul_kunlari, name='qabul'),
+    path('hujjatlar_t/', hujjatlar_t, name='hujjatlar_t'),
     path('qabul_kvotasi/', qabul_kvotasi, name='qabul_kvotasi'),
+    path('qabul-rejasi/', Qabul_Rijasi, name='Qabul_Rijasi'),
+    path('natijalar/', Magistratura_Natijalari, name='Magistratura_Natijalari'),
     path('bakalaver/', bakalaver, name='bakalaver'),
     path('magistr/', magistr, name='magistr'),
     path('shartnoma/', shartnoma, name='shartnoma'),

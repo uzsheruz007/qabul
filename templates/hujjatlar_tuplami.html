@@ -1,0 +1,1030 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    :root {
+        --nuu-blue: #0a3d6d;
+        --nuu-light-blue: #1a6ca1;
+        --nuu-gold: #d4af37;
+        --nuu-white: #ffffff;
+        --nuu-light-gray: #f5f7fa;
+        --nuu-dark-gray: #2d3748;
+        --nuu-green: #2e7d32;
+        --nuu-red: #c62828;
+        --nuu-purple: #6a1b9a;
+        --nuu-orange: #f57c00;
+        
+        --gradient-primary: linear-gradient(135deg, #0a3d6d 0%, #1a6ca1 100%);
+        --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f7d469 100%);
+        --gradient-success: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+        --gradient-purple: linear-gradient(135deg, #6a1b9a 0%, #9c27b0 100%);
+        --gradient-warning: linear-gradient(135deg, #f57c00 0%, #ff9800 100%);
+        
+        --shadow-sm: 0 4px 12px rgba(10, 61, 109, 0.08);
+        --shadow-md: 0 8px 24px rgba(10, 61, 109, 0.12);
+        --shadow-lg: 0 12px 36px rgba(10, 61, 109, 0.15);
+        --shadow-xl: 0 20px 50px rgba(10, 61, 109, 0.2);
+        
+        --border-radius: 20px;
+        --border-radius-sm: 10px;
+        --border-radius-lg: 30px;
+        
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    :root {
+        --nuu-blue: #0a3d6d;
+        --nuu-light-blue: #1a6ca1;
+        --nuu-gold: #d4af37;
+        --nuu-white: #ffffff;
+        --nuu-light-gray: #f5f7fa;
+        --nuu-dark-gray: #333333;
+        --nuu-green: #2e7d32;
+        --nuu-red: #c62828;
+        --nuu-purple: #6a1b9a;
+        --nuu-gradient: linear-gradient(135deg, #0a3d6d 0%, #1a6ca1 100%);
+        --nuu-gradient-hover: linear-gradient(135deg, #1a6ca1 0%, #2c8bc8 100%);
+        --shadow-sm: 0 4px 12px rgba(10, 61, 109, 0.08);
+        --shadow-md: 0 8px 24px rgba(10, 61, 109, 0.12);
+        --shadow-lg: 0 12px 36px rgba(10, 61, 109, 0.15);
+        --border-radius: 16px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Page Header */
+    .page-header {
+        background: var(--nuu-gradient);
+        color: var(--nuu-white);
+        padding: 60px 0;
+        margin-bottom: 60px;
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+    }
+    
+    .page-header::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left: -50%;
+        background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+        animation: float 20s linear infinite;
+        z-index: 0;
+    }
+    
+    .page-header-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .page-header h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 25px;
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(to right, #ffffff, #f0f7ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -0.5px;
+    }
+    
+    .page-header p {
+        font-size: 1.25rem;
+        opacity: 0.95;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .university-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        padding: 12px 25px;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    @keyframes float {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        100% { transform: translate(20px, 20px) rotate(360deg); }
+    }
+    /* Platform Card */
+    .platform-card {
+        background: var(--nuu-white);
+        border-radius: var(--border-radius);
+        padding: 50px;
+        margin-bottom: 60px;
+        box-shadow: var(--shadow-xl);
+        border: 2px solid var(--nuu-gold);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+    
+    .platform-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: var(--gradient-gold);
+    }
+    
+    .platform-icon {
+        font-size: 4rem;
+        color: var(--nuu-gold);
+        margin-bottom: 25px;
+        display: inline-block;
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+    
+    .platform-title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--nuu-blue);
+        margin-bottom: 20px;
+    }
+    
+    .platform-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        padding: 18px 40px;
+        background: var(--gradient-primary);
+        color: white;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.3rem;
+        text-decoration: none;
+        transition: var(--transition);
+        margin-top: 20px;
+        box-shadow: 0 8px 25px rgba(10, 61, 109, 0.2);
+    }
+    
+    .platform-link:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 15px 35px rgba(10, 61, 109, 0.3);
+        color: white;
+    }
+    
+    .platform-description {
+        font-size: 1.2rem;
+        color: #666;
+        line-height: 1.8;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    /* Documents Section */
+    .documents-section {
+        margin-bottom: 60px;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+        font-weight: 900;
+        color: var(--nuu-blue);
+        margin-bottom: 50px;
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--gradient-gold);
+        border-radius: 2px;
+    }
+    
+    .documents-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+    
+    .document-card {
+        background: var(--nuu-white);
+        border-radius: var(--border-radius);
+        padding: 40px;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid rgba(10, 61, 109, 0.1);
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+    
+    .document-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-xl);
+        border-color: var(--nuu-gold);
+    }
+    
+    .document-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--gradient-primary);
+    }
+    
+    .document-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--gradient-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        font-size: 2rem;
+        color: white;
+        box-shadow: 0 8px 20px rgba(10, 61, 109, 0.2);
+    }
+    
+    .document-title {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--nuu-blue);
+        margin-bottom: 20px;
+    }
+    
+    .document-description {
+        color: #666;
+        line-height: 1.7;
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+    
+    .document-requirements {
+        text-align: left;
+        background: rgba(10, 61, 109, 0.03);
+        padding: 20px;
+        border-radius: var(--border-radius-sm);
+        margin-top: 20px;
+        border-left: 4px solid var(--nuu-gold);
+    }
+    
+    .document-requirements h4 {
+        color: var(--nuu-blue);
+        font-weight: 700;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .requirements-list {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .requirements-list li {
+        padding: 8px 0;
+        color: #555;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .requirements-list li:last-child {
+        border-bottom: none;
+    }
+    
+    .requirements-list li i {
+        color: var(--nuu-gold);
+        margin-top: 4px;
+        flex-shrink: 0;
+    }
+    
+    /* Requirements Table */
+    .requirements-table {
+        background: var(--nuu-white);
+        border-radius: var(--border-radius);
+        padding: 40px;
+        box-shadow: var(--shadow-lg);
+        margin-bottom: 60px;
+        border: 1px solid rgba(10, 61, 109, 0.1);
+        overflow: hidden;
+    }
+    
+    .table-title {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--nuu-blue);
+        margin-bottom: 30px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .table-container {
+        overflow-x: auto;
+    }
+    
+    .requirements-table table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px;
+    }
+    
+    .requirements-table thead {
+        background: var(--gradient-primary);
+        color: white;
+    }
+    
+    .requirements-table th {
+        padding: 20px;
+        text-align: left;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+    
+    .requirements-table tbody tr {
+        border-bottom: 1px solid #e2e8f0;
+        transition: var(--transition);
+    }
+    
+    .requirements-table tbody tr:hover {
+        background: rgba(10, 61, 109, 0.03);
+    }
+    
+    .requirements-table td {
+        padding: 20px;
+        color: #555;
+        font-size: 1.1rem;
+        vertical-align: top;
+    }
+    
+    .requirements-table td:first-child {
+        font-weight: 700;
+        color: var(--nuu-blue);
+        width: 40%;
+    }
+    
+    .status-badge {
+        display: inline-block;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+    
+    .status-required {
+        background: rgba(46, 125, 50, 0.1);
+        color: var(--nuu-green);
+    }
+    
+    .status-optional {
+        background: rgba(247, 124, 0, 0.1);
+        color: var(--nuu-orange);
+    }
+    
+    /* Process Timeline */
+    .process-timeline {
+        margin-bottom: 60px;
+    }
+    
+    .timeline {
+        position: relative;
+        max-width: 1000px;
+        margin: 50px auto;
+    }
+    
+    .timeline::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        background: var(--gradient-primary);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -2px;
+        border-radius: 2px;
+    }
+    
+    .timeline-item {
+        position: relative;
+        width: 50%;
+        padding: 20px 40px;
+        box-sizing: border-box;
+    }
+    
+    .timeline-item:nth-child(odd) {
+        left: 0;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 50%;
+    }
+    
+    .timeline-content {
+        background: var(--nuu-white);
+        padding: 30px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-lg);
+        position: relative;
+        border: 1px solid rgba(10, 61, 109, 0.1);
+        transition: var(--transition);
+    }
+    
+    .timeline-content:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-xl);
+        border-color: var(--nuu-gold);
+    }
+    
+    .timeline-content::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: var(--gradient-gold);
+        border-radius: 50%;
+        top: 30px;
+        right: -10px;
+        z-index: 1;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content::before {
+        left: -10px;
+        right: auto;
+    }
+    
+    .timeline-number {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: var(--gradient-primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        font-size: 1.2rem;
+        top: 25px;
+        right: -20px;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-number {
+        left: -20px;
+        right: auto;
+    }
+    
+    .timeline-title {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--nuu-blue);
+        margin-bottom: 15px;
+    }
+    
+    /* Important Notice */
+    .important-notice {
+        background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+        padding: 50px;
+        border-radius: var(--border-radius);
+        margin-bottom: 60px;
+        border: 3px solid var(--nuu-gold);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .important-notice::before {
+        content: "⚡";
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        font-size: 12rem;
+        opacity: 0.1;
+        transform: rotate(15deg);
+    }
+    
+    .notice-header {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        margin-bottom: 30px;
+    }
+    
+    .notice-icon {
+        font-size: 3.5rem;
+        color: var(--nuu-gold);
+    }
+    
+    .notice-title {
+        color: var(--nuu-blue);
+        font-size: 2.2rem;
+        font-weight: 900;
+    }
+    
+    .notice-content {
+        color: #555;
+        line-height: 1.8;
+        font-size: 1.2rem;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .notice-content ul {
+        margin-top: 25px;
+        padding-left: 25px;
+    }
+    
+    .notice-content li {
+        margin-bottom: 15px;
+        padding-left: 10px;
+        position: relative;
+        font-size: 1.1rem;
+    }
+    
+    .notice-content li::before {
+        content: "•";
+        color: var(--nuu-gold);
+        font-weight: bold;
+        position: absolute;
+        left: -20px;
+        font-size: 1.8rem;
+        line-height: 1;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+        text-align: center;
+        padding: 70px 40px;
+        background: var(--gradient-primary);
+        color: white;
+        border-radius: var(--border-radius);
+        margin-bottom: 60px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .cta-section::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: 
+            radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+    }
+    
+    .cta-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .cta-title {
+        font-size: 2.8rem;
+        font-weight: 900;
+        margin-bottom: 25px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .cta-buttons {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+    
+    .cta-btn {
+        padding: 18px 40px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        transition: var(--transition);
+        min-width: 200px;
+        justify-content: center;
+    }
+    
+    .cta-btn-primary {
+        background: white;
+        color: var(--nuu-blue);
+    }
+    
+    .cta-btn-secondary {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: white;
+    }
+    
+    .cta-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
+    
+    .cta-btn-primary:hover {
+        background: #f8fafc;
+        color: var(--nuu-blue);
+    }
+    
+    .cta-btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.25);
+        color: white;
+    }
+    
+    /* Responsive */
+    @media (max-width: 1200px) {
+        .hero-title { font-size: 3.5rem; }
+        .timeline::before { left: 30px; }
+        .timeline-item { width: 100%; left: 0 !important; padding-left: 80px; padding-right: 0; }
+        .timeline-content::before { left: -10px !important; right: auto !important; }
+        .timeline-number { left: 10px !important; right: auto !important; }
+    }
+    
+    @media (max-width: 992px) {
+        .hero-section { padding: 80px 0; }
+        .hero-title { font-size: 3rem; }
+        .hero-subtitle { font-size: 1.3rem; }
+        .platform-card { padding: 40px; }
+        .documents-grid { grid-template-columns: 1fr; }
+    }
+    
+    @media (max-width: 768px) {
+        .hero-section { 
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        .hero-title { 
+            font-size: 2.5rem;
+            line-height: 1.3;
+        }
+        .hero-badge { 
+            padding: 12px 25px; 
+            font-size: 1rem; 
+        }
+        .platform-title { font-size: 2rem; }
+        .section-title { font-size: 2.5rem; }
+        .document-card { padding: 30px; }
+        .important-notice { padding: 30px; }
+        .notice-title { font-size: 1.8rem; }
+        .cta-title { font-size: 2.2rem; }
+        .cta-buttons { flex-direction: column; align-items: center; }
+        .cta-btn { width: 100%; max-width: 300px; }
+    }
+    
+    @media (max-width: 576px) {
+        .hero-title { font-size: 2rem; }
+        .platform-card { padding: 30px 20px; }
+        .platform-link { padding: 15px 30px; font-size: 1.1rem; }
+        .document-icon { width: 70px; height: 70px; font-size: 1.8rem; }
+        .document-title { font-size: 1.5rem; }
+        .requirements-table { padding: 20px; }
+        .notice-header { flex-direction: column; text-align: center; gap: 15px; }
+    }
+</style>
+
+<!-- Hero Section -->
+
+
+<div class="container">
+    <div class="page-header">
+        <div class="page-header-content">
+            <h1>MAGISTRATURA HUJJATLARI </h1>
+            <p>Oliy ta'lim muassasalari magistrlik mutaxassisligi bo'yicha ro'yxatdan o'tishda talab qilinadigan barcha hujjatlar va talablar</p>
+            <div class="university-badge">
+                <i class="fas fa-university"></i>
+                <span>SAMDU Urgut Filiali</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Platform Card -->
+    <div class="platform-card">
+        <div class="platform-icon">
+            <i class="fas fa-laptop-code"></i>
+        </div>
+        <h2 class="platform-title">Onlayn Ro'yxatdan O'tish Platformasi</h2>
+        <p class="platform-description">
+            Oliy ta'lim muassasalari magistrlik mutaxassisligi bo'yicha onlayn ro'yxatdan o'tish 
+            faqat rasmiy platforma orqali amalga oshiriladi. Barcha hujjatlar elektron shaklda yuklanadi.
+        </p>
+        <a href="https://magistr.edu.uz/" target="_blank" class="platform-link">
+            <i class="fas fa-external-link-alt"></i>
+            magistr.edu.uz ga o'tish
+        </a>
+    </div>
+
+    <!-- Documents Section -->
+    <div class="documents-section">
+        <h2 class="section-title">Talab Qilinadigan Hujjatlar</h2>
+        
+        <div class="documents-grid">
+            <!-- Document 1 -->
+            
+            
+            <!-- Document 2 -->
+            <div class="document-card">
+                <div class="document-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="document-title">Diplom</h3>
+                <p class="document-description">
+                    Bakalavr yoki mutaxassislik darajasini tasdiqlovchi diplom va ilova (qo'shimcha varaq) skaner nusxalari.
+                </p>
+                <div class="document-requirements">
+                    <h4><i class="fas fa-clipboard-check"></i> Talablar:</h4>
+                    <ul class="requirements-list">
+                        <li><i class="fas fa-check-circle"></i> Asl diplom skaner nusxasi</li>
+                        <li><i class="fas fa-check-circle"></i> Ilova (qo'shimcha varaq) nusxasi</li>
+                        <li><i class="fas fa-check-circle"></i> Notarial tasdiqlangan tarjimasi</li>
+                        <li><i class="fas fa-check-circle"></i> O'rtacha baho ko'rsatilgan</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Document 3 -->
+            <div class="document-card">
+                <div class="document-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3 class="document-title">Til Bilishi Sertifikati</h3>
+                <p class="document-description">
+                    Chet tillarini bilish darajasini tasdiqlovchi xalqaro sertifikat (IELTS, TOEFL yoki boshqa tan olingan sertifikatlar).
+                </p>
+                <div class="document-requirements">
+                    <h4><i class="fas fa-clipboard-check"></i> Qabul qilinadigan sertifikatlar:</h4>
+                    <ul class="requirements-list">
+                        <li><i class="fas fa-certificate"></i> IELTS (minimum 5.5)</li>
+                        <li><i class="fas fa-certificate"></i> TOEFL (minimum 72)</li>
+                        <li><i class="fas fa-certificate"></i> CEFR (minimum B2)</li>
+                        <li><i class="fas fa-certificate"></i> Milliy sertifikatlar</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Document 4 -->
+            <div class="document-card">
+                <div class="document-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 class="document-title">Imtiyoz Hujjatlari</h3>
+                <p class="document-description">
+                    Imtiyozi mavjud bo'lganda, imtiyozni tasdiqlovchi hujjatlar (olimpiada g'olibi, nogironlik guvohnomasi va boshqalar).
+                </p>
+                <div class="document-requirements">
+                    <h4><i class="fas fa-clipboard-check"></i> Imtiyoz turlari:</h4>
+                    <ul class="requirements-list">
+                        <li><i class="fas fa-medal"></i> Olimpiada g'oliblari</li>
+                        <li><i class="fas fa-wheelchair"></i> Nogironlik guvohnomasi</li>
+                        <li><i class="fas fa-user-shield"></i> Orphan yoki kam ta'minlangan</li>
+                        <li><i class="fas fa-star"></i> Maxsus yutuqlar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Requirements Table -->
+    <div class="requirements-table">
+        <h3 class="table-title">
+            <i class="fas fa-table"></i>
+            Hujjatlar Talablari Jadvali
+        </h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hujjat Turi</th>
+                        <th>Format</th>
+                        <th>Max Fayl Hajmi</th>
+                        <th>Majburiylik</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pasport (asosiy sahifa)</td>
+                        <td>PDF, JPG, PNG</td>
+                        <td>5 MB</td>
+                        <td><span class="status-badge status-required">Majburiy</span></td>
+                    </tr>
+                    <tr>
+                        <td>Pasport (propiska sahifasi)</td>
+                        <td>PDF, JPG, PNG</td>
+                        <td>5 MB</td>
+                        <td><span class="status-badge status-required">Majburiy</span></td>
+                    </tr>
+                    <tr>
+                        <td>Diplom (asl nusxa)</td>
+                        <td>PDF</td>
+                        <td>10 MB</td>
+                        <td><span class="status-badge status-required">Majburiy</span></td>
+                    </tr>
+                    <tr>
+                        <td>Diplom ilovasi</td>
+                        <td>PDF</td>
+                        <td>10 MB</td>
+                        <td><span class="status-badge status-required">Majburiy</span></td>
+                    </tr>
+                    <tr>
+                        <td>Til sertifikati</td>
+                        <td>PDF, JPG</td>
+                        <td>8 MB</td>
+                        <td><span class="status-badge status-optional">Majburiy emas</span></td>
+                    </tr>
+                    <tr>
+                        <td>Imtiyoz hujjati</td>
+                        <td>PDF, JPG</td>
+                        <td>5 MB</td>
+                        <td><span class="status-badge status-optional">Imtiyoz bo'lsa</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Process Timeline -->
+    <div class="process-timeline">
+        <h2 class="section-title">Ro'yxatdan O'tish Jarayoni</h2>
+        
+        <div class="timeline">
+            <!-- Step 1 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-number">1</div>
+                    <h3 class="timeline-title">Platformaga Kirish</h3>
+                    <p>magistr.edu.uz saytiga kirish va ro'yxatdan o'tish</p>
+                </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-number">2</div>
+                    <h3 class="timeline-title">Shaxsiy Kabinet</h3>
+                    <p>Shaxsiy kabinet yaratish va ma'lumotlarni to'ldirish</p>
+                </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-number">3</div>
+                    <h3 class="timeline-title">Hujjatlarni Yuklash</h3>
+                    <p>Barcha talab qilinadigan hujjatlarni yuklash</p>
+                </div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-number">4</div>
+                    <h3 class="timeline-title">Ariza Yuborish</h3>
+                    <p>To'liq to'ldirilgan arizani yuborish</p>
+                </div>
+            </div>
+            
+            <!-- Step 5 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-number">5</div>
+                    <h3 class="timeline-title">Tekshiruv va Tasdiqlash</h3>
+                    <p>Hujjatlarni tekshirish va natijani kutish</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Important Notice -->
+    <div class="important-notice">
+        <div class="notice-header">
+            <div class="notice-icon">⚡️</div>
+            <h2 class="notice-title">Muhim Eslatmalar</h2>
+        </div>
+        <div class="notice-content">
+            <p>Magistraturaga ro'yxatdan o'tishda quyidagi nuqtalarga alohida e'tibor bering:</p>
+            <ul>
+                <li>Barcha hujjatlar elektron shaklda yuklanadi, qog'oz nusxalar talab qilinmaydi</li>
+                <li>Hujjatlar faqat magistr.edu.uz platformasi orqali qabul qilinadi</li>
+                <li>Til sertifikati majburiy emas, lekin qo'shimcha imtiyoz beradi</li>
+                <li>Imtiyoz hujjatlari faqat mavjud bo'lganda taqdim etiladi</li>
+                <li>Diplom tarjimasi notarial tasdiqlangan bo'lishi kerak</li>
+                <li>Ariza yuborish muddati cheklangan, vaqtida bajaring</li>
+                <li>Shaxsiy ma'lumotlarni to'g'ri va to'liq kiritish zarur</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">Ro'yxatdan O'tishni Boshlang</h2>
+            <p style="font-size: 1.3rem; opacity: 0.95; max-width: 600px; margin: 0 auto;">
+                Magistraturaga ro'yxatdan o'tish jarayonini hoziroq boshlang va o'z kelajagingizni quring.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="https://magistr.edu.uz/" target="_blank" class="cta-btn cta-btn-primary">
+                    <i class="fas fa-play-circle"></i>
+                    Ro'yxatdan O'tishni Boshlash
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add animations to cards
+        const cards = document.querySelectorAll('.document-card, .platform-card');
+        
+        cards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+        
+        // Add hover effect to timeline items
+        const timelineItems = document.querySelectorAll('.timeline-content');
+        
+        timelineItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.zIndex = '10';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.zIndex = '1';
+            });
+        });
+        
+        
+        // Smooth scroll for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add platform link tracking
+        const platformLink = document.querySelector('.platform-link');
+        if (platformLink) {
+            platformLink.addEventListener('click', function() {
+                // In real application, you would track this click
+                console.log('Platform link clicked:', this.href);
+            });
+        }
+    });
+</script>
+
+{% endblock %}
