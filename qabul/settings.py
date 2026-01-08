@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'news',
     'employees',
     'Abituriyent',
+    'django_ckeditor_5',
+    'xorijiy.apps.XorijiyConfig',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +142,27 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10MB
 # Ruxsat etilgan fayl kengaytmalari
 ALLOWED_EXTENSIONS = ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png', 'xls', 'xlsx', 'zip', 'rar', 'txt']
 
+CKEDITOR_5_CONFIGS = {
+    'default': {
+        'toolbar': [
+            'heading', '|',
+            'bold', 'italic', 'underline', 'strikethrough', '|',
+            'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', '|',
+            'alignment', '|',
+            'numberedList', 'bulletedList', '|',
+            'insertTable', '|',
+            'link', 'imageUpload', '|',
+            'sourceEditing', '|',
+            'undo', 'redo'
+        ],
+        'table': {
+            'contentToolbar': [
+                'tableColumn',
+                'tableRow',
+                'mergeTableCells',
+                'tableCellProperties',
+                'tableProperties'
+            ]
+        }
+    }
+}

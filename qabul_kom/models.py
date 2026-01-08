@@ -1,24 +1,5 @@
 from django.db import models
 
-class TeamMember(models.Model):
-    full_name = models.CharField(max_length=150, verbose_name='F.I.SH')
-    profession = models.CharField(max_length=150, verbose_name='Lavozimi')
-    image = models.ImageField(upload_to='team/', verbose_name='rasm 300 x 300 px ')
-    
-    facebook = models.URLField(blank=True, null=True)
-    twitter = models.URLField(blank=True, null=True)
-    linkedin = models.URLField(blank=True, null=True)
-    instagram = models.URLField(blank=True, null=True)
-
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        verbose_name = "Qabul komissiyasi tarkibi "
-        verbose_name_plural = "Qabul komissiyasi tarkibi"
-
-    def __str__(self):
-        return self.full_name
-
 
 
 from django.db import models

@@ -54,16 +54,23 @@ class Privilege(models.Model):
         return self.title
 
 
-
+from django.db import models
+from django_ckeditor_5.fields import CKEditor5Field
 
 class QabulKvotasi(models.Model):
-    title = models.CharField(max_length=255, verbose_name="Sarlavha")
-    file = models.FileField(upload_to='qabul_kvotasi/', verbose_name="Word fayl")
+    title = models.CharField(
+        max_length=255,
+        verbose_name="Sarlavha"
+    )
+    content = CKEditor5Field(
+        'Qabul kvotasi matni',
+        config_name='default'
+    )
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = "Qabul kvotasi"
-        verbose_name_plural = "Qabul kvotalari"
+        verbose_name_plural = "Qabul kvotasi"
 
     def __str__(self):
         return self.title

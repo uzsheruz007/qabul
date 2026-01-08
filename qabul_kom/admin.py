@@ -1,17 +1,5 @@
 from django.contrib import admin
-from .models import TeamMember
-
-@admin.register(TeamMember)
-class TeamMemberAdmin(admin.ModelAdmin):
-    list_display = ('full_name', 'profession', 'created_at')
-    search_fields = ('full_name', 'profession')
-    list_filter = ('created_at',)
-
-
-
-
 from django.contrib import admin
-from django.utils.html import format_html
 from .models import  Document, ImportantNote, AdmissionRule, Deadline
 
 

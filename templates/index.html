@@ -119,12 +119,8 @@
                                     <span class="dropdown-toggle">Bakalavriat</span>
                                 </a>
                                 <div class="dropdown-menu">
-                                    <a href="{%url 'hujjatlar'%}" class="dropdown-item">Hujjatlar Tuplami</a>
-                                    <a href="feature.html" class="dropdown-item">Our Features</a>
-                                    <a href="team.html" class="dropdown-item">Our team</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                    <a href="FAQ.html" class="dropdown-item">FAQs</a>
-                                    <a href="404.html" class="dropdown-item">404 Page</a>
+                                    <a href="{% url 'hujjatlar'%}" class="dropdown-item">Hujjatlar Tuplami</a>
+                                    <a href="{% url 'qabul_kvotasi'%}" class="dropdown-item">Qabul Kvotasi</a>
                                 </div>
                             </div>
 
@@ -152,6 +148,8 @@
                                     <a href="FAQ.html" class="dropdown-item">Magistartura natijalari</a>
                                 </div>
                             </div>
+
+                            <a href="{% url 'post_list'%}" class="nav-item nav-link active">Yangiliklar</a>
                             
                         </div>
                     </div>

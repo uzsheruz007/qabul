@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        
+        .section-title {
+            color: #2980b9;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .errorlist {
+            color: #e74c3c;
+            margin: 5px 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .helptext {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: block;
+        }
+        
+        .required {
+            color: #e74c3c;
+        }
+        
+        button {
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+        
+        button:hover {
+            background: #2980b9;
+        }
+        
+        .terms {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bilasan Universiteti - Xorijlik Talabalar Ariza Formasi</h1>
+        
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <!-- Shaxsiy ma'lumotlar -->
+            <div class="form-section">
+                <h2 class="section-title">1. Shaxsiy ma'lumotlar</h2>
+                <div class="form-group">
+                    {{ form.full_name.label_tag }}<span class="required">*</span>
+                    {{ form.full_name }}
+                    {{ form.full_name.errors }}
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                    <div class="form-group">
+                        {{ form.date_of_birth.label_tag }}<span class="required">*</span>
+                        {{ form.date_of_birth }}
+                        {{ form.date_of_birth.errors }}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.gender.label_tag }}<span class="required">*</span>
+                        {{ form.gender }}
+                        {{ form.gender.errors }}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.nationality.label_tag }}<span class="required">*</span>
+                        {{ form.nationality }}
+                        {{ form.nationality.errors }}
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Passport ma'lumotlari -->
+            <div class="form-section">
+                <h2 class="section-title">2. Passport ma'lumotlari</h2>
+                <div class="form-group">
+                    {{ form.passport_number.label_tag }}<span class="required">*</span>
+                    {{ form.passport_number }}
+                    {{ form.passport_number.errors }}
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                    <div class="form-group">
+                        {{ form.passport_issue_date.label_tag }}<span class="required">*</span>
+                        {{ form.passport_issue_date }}
+                        {{ form.passport_issue_date.errors }}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.passport_expiry_date.label_tag }}<span class="required">*</span>
+                        {{ form.passport_expiry_date }}
+                        {{ form.passport_expiry_date.errors }}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.passport_photo.label_tag }}<span class="required">*</span>
+                        {{ form.passport_photo }}
+                        {{ form.passport_photo.errors }}
+                        <span class="helptext">{{ form.passport_photo.help_text }}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Aloqa ma'lumotlari -->
+            <div class="form-section">
+                <h2 class="section-title">3. Aloqa ma'lumotlari</h2>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                    <div class="form-group">
+                        {{ form.email.label_tag }}<span class="required">*</span>
+                        {{ form.email }}
+                        {{ form.email.errors }}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.confirm_email.label_tag }}<span class="required">*</span>
+                        {{ form.confirm_email }}
+                        {{ form.confirm_email.errors }}
+                        <span class="helptext">{{ form.confirm_email.help_text }}</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    {{ form.phone.label_tag }}<span class="required">*</span>
+                    {{ form.phone }}
+                    {{ form.phone.errors }}
+                </div>
+                
+                <div class="form-group">
+                    {{ form.address.label_tag }}<span class="required">*</span>
+                    {{ form.address }}
+                    {{ form.address.errors }}
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                    <div class="form-group">
+                        {{ form.city.label_tag }}<span class="required">*</span>
+                        {{ form.city }}
+                        {{ form.city.errors }}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.postal_code.label_tag }}
+                        {{ form.postal_code }}
+                        {{ form.postal_code.errors }}
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ta'lim ma'lumotlari -->
+            <div class="form-section">
+                <h2 class="section-title">4. Ta'lim ma'lumotlari</h2>
+                <div class="form-group">
+                    {{ form.study_program.label_tag }}<span class="required">*</span>
+                    {{ form.study_program }}
+                    {{ form.study_program.errors }}
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                    <div class="form-group">
+                        {{ form.previous_education.label_tag }}<span class="required">*</span>
+                        {{ form.previous_education }}
+                        {{ form.previous_education.errors }}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.previous_institution.label_tag }}<span class="required">*</span>
+                        {{ form.previous_institution }}
+                        {{ form.previous_institution.errors }}
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                    <div class="form-group">
+                        {{ form.graduation_year.label_tag }}<span class="required">*</span>
+                        {{ form.graduation_year }}
+                        {{ form.graduation_year.errors }}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.gpa.label_tag }}<span class="required">*</span>
+                        {{ form.gpa }}
+                        {{ form.gpa.errors }}
+                        <span class="helptext">{{ form.gpa.help_text }}</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.diploma_copy.label_tag }}<span class="required">*</span>
+                        {{ form.diploma_copy }}
+                        {{ form.diploma_copy.errors }}
+                        <span class="helptext">{{ form.diploma_copy.help_text }}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Qo'shimcha ma'lumotlar -->
+            <div class="form-section">
+                <h2 class="section-title">5. Qo'shimcha ma'lumotlar</h2>
+                <div class="form-group">
+                    {{ form.motivation_letter.label_tag }}<span class="required">*</span>
+                    {{ form.motivation_letter }}
+                    {{ form.motivation_letter.errors }}
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                    <div class="form-group">
+                        {{ form.emergency_contact_name.label_tag }}<span class="required">*</span>
+                        {{ form.emergency_contact_name }}
+                        {{ form.emergency_contact_name.errors }}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.emergency_contact_phone.label_tag }}<span class="required">*</span>
+                        {{ form.emergency_contact_phone }}
+                        {{ form.emergency_contact_phone.errors }}
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shartlar -->
+            <div class="terms">
+                <h2 class="section-title">6. Shartlar va qoidalar</h2>
+                <p>Men quyidagi shartlarga roziman:</p>
+                <ul>
+                    <li>Barcha ma'lumotlarim to'g'ri va haqiqiydir</li>
+                    <li>Noto'g'ri ma'lumot keltirgan taqdirda arizam bekor qilinishi mumkin</li>
+                    <li>Shaxsiy ma'lumotlarim qabul jarayonida ishlatilishiga roziman</li>
+                </ul>
+                
+                <div class="form-group">
+                    {{ form.agree_terms }}
+                    {{ form.agree_terms.label_tag }}<span class="required">*</span>
+                    {{ form.agree_terms.errors }}
+                </div>
+            </div>
+            
+            <button type="submit">Ariza yuborish</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,14 +1,9 @@
 from django.shortcuts import render
-from .models import TeamMember
 
 
 
 
 
-def about(request):
-    about = TeamMember.objects.all()
-    
-    return render(request, 'about.html', {'about': about})
 
 def hujjatlar(request):
     return render(request, 'hujjatlar.html' )

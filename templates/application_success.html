@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .success-icon {
+            font-size: 80px;
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .info-item {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .info-value {
+            color: #34495e;
+        }
+        
+        .next-steps {
+            background: #e8f4fc;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .next-steps h3 {
+            color: #2980b9;
+            margin-top: 0;
+        }
+        
+        .next-steps ul {
+            padding-left: 20px;
+        }
+        
+        .buttons {
+            margin-top: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        .btn-home {
+            background: #2ecc71;
+        }
+        
+        .btn-home:hover {
+            background: #27ae60;
+        }
+        
+        .application-id {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e74c3c;
+            background: #f9ebea;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">✓</div>
+        <h1>Arizangiz muvaffaqiyatli qabul qilindi!</h1>
+        
+        <p>Hurmatli <strong>{{ application.full_name }}</strong>, sizning arizangiz muvaffaqiyatli qabul qilindi.</p>
+        
+        <div class="application-id">
+            Ariza raqami: #{{ application.id }}
+        </div>
+        
+        <div class="info-box">
+            <h2>Ariza ma'lumotlari</h2>
+            <div class="info-item">
+                <span class="info-label">To'liq ism:</span>
+                <span class="info-value">{{ application.full_name }}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">O'quv dasturi:</span>
+                <span class="info-value">{{ application.study_program.name }}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Elektron pochta:</span>
+                <span class="info-value">{{ application.email }}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Ariza sanasi:</span>
+                <span class="info-value">{{ application.application_date|date:"Y-m-d H:i" }}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Holati:</span>
+                <span class="info-value">{{ application.get_status_display }}</span>
+            </div>
+        </div>
+        
+        <div class="next-steps">
+            <h3>Keyingi qadamlaringiz:</h3>
+            <ul>
+                <li>Arizangiz haqidagi ma'lumot elektron pochtangizga yuborildi</li>
+                <li>Arizangizni ko'rib chiqish jarayoni 5-7 ish kunida amalga oshiriladi</li>
+                <li>Holatingiz haqida ma'lumot elektron pochtangizga yuboriladi</li>
+                <li>Qo'shimcha savollar uchun: qabul@bilasan.uz</li>
+            </ul>
+        </div>
+        
+        <div class="buttons">
+            <a href="/" class="btn btn-home">Bosh sahifaga qaytish</a>
+            <a href="/check-status/" class="btn">Ariza holatini tekshirish</a>
+        </div>
+        
+        <p style="margin-top: 30px; color: #7f8c8d; font-size: 14px;">
+            Rahmat! Bilasan Universiteti jamoasi siz bilan bog'lanishni kutmoqda.
+        </p>
+    </div>
+</body>
+</html>
