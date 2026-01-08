@@ -2,8 +2,8 @@ from django.urls import path
 from . import views
 from news.views import PostListView, post_detail, index
 from Abituriyent.views import PrivilegeListView, qabul_kvotasi
-from xorijiy.views import home2, application_form, check_status, application_success
 from employees.views import KomissiyaView
+from xorijiy.views import foreign_student_request, bakalaver, magistr, shartnoma, kontrakt
 
 urlpatterns = [
     # HOME
@@ -13,15 +13,17 @@ urlpatterns = [
     path("meyor/", views.RegulatoryDocumentsView.as_view(), name='meyor'),
     path("qabul/", views.qabul_kunlari, name='qabul'),
     path('qabul_kvotasi/', qabul_kvotasi, name='qabul_kvotasi'),
+    path('bakalaver/', bakalaver, name='bakalaver'),
+    path('magistr/', magistr, name='magistr'),
+    path('shartnoma/', shartnoma, name='shartnoma'),
+    path('kontrakt/', kontrakt, name='kontrakt'),
     path('komissiya/', KomissiyaView.as_view(), name='komissiya'),
     path('privileges/', PrivilegeListView.as_view(), name='privileges'),
     path('hujjatlar/', views.hujjatlar, name='hujjatlar'),
 
     # XORIJIY TALABALAR
-    path('xorij/', home2, name='home2'),
-    path('apply/', application_form, name='application_form'),
-    path('check-status/', check_status, name='check_status'),
-    path('success/<int:application_id>/', application_success, name='application_success'),
+    path('foreign/', foreign_student_request, name='foreign_request'),
+
 
     # YANGILIKLAR
     path('yangiliklar/', PostListView.as_view(), name='post_list'),
@@ -36,6 +38,5 @@ urlpatterns = [
     path('api/download/increment/', views.increment_download_count, name='increment_download'),
     path('api/admission/info/', views.get_admission_info, name='admission_info'),
 
-    # ❗ ENG OXIRIDA ❗
     path('<slug:slug>/', post_detail, name='post_detail'),
 ]

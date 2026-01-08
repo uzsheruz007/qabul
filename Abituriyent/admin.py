@@ -2,7 +2,6 @@ from django.contrib import admin
 from .models import Privilege, PrivilegeCategory
 
 from .models import QabulKvotasi
-from django.shortcuts import render
 
 @admin.register(PrivilegeCategory)
 class PrivilegeCategoryAdmin(admin.ModelAdmin):
@@ -23,3 +22,5 @@ class PrivilegeAdmin(admin.ModelAdmin):
 @admin.register(QabulKvotasi)
 class QabulKvotasiAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_at')
+
+

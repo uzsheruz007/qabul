@@ -1,0 +1,4226 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-01-04T17:17:33.338Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Cherokee Cantu",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-01-04T17:56:03.383Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Qabul komissiyasi raisi – Madjidov Inomjon Urishevich",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-01-04T17:56:58.698Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Distinctio Rerum sed id corrupti voluptatem",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-01-05T03:47:18.885Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "Alias fugit delectus ut doloribus excepteur eius eum qui est quidem ut asperiores delectus fugit – Enim totam molestias natus aut nisi qui temporibus corrupti",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-01-05T03:47:26.560Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "3",
+    "object_repr": "Quia a ea esse architecto iusto et – Sed dolor velit labore do laboriosam dolores sint sunt sunt qui asperiores numquam minima id dolore a est non ut",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-01-05T03:47:54.907Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Kalia Haley",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-01-05T03:48:25.476Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Cain Sweeney",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-01-05T03:49:03.343Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Isabelle Shaffer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-01-05T03:50:00.154Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Fugit qui debitis fugiat consequatur quae sed molestias exercitation odit tempor fugiat et et ut eum voluptas maxime (2026-01-05 - 2026-01-05)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-01-05T03:50:10.589Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Officia sit veniam quia sit quis doloribus eveniet sed molestiae qui ad dolores et eos officia",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-01-05T04:44:04.472Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Distinctio Rerum sed id corrupti voluptatem",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Faol\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-01-05T05:10:26.271Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Rudyard Powell11",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-01-05T05:12:00.024Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Non est ad laborum nesciunt irure recusandae Inventore voluptate in ut non",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-01-05T05:13:04.061Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Non est ad laborum nesciunt irure recusandae Inventore voluptate in ut non",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Mazmuni\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-01-05T05:15:02.603Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Non est ad laborum nesciunt irure recusandae Inventore voluptate in ut non",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Faol\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-01-05T05:15:13.149Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Non est ad laborum nesciunt irure recusandae Inventore voluptate in ut non",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Faol\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-01-05T05:17:23.922Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Repudiandae tempora nostrum velit non (2026-01-05 - 2026-01-05)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-01-05T15:33:40.326Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "E'lonlar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-01-05T15:33:49.961Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "Yangiliklar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-01-05T15:36:03.319Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "salom",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-01-05T16:48:05.504Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "1",
+    "object_repr": "E'lonlar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-01-05T16:48:13.337Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "2",
+    "object_repr": "Yangiliklar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-01-05T16:53:09.893Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "1",
+    "object_repr": "salom",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-01-05T16:53:43.753Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "1",
+    "object_repr": "salom",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-01-05T17:04:49.903Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "2",
+    "object_repr": "salom1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-01-05T17:05:10.251Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "2",
+    "object_repr": "salom1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-01-05T17:05:38.267Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "2",
+    "object_repr": "salom1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-01-05T17:06:21.956Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "3",
+    "object_repr": "sal",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-01-05T17:13:40.943Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "4",
+    "object_repr": "sa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-01-05T17:14:52.304Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "5",
+    "object_repr": "sa11",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-01-05T17:21:38.887Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "6",
+    "object_repr": "qw1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-01-05T17:22:02.477Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "7",
+    "object_repr": "11",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-01-05T17:22:25.997Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "8",
+    "object_repr": "e1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-01-05T17:22:55.523Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "8",
+    "object_repr": "e1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is main\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-01-05T17:24:11.724Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "9",
+    "object_repr": "222",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-01-06T15:31:18.674Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "1",
+    "object_repr": "Fuga Voluptatem velit fugiat velit porro dolorem quia pariatur Omnis Quidem aut officia reiciendis voluptatem sunt id (Dolore dignissimos et pariatur Voluptate)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-01-06T15:41:41.198Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "2",
+    "object_repr": "Duis corporis cupiditate ut dignissimos nemo magnam sint nisi qui magna sequi eligendi Voluptates quaerat dolor voluptatibus officia quos cum autem ratione delectus et officiis (Aliqua Eu culpa deleni",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-01-06T15:41:45.955Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "3",
+    "object_repr": "In tempor assumenda ea voluptates voluptatem asperiores molestiae dolore sunt dolorum Aut ullamco quis lorem est nostrum rerum cumque adipisci quos (Nobis est odit et dolore dolore rem magni corrupti)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-01-06T15:41:49.190Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "4",
+    "object_repr": "Ea ad molestiae velit officia est qui molestiae voluptate dolore pariatur Aut ipsa hic sint Ullam quae labore labore laudantium sed suscipit ut commodi culpa dolor voluptatum sit est ut et p (Illum do",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-01-06T15:41:56.874Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "5",
+    "object_repr": "Consequatur aliqua Excepturi temporibus voluptas exercitationem aut proident lorem culpa aute et Anim sed et dolor deserunt consequuntur et (Tempore consequatur dolore fuga Sunt alias ullam)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-01-06T15:42:01.190Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "6",
+    "object_repr": "Enim quia elit cum do rem assumenda velit neque et consequatur Expedita et aspernatur culpa qui mollit voluptatem aut (Est nostrud excepteur qui id impedit)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-01-06T15:42:30.781Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "6",
+    "object_repr": "Enim quia elit cum do rem assumenda velit neque et consequatur Expedita et aspernatur culpa qui mollit voluptatem aut (Est nostrud excepteur qui id impedit)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-01-06T15:43:43.993Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "7",
+    "object_repr": "Magnam fugiat veniam recusandae Soluta animi aut commodi animi id excepturi et blanditiis Voluptas consequat Dignissimos mollit perspiciatis esse voluptatem Consectetur do consequatur (Cumque anim fug",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-01-06T15:44:16.133Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "8",
+    "object_repr": "Et Nam eum similique sit incidunt id A dolore molestiae esse fugit illo non labore dolores itaque assumenda tempor voluptate voluptates (Veritatis quia aperiam id ab excepturi sit id)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-01-06T15:44:26.649Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "9",
+    "object_repr": "Quia adipisci delectus unde nostrum aute minim qui eveniet consequatur Esse sed corporis quasi s Dicta reprehenderit nemo ipsa placeat dolor ut quia nihil voluptatem sint similique voluptatem (Dolore ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-01-06T17:08:58.064Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "9",
+    "object_repr": "222",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-01-06T17:08:58.065Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "8",
+    "object_repr": "e1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-01-06T17:30:04.386Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "9",
+    "object_repr": "222",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-01-06T17:30:04.388Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "8",
+    "object_repr": "e1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-01-06T18:28:40.189Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "4",
+    "object_repr": "Valiyev ALI (Illum do aperiam ducimus ex quis est officia vel)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ism\", \"Familiya\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-01-06T18:29:17.447Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "7",
+    "object_repr": "Valiyev ALI (Cumque anim fugit deserunt incidunt sed elit in)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ism\", \"Familiya\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-01-06T18:29:40.176Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "4",
+    "object_repr": "Valiyev ALI (Illum do aperiam ducimus ex quis est officia vel)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rasm\", \"Tartib\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-01-06T18:30:24.847Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "5",
+    "object_repr": "Valiyev ALI (Tempore consequatur dolore fuga Sunt alias ullam)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ism\", \"Familiya\", \"Rasm\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-01-06T18:30:40.661Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "7",
+    "object_repr": "Valiyev ALI (Cumque anim fugit deserunt incidunt sed elit in)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rasm\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-01-06T18:31:05.025Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "6",
+    "object_repr": "salommm salom (Est nostrud excepteur qui id impedit)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ism\", \"Familiya\", \"Rasm\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-01-06T18:31:18.344Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "3",
+    "object_repr": "sdjasnd asdasj asdsdssada (Nobis est odit et dolore dolore rem magni corrupti)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ism\", \"Familiya\", \"Rasm\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-01-06T18:31:38.471Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "1",
+    "object_repr": "salommm ssdsdswsw (Dolore dignissimos et pariatur Voluptate)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ism\", \"Familiya\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-01-06T18:31:52.638Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "2",
+    "object_repr": "Valiyev salom (Aliqua Eu culpa deleniti quia rerum expedita quo)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ism\", \"Familiya\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-01-06T18:32:07.873Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "9",
+    "object_repr": "salommm salom (Dolore nostrud mollitia quibusdam optio quam anim)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ism\", \"Familiya\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-01-06T18:32:52.912Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "3",
+    "object_repr": "sdjasnd asdasj asdsdssada (Nobis est odit et dolore dolore rem magni corrupti)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tartib\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-01-06T18:33:04.345Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "6",
+    "object_repr": "salommm salom (Est nostrud excepteur qui id impedit)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tartib\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-01-07T06:12:14.681Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "1",
+    "object_repr": "Imtihonsiz qoʻshimcha davlat granti",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-01-07T06:14:12.191Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "2",
+    "object_repr": "Imtihonsiz bazaviy toʻlov-kontrakt asosida",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-01-07T06:15:06.703Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "3",
+    "object_repr": "Tegishli fan boʻyicha imtihondan ozod etilib, maʼlum miqdorda ball berish boʻyicha",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-01-07T06:15:30.619Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "4",
+    "object_repr": "Toʻplangan ballga nisbatan qoʻshimcha ball berish boʻyicha imtiyozlar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-01-07T06:15:50.881Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "5",
+    "object_repr": "Qoʻshimcha kvota doirasida tanlovda ishtirok etish boʻyicha imtiyozlar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2026-01-07T06:16:06.550Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "6",
+    "object_repr": "Qoʻshimcha imtiyozlar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2026-01-07T06:36:19.891Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "1",
+    "object_repr": "Kam ta'minlangan oilalar farzandlari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2026-01-07T06:36:42.100Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "Boquvchisini yo‘qotgan abituriyentlar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2026-01-07T06:37:03.103Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "Respublika fan olimpiadalari g‘oliblari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2026-01-07T06:37:24.076Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "Xalqaro fan olimpiadalari g‘oliblari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2026-01-07T06:37:40.277Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "5",
+    "object_repr": "Sport musobaqalari g‘oliblari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2026-01-07T06:38:09.125Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "6",
+    "object_repr": "Nogironligi bo‘lgan shaxslar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2026-01-07T06:38:22.654Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "6",
+    "object_repr": "Nogironligi bo‘lgan shaxslar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2026-01-07T06:38:43.721Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "7",
+    "object_repr": "Mehribonlik uyi bitiruvchilari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2026-01-07T06:39:00.132Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "8",
+    "object_repr": "Harbiy xizmatchilar farzandlari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2026-01-07T06:39:22.380Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "9",
+    "object_repr": "Yetim bolalar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2026-01-07T06:39:41.395Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "10",
+    "object_repr": "Ijtimoiy himoyaga muhtoj shaxslar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2026-01-07T06:39:57.852Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "11",
+    "object_repr": "Prezident maktablari bitiruvchilari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2026-01-07T06:40:22.359Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "12",
+    "object_repr": "Zulfiya mukofoti sovrindorlari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2026-01-07T06:40:36.676Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "13",
+    "object_repr": "Davlat mukofoti sovrindorlari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2026-01-07T06:40:51.778Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "14",
+    "object_repr": "Xalqaro tanlovlar g‘oliblari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2026-01-07T06:41:09.326Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "15",
+    "object_repr": "Maxsus davlat dasturlari asosidagi imtiyozlar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2026-01-07T06:50:05.934Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "16",
+    "object_repr": "Prezident ta’lim muassasalari agentligi tizimidagi ixtisoslashtirilgan maktablar bitiruvchilari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2026-01-07T06:50:48.686Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "17",
+    "object_repr": "Prezident ta’lim muassasalari agentligi tizimidagi ijod maktablarining bitiruvchilari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2026-01-07T06:51:14.302Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "18",
+    "object_repr": "“Zakovat” intellektual o‘yini g‘oliblari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2026-01-07T06:52:39.079Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "19",
+    "object_repr": "Profilaktika (katta) inspektorlari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2026-01-07T06:54:01.251Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "19",
+    "object_repr": "Profilaktika (katta) inspektorlari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2026-01-07T06:54:01.252Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "16",
+    "object_repr": "Prezident ta’lim muassasalari agentligi tizimidagi ixtisoslashtirilgan maktablar bitiruvchilari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2026-01-07T06:54:01.252Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "18",
+    "object_repr": "“Zakovat” intellektual o‘yini g‘oliblari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2026-01-07T07:02:38.961Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "20",
+    "object_repr": "Chet tili sertifikatiga ega abituriyentlar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2026-01-07T07:02:57.497Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "20",
+    "object_repr": "Chet tili sertifikatiga ega abituriyentlar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2026-01-07T07:03:22.292Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "21",
+    "object_repr": "Musiqa, raqs, teatr, folklor, tasviriy va amaliy san’at hamda dizayn yo‘nalishlari bo‘yicha respublika va xalqaro tanlovlar g‘oliblari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2026-01-07T07:03:48.669Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "22",
+    "object_repr": "“Bolalar sport o‘yinlari”ning respublika bosqichi g‘oliblari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2026-01-07T07:04:10.612Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "23",
+    "object_repr": "Umumta’lim fanlaridan milliy sertifikatga ega abituriyentlar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2026-01-07T07:04:43.203Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "24",
+    "object_repr": "Respublika fan olimpiadalari g‘oliblari (tegishli fan bo‘yicha imtihondan ozod etilib ball beriladigan imtiyoz)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2026-01-07T07:07:17.205Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "25",
+    "object_repr": "“Temurbeklar maktabi” bitiruvchilari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2026-01-07T08:04:31.230Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "26",
+    "object_repr": "Mehribonlik uylari bitiruvchilari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2026-01-07T08:05:10.031Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "27",
+    "object_repr": "Harbiy xizmatchilarning farzandlari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2026-01-07T08:05:29.560Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "28",
+    "object_repr": "Ichki ishlar organlari xodimlarining farzandlari  Huquqiy asosi:",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2026-01-07T08:05:44.969Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "29",
+    "object_repr": "Bojxona organlari xodimlarining farzandlari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2026-01-07T08:06:01.986Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "30",
+    "object_repr": "Nogironligi bo‘lgan shaxslar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2026-01-07T08:06:22.755Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "31",
+    "object_repr": "Ota-onasidan ayrilgan (yetim) bolalar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2026-01-07T08:06:39.929Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "32",
+    "object_repr": "Harbiy oliy o‘quv yurtlariga tavsiyanomaga ega abituriyentlar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2026-01-07T08:07:01.926Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "33",
+    "object_repr": "O‘rmonchilar va ularning farzandlari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2026-01-07T08:08:09.585Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "34",
+    "object_repr": "Umumta’lim muassasalarida fidokorona xizmat qilgan pedagoglar farzandlari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2026-01-07T08:11:58.319Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "34",
+    "object_repr": "Umumta’lim muassasalarida fidokorona xizmat qilgan pedagoglar farzandlari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2026-01-07T08:11:58.320Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "33",
+    "object_repr": "O‘rmonchilar va ularning farzandlari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2026-01-07T08:11:58.320Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "32",
+    "object_repr": "Harbiy oliy o‘quv yurtlariga tavsiyanomaga ega abituriyentlar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2026-01-07T08:11:58.321Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "31",
+    "object_repr": "Ota-onasidan ayrilgan (yetim) bolalar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2026-01-07T08:11:58.321Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "30",
+    "object_repr": "Nogironligi bo‘lgan shaxslar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2026-01-07T08:11:58.322Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "29",
+    "object_repr": "Bojxona organlari xodimlarining farzandlari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2026-01-07T08:11:58.322Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "28",
+    "object_repr": "Ichki ishlar organlari xodimlarining farzandlari  Huquqiy asosi:",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2026-01-07T08:11:58.322Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "27",
+    "object_repr": "Harbiy xizmatchilarning farzandlari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2026-01-07T08:11:58.323Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "26",
+    "object_repr": "Mehribonlik uylari bitiruvchilari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2026-01-07T08:12:55.721Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "35",
+    "object_repr": "Olis cho‘l hududlari aholisi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2026-01-07T08:13:20.639Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "36",
+    "object_repr": "Surxondaryo viloyati Bobotog‘ hududidagi yoshlar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2026-01-07T08:13:40.802Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "37",
+    "object_repr": "Fuqarolarning o‘zini o‘zi boshqarish organlari xodimlari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2026-01-07T08:14:15.142Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "38",
+    "object_repr": "Harbiy qism qo‘mondonligi tavsiyanomasiga ega abituriyentlar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2026-01-07T08:14:43.617Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "39",
+    "object_repr": "Ijtimoiy himoyaga muhtoj xotin-qizlar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2026-01-07T08:18:19.035Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "8",
+    "object_repr": "Harbiy xizmatchilar farzandlari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2026-01-07T08:19:44.809Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "11",
+    "object_repr": "Prezident maktablari bitiruvchilari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2026-01-07T08:20:54.481Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "14",
+    "object_repr": "Xalqaro tanlovlar g‘oliblari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2026-01-07T08:22:25.121Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "15",
+    "object_repr": "O‘zbekiston yoshlar ittifoqining faol a’zolari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Imtiyoz nomi\", \"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2026-01-07T08:23:28.650Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "13",
+    "object_repr": "“Hamshira” respublika tanlovi g‘oliblarI",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Imtiyoz nomi\", \"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2026-01-07T08:24:26.798Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "12",
+    "object_repr": "“Mard o‘g‘lon” davlat mukofoti sohiblari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Imtiyoz nomi\", \"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2026-01-07T08:25:17.246Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "11",
+    "object_repr": "“Mard o‘g‘lon” davlat mukofoti sohiblari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Imtiyoz nomi\", \"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2026-01-07T08:26:15.763Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "10",
+    "object_repr": "Madaniyat vazirligining respublika ko‘rik-tanlovlari g‘oliblari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Imtiyoz nomi\", \"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2026-01-07T08:27:01.269Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "9",
+    "object_repr": "“Nihol” mukofoti sohiblari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Imtiyoz nomi\", \"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2026-01-07T08:28:04.310Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "7",
+    "object_repr": "Zulfiya nomidagi Davlat mukofoti laureatlari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Imtiyoz nomi\", \"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2026-01-07T08:29:25.065Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "6",
+    "object_repr": "Respublika va xalqaro shaxmat va shashka turnirlari  g‘oliblari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Imtiyoz nomi\", \"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2026-01-07T08:30:06.842Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "5",
+    "object_repr": "Respublika va xalqaro sport musobaqalari g‘oliblari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Imtiyoz nomi\", \"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2026-01-07T08:31:10.942Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "Bojxona organlari xodimlarining farzandlari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Imtiyoz nomi\", \"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2026-01-07T08:32:43.290Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "Ichki ishlar organlari xodimlari farzandlari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Imtiyoz nomi\", \"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2026-01-07T08:34:13.615Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "1",
+    "object_repr": "Harbiy xizmatchilarning farzandlari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Imtiyoz nomi\", \"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2026-01-07T08:36:09.533Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "Harbiy qism qo‘mondonligi va O‘zbekiston yoshlar ittifoqining  tavsiyanomasiga ega abituriyentlar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Imtiyoz nomi\", \"Tavsif\", \"Kerakli hujjatlar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2026-01-07T08:37:30.467Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "Harbiy qism qo‘mondonligi va O‘zbekiston yoshlar ittifoqining  tavsiyanomasiga ega abituriyentlar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2026-01-07T08:37:30.468Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "38",
+    "object_repr": "Harbiy qism qo‘mondonligi tavsiyanomasiga ega abituriyentlar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2026-01-07T08:37:30.469Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "39",
+    "object_repr": "Ijtimoiy himoyaga muhtoj xotin-qizlar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2026-01-07T08:37:46.637Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "30",
+    "object_repr": "Nogironligi bo‘lgan shaxslar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2026-01-07T10:10:03.203Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "qabul",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2026-01-07T15:34:18.695Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "qabul",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2026-01-07T15:54:24.201Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "Qabul KVOtasi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2026-01-07T15:54:35.335Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "Qabul Kvotasi",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Sarlavha\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2026-01-07T16:21:03.036Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "Qabul Kvotasi",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Qabul kvotasi matni\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2026-01-07T16:24:09.824Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "Qabul Kvotasi",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2026-01-07T16:25:08.835Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "2",
+    "object_repr": "Qabul kvotasi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2026-01-07T16:50:58.528Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "2",
+    "object_repr": "Qabul kvotasi",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Qabul kvotasi matni\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2026-01-07T16:52:28.791Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "2",
+    "object_repr": "Qabul kvotasi",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Qabul kvotasi matni\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2026-01-07T16:54:27.532Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "2",
+    "object_repr": "Qabul kvotasi",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Qabul kvotasi matni\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2026-01-07T17:30:46.968Z",
+    "user": 1,
+    "content_type": 25,
+    "object_id": "1",
+    "object_repr": "Tojikiston",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2026-01-07T17:49:40.586Z",
+    "user": 1,
+    "content_type": 26,
+    "object_id": "1",
+    "object_repr": "Tyrone Rodgers (PhD)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 3,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 3,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 3,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 3,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 2,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 2,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 2,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 2,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add team member",
+    "content_type": 7,
+    "codename": "add_teammember"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change team member",
+    "content_type": 7,
+    "codename": "change_teammember"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete team member",
+    "content_type": 7,
+    "codename": "delete_teammember"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view team member",
+    "content_type": 7,
+    "codename": "view_teammember"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Qabul qoidasi",
+    "content_type": 8,
+    "codename": "add_admissionrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Qabul qoidasi",
+    "content_type": 8,
+    "codename": "change_admissionrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Qabul qoidasi",
+    "content_type": 8,
+    "codename": "delete_admissionrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Qabul qoidasi",
+    "content_type": 8,
+    "codename": "view_admissionrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add Muddat",
+    "content_type": 9,
+    "codename": "add_deadline"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change Muddat",
+    "content_type": 9,
+    "codename": "change_deadline"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete Muddat",
+    "content_type": 9,
+    "codename": "delete_deadline"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view Muddat",
+    "content_type": 9,
+    "codename": "view_deadline"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add Muhim eslatma",
+    "content_type": 12,
+    "codename": "add_importantnote"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change Muhim eslatma",
+    "content_type": 12,
+    "codename": "change_importantnote"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete Muhim eslatma",
+    "content_type": 12,
+    "codename": "delete_importantnote"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view Muhim eslatma",
+    "content_type": 12,
+    "codename": "view_importantnote"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add Hujjat",
+    "content_type": 10,
+    "codename": "add_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change Hujjat",
+    "content_type": 10,
+    "codename": "change_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete Hujjat",
+    "content_type": 10,
+    "codename": "delete_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view Hujjat",
+    "content_type": 10,
+    "codename": "view_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add Hujjat kategoriyasi",
+    "content_type": 11,
+    "codename": "add_documentcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change Hujjat kategoriyasi",
+    "content_type": 11,
+    "codename": "change_documentcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete Hujjat kategoriyasi",
+    "content_type": 11,
+    "codename": "delete_documentcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view Hujjat kategoriyasi",
+    "content_type": 11,
+    "codename": "view_documentcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add Qabul jadvali",
+    "content_type": 13,
+    "codename": "add_qabuljadvali"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change Qabul jadvali",
+    "content_type": 13,
+    "codename": "change_qabuljadvali"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete Qabul jadvali",
+    "content_type": 13,
+    "codename": "delete_qabuljadvali"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view Qabul jadvali",
+    "content_type": 13,
+    "codename": "view_qabuljadvali"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add Yangiliklar kategoriyasi",
+    "content_type": 15,
+    "codename": "add_newscategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change Yangiliklar kategoriyasi",
+    "content_type": 15,
+    "codename": "change_newscategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete Yangiliklar kategoriyasi",
+    "content_type": 15,
+    "codename": "delete_newscategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view Yangiliklar kategoriyasi",
+    "content_type": 15,
+    "codename": "view_newscategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add Yangilik",
+    "content_type": 14,
+    "codename": "add_news"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change Yangilik",
+    "content_type": 14,
+    "codename": "change_news"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete Yangilik",
+    "content_type": 14,
+    "codename": "delete_news"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view Yangilik",
+    "content_type": 14,
+    "codename": "view_news"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add category",
+    "content_type": 16,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change category",
+    "content_type": 16,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete category",
+    "content_type": 16,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view category",
+    "content_type": 16,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add comment",
+    "content_type": 17,
+    "codename": "add_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change comment",
+    "content_type": 17,
+    "codename": "change_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete comment",
+    "content_type": 17,
+    "codename": "delete_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view comment",
+    "content_type": 17,
+    "codename": "view_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add post",
+    "content_type": 18,
+    "codename": "add_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change post",
+    "content_type": 18,
+    "codename": "change_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete post",
+    "content_type": 18,
+    "codename": "delete_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view post",
+    "content_type": 18,
+    "codename": "view_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add Qabul komissiya a’zosi",
+    "content_type": 19,
+    "codename": "add_qabulkomissiya"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change Qabul komissiya a’zosi",
+    "content_type": 19,
+    "codename": "change_qabulkomissiya"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete Qabul komissiya a’zosi",
+    "content_type": 19,
+    "codename": "delete_qabulkomissiya"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view Qabul komissiya a’zosi",
+    "content_type": 19,
+    "codename": "view_qabulkomissiya"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can add Imtiyoz kategoriyasi",
+    "content_type": 21,
+    "codename": "add_privilegecategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can change Imtiyoz kategoriyasi",
+    "content_type": 21,
+    "codename": "change_privilegecategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can delete Imtiyoz kategoriyasi",
+    "content_type": 21,
+    "codename": "delete_privilegecategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can view Imtiyoz kategoriyasi",
+    "content_type": 21,
+    "codename": "view_privilegecategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can add Imtiyoz",
+    "content_type": 20,
+    "codename": "add_privilege"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can change Imtiyoz",
+    "content_type": 20,
+    "codename": "change_privilege"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can delete Imtiyoz",
+    "content_type": 20,
+    "codename": "delete_privilege"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can view Imtiyoz",
+    "content_type": 20,
+    "codename": "view_privilege"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 85,
+  "fields": {
+    "name": "Can add Qabul kvotasi",
+    "content_type": 22,
+    "codename": "add_qabulkvotasi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 86,
+  "fields": {
+    "name": "Can change Qabul kvotasi",
+    "content_type": 22,
+    "codename": "change_qabulkvotasi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 87,
+  "fields": {
+    "name": "Can delete Qabul kvotasi",
+    "content_type": 22,
+    "codename": "delete_qabulkvotasi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 88,
+  "fields": {
+    "name": "Can view Qabul kvotasi",
+    "content_type": 22,
+    "codename": "view_qabulkvotasi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 89,
+  "fields": {
+    "name": "Can add Xorijiy talaba arizasi",
+    "content_type": 23,
+    "codename": "add_foreignstudentapplication"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 90,
+  "fields": {
+    "name": "Can change Xorijiy talaba arizasi",
+    "content_type": 23,
+    "codename": "change_foreignstudentapplication"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 91,
+  "fields": {
+    "name": "Can delete Xorijiy talaba arizasi",
+    "content_type": 23,
+    "codename": "delete_foreignstudentapplication"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 92,
+  "fields": {
+    "name": "Can view Xorijiy talaba arizasi",
+    "content_type": 23,
+    "codename": "view_foreignstudentapplication"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 93,
+  "fields": {
+    "name": "Can add Mamlakat",
+    "content_type": 25,
+    "codename": "add_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 94,
+  "fields": {
+    "name": "Can change Mamlakat",
+    "content_type": 25,
+    "codename": "change_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 95,
+  "fields": {
+    "name": "Can delete Mamlakat",
+    "content_type": 25,
+    "codename": "delete_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 96,
+  "fields": {
+    "name": "Can view Mamlakat",
+    "content_type": 25,
+    "codename": "view_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 97,
+  "fields": {
+    "name": "Can add O'quv dasturi",
+    "content_type": 26,
+    "codename": "add_studyprogram"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 98,
+  "fields": {
+    "name": "Can change O'quv dasturi",
+    "content_type": 26,
+    "codename": "change_studyprogram"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 99,
+  "fields": {
+    "name": "Can delete O'quv dasturi",
+    "content_type": 26,
+    "codename": "delete_studyprogram"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 100,
+  "fields": {
+    "name": "Can view O'quv dasturi",
+    "content_type": 26,
+    "codename": "view_studyprogram"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 101,
+  "fields": {
+    "name": "Can add Ariza",
+    "content_type": 24,
+    "codename": "add_application"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 102,
+  "fields": {
+    "name": "Can change Ariza",
+    "content_type": 24,
+    "codename": "change_application"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 103,
+  "fields": {
+    "name": "Can delete Ariza",
+    "content_type": 24,
+    "codename": "delete_application"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 104,
+  "fields": {
+    "name": "Can view Ariza",
+    "content_type": 24,
+    "codename": "view_application"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$vUFjO5QFyWDNLZwkANXexG$L+oXJrU60chxonIoTURuPEknMvuk+0rM/WoDeZ6u5Og=",
+    "last_login": "2026-01-07T06:13:45.376Z",
+    "is_superuser": true,
+    "username": "sam",
+    "first_name": "",
+    "last_name": "",
+    "email": "sal2@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-01-04T17:15:17.980Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "qabul_kom",
+    "model": "teammember"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "qabul_kom",
+    "model": "admissionrule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "qabul_kom",
+    "model": "deadline"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "qabul_kom",
+    "model": "document"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "qabul_kom",
+    "model": "documentcategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "qabul_kom",
+    "model": "importantnote"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "qabul_kom",
+    "model": "qabuljadvali"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "news",
+    "model": "news"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "news",
+    "model": "newscategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "news",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "news",
+    "model": "comment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "news",
+    "model": "post"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "employees",
+    "model": "qabulkomissiya"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "Abituriyent",
+    "model": "privilege"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "Abituriyent",
+    "model": "privilegecategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 22,
+  "fields": {
+    "app_label": "Abituriyent",
+    "model": "qabulkvotasi"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 23,
+  "fields": {
+    "app_label": "xorijiy",
+    "model": "foreignstudentapplication"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 24,
+  "fields": {
+    "app_label": "xorijiy",
+    "model": "application"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 25,
+  "fields": {
+    "app_label": "xorijiy",
+    "model": "country"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 26,
+  "fields": {
+    "app_label": "xorijiy",
+    "model": "studyprogram"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1eltd8c7chpt0hmv0om6kn7m3ucx2i64",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSFMKVNw6d5vIMNjpGogKe3K-O_apAvd3nPOfQlP21r81vPi5yTOAsTpdwsUH7nuIN2p3pqMra7LHOSuyIN2eW0pPy-H-3dQqJdvrdhZMCpCgNGSyYzMbILCESZmS06n7IgIUWHWicBp1DgEMyUYwATx_gDn7zfP:1vcdHW:uhgfbmFMt3t51CMvug1kYmLdSkO364tOc5p0O5u8KbM",
+    "expire_date": "2026-01-19T05:37:30.460Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "awhmond743td7cz5yz28wj0xn6ax8cbf",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP-yZ0PYUrbQo3ffQJbC2qqBpLQn499Nkx70OjOZNwTetznsLa9hSTACwuWXRZ6euRwiPbjcq5pq2dYlqiNRp23qVlN-Xc_2bzBzm2EELd6h1RNG7B3bLCQiNmrqcRBx7E3KnpmJNGWTGL0hQ120Q8IObYTPF-fvN88:1vdMnh:wDlcScD6GwgV5QyHm8uZ8-lrzWqsFt0QidLAgwt6Si0",
+    "expire_date": "2026-01-21T06:13:45.380Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "n39lx5pt0kkxozl77xw07hiz3fxcbtu0",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP-yZ0PYUrbQo3ffQJbC2qqBpLQn499Nkx70OjOZNwTetznsLa9hSTACwuWXRZ6euRwiPbjcq5pq2dYlqiNRp23qVlN-Xc_2bzBzm2EELd6h1RNG7B3bLCQiNmrqcRBx7E3KnpmJNGWTGL0hQ120Q8IObYTPF-fvN88:1vdMhd:tsCl_b11pW5K-0Noajn1ULFmDdl5koTnQjI9L7ZZMXA",
+    "expire_date": "2026-01-21T06:07:29.296Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uvccfguiiq7zsdn00pdkz3x4hqli0xid",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSFMKVNw6d5vIMNjpGogKe3K-O_apAvd3nPOfQlP21r81vPi5yTOAsTpdwsUH7nuIN2p3pqMra7LHOSuyIN2eW0pPy-H-3dQqJdvrdhZMCpCgNGSyYzMbILCESZmS06n7IgIUWHWicBp1DgEMyUYwATx_gDn7zfP:1vcd6c:pQd2eETOUi-sFLoO-ufBy0y-qH7IuFZS7eH-b5-22c0",
+    "expire_date": "2026-01-19T05:26:14.893Z"
+  }
+},
+{
+  "model": "qabul_kom.document",
+  "pk": 1,
+  "fields": {
+    "name": "Cain Sweeney",
+    "description": "Adipisicing ea aut d",
+    "file_format": "TXT",
+    "file": "documents/2026/01/05/team-1.jpg",
+    "file_size": "24.0 KB",
+    "download_count": 3,
+    "view_count": 2,
+    "is_active": true,
+    "order": 20,
+    "created_at": "2026-01-05T03:48:25.475Z",
+    "updated_at": "2026-01-05T04:57:48.331Z"
+  }
+},
+{
+  "model": "qabul_kom.document",
+  "pk": 2,
+  "fields": {
+    "name": "Isabelle Shaffer",
+    "description": "Ea praesentium repud",
+    "file_format": "TXT",
+    "file": "documents/2026/01/05/12.png",
+    "file_size": "2.5 MB",
+    "download_count": 2,
+    "view_count": 0,
+    "is_active": true,
+    "order": 45,
+    "created_at": "2026-01-05T03:49:03.342Z",
+    "updated_at": "2026-01-06T10:24:03.330Z"
+  }
+},
+{
+  "model": "qabul_kom.importantnote",
+  "pk": 1,
+  "fields": {
+    "title": "Officia sit veniam quia sit quis doloribus eveniet sed molestiae qui ad dolores et eos officia",
+    "content": "Nesciunt esse nesc",
+    "icon": "Ad sit harum perspiciatis sequi debitis ullam tenetur id sed",
+    "order": 64,
+    "is_active": true,
+    "created_at": "2026-01-05T03:50:10.588Z"
+  }
+},
+{
+  "model": "qabul_kom.admissionrule",
+  "pk": 1,
+  "fields": {
+    "title": "Distinctio Rerum sed id corrupti voluptatem",
+    "content": "Est quo commodo tota",
+    "rule_type": "general",
+    "icon": "Sed officia reiciendis sit est sit",
+    "order": 95,
+    "is_active": true,
+    "created_at": "2026-01-04T17:56:58.696Z"
+  }
+},
+{
+  "model": "qabul_kom.admissionrule",
+  "pk": 2,
+  "fields": {
+    "title": "Non est ad laborum nesciunt irure recusandae Inventore voluptate in ut non",
+    "content": "qoidalar shunda iborat",
+    "rule_type": "magistr",
+    "icon": "Maxime numquam aut atque veniam et aspernatur vitae totam eius nisi libero minima facere aliquip si",
+    "order": 44,
+    "is_active": true,
+    "created_at": "2026-01-05T05:12:00.022Z"
+  }
+},
+{
+  "model": "qabul_kom.deadline",
+  "pk": 1,
+  "fields": {
+    "title": "Fugit qui debitis fugiat consequatur quae sed molestias exercitation odit tempor fugiat et et ut eum voluptas maxime",
+    "start_date": "2026-01-05",
+    "end_date": "2026-01-05",
+    "description": "Dolorem omnis ex sit",
+    "is_active": true,
+    "created_at": "2026-01-05T03:50:00.153Z"
+  }
+},
+{
+  "model": "qabul_kom.deadline",
+  "pk": 2,
+  "fields": {
+    "title": "Repudiandae tempora nostrum velit non",
+    "start_date": "2026-01-05",
+    "end_date": "2026-01-05",
+    "description": "Sint sapiente volup",
+    "is_active": true,
+    "created_at": "2026-01-05T05:17:23.921Z"
+  }
+},
+{
+  "model": "qabul_kom.qabuljadvali",
+  "pk": 1,
+  "fields": {
+    "lavozim": "Qabul komissiyasi raisi",
+    "fish": "Madjidov Inomjon Urishevich",
+    "telefon": "+998 88 898 08 22",
+    "qabul_kuni": "Dushanba",
+    "vaqt": "9:00",
+    "xona": "111"
+  }
+},
+{
+  "model": "qabul_kom.qabuljadvali",
+  "pk": 2,
+  "fields": {
+    "lavozim": "Alias fugit delectus ut doloribus excepteur eius eum qui est quidem ut asperiores delectus fugit",
+    "fish": "Enim totam molestias natus aut nisi qui temporibus corrupti",
+    "telefon": "Error deserunt minim",
+    "qabul_kuni": "Juma",
+    "vaqt": "Et id cupiditate illo suscipit",
+    "xona": "Delectus"
+  }
+},
+{
+  "model": "qabul_kom.qabuljadvali",
+  "pk": 3,
+  "fields": {
+    "lavozim": "Quia a ea esse architecto iusto et",
+    "fish": "Sed dolor velit labore do laboriosam dolores sint sunt sunt qui asperiores numquam minima id dolore a est non ut",
+    "telefon": "Laudantium porro et",
+    "qabul_kuni": "Payshanba",
+    "vaqt": "Proident dicta quis eos aut quibusdam enim",
+    "xona": "Veritatis"
+  }
+},
+{
+  "model": "news.category",
+  "pk": 1,
+  "fields": {
+    "name": "E'lonlar",
+    "slug": "elonlar",
+    "description": "",
+    "created_at": "2026-01-05T16:48:05.502Z"
+  }
+},
+{
+  "model": "news.category",
+  "pk": 2,
+  "fields": {
+    "name": "Yangiliklar",
+    "slug": "yangiliklar",
+    "description": "",
+    "created_at": "2026-01-05T16:48:13.336Z"
+  }
+},
+{
+  "model": "news.post",
+  "pk": 1,
+  "fields": {
+    "title": "salom",
+    "slug": "salom",
+    "author": 1,
+    "category": 1,
+    "content": "Dolor est nesciunt",
+    "excerpt": "Adipisicing sunt rem nobis omnis et ad qui exercitation sint dolor",
+    "image": "blog/images/carousel-2_G19fuKR.png",
+    "status": "published",
+    "views": 4,
+    "is_main": true,
+    "published_date": "2026-01-05T16:48:16Z",
+    "created_at": "2026-01-05T16:53:09.892Z",
+    "updated_at": "2026-01-05T16:53:43.751Z"
+  }
+},
+{
+  "model": "news.post",
+  "pk": 2,
+  "fields": {
+    "title": "salom1",
+    "slug": "salom1",
+    "author": 1,
+    "category": 1,
+    "content": "Pariatur Sit alias",
+    "excerpt": "Et fuga Rerum ipsum veritatis",
+    "image": "blog/images/blog-2.png",
+    "status": "published",
+    "views": 0,
+    "is_main": true,
+    "published_date": "2026-01-05T17:04:31Z",
+    "created_at": "2026-01-05T17:04:49.901Z",
+    "updated_at": "2026-01-05T17:05:38.266Z"
+  }
+},
+{
+  "model": "news.post",
+  "pk": 3,
+  "fields": {
+    "title": "sal",
+    "slug": "sal",
+    "author": 1,
+    "category": 2,
+    "content": "dsdsddd",
+    "excerpt": "dsdsddd",
+    "image": "blog/images/contact-img.png",
+    "status": "published",
+    "views": 9,
+    "is_main": true,
+    "published_date": "2026-01-05T17:05:55Z",
+    "created_at": "2026-01-05T17:06:21.955Z",
+    "updated_at": "2026-01-05T17:06:21.955Z"
+  }
+},
+{
+  "model": "news.post",
+  "pk": 4,
+  "fields": {
+    "title": "sa",
+    "slug": "sa",
+    "author": 1,
+    "category": 2,
+    "content": "SDASSFDG",
+    "excerpt": "SDASSFDG",
+    "image": "blog/images/blog-2_1doTLCU.png",
+    "status": "published",
+    "views": 1,
+    "is_main": true,
+    "published_date": "2026-01-05T17:13:02Z",
+    "created_at": "2026-01-05T17:13:40.942Z",
+    "updated_at": "2026-01-05T17:13:40.942Z"
+  }
+},
+{
+  "model": "news.post",
+  "pk": 5,
+  "fields": {
+    "title": "sa11",
+    "slug": "sa11",
+    "author": 1,
+    "category": 2,
+    "content": "adsfdb",
+    "excerpt": "adsfdb",
+    "image": "blog/images/blog-4.png",
+    "status": "published",
+    "views": 0,
+    "is_main": true,
+    "published_date": "2026-01-05T17:14:12Z",
+    "created_at": "2026-01-05T17:14:52.303Z",
+    "updated_at": "2026-01-05T17:14:52.303Z"
+  }
+},
+{
+  "model": "news.post",
+  "pk": 6,
+  "fields": {
+    "title": "qw1",
+    "slug": "qw1",
+    "author": 1,
+    "category": 1,
+    "content": "11",
+    "excerpt": "11",
+    "image": "blog/images/blog-1.png",
+    "status": "published",
+    "views": 1,
+    "is_main": true,
+    "published_date": "2026-01-05T17:21:16Z",
+    "created_at": "2026-01-05T17:21:38.885Z",
+    "updated_at": "2026-01-05T17:21:38.885Z"
+  }
+},
+{
+  "model": "news.post",
+  "pk": 7,
+  "fields": {
+    "title": "11",
+    "slug": "11",
+    "author": 1,
+    "category": 1,
+    "content": "1111111",
+    "excerpt": "1111111",
+    "image": "blog/images/instagram-footer-1.jpg",
+    "status": "published",
+    "views": 3,
+    "is_main": true,
+    "published_date": "2026-01-05T17:21:40Z",
+    "created_at": "2026-01-05T17:22:02.476Z",
+    "updated_at": "2026-01-05T17:22:02.476Z"
+  }
+},
+{
+  "model": "news.post",
+  "pk": 8,
+  "fields": {
+    "title": "e1",
+    "slug": "e1",
+    "author": 1,
+    "category": 1,
+    "content": "e111e11",
+    "excerpt": "e111e11",
+    "image": "blog/images/instagram-footer-2.jpg",
+    "status": "published",
+    "views": 3,
+    "is_main": true,
+    "published_date": "2026-01-05T17:22:04Z",
+    "created_at": "2026-01-05T17:22:25.996Z",
+    "updated_at": "2026-01-06T17:30:04.387Z"
+  }
+},
+{
+  "model": "news.post",
+  "pk": 9,
+  "fields": {
+    "title": "222",
+    "slug": "222",
+    "author": 1,
+    "category": 1,
+    "content": "gdggfs",
+    "excerpt": "gdggfs",
+    "image": "blog/images/bg-breadcrumb.jpg",
+    "status": "published",
+    "views": 0,
+    "is_main": false,
+    "published_date": "2026-01-05T17:23:51Z",
+    "created_at": "2026-01-05T17:24:11.722Z",
+    "updated_at": "2026-01-06T17:30:04.383Z"
+  }
+},
+{
+  "model": "employees.qabulkomissiya",
+  "pk": 1,
+  "fields": {
+    "ism": "ssdsdswsw",
+    "familiya": "salommm",
+    "lavozim": "Dolore dignissimos et pariatur Voluptate",
+    "lavozim_turi": "rais",
+    "email": "vonubuk@mailinator.com",
+    "telefon": "Dolore aut dolore ea",
+    "rasm": "komissiya/Cain_Sweeney_1.JPG",
+    "tartib": 30,
+    "is_active": true
+  }
+},
+{
+  "model": "employees.qabulkomissiya",
+  "pk": 2,
+  "fields": {
+    "ism": "salom",
+    "familiya": "Valiyev",
+    "lavozim": "Aliqua Eu culpa deleniti quia rerum expedita quo",
+    "lavozim_turi": "rahbar",
+    "email": "rehumov@mailinator.com",
+    "telefon": "Nostrud harum evenie",
+    "rasm": "komissiya/Cain_Sweeney_1_ZNAxFvN.JPG",
+    "tartib": 43,
+    "is_active": true
+  }
+},
+{
+  "model": "employees.qabulkomissiya",
+  "pk": 3,
+  "fields": {
+    "ism": "asdsdssada",
+    "familiya": "sdjasnd asdasj",
+    "lavozim": "Nobis est odit et dolore dolore rem magni corrupti",
+    "lavozim_turi": "rais",
+    "email": "wuhufiqyfu@mailinator.com",
+    "telefon": "Ea et qui quia sequi",
+    "rasm": "komissiya/instagram-footer-1.jpg",
+    "tartib": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "employees.qabulkomissiya",
+  "pk": 4,
+  "fields": {
+    "ism": "ALI",
+    "familiya": "Valiyev",
+    "lavozim": "Illum do aperiam ducimus ex quis est officia vel",
+    "lavozim_turi": "rahbar",
+    "email": "ziregedo@mailinator.com",
+    "telefon": "Expedita modi non pa",
+    "rasm": "komissiya/team-3.jpg",
+    "tartib": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "employees.qabulkomissiya",
+  "pk": 5,
+  "fields": {
+    "ism": "ALI",
+    "familiya": "Valiyev",
+    "lavozim": "Tempore consequatur dolore fuga Sunt alias ullam",
+    "lavozim_turi": "azo",
+    "email": "japa@mailinator.com",
+    "telefon": "Dolores aut eum magn",
+    "rasm": "komissiya/team-4.jpg",
+    "tartib": 19,
+    "is_active": true
+  }
+},
+{
+  "model": "employees.qabulkomissiya",
+  "pk": 6,
+  "fields": {
+    "ism": "salom",
+    "familiya": "salommm",
+    "lavozim": "Est nostrud excepteur qui id impedit",
+    "lavozim_turi": "azo",
+    "email": "bimozeca@mailinator.com",
+    "telefon": "Magnam harum digniss",
+    "rasm": "komissiya/team-3_Ll3GCy0.jpg",
+    "tartib": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "employees.qabulkomissiya",
+  "pk": 7,
+  "fields": {
+    "ism": "ALI",
+    "familiya": "Valiyev",
+    "lavozim": "Cumque anim fugit deserunt incidunt sed elit in",
+    "lavozim_turi": "rahbar",
+    "email": "biwuhyzyg@mailinator.com",
+    "telefon": "In non et rem iure a",
+    "rasm": "komissiya/contact-img.png",
+    "tartib": 17,
+    "is_active": true
+  }
+},
+{
+  "model": "employees.qabulkomissiya",
+  "pk": 8,
+  "fields": {
+    "ism": "A dolore molestiae esse fugit illo non labore dolores itaque assumenda tempor voluptate voluptates",
+    "familiya": "Et Nam eum similique sit incidunt id",
+    "lavozim": "Veritatis quia aperiam id ab excepturi sit id",
+    "lavozim_turi": "rahbar",
+    "email": "wyxozode@mailinator.com",
+    "telefon": "Sint nobis sunt sit",
+    "rasm": "komissiya/team-2.jpg",
+    "tartib": 41,
+    "is_active": false
+  }
+},
+{
+  "model": "employees.qabulkomissiya",
+  "pk": 9,
+  "fields": {
+    "ism": "salom",
+    "familiya": "salommm",
+    "lavozim": "Dolore nostrud mollitia quibusdam optio quam anim",
+    "lavozim_turi": "rahbar",
+    "email": "zezebotami@mailinator.com",
+    "telefon": "Amet adipisicing ut",
+    "rasm": "komissiya/team-2_eB0dyRf.jpg",
+    "tartib": 51,
+    "is_active": true
+  }
+},
+{
+  "model": "Abituriyent.privilegecategory",
+  "pk": 1,
+  "fields": {
+    "title": "Imtihonsiz qoʻshimcha davlat granti",
+    "slug": "imtihonsiz-qoshimcha-davlat-granti",
+    "icon": "🏛️",
+    "is_active": true
+  }
+},
+{
+  "model": "Abituriyent.privilegecategory",
+  "pk": 2,
+  "fields": {
+    "title": "Imtihonsiz bazaviy toʻlov-kontrakt asosida",
+    "slug": "imtihonsiz-bazaviy-tolov-kontrakt-asosida",
+    "icon": "🏛️",
+    "is_active": true
+  }
+},
+{
+  "model": "Abituriyent.privilegecategory",
+  "pk": 3,
+  "fields": {
+    "title": "Tegishli fan boʻyicha imtihondan ozod etilib, maʼlum miqdorda ball berish boʻyicha",
+    "slug": "tegishli-fan-boyicha-imtihondan-ozod-etilib-malum",
+    "icon": "🏛️",
+    "is_active": true
+  }
+},
+{
+  "model": "Abituriyent.privilegecategory",
+  "pk": 4,
+  "fields": {
+    "title": "Toʻplangan ballga nisbatan qoʻshimcha ball berish boʻyicha imtiyozlar",
+    "slug": "toplangan-ballga-nisbatan-qoshimcha-ball-berish-bo",
+    "icon": "🏛️",
+    "is_active": true
+  }
+},
+{
+  "model": "Abituriyent.privilegecategory",
+  "pk": 5,
+  "fields": {
+    "title": "Qoʻshimcha kvota doirasida tanlovda ishtirok etish boʻyicha imtiyozlar",
+    "slug": "qoshimcha-kvota-doirasida-tanlovda-ishtirok-etish",
+    "icon": "🏛️",
+    "is_active": true
+  }
+},
+{
+  "model": "Abituriyent.privilegecategory",
+  "pk": 6,
+  "fields": {
+    "title": "Qoʻshimcha imtiyozlar",
+    "slug": "qoshimcha-imtiyozlar",
+    "icon": "🏛️",
+    "is_active": true
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "title": "Harbiy xizmatchilarning farzandlari",
+    "description": "Huquqiy asosi:  1. O‘zbekiston Respublikasi Prezidentining “O‘zbekiston  Respublikasi Qurolli Kuchlari harbiy xizmatchilari va ularning oila  a’zolarini ijtimoiy qo‘llab-quvvatlashga oid qo‘shimcha choratadbirlar to‘g‘risida” 2018-yil 14-maydagi PQ-3726-son qarori.  2. Vazirlar Mahkamasining 2018-yil 22-iyundagi 462-son qarori  bilan tasdiqlangan “O‘zbekiston Respublikasi Qurolli Kuchlari  harbiylari va uning tarkibiga kiruvchi vazirlik hamda idoralarning  xodimlari farzandlarining kvota asosida respublika oliy ta’lim  muassasalariga o‘qishga kirishi uchun tavsiyanomalar berish tartibi  to‘g‘risida” nizom.  Qo‘llanishi: Harbiy xizmat vazifalarini bajarish chog‘ida halok  bo‘lgan hamda harbiy xizmat vazifalarini bajarish chog‘ida  yaradorlik, kontuziya, shikastlanish yoki kasalliklar oqibatida nogiron  bo‘lib qolgan O‘zbekiston Respublikasi Qurolli Kuchlari tarkibiga  kiruvchi vazirliklar va idoralarning harbiy xizmatchilari va Milliy  gvardiya xodimlarining farzandlari vazirliklar yoki idoralarning  tegishli tavsiyanomalari asosida oliy ta’lim muassasalariga kirishda  belgilangan qabul ko‘rsatkichlaridan tashqari tanlovsiz davlat granti  asosida o‘qishga qabul qilinadi.  Mazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining  bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan  birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi.",
+    "documents": "Mas’ul vakolatli davlat organi: Mudofaa vazirligi, Ichki ishlar  vazirligi, Favqulodda vaziyatlar vazirligi, Davlat xavfsizlik xizmati,  O‘zbekiston Respublikasi Prezidentining davlat xavfsizlik xizmati,  Elektron texnologiyalarni rivojlantirish markazi, Milliy gvardiya",
+    "order": 1,
+    "is_active": true,
+    "created_at": "2026-01-07T06:36:19.888Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 2,
+  "fields": {
+    "category": 1,
+    "title": "Harbiy qism qo‘mondonligi va O‘zbekiston yoshlar ittifoqining  tavsiyanomasiga ega abituriyentlar",
+    "description": "Huquqiy asosi:  1. O‘zbekiston Respublikasi Prezidentining “O‘zbekiston  Respublikasi Qurolli Kuchlari tizimida yoshlarga oid davlat siyosati  samaradorligini oshirish bo‘yicha qo‘shimcha chora-tadbirlar  to‘g‘risida” 2017-yil 17-noyabrdagi PQ-3394-son qarori.  2. Vazirlar Mahkamasining 2017-yil 20-iyundagi 393-son qarori  bilan tasdiqlangan “Oliy ta’lim muassasalarining bakalavriatiga  talabalarni o‘qishga qabul qilish tartibi to‘g‘risida” nizom.  Qo‘llanishi: O‘zbekiston Respublikasi Qurolli Kuchlari harbiy  qism qo‘mondonligi (rahbariyati) va O‘zbekiston yoshlar ittifoqining  tavsiyanomasiga asosan har bir harbiy qismdan bir nafardan yuqori  natijalarga erishgan yosh harbiy xizmatchi qo‘shimcha davlat granti  asosida oliy ta’lim muassasalariga o‘qishga qabul qilinadi.  Mazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining  bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan  birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi.",
+    "documents": "Mas’ul vakolatli davlat organi: O‘zbekiston yoshlar ittifoqi,  Mudofaa vazirligi, Milliy gvardiya, Ichki ishlar vazirligi, Davlat  xavfsizlik xizmati",
+    "order": 28,
+    "is_active": true,
+    "created_at": "2026-01-07T06:36:42.098Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 3,
+  "fields": {
+    "category": 1,
+    "title": "Ichki ishlar organlari xodimlari farzandlari",
+    "description": "Huquqiy asosi:  1. O‘zbekiston Respublikasi Prezidentining “Ichki ishlar  organlari xodimlari va ularning oila a’zolarini ijtimoiy himoya qilishni  yanada kuchaytirish chora-tadbirlari to‘g‘risida” 2019-yil  26-fevraldagi PQ-4212-son qarori.  2. Vazirlar Mahkamasining 2019-yil 6-maydagi 375-son qarori  bilan tasdiqlangan “Ichki ishlar organlari xodimlari farzandlarining  davlat oliy ta’lim muassasalari hamda O‘zbekiston Respublikasi  Mudofaa vazirligi, Ichki ishlar vazirligi, Milliy gvardiyasi va Davlat  bojxona qo‘mitasining oliy va o‘rta maxsus ta’lim muassasalariga  o‘qishga kirishi uchun tavsiyanoma (taqdimnoma) berish tartibi  to‘g‘risida” nizom.  Qo‘llanishi: Terrorizm va jinoyatchilikka qarshi kurashish  hamda jamoat xavfsizligini ta’minlash chog‘ida halok bo‘lgan yoki  olgan jarohati tufayli nogiron bo‘lib qolgan ichki ishlar organlari  xodimlarining farzandlariga oliy ta’lim muassasalariga kirishda  tanlovsiz, belgilangan qabul parametrlaridan tashqari davlat granti  asosida o‘qishga kirish imtiyozi beriladi (tavsiyanoma asosida).  Tavsiyanoma kunduzgi yoki sirtqi ta’lim shakliga bir marta  kirish uchun uch yildan ko‘p bo‘lmagan muddatga beriladi.  Mazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining  bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan  birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi.",
+    "documents": "Mas’ul vakolatli davlat organi:  Ichki ishlavazirligi",
+    "order": 3,
+    "is_active": true,
+    "created_at": "2026-01-07T06:37:03.102Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 4,
+  "fields": {
+    "category": 1,
+    "title": "Bojxona organlari xodimlarining farzandlari",
+    "description": "Huquqiy asosi:  1. O‘zbekiston Respublikasi Prezidentining “Bojxona  ma’muriyatchiligini yanada takomillashtirishga doir qo‘shimcha  chora-tadbirlar to‘g‘risida” 2022-yil 27-apreldagi PF-122-son  Farmoni.  2. O‘zbekiston Respublikasi Prezidentining 2018-yil 12-apreldagi  PQ-3665-son qarori bilan tasdiqlangan “O‘zbekiston Respublikasi  davlat bojxona xizmati organlarida xizmatni o‘tash to‘g‘risida” nizom.  Qo‘llanishi: Xizmat majburiyatini bajarish chog‘ida halok  bo‘lgan, shuningdek, xizmat majburiyatini bajarishda olgan jarohati  tufayli nogiron bo‘lib qolgan bojxona organlari xodimlarining  farzandlari Davlat bojxona qo‘mitasi raisining tavsiyanomasi asosida  belgilangan qabul parametrlaridan tashqari davlat granti asosida  O‘zbekiston Respublikasi davlat oliy ta’lim muassasalari  bakalavriatining kunduzgi ta’lim shakliga tanlovsiz qabul qilinadi.  Mazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining  bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan  birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi.  Shuningdek, DBQ raisi xizmat majburiyatlarini bajarish chog‘ida  halok bo‘lgan bojxona organlari xodimlarining to‘lov-kontrakt  asosida ta’lim olayotgan farzandlariga – qolgan o‘quv davri to‘lovkontrakt mablag‘lari miqdorining to‘liq hajmini, xizmat  majburiyatlarini bajarish chog‘ida olgan jarohati tufayli nogiron bo‘lib  qolgan bojxona organlari xodimlarining to‘lov-kontrakt asosida ta’lim  olayotgan farzandlariga – to‘lov-kontrakt mablag‘lari miqdorining  ellik foizi miqdorini Davlat bojxona qo‘mitasining budjetdan tashqari  mablag‘lari hisobidan to‘lab berish huquqiga ega",
+    "documents": "Mas’ul vakolatli davlat organi: Davlat bojxona qo‘mitasi.",
+    "order": 4,
+    "is_active": true,
+    "created_at": "2026-01-07T06:37:24.075Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 5,
+  "fields": {
+    "category": 1,
+    "title": "Respublika va xalqaro sport musobaqalari g‘oliblari",
+    "description": "Huquqiy asosi: Vazirlar Mahkamasining 2008-yil 13-oktabrdagi  226-son qarori bilan tasdiqlangan “Xalqaro va respublika tanlovlari,  musobaqalari g‘oliblari bo‘lgan akademik litseylar, professional  ta’lim muassasalari va umumta’lim maktablari o‘quvchilarini  taqdirlash tartibi to‘g‘risida” nizom.  Qo‘llanishi: Kattalar va yoshlar o‘rtasida Olimpiya va  Paralimpiya o‘yinlari dasturlariga kiritilgan sportning olimpiya va  paralimpiya turlari bo‘yicha Olimpiya va Paralimpiya, Osiyo va  Paraosiyo o‘yinlari, jahon va Osiyo chempionatlarida oxirgi to‘rt yilda  hamda respublika chempionatlarida oxirgi bir yilda g‘olib va  sovrindor (1-3 o‘rin) bo‘lgan umumiy o‘rta ta’lim maktablari, o‘rta  maxsus professional ta’lim muassasalarining bitiruvchilari oliy ta’lim  muassasalariga o‘qishga kirish uchun hujjatlar qabul qilish  boshlanguniga qadar oliy ta’lim muassasalarining jismoniy tarbiya va  sport sohasidagi ta’lim yo‘nalishlariga qo‘shimcha davlat granti  asosida kunduzgi, sirtqi, kechki ta’lim shakllariga imtihon sinovlarisiz  qabul qilinadilar.  Respublika (1-o‘rin) va xalqaro tanlovlar va sport  musobaqalarining (Olimpiya va Paralimpiya o‘yinlari dasturlariga  kiritilgan sportning olimpiya va paralimpiya turlari bo‘yicha  Olimpiya va Paralimpiya, Osiyo va Paraosiyo o‘yinlari, jahon va  Osiyo chempionatlarida oxirgi to‘rt yilda hamda respublika  chempionatlarida oxirgi bir yilda g‘olib va sovrindor (1-3 o‘rin)  bo‘lgan) jamoa turlari g‘oliblari o‘z komandalari tarkibidan -  akademik litseylar, kasb-hunar kollejlari va umumta’lim maktablari  bitiruvchilaridan oliy ta’lim muassasasiga test sinovlarisiz va  qo‘shimcha imtihonsiz qabul qilish uchun uch nomzodni belgilaydilar.",
+    "documents": "Mas’ul vakolatli davlat organi: Sportni rivojlantirish vazirligi.",
+    "order": 5,
+    "is_active": true,
+    "created_at": "2026-01-07T06:37:40.276Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 6,
+  "fields": {
+    "category": 1,
+    "title": "Respublika va xalqaro shaxmat va shashka turnirlari  g‘oliblari",
+    "description": "Huquqiy asosi: Vazirlar Mahkamasining 2008-yil 13-oktabrdagi  226-son qarori bilan tasdiqlangan “Xalqaro va respublika tanlovlari,  musobaqalari g‘oliblari bo‘lgan akademik litseylar, professional  ta’lim muassasalari va umumta’lim maktablari o‘quvchilarini  taqdirlash tartibi to‘g‘risida” nizom.  Qo‘llanishi: Respublika (1-o‘rin) va xalqaro (1-5-o‘rinlar)  shaxmat va shashka turnirlarida g‘olib chiqqan akademik litseylar,  kasb-hunar kollejlari va umumta’lim maktablari bitiruvchilari  pedagogik kadrlar tayyorlaydigan oliy ta’lim muassasasiga test  sinovlarisiz va qo‘shimcha imtihonsiz qabul qilinadilar.  Bunda ularni oliy ta’lim muassasasiga imtiyozli qabul qilish  ta’lim muassasasi ixtisosliklari bilan tanlovlar ixtisosliklari, sport  turlarining soha bo‘yicha mos kelishiga qat’iy rioya qilingan holda  amalga oshiriladi.",
+    "documents": "Mas’ul vakolatli davlat organi: Sportni rivojlantirish vazirligi",
+    "order": 6,
+    "is_active": true,
+    "created_at": "2026-01-07T06:38:09.124Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 7,
+  "fields": {
+    "category": 1,
+    "title": "Zulfiya nomidagi Davlat mukofoti laureatlari",
+    "description": "Huquqiy asosi:  1. O‘zbekiston Respublikasi Prezidentining “Zulfiya nomidagi  Davlat mukofotini ta’sis etish bo‘yicha takliflarni qo‘llab-quvvatlash  to‘g‘risida” 1999-yil 10-iyundagi PF-2326-son Farmoni.  2. Vazirlar Mahkamasining 2017-yil 20-iyundagi 393-son qarori  bilan tasdiqlangan “Oliy ta’lim muassasalarining bakalavriatiga  talabalarni o‘qishga qabul qilish tartibi to‘g‘risida” nizom.  3. O‘zbekiston Respublikasi Prezidentining “2021-2022-o‘quv  yilida O‘zbekiston Respublikasining oliy ta’lim muassasalariga  o‘qishga qabul qilishning davlat buyurtmasi parametrlari to‘g‘risida”  2021-yil 22-iyundagi PQ-5157-son qarori.  Qo‘llanishi: Umumiy o‘rta, o‘rta maxsus, kasb-hunar ta’limi  muassasalarining Zulfiya nomidagi Davlat mukofoti laureatlari  bo‘lgan o‘quvchilari oliy ta’lim muassasalarining bakalavriatiga,  bakalavriat talabalari esa magistraturaga tegishli yo‘nalish va  ixtisoslik bo‘yicha sinovlarsiz qo‘shimcha davlat granti asosida  o‘qishga qabul qilinadi.  Mazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining  bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan  birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi.",
+    "documents": "Mas’ul vakolatli davlat organi: Oila va xotin-qizlar davlat  qo‘mitasi.",
+    "order": 7,
+    "is_active": true,
+    "created_at": "2026-01-07T06:38:43.720Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 8,
+  "fields": {
+    "category": 1,
+    "title": "Harbiy xizmatchilar farzandlari",
+    "description": "Huquqiy asosi:  1. O‘zbekiston Respublikasi Prezidentining “O‘zbekiston  Respublikasi Qurolli Kuchlari harbiy xizmatchilari va ularning oila  a’zolarini ijtimoiy qo‘llab-quvvatlashga oid qo‘shimcha choratadbirlar to‘g‘risida” 2018-yil 14-maydagi PQ-3726-son qarori.  2. Vazirlar Mahkamasining 2018-yil 22-iyundagi 462-son qarori  bilan tasdiqlangan “O‘zbekiston Respublikasi Qurolli Kuchlari  harbiylari va uning tarkibiga kiruvchi vazirlik hamda idoralarning  xodimlari farzandlarining kvota asosida respublika oliy ta’lim  muassasalariga o‘qishga kirishi uchun tavsiyanomalar berish tartibi  to‘g‘risida” nizom.  Qo‘llanishi: Harbiy xizmat vazifalarini bajarish chog‘ida halok  bo‘lgan hamda harbiy xizmat vazifalarini bajarish chog‘ida  yaradorlik, kontuziya, shikastlanish yoki kasalliklar oqibatida nogiron  bo‘lib qolgan O‘zbekiston Respublikasi Qurolli Kuchlari tarkibiga  kiruvchi vazirliklar va idoralarning harbiy xizmatchilari va Milliy  gvardiya xodimlarining farzandlari vazirliklar yoki idoralarning  tegishli tavsiyanomalari asosida oliy ta’lim muassasalariga kirishda  belgilangan qabul ko‘rsatkichlaridan tashqari tanlovsiz davlat granti  asosida o‘qishga qabul qilinadi.  Mazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining  bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan  birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi.",
+    "documents": "Mas’ul vakolatli davlat organi: Mudofaa vazirligi, Ichki ishlar  vazirligi, Favqulodda vaziyatlar vazirligi, Davlat xavfsizlik xizmati,  O‘zbekiston Respublikasi Prezidentining davlat xavfsizlik xizmati,  Elektron texnologiyalarni rivojlantirish markazi, Milliy gvardiya.",
+    "order": 8,
+    "is_active": true,
+    "created_at": "2026-01-07T06:39:00.131Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 9,
+  "fields": {
+    "category": 1,
+    "title": "“Nihol” mukofoti sohiblari",
+    "description": "Huquqiy asosi:  1. Vazirlar Mahkamasining 2006-yil 9-avgustdagi 169-son qarori  bilan tasdiqlangan “O‘zbekiston Respublikasi Prezidentining yosh  iste’dodlar uchun “Nihol” mukofoti to‘g‘risida” nizom.  2. Vazirlar Mahkamasining 2017-yil 20-iyundagi 393-son qarori  bilan tasdiqlangan “Oliy ta’lim muassasalarining bakalavriatiga  talabalarni o‘qishga qabul qilish tartibi to‘g‘risida” nizom.  3. O‘zbekiston Respublikasi Prezidentining “2021-2022-o‘quv  yilida O‘zbekiston Respublikasining oliy ta’lim muassasalariga  o‘qishga qabul qilishning davlat buyurtmasi parametrlari to‘g‘risida”  2021-yil 22-iyundagi PQ-5157-son qarori.  Qo‘llanishi: “Nihol” mukofoti sovrindorlari Madaniyat  vazirligining taqdimnomalariga muvofiq Davlat komissiyasining  qarori bilan madaniyat, san’at yo‘nalishidagi oliy va o‘rta maxsus  o‘quv yurtlarining mos ta’lim yo‘nalishlariga tanlovdan tashqari kirish  imtihonlarisiz qo‘shimcha davlat granti asosida o‘qishga qabul  qilinadilar (ansambl, jamoa sifatida ishtirok etganlar bundan  mustasno).  Mazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining  bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan  birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi.",
+    "documents": "Mas’ul vakolatli davlat organi:    Madaniyat vazirligi",
+    "order": 9,
+    "is_active": true,
+    "created_at": "2026-01-07T06:39:22.379Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 10,
+  "fields": {
+    "category": 1,
+    "title": "Madaniyat vazirligining respublika ko‘rik-tanlovlari g‘oliblari",
+    "description": "Huquqiy asosi: O‘zbekiston Respublikasi Prezidentining  “O‘zbekiston Respublikasida milliy madaniyatni yanada rivojlantirish  konsepsiyasini tasdiqlash to‘g‘risida” 2018-yil 28-noyabrdagi  PQ-4038-son qarori.  Qo‘llanishi: Madaniyat vazirligining “Xalq cholg‘ulari  ijrochilari”, Mukarrama Turg‘unboyeva nomidagi “Milliy raqs  ijrochilari” va Yunus Rajabiy nomidagi “Yosh maqom ijrochilari”  respublika ko‘rik-tanlovlari g‘oliblarining bir nafardan yakka  ijrochilari tegishli yo‘nalishi bo‘yicha oliy ta’lim muassasasining  bakalavriat bosqichiga qabul kvotasiga qo‘shimcha davlat granti  asosida qabul qilinadi.  Ushbu respublika ko‘rik-tanlovlari:  – Xalq cholg‘ulari ijrochilari” ko‘rik-tanlovi ikki yilda bir marta,  dastlab 2019-yilning iyun oyida;  – Mukarrama Turg‘unboyeva nomidagi “Milliy raqs ijrochilari”  ko‘rik-tanlovi ikki yilda bir marta, dastlab 2019-yilning oktabr oyida;  – Yunus Rajabiy nomidagi “Yosh maqom ijrochilari” ko‘riktanlovi ikki yilda bir marta, dastlab 2020-yilning aprel oyida  o‘tkaziladi.  Mazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining  bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan  birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi",
+    "documents": "Mas’ul vakolatli davlat organi: Madaniyat vazirligi",
+    "order": 10,
+    "is_active": true,
+    "created_at": "2026-01-07T06:39:41.394Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 11,
+  "fields": {
+    "category": 1,
+    "title": "“Mard o‘g‘lon” davlat mukofoti sohiblari",
+    "description": "Huquqiy asosi:  1. O‘zbekiston Respublikasi Prezidentining “Mard o‘g‘lon”  davlat mukofotini ta’sis etish to‘g‘risida” 2017-yil 21-noyabrdagi  PQ-3402-son qarori.  2. O‘zbekiston Respublikasi Prezidentining “2021-2022-o‘quv  yilida O‘zbekiston Respublikasining oliy ta’lim muassasalariga  o‘qishga qabul qilishning davlat buyurtmasi parametrlari to‘g‘risida”  2021-yil 22-iyundagi PQ-5157-son qarori.  Qo‘llanishi: “Mard o‘g‘lon” davlat mukofoti sohiblari bo‘lgan  umumta’lim va o‘rta maxsus, kasb-hunar ta’limi muassasalarining  o‘quvchilari oliy ta’lim muassasalarining bakalavriat bosqichiga, oliy  o‘quv yurtlari talabalari yoki bakalavr darajasiga ega yoshlar esa  magistratura bosqichiga tegishli yo‘nalish bo‘yicha kirish  imtihonlarisiz davlat grantlari asosida qabul qilinadilar.  Bunda “Mard o‘g‘lon” davlat mukofoti sohiblari bo‘lgan  umumta’lim va o‘rta maxsus, kasb-hunar ta’limi muassasalarining  o‘quvchilari O‘zbekiston Respublikasi Prezidentining 2021-yil  22-iyundagi PQ-5157-son qaroriga asosan oliy ta’lim  muassasalarining bakalavriat bosqichiga qo‘shimcha davlat grantlari  asosida qabul qilinadi.  Mazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining  bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan  birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi",
+    "documents": "Mas’ul vakolatli davlat organi",
+    "order": 11,
+    "is_active": true,
+    "created_at": "2026-01-07T06:39:57.850Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 12,
+  "fields": {
+    "category": 1,
+    "title": "“Mard o‘g‘lon” davlat mukofoti sohiblari",
+    "description": "Huquqiy asosi:  1. O‘zbekiston Respublikasi Prezidentining “Mard o‘g‘lon”  davlat mukofotini ta’sis etish to‘g‘risida” 2017-yil 21-noyabrdagi  PQ-3402-son qarori.  2. O‘zbekiston Respublikasi Prezidentining “2021-2022-o‘quv  yilida O‘zbekiston Respublikasining oliy ta’lim muassasalariga  o‘qishga qabul qilishning davlat buyurtmasi parametrlari to‘g‘risida”  2021-yil 22-iyundagi PQ-5157-son qarori.  Qo‘llanishi: “Mard o‘g‘lon” davlat mukofoti sohiblari bo‘lgan  umumta’lim va o‘rta maxsus, kasb-hunar ta’limi muassasalarining  o‘quvchilari oliy ta’lim muassasalarining bakalavriat bosqichiga, oliy  o‘quv yurtlari talabalari yoki bakalavr darajasiga ega yoshlar esa  magistratura bosqichiga tegishli yo‘nalish bo‘yicha kirish  imtihonlarisiz davlat grantlari asosida qabul qilinadilar.  Bunda “Mard o‘g‘lon” davlat mukofoti sohiblari bo‘lgan  umumta’lim va o‘rta maxsus, kasb-hunar ta’limi muassasalarining  o‘quvchilari O‘zbekiston Respublikasi Prezidentining 2021-yil  22-iyundagi PQ-5157-son qaroriga asosan oliy ta’lim  muassasalarining bakalavriat bosqichiga qo‘shimcha davlat grantlari  asosida qabul qilinadi.  Mazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining  bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan  birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi.",
+    "documents": "Mas’ul vakolatli davlat organi",
+    "order": 12,
+    "is_active": true,
+    "created_at": "2026-01-07T06:40:22.357Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 13,
+  "fields": {
+    "category": 1,
+    "title": "“Hamshira” respublika tanlovi g‘oliblarI",
+    "description": "Huquqiy asosi:  1. Vazirlar Mahkamasining 2017-yil 20-iyundagi 393-son qarori  bilan tasdiqlangan “Oliy ta’lim muassasalarining bakalavriatiga  talabalarni o‘qishga qabul qilish tartibi to‘g‘risida” nizom.  2. O‘zbekiston Respublikasi Prezidentining “2021-2022-o‘quv  yilida O‘zbekiston Respublikasining oliy ta’lim muassasalariga  o‘qishga qabul qilishning davlat buyurtmasi parametrlari to‘g‘risida”  2021-yil 22-iyundagi PQ-5157-son qarori.  Qo‘llanishi: Sog‘liqni saqlash vazirligi tomonidan har yili  o‘tkaziladigan “Hamshira” respublika tanlovi g‘oliblari Davlat  komissiyasining qarori bilan tegishli oliy ta’lim muassasalarining mos  ta’lim yo‘nalishlariga tanlovdan tashqari kirish imtihonlari (test  sinovlari, kasbiy (ijodiy) imtihon, yozma imtihon)siz qo‘shimcha  davlat granti asosida o‘qishga qabul qilinadi.  Mazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining  bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan  birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi.",
+    "documents": "Mas’ul vakolatli davlat organi: Sog‘liqni saqlash vazirligi.",
+    "order": 13,
+    "is_active": true,
+    "created_at": "2026-01-07T06:40:36.675Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 14,
+  "fields": {
+    "category": 1,
+    "title": "Xalqaro tanlovlar g‘oliblari",
+    "description": "Huquqiy asosi:  1. O‘zbekiston Respublikasi Prezidentining “Iqtidorli yoshlarni  aniqlash va yuqori malakali kadrlar tayyorlashning uzluksiz tizimini  tashkil etish chora-tadbirlari to‘g‘risida” 2019-yil 3-maydagi  PQ-4306-son qarori.  2. O‘zbekiston Respublikasi Prezidentining “2021-2022-o‘quv  yilida O‘zbekiston Respublikasining oliy ta’lim muassasalariga  o‘qishga qabul qilishning davlat buyurtmasi parametrlari to‘g‘risida”  2021-yil 22-iyundagi PQ-5157-son qarori.  Qo‘llanishi: Xalqaro olimpiadalarda 1-3-o‘rinni egallagan  abituriyentlar oliy ta’lim muassasalariga test sinovisiz va imtihonlarsiz  qo‘shimcha davlat granti asosida qabul qilinadi. Bular:   Xalqaro matematika olimpiadasi – International Mathematical  Olympiad (IMO);   Xalqaro fizika olimpiadasi – International Physics Olympiad  (IPhO);   Xalqaro kimyo olimpiadasi – International Chemistry  Olympiad (IChO);   Xalqaro biologiya olimpiadasi – International Biology  Olympiad (IBO);   Xalqaro informatika olimpiadasi – International Olympiad in  Informatics (IOI).  Mazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining  bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan  birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi.",
+    "documents": "Mas’ul vakolatli davlat organi: Xalq ta’limi vazirligi.",
+    "order": 14,
+    "is_active": true,
+    "created_at": "2026-01-07T06:40:51.778Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 15,
+  "fields": {
+    "category": 1,
+    "title": "O‘zbekiston yoshlar ittifoqining faol a’zolari",
+    "description": "Huquqiy asosi:  1. Vazirlar Mahkamasining “O‘zbekiston yoshlar ittifoqining faol  a’zolariga oliy ta’lim muassasalariga kirishda imtiyozlar berish  to‘g‘risida” 2017-yil 14-noyabrdagi 914-son qarori.  2. O‘zbekiston Respublikasi Prezidentining “2021-2022-o‘quv  yilida O‘zbekiston Respublikasining oliy ta’lim muassasalariga  o‘qishga qabul qilishning davlat buyurtmasi parametrlari to‘g‘risida”  2021-yil 22-iyundagi PQ-5157-son qarori.  Qo‘llanishi: O‘zbekiston yoshlar ittifoqining faol a’zolariga,  ya’ni O‘zbekiston yoshlar ittifoqi tizimidagi sardorlarga, boshlang‘ich  tashkilotlardagi yo‘nalish yetakchilariga, ikki yillik mehnat stajiga ega  bo‘lgan fidoyi yoshlarga oliy ta’lim muassasalariga imtiyozli qabul  qilish bo‘yicha tavsiyanomalar beriladi.  Bunda respublika komissiyasi tanlov natijalariga ko‘ra  Qoraqalpog‘iston Respublikasi, viloyatlar va Toshkent shahrining bir  nafardan (jami 14 nafar) eng munosib yoshlari tanlab olinadi.  Tavsiyanomaga ega O‘zbekiston yoshlar ittifoqining faol a’zolari  Davlat komissiyasining qarori bilan doimiy yashash joyidagi oliy  ta’lim muassasalarining pedagogika ta’lim yo‘nalishlariga tanlovdan  tashqari kirish imtihonlari (test sinovlari, kasbiy (ijodiy) imtihon,  yozma imtihon)siz qo‘shimcha davlat granti asosida o‘qishga qabul  qilinadi.  Mazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining  bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan  birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi.",
+    "documents": "Mas’ul vakolatli davlat organi: O‘zbekiston yoshlar ittifoqi",
+    "order": 15,
+    "is_active": true,
+    "created_at": "2026-01-07T06:41:09.324Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 16,
+  "fields": {
+    "category": 2,
+    "title": "Prezident ta’lim muassasalari agentligi tizimidagi ixtisoslashtirilgan maktablar bitiruvchilari",
+    "description": "Huquqiy asosi:\r\nO‘zbekiston Respublikasi Prezidentining\r\n“Prezident, ijod va ixtisoslashtirilgan maktablar faoliyatini yanada takomillashtirish bo‘yicha qo‘shimcha chora-tadbirlar to‘g‘risida”\r\n2021-yil 19-iyuldagi PQ-5188-son qarori.\r\n\r\nQo‘llanishi:\r\nPrezident ta’lim muassasalari agentligi tizimidagi ixtisoslashtirilgan maktablarning bitiruvchilari ixtisoslik yo‘nalishidan kelib chiqib davlat oliy ta’lim tashkilotlarining kimyo, biologiya, fizika va axborot texnologiyalari sohalari uchun kadrlar tayyorlaydigan bakalavriat ta’lim yo‘nalishlariga umumiy belgilangan qabul parametrlaridan tashqari bazaviy to‘lov-kontrakt asosida test sinovlarisiz va qo‘shimcha imtihonlarsiz o‘qishga qabul qilinadi.\r\n\r\nMazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nPrezident ta’lim muassasalari agentligi.",
+    "order": 17,
+    "is_active": true,
+    "created_at": "2026-01-07T06:50:05.931Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 17,
+  "fields": {
+    "category": 1,
+    "title": "Prezident ta’lim muassasalari agentligi tizimidagi ijod maktablarining bitiruvchilari",
+    "description": "Huquqiy asosi:\r\nO‘zbekiston Respublikasi Prezidentining\r\n“Prezident, ijod va ixtisoslashtirilgan maktablar faoliyatini yanada takomillashtirish bo‘yicha qo‘shimcha chora-tadbirlar to‘g‘risida”\r\n2021-yil 19-iyuldagi PQ-5188-son qarori.\r\n\r\nQo‘llanishi:\r\nPrezident ta’lim muassasalari agentligi tizimidagi ijod maktablarining bitiruvchilari ixtisoslik yo‘nalishidan kelib chiqib davlat oliy ta’lim tashkilotlarining tilshunoslik, adabiyot, pedagogika, tarjimonlik va jurnalistika sohalari uchun kadrlar tayyorlaydigan bakalavriat ta’lim yo‘nalishlariga umumiy belgilangan qabul parametrlaridan tashqari bazaviy to‘lov-kontrakt asosida test sinovlarisiz va qo‘shimcha imtihonlarsiz o‘qishga qabul qilinadi.\r\n\r\nMazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nPrezident ta’lim muassasalari agentligi.",
+    "order": 2,
+    "is_active": true,
+    "created_at": "2026-01-07T06:50:48.685Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 18,
+  "fields": {
+    "category": 2,
+    "title": "“Zakovat” intellektual o‘yini g‘oliblari",
+    "description": "Huquqiy asosi:\r\nO‘zbekiston Respublikasi Prezidentining\r\n“‘Zakovat’ intellektual o‘yinini aholi o‘rtasida ommaviy-ma’rifiy harakatga aylantirish va boshqa intellektual o‘yinlarni rivojlantirishga oid chora-tadbirlar to‘g‘risida”\r\n2022-yil 20-yanvardagi PQ-96-son qarori.\r\n\r\nQo‘llanishi:\r\n“Zakovat” intellektual o‘yini bo‘yicha respublika tashkiliy qo‘mitasi tavsiyasiga ko‘ra intellektual o‘yinlarning respublika bosqichida g‘olib va sovrindor (1–3-o‘rinlar) bo‘lgan umumiy o‘rta ta’lim maktablari, jumladan Prezident ta’lim muassasalari o‘quvchilari belgilangan tartibda:\r\n\r\no‘rta maxsus va professional ta’lim muassasalariga;\r\n\r\noliy ta’lim muassasalariga;\r\n\r\no‘rta maxsus va professional ta’lim muassasalari o‘quvchilari — oliy ta’lim muassasalarining tegishli ta’lim yo‘nalishlariga;\r\n\r\noliy ta’lim muassasalari talabalari — ta’limning keyingi bosqichiga\r\n\r\nbazaviy to‘lov-kontrakt asosida imtihon sinovlarisiz qabul qilinadi.\r\n\r\nMazkur imtiyozga ega abituriyentlar oliy ta’lim muassasalarining bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nXalq ta’limi vazirligi, Prezident ta’lim muassasalari agentligi, Oliy va o‘rta maxsus ta’lim vazirligi.",
+    "order": 18,
+    "is_active": true,
+    "created_at": "2026-01-07T06:51:14.301Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 19,
+  "fields": {
+    "category": 2,
+    "title": "Profilaktika (katta) inspektorlari",
+    "description": "Huquqiy asosi:\r\nO‘zbekiston Respublikasi Prezidentining\r\n“Ichki ishlar organlari profilaktika inspektorlarining yuridik yo‘nalishdagi bilimlarini oshirish bo‘yicha qo‘shimcha chora-tadbirlar to‘g‘risida”\r\n2021-yil 30-noyabrdagi PQ-23-son qarori.\r\n\r\nQo‘llanishi:\r\n2022–2023-o‘quv yilidan boshlab ichki ishlar organlarida uch yildan ortiq ish stajiga ega bo‘lgan, kasbiga fidoyi, tashabbuskor profilaktika (katta) inspektorlari Jamoat xavfsizligi universiteti, Toshkent davlat yuridik universiteti hamda yurisprudensiya sohasida bakalavriat ta’lim yo‘nalishi mavjud bo‘lgan boshqa davlat oliy ta’lim muassasalariga sirtqi ta’lim shakliga test sinovlarisiz qabul qilinadi\r\n(Jahon iqtisodiyoti va diplomatiya universiteti, Ichki ishlar vazirligi akademiyasi hamda Davlat bojxona qo‘mitasining Bojxona instituti bundan mustasno).\r\n\r\nTavsiyanomaga ega profilaktika (katta) inspektorlari oliy ta’lim muassasalariga qabul parametrlardan tashqari qabul qilinadi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nIchki ishlar vazirligi.",
+    "order": 16,
+    "is_active": true,
+    "created_at": "2026-01-07T06:52:39.076Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 20,
+  "fields": {
+    "category": 3,
+    "title": "Chet tili sertifikatiga ega abituriyentlar",
+    "description": "Huquqiy asosi:\r\nVazirlar Mahkamasining\r\n“Oliy ta’lim muassasalariga o‘qishga qabul qilish hamda xalqaro baholash tizimlari sertifikatlarini tan olish chora-tadbirlari to‘g‘risida”\r\n2019-yil 13-maydagi 395-son qarori.\r\n\r\nQo‘llanishi:\r\nTest sinovlari (kasbiy (ijodiy) imtihonlar) majmuasiga chet tili fani kiritilgan barcha bakalavriat ta’lim yo‘nalishlariga hujjat topshirgan va milliy yoki xalqaro imtihonlar bo‘yicha B2 va undan yuqori darajadagi chet tili sertifikatiga ega abituriyentlarga ushbu fandan imtihonsiz belgilangan maksimal ball beriladi.\r\n\r\nBundan tashqari, Davlat yuridik universiteti uchun IELTS writing moduli 5.5 balldan yuqori bo‘lishi lozim.\r\nImtiyoz amal qiluvchi sertifikatlar:\r\n\r\ningliz tili — milliy sertifikat, IELTS, TOEFL iBT, Cambridge Assessment English (FCE, CAE, CPE);\r\n\r\nyapon tili — milliy sertifikat, JLPT N2;\r\n\r\nnemis tili — milliy sertifikat, Goethe-Zertifikat, DSD, TestDaF;\r\n\r\nfransuz tili — milliy sertifikat, DELF, TCF;\r\n\r\nboshqa tillar — milliy sertifikat yoki xalqaro imtihon tizimlari.\r\n\r\nTegishli fandan beriladigan maksimal ball fanlar majmuasida mazkur fan mavjud bo‘lgan abituriyent tanlagan barcha ta’lim yo‘nalishlari uchun o‘rinli hisoblanadi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nDavlat test markazi, Xorijiy tillarni o‘rganishni ommalashtirish agentligi.",
+    "order": 19,
+    "is_active": true,
+    "created_at": "2026-01-07T07:02:38.959Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 21,
+  "fields": {
+    "category": 3,
+    "title": "Musiqa, raqs, teatr, folklor, tasviriy va amaliy san’at hamda dizayn yo‘nalishlari bo‘yicha respublika va xalqaro tanlovlar g‘oliblari",
+    "description": "Huquqiy asosi:\r\n\r\nVazirlar Mahkamasining 2008-yil 13-oktabrdagi 226-son qarori.\r\n\r\nVazirlar Mahkamasining 2017-yil 20-iyundagi 393-son qarori.\r\n\r\nQo‘llanishi:\r\nMadaniyat vazirligi huzuridagi respublika va xalqaro tanlovlar g‘oliblari bakalavriat ta’lim yo‘nalishlarining kasbiy (ijodiy) imtihonlari bo‘yicha eng yuqori ball bilan baholanadi va maksimal ball beriladi.\r\n\r\nAgar kasbiy (ijodiy) imtihonlardan eng yuqori ball bir nechta fanlardan belgilangan bo‘lsa, abituriyent eng yuqori ballni olish huquqiga ega bo‘ladi.\r\n\r\nTegishli fandan beriladigan maksimal ball fanlar majmuasida mazkur fan mavjud bo‘lgan abituriyent tanlagan barcha ta’lim yo‘nalishlari uchun o‘rinli hisoblanadi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nMadaniyat vazirligi, O‘zbekiston badiiy akademiyasi.",
+    "order": 20,
+    "is_active": true,
+    "created_at": "2026-01-07T07:03:22.290Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 22,
+  "fields": {
+    "category": 3,
+    "title": "“Bolalar sport o‘yinlari”ning respublika bosqichi g‘oliblari",
+    "description": "Huquqiy asosi:\r\nO‘zbekiston Respublikasi Prezidentining\r\n“O‘zbekiston Respublikasida jismoniy tarbiya va sportni yanada takomillashtirish va ommalashtirish chora-tadbirlari to‘g‘risida”\r\n2020-yil 24-yanvardagi PF-5924-son farmoni.\r\n\r\nQo‘llanishi:\r\n“Bolalar sport o‘yinlari” jamoaviy sport turlari bo‘yicha respublika bosqichi g‘oliblariga (1-o‘rin) oliy ta’lim muassasalariga kirish imtihonlarida maksimal ball olish huquqi beriladi va ushbu imtiyoz bir yil muddat davomida amal qiladi.\r\n\r\nTegishli fandan beriladigan maksimal ball fanlar majmuasida mazkur fan mavjud bo‘lgan abituriyent tanlagan barcha ta’lim yo‘nalishlari uchun o‘rinli hisoblanadi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nSportni rivojlantirish vazirligi.",
+    "order": 21,
+    "is_active": true,
+    "created_at": "2026-01-07T07:03:48.668Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 23,
+  "fields": {
+    "category": 3,
+    "title": "Umumta’lim fanlaridan milliy sertifikatga ega abituriyentlar",
+    "description": "Huquqiy asosi:\r\nVazirlar Mahkamasining\r\n“Umumta’lim fanlarini bilish darajasini baholash tizimini joriy etish to‘g‘risida”\r\n2020-yil 22-oktabrdagi 646-son qarori.\r\n\r\nQo‘llanishi:\r\nUmumta’lim fanidan milliy baholash test sinovlari natijasiga ko‘ra eng yuqori ballning kamida 60 foizini to‘plagan shaxslarga 3 yil muddat davomida amal qiluvchi davlat namunasidagi sertifikat beriladi.\r\n\r\nUshbu sertifikatga ega bo‘lgan abituriyentlar tegishli fan bo‘yicha davlat oliy ta’lim muassasalariga kirish imtihonlarida bazaviy to‘lov-kontrakt asosida test sinovlarisiz va qo‘shimcha ball berilgan holda qabul qilinadi.\r\n\r\nTegishli fandan beriladigan ball fanlar majmuasida mazkur fan mavjud bo‘lgan abituriyent tanlagan barcha ta’lim yo‘nalishlari uchun o‘rinli hisoblanadi.\r\n\r\nHozirda milliy sertifikatlash tizimi ona tili va adabiyot, rus tili va adabiyoti, matematika, kimyo va biologiya fanlari bo‘yicha joriy etilgan.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nDavlat test markazi.",
+    "order": 22,
+    "is_active": true,
+    "created_at": "2026-01-07T07:04:10.611Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 24,
+  "fields": {
+    "category": 3,
+    "title": "Respublika fan olimpiadalari g‘oliblari (tegishli fan bo‘yicha imtihondan ozod etilib ball beriladigan imtiyoz)",
+    "description": "Huquqiy asosi:\r\n\r\nO‘zbekiston Respublikasi Prezidentining\r\n“Iqtidorli yoshlarni aniqlash va yuqori malakali kadrlar tayyorlashning uzluksiz tizimini tashkil etish chora-tadbirlari to‘g‘risida”\r\n2019-yil 3-maydagi PQ-4306-son qarori.\r\n\r\nVazirlar Mahkamasining 2021-yil 9-sentabrdagi 562-son qarori.\r\n\r\nQo‘llanishi:\r\nAsosiy fan olimpiadalarining respublika bosqichida 1–3-o‘rinlarni egallagan o‘quvchilarga ixtisoslik fani bo‘yicha davlat oliy ta’lim muassasalariga kirish imtihonlarida maksimal ball olish huquqini beruvchi elektron sertifikat beriladi va u uch yil muddat davomida amal qiladi.\r\n\r\nInformatika va axborot texnologiyalari fani bo‘yicha sertifikatga ega bo‘lgan o‘quvchilarga ixtisoslik fani sifatida matematika fanidan maksimal ball olish huquqi beriladi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nXalq ta’limi vazirligi.",
+    "order": 23,
+    "is_active": true,
+    "created_at": "2026-01-07T07:04:43.202Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 25,
+  "fields": {
+    "category": 4,
+    "title": "“Temurbeklar maktabi” bitiruvchilari",
+    "description": "Huquqiy asosi:\r\n\r\nO‘zbekiston Respublikasi Prezidentining 2019-yil 28-iyundagi PQ-4375-son qarori.\r\n\r\nVazirlar Mahkamasining 2017-yil 20-iyundagi 393-son qarori bilan tasdiqlangan nizom.\r\n\r\nQo‘llanishi:\r\n“Temurbeklar maktabi” bitiruvchilariga O‘zbekiston Respublikasi oliy harbiy va ixtisoslashtirilgan ta’lim muassasalariga o‘qishga kirishda Davlat test markazi tomonidan o‘tkaziladigan test sinovlarida o‘zlari to‘plagan ballarning 30 foizi miqdorida qo‘shimcha ball ko‘rinishida imtiyoz beriladi.\r\n\r\nShuningdek, respublikaning boshqa davlat oliy ta’lim muassasalariga o‘qishga kirishda esa ushbu bitiruvchilarga test sinovlarida to‘plagan ballarining 15 foizi miqdorida qo‘shimcha ball ko‘rinishida imtiyoz beriladi.\r\n\r\nMazkur imtiyoz abituriyent tanlagan oliy ta’lim muassasasiga kirish imtihonlarida belgilangan tartibda qo‘llaniladi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nDavlat test markazi.",
+    "order": 25,
+    "is_active": true,
+    "created_at": "2026-01-07T07:07:17.203Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 26,
+  "fields": {
+    "category": 5,
+    "title": "Mehribonlik uylari bitiruvchilari",
+    "description": "Huquqiy asosi:\r\nO‘zbekiston Respublikasi Prezidentining yetim va ota-ona qaramog‘idan mahrum bo‘lgan bolalarni ijtimoiy qo‘llab-quvvatlashga doir qarorlari.\r\n\r\nQo‘llanishi:\r\nMehribonlik uylari va bolalar shaharchalari bitiruvchilari davlat oliy ta’lim muassasalariga kirishda qonunchilikda belgilangan tartibda imtiyozlarga ega bo‘ladi. Ular uchun qabul jarayonida qo‘shimcha imkoniyatlar yaratiladi hamda ijtimoiy himoya choralari qo‘llaniladi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nXalq ta’limi vazirligi, Mahalla va oilani qo‘llab-quvvatlash vazirligi.",
+    "order": 34,
+    "is_active": true,
+    "created_at": "2026-01-07T08:04:31.229Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 27,
+  "fields": {
+    "category": 4,
+    "title": "Harbiy xizmatchilarning farzandlari",
+    "description": "Huquqiy asosi:\r\nO‘zbekiston Respublikasi Prezidentining harbiy xizmatchilar va ularning oila a’zolarini ijtimoiy qo‘llab-quvvatlashga oid qarorlari.\r\n\r\nQo‘llanishi:\r\nHarbiy xizmat vazifalarini bajarish chog‘ida halok bo‘lgan, bedarak yo‘qolgan yoki xizmat vaqtida og‘ir jarohat olib vafot etgan harbiy xizmatchilarning farzandlari oliy ta’lim muassasalariga kirishda imtiyozga ega bo‘ladi.\r\n\r\nMazkur imtiyozlar belgilangan kvotalar doirasida yoki qo‘shimcha ball berish orqali amalga oshiriladi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nMudofaa vazirligi, Davlat xavfsizlik xizmati, Milliy gvardiya.",
+    "order": 33,
+    "is_active": true,
+    "created_at": "2026-01-07T08:05:10.030Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 28,
+  "fields": {
+    "category": 5,
+    "title": "Ichki ishlar organlari xodimlarining farzandlari  Huquqiy asosi:",
+    "description": "O‘zbekiston Respublikasi Prezidentining ichki ishlar organlari xodimlarini ijtimoiy himoya qilishga oid qarorlari.\r\n\r\nQo‘llanishi:\r\nIchki ishlar organlarida xizmat vazifalarini bajarish chog‘ida halok bo‘lgan yoki og‘ir jarohat olgan xodimlarning farzandlari oliy ta’lim muassasalariga kirishda imtiyoz asosida qabul qilinadi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nIchki ishlar vazirligi.",
+    "order": 32,
+    "is_active": true,
+    "created_at": "2026-01-07T08:05:29.559Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 29,
+  "fields": {
+    "category": 5,
+    "title": "Bojxona organlari xodimlarining farzandlari",
+    "description": "Huquqiy asosi:\r\nO‘zbekiston Respublikasi Prezidentining bojxona organlari faoliyatini tartibga soluvchi hujjatlari.\r\n\r\nQo‘llanishi:\r\nBojxona organlarida xizmat vazifasini bajarish vaqtida halok bo‘lgan yoki xizmat davomida jarohat olib vafot etgan xodimlarning farzandlariga oliy ta’lim muassasalariga kirishda imtiyozlar beriladi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nDavlat bojxona qo‘mitasi.",
+    "order": 32,
+    "is_active": true,
+    "created_at": "2026-01-07T08:05:44.967Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 30,
+  "fields": {
+    "category": 5,
+    "title": "Nogironligi bo‘lgan shaxslar",
+    "description": "Huquqiy asosi:\r\nNogironligi bo‘lgan shaxslarning huquqlarini ta’minlashga doir O‘zbekiston Respublikasi qonunlari.\r\n\r\nQo‘llanishi:\r\nI va II-guruh nogironligi mavjud bo‘lgan abituriyentlar oliy ta’lim muassasalariga kirishda belgilangan tartibda imtiyozlar asosida qabul qilinadi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nSog‘liqni saqlash vazirligi.",
+    "order": 39,
+    "is_active": true,
+    "created_at": "2026-01-07T08:06:01.984Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 31,
+  "fields": {
+    "category": 5,
+    "title": "Ota-onasidan ayrilgan (yetim) bolalar",
+    "description": "Huquqiy asosi:\r\nO‘zbekiston Respublikasi Prezidentining yetim bolalarni qo‘llab-quvvatlashga oid qarorlari.\r\n\r\nQo‘llanishi:\r\nYetim bolalar va ota-ona qaramog‘idan mahrum bo‘lgan shaxslar oliy ta’lim muassasalariga kirishda ijtimoiy himoya doirasida imtiyozlarga ega bo‘ladi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nMahalla va oilani qo‘llab-quvvatlash vazirligi.",
+    "order": 29,
+    "is_active": true,
+    "created_at": "2026-01-07T08:06:22.754Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 32,
+  "fields": {
+    "category": 4,
+    "title": "Harbiy oliy o‘quv yurtlariga tavsiyanomaga ega abituriyentlar",
+    "description": "Huquqiy asosi:\r\nO‘zbekiston Respublikasi Prezidentining harbiy ta’lim tizimini rivojlantirishga doir qarorlari.\r\n\r\nQo‘llanishi:\r\nHarbiy qism qo‘mondonligi tomonidan berilgan tavsiyanomaga ega bo‘lgan yoshlar harbiy oliy ta’lim muassasalariga kirishda imtiyoz asosida ko‘rib chiqiladi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nMudofaa vazirligi.",
+    "order": 27,
+    "is_active": true,
+    "created_at": "2026-01-07T08:06:39.928Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 33,
+  "fields": {
+    "category": 5,
+    "title": "O‘rmonchilar va ularning farzandlari",
+    "description": "Huquqiy asosi:\r\nO‘zbekiston Respublikasi Prezidentining o‘rmon xo‘jaligi sohasini rivojlantirishga oid qarorlari.\r\n\r\nQo‘llanishi:\r\nO‘rmon xo‘jaligi tizimida xizmat qilayotgan xodimlar va ularning farzandlariga oliy ta’lim muassasalariga kirishda belgilangan tartibda imtiyozlar beriladi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nO‘rmon xo‘jaligi davlat qo‘mitasi.",
+    "order": 27,
+    "is_active": true,
+    "created_at": "2026-01-07T08:07:01.925Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 34,
+  "fields": {
+    "category": 5,
+    "title": "Umumta’lim muassasalarida fidokorona xizmat qilgan pedagoglar farzandlari",
+    "description": "Huquqiy asosi:\r\nTa’lim sohasi xodimlarini rag‘batlantirishga doir Prezident qarorlari.\r\n\r\nQo‘llanishi:\r\nUmumta’lim muassasalarida uzoq yillar fidokorona xizmat qilgan pedagoglarning farzandlariga oliy ta’lim muassasalariga kirishda imtiyozlar beriladi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nXalq ta’limi vazirligi.",
+    "order": 26,
+    "is_active": true,
+    "created_at": "2026-01-07T08:08:09.583Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 35,
+  "fields": {
+    "category": 5,
+    "title": "Olis cho‘l hududlari aholisi",
+    "description": "Huquqiy asosi:\r\nO‘zbekiston Respublikasi Prezidentining\r\n“Navoiy viloyatining olis cho‘l tumanlarida aholining turmush darajasini yanada oshirishga doir qo‘shimcha chora-tadbirlar to‘g‘risida”\r\n2017-yil 25-apreldagi PQ-2925-son qarori.\r\n\r\nQo‘llanishi:\r\nNavoiy, Buxoro, Samarqand viloyatlaridagi oliy ta’lim muassasalariga o‘qishga qabul qilishda test sinovlari natijalari bo‘yicha 68 va undan yuqori ball to‘plagan Navoiy viloyatining olis cho‘l hududlarida istiqomat qilayotgan abituriyentlar keyinchalik mutaxassisligi bo‘yicha hududlardagi budjet tashkilotlarida kamida 4 yil ishlash sharti bilan qo‘shimcha davlat granti asosida o‘qishga qabul qilinadi.\r\n\r\nMazkur imtiyoz asosida abituriyentlar oliy ta’lim muassasalarining bakalavriat ta’lim yo‘nalishlariga ro‘yxatdan o‘tishda o‘zlari tanlagan birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi\r\n(Navoiy, Buxoro va Samarqand viloyatlaridagi oliy ta’lim muassasalaridan biri bo‘lishi shart).",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nViloyati hokimligi.",
+    "order": 35,
+    "is_active": true,
+    "created_at": "2026-01-07T08:12:55.719Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 36,
+  "fields": {
+    "category": 5,
+    "title": "Surxondaryo viloyati Bobotog‘ hududidagi yoshlar",
+    "description": "Huquqiy asosi:\r\nO‘zbekiston Respublikasi Prezidentining\r\n2021–2023-yillarda Surxondaryo viloyati Uzun tumani Bobotog‘ hududini ijtimoiy-iqtisodiy rivojlantirish chora-tadbirlari to‘g‘risida\r\n2021-yil 17-fevraldagi PQ-4995-son qarori.\r\n\r\nQo‘llanishi:\r\n2021–2022-o‘quv yilidan kelgusiga qadar Uzun tumani Bobotog‘ hududidagi yoshlar uchun davlat granti bo‘yicha kvotalar ajratiladi.\r\n\r\nUshbu kvotalar asosan Surxondaryo viloyatidagi pedagogika va tibbiyot yo‘nalishlariga ega oliy ta’lim muassasalariga qabul qilish uchun mo‘ljallanadi.\r\n\r\nMazkur kvotalarning taqsimoti vazirliklar tomonidan amalga oshiriladi va Davlat komissiyasi tomonidan tasdiqlanadi.\r\n\r\nMazkur kvota bo‘yicha o‘qishga qabul qilingan yoshlar oliy ta’limni tamomlagach, o‘z hududida kamida 5 yil ishlash majburiyatini oladi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nOliy va o‘rta maxsus ta’lim vazirligi, Sog‘liqni saqlash vazirligi, Xalq ta’limi vazirligi, Davlat test markazi, Surxondaryo viloyati hokimligi.",
+    "order": 36,
+    "is_active": true,
+    "created_at": "2026-01-07T08:13:20.638Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 37,
+  "fields": {
+    "category": 5,
+    "title": "Fuqarolarning o‘zini o‘zi boshqarish organlari xodimlari",
+    "description": "Huquqiy asosi:\r\nVazirlar Mahkamasining\r\n“Fuqarolarning o‘zini o‘zi boshqarish organlari uchun kadrlar tayyorlash tizimini takomillashtirish chora-tadbirlari to‘g‘risida”\r\n2021-yil 8-yanvardagi 3-son qarori.\r\n\r\nQo‘llanishi:\r\nFuqarolarning o‘zini o‘zi boshqarish organlari xodimlari pedagogika, moliya-iqtisod sohalari hamda oliy ta’lim muassasalarining “5520100 – Ijtimoiy ish (faoliyatning turli sohalari bo‘yicha)” bakalavriat ta’lim yo‘nalishiga sirtqi ta’lim shaklida o‘qishga qabul qilinadi.\r\n\r\nUlar uchun ajratilgan qo‘shimcha qabul ko‘rsatkichlari Prezident qarori bilan belgilanadi va oliy ta’lim muassasalariga davlat buyurtmasi asosida qabul qilinadi.\r\n\r\nMazkur imtiyoz asosida qabul qilingan talabalarga stipendiya to‘lanmaydi, o‘qish to‘lov-kontrakt asosida amalga oshiriladi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nMahalla va nuroniylarni qo‘llab-quvvatlash vazirligi.",
+    "order": 37,
+    "is_active": true,
+    "created_at": "2026-01-07T08:13:40.799Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 38,
+  "fields": {
+    "category": 5,
+    "title": "Harbiy qism qo‘mondonligi tavsiyanomasiga ega abituriyentlar",
+    "description": "Huquqiy asosi:\r\n\r\nO‘zbekiston Respublikasi Prezidentining\r\n“O‘zbekiston Respublikasi Qurolli Kuchlari safida muddatli harbiy xizmatni o‘tab bo‘lgan fuqarolarga imtiyozlar tizimini takomillashtirish to‘g‘risida”\r\n2012-yil 31-maydagi PQ-1765-son qarori.\r\n\r\nVazirlar Mahkamasining\r\n2019-yil 17-avgustdagi 681-son qarori.\r\n\r\nQo‘llanishi:\r\nO‘zbekiston Respublikasi Qurolli Kuchlari safida muddatli harbiy xizmatni o‘tab, harbiy qism qo‘mondonligining tavsiyanomasiga ega bo‘lgan fuqarolar oliy ta’lim muassasalariga qo‘shimcha qabul ko‘rsatkichlari doirasida o‘qishga qabul qilinadi.\r\n\r\nMazkur abituriyentlar uchun ajratilgan alohida qabul ko‘rsatkichlari doirasida, tanlagan birinchi oliy ta’lim muassasasi bo‘yicha tanlovda ishtirok etadi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nMudofaa vazirligi, Milliy gvardiya, Ichki ishlar vazirligi, Davlat xavfsizlik xizmati, Favqulodda vaziyatlar vazirligi.",
+    "order": 38,
+    "is_active": true,
+    "created_at": "2026-01-07T08:14:15.141Z"
+  }
+},
+{
+  "model": "Abituriyent.privilege",
+  "pk": 39,
+  "fields": {
+    "category": 5,
+    "title": "Ijtimoiy himoyaga muhtoj xotin-qizlar",
+    "description": "Huquqiy asosi:\r\n\r\nO‘zbekiston Respublikasi Prezidentining\r\n“Xotin-qizlarni qo‘llab-quvvatlash, ularning jamiyat hayotidagi faol ishtirokini ta’minlash tizimini yanada takomillashtirish to‘g‘risida”\r\n2021-yil 5-martdagi PQ-5020-son qarori.\r\n\r\nVazirlar Mahkamasining\r\n2020-yil 23-iyundagi 402-son qarori.\r\n\r\nQo‘llanishi:\r\nOila va xotin-qizlar davlat qo‘mitasi tomonidan berilgan tavsiyanomaga ega ehtiyojmand oilalardagi xotin-qizlar oliy ta’lim muassasalariga qo‘shimcha kvotalar doirasida tanlovda ishtirok etadi.\r\n\r\nUlar uchun hududlar kesimida kvotalar ajratiladi va kvota doirasida eng yuqori ball to‘plagan abituriyentlar o‘zlari tanlagan birinchi oliy ta’lim muassasasiga talabalikka tavsiya etiladi.",
+    "documents": "Mas’ul vakolatli davlat organi:\r\nOila va xotin-qizlar davlat qo‘mitasi.",
+    "order": 30,
+    "is_active": true,
+    "created_at": "2026-01-07T08:14:43.615Z"
+  }
+},
+{
+  "model": "Abituriyent.qabulkvotasi",
+  "pk": 2,
+  "fields": {
+    "title": "Qabul kvotasi",
+    "content": "<!DOCTYPE html>\r\n<html lang=\"uz\"><head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>2025/2026 o‘quv yili qabul jadvali</title>\r\n    <style>\r\n        body {\r\n            font-family: \"Times New Roman\", serif;\r\n        }\r\n        h3, h4 {\r\n            text-align: center;\r\n            margin: 5px 0;\r\n        }\r\n        table {\r\n            width: 100%;\r\n            border-collapse: collapse;\r\n            margin-top: 20px;\r\n        }\r\n        th, td {\r\n            border: 1px solid #000;\r\n            padding: 6px;\r\n            text-align: center;\r\n            font-size: 14px;\r\n        }\r\n        th {\r\n            font-weight: bold;\r\n        }\r\n        td.left {\r\n            text-align: left;\r\n        }\r\n    </style>\r\n</head>\r\n<body><h3><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">2025/2026 o‘quv yilida</span></h3><h4><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Sharof Rashidov nomidagi Samarqand davlat universitetining Urgut filiali</span><br><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">bakalavriatining kunduzgi ta’lim shakli bo‘yicha o‘qishga</span><br><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">qabul qilish parametrlarining ta’lim yo‘nalishlari va o‘qitish tillari bo‘yicha</span><br><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\"><strong>TAQSIMLANISHI</strong></span></h4><figure class=\"table\"><table><thead><tr><th><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Shifr</span></th><th><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Ta’lim yo‘nalishlari nomi</span></th><th><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Jami</span></th><th colspan=\"7\"><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">shu jumladan:</span></th></tr></thead><tbody><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">o‘zbek</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">rus</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">qq</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">qoz</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">toj</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">qirg‘</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">tur</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\"><strong>SamDU Urgut filiali bo‘yicha jami:</strong></span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\"><strong>450</strong></span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\"><strong>425</strong></span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\"><strong>25</strong></span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60110200</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Maktabgacha ta’lim</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">75</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">75</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60110400</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Boshlang‘ich ta’lim</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">75</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">75</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60110700</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">O‘zbek tili va adabiyoti</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">75</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">75</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60110800</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Ona tili va adabiyoti (rus tili)</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60110900</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Xorijiy til va adabiyoti (ingliz tili)</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">50</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">50</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60410200</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Buxgalteriya hisobi</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60510100</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Biologiya</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60530100</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Kimyo</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60530200</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Geografiya</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60540100</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Matematika</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60610100</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Axborot tizimlari va texnologiyalar</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure></body></html>",
+    "created_at": "2026-01-07T16:25:08.834Z"
+  }
+},
+{
+  "model": "xorijiy.country",
+  "pk": 1,
+  "fields": {
+    "name": "Tojikiston",
+    "code": "+992"
+  }
+},
+{
+  "model": "xorijiy.studyprogram",
+  "pk": 1,
+  "fields": {
+    "name": "Tyrone Rodgers",
+    "code": "Quia et fuga Esse odio voluptate sit sed cillum",
+    "program_type": "phd",
+    "duration": 6,
+    "description": "Eum dolore non aute",
+    "is_active": true
+  }
+}
+]

@@ -27,4 +27,3 @@ class PrivilegeListView(TemplateView):
 def qabul_kvotasi(request):
     kvota = QabulKvotasi.objects.last()
     return render(request, 'qabul_kvotasi.html', {'kvota': kvota})
-

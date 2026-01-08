@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
-
+from django_ckeditor_5.fields import CKEditor5Field
 
 class PrivilegeCategory(models.Model):
     title = models.CharField(max_length=100, verbose_name="Kategoriya nomi")
@@ -54,8 +54,6 @@ class Privilege(models.Model):
         return self.title
 
 
-from django.db import models
-from django_ckeditor_5.fields import CKEditor5Field
 
 class QabulKvotasi(models.Model):
     title = models.CharField(
@@ -74,3 +72,4 @@ class QabulKvotasi(models.Model):
 
     def __str__(self):
         return self.title
+

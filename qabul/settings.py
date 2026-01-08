@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'employees',
     'Abituriyent',
     'django_ckeditor_5',
-    'xorijiy.apps.XorijiyConfig',
+    'xorijiy',
 ]
 
 MIDDLEWARE = [
