@@ -433,52 +433,78 @@
 
     <!-- Posts Grid -->
     {% if posts %}
-    <div class="row g-4" id="postsGrid">
-        {% for post in posts %}
-        <div class="col-12 col-md-6 col-lg-3 wow fadeInUp" style="--animation-order: {{ forloop.counter }}">
-            <div class="post-card">
-                <div class="post-card-image">
-                    <img src="{{ post.image.url }}" 
-                         alt="{{ post.title }}"
-                         loading="lazy">
-                    <div class="post-card-badge">
-                        {{ post.category.name }}
+<div class="container-fluid blog py-5">
+    <div class="container py-5">
+
+        <!-- Sarlavha -->
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h1 class="display-4 mb-4">So'nggi Yangiliklar va E'lonlar</h1>
+            <p class="mb-0">
+                Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filialining
+                eng so'nggi yangiliklari va muhim e'lonlari
+            </p>
+        </div>
+
+        <!-- Postlar -->
+        <div class="row g-4 justify-content-center" id="postsGrid">
+            {% for post in posts %}
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.{{ forloop.counter }}s">
+                <div class="blog-item h-100">
+
+                    <!-- Rasm -->
+                    <div class="blog-img position-relative">
+                        <img src="{{ post.image.url }}"
+                             class="img-fluid rounded-top w-100"
+                             alt="{{ post.title }}"
+                             loading="lazy"
+                             style="height: 250px; object-fit: cover;">
+
+                        <!-- Kategoriya -->
+                        <div class="blog-categiry py-2 px-4">
+                            <span>{{ post.category.name }}</span>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="post-card-content">
-                    <div class="post-meta">
-                        <span class="post-date">
-                            <i class="fas fa-calendar-alt"></i>
-                            {{ post.published_date|date:"d M Y" }}
-                        </span>
-                        <span class="post-views">
-                            <i class="fas fa-eye"></i>
-                            {{ post.views }}
-                        </span>
-                    </div>
-                    
-                    <h3 class="post-title">
-                        <a href="{{ post.get_absolute_url }}" class="text-decoration-none">
-                            {{ post.title }}
+
+                    <!-- Kontent -->
+                    <div class="blog-content p-4 d-flex flex-column">
+
+                        <!-- Meta -->
+                        <div class="blog-comment d-flex justify-content-between mb-3">
+                            <div class="small">
+                                <span class="fa fa-calendar text-primary"></span>
+                                {{ post.published_date|date:"d M Y" }}
+                            </div>
+                            <div class="small">
+                                <span class="fa fa-eye text-primary"></span>
+                                {{ post.views }}
+                            </div>
+                        </div>
+
+                        <!-- Sarlavha -->
+                        <a href="{{ post.get_absolute_url }}" class="h4 d-inline-block mb-3">
+                            {{ post.title|truncatewords:8 }}
                         </a>
-                    </h3>
-                    
-                    <p class="post-excerpt">
-                        {{ post.excerpt|truncatewords:25 }}
-                    </p>
-                    
-                    <div class="post-footer">
-                        <a href="{{ post.get_absolute_url }}" class="read-more-btn">
-                            Batafsil
-                            <i class="fas fa-arrow-right"></i>
+
+                        <!-- Qisqa matn -->
+                        <p class="mb-4">
+                            {{ post.excerpt|truncatewords:15 }}
+                        </p>
+
+                        <!-- Batafsil -->
+                       <a href="{{ post.get_absolute_url }}" class="btn p-0 mt-auto" style="text-align: left;">
+                            Batafsil <i class="fa fa-arrow-right"></i>
                         </a>
+
+
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+
     </div>
+</div>
+
 
     <!-- Pagination -->
     {% if page_obj.has_other_pages %}

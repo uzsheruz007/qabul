@@ -26,7 +26,12 @@ SECRET_KEY = 'django-insecure-h4%-ra2ma=_qi&4hofuq-wv+_t53+l_7#!mz56)fg-#_m%)b58
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "qabul.samduuf.uz",
+    "www.qabul.samduuf.uz",
+    "213.230.126.222",
+]
+
 
 
 
@@ -51,6 +56,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -128,13 +134,22 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
+# =========================
+# STATIC & MEDIA
+# =========================
+
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 STATICFILES_DIRS = [
-    BASE_DIR / "static"
+    BASE_DIR / 'static',
 ]
-# Fayl yuklash sozlamalari
+
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = BASE_DIR / 'media'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 # Fayl formatlari
 FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10MB
@@ -167,3 +182,10 @@ CKEDITOR_5_CONFIGS = {
         }
     }
 }
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://qabul.samduuf.uz",
+    "https://www.qabul.samduuf.uz",
+]
+
