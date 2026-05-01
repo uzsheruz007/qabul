@@ -8,7 +8,10 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8000/)",
       "Bash(curl -s http://127.0.0.1:8000/static/css/style.css)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8000/static/img/41.png)",
-      "Bash(curl -s http://127.0.0.1:8000/)"
+      "Bash(curl -s http://127.0.0.1:8000/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8000/static/css/bootstrap.min.css)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8000/static/css/style.css)",
+      "Bash(python manage.py collectstatic --noinput)"
     ]
   }
 }
