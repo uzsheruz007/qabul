@@ -16,7 +16,11 @@
       "PowerShell(git -C \"c:\\\\Users\\\\User\\\\qabul_project\" diff --stat)",
       "PowerShell(git -C \"c:\\\\Users\\\\User\\\\qabul_project\" add templates/)",
       "PowerShell(git -C \"c:\\\\Users\\\\User\\\\qabul_project\" add templates/index.html static/css/style.css)",
-      "PowerShell(git -C \"c:\\\\Users\\\\User\\\\qabul_project\" add static/css/style.css templates/index.html)"
+      "PowerShell(git -C \"c:\\\\Users\\\\User\\\\qabul_project\" add static/css/style.css templates/index.html)",
+      "PowerShell(git -C \"c:\\\\Users\\\\User\\\\qabul_project\" add staticfiles/)",
+      "PowerShell(git -C \"c:\\\\Users\\\\User\\\\qabul_project\" status --short)",
+      "PowerShell(git -C \"c:\\\\Users\\\\User\\\\qabul_project\" add staticfiles/ templates/index.html)",
+      "PowerShell(git -C \"c:\\\\Users\\\\User\\\\qabul_project\" push)"
     ]
   }
 }
