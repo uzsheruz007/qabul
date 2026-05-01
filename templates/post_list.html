@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+﻿{% extends "index.html" %}
 {% load static %}
 
 {% block content %}
@@ -397,19 +397,17 @@
     }
 </style>
 
-<div class="container">
-    <div class="page-header">
-        <div class="page-header-content">
-            <h1>So'nggi yangiliklar va e'lonlar</h1>
-            <p>Sharof Rashidov nomidagi Samarqand davlat universitetining Urgut filialining eng so'nggi yangiliklari, muhim e'lonlari va tadbirlari haqida ma'lumotlar</p>
-            <div class="university-badge">
-                <i class="fas fa-university"></i>
-                <span>SamDU Urgut filiali</span>
-            </div>
-        </div>
+<section class="page-hero">
+    <div class="container">
+        <div class="hero-badge"><i class="fas fa-newspaper me-2"></i>Yangiliklar</div>
+        <h1>Yangiliklar va e'lonlar</h1>
+        <p>SamDU Urgut filialining eng so'nggi yangiliklari, muhim e'lonlari va tadbirlar haqida ma'lumotlar</p>
+        <nav aria-label="breadcrumb"><ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Bosh sahifa</a></li>
+            <li class="breadcrumb-item active">Yangiliklar</li>
+        </ol></nav>
     </div>
-</div>
-
+</section>
 <div class="container">
     <!-- Categories -->
     <div class="categories-container">
@@ -432,79 +430,35 @@
     </div>
 
     <!-- Posts Grid -->
-    {% if posts %}
-<div class="container-fluid blog py-5">
-    <div class="container py-5">
-
-        <!-- Sarlavha -->
-        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-            <h1 class="display-4 mb-4">So'nggi yangiliklar va e'lonlar</h1>
-            <p class="mb-0">
-                Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filialining
-                eng so'nggi yangiliklari va muhim e'lonlari
-            </p>
-        </div>
-
-        <!-- Postlar -->
-        <div class="row g-4 justify-content-center" id="postsGrid">
-            {% for post in posts %}
-            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.{{ forloop.counter }}s">
-                <div class="blog-item h-100">
-
-                    <!-- Rasm -->
-                    <div class="blog-img position-relative">
-                        <img src="{{ post.image.url }}"
-                             class="img-fluid rounded-top w-100"
-                             alt="{{ post.title }}"
-                             loading="lazy"
-                             style="height: 250px; object-fit: cover;">
-
-                        <!-- Kategoriya -->
-                        <div class="blog-categiry py-2 px-4">
-                            <span>{{ post.category.name }}</span>
-                        </div>
-                    </div>
-
-                    <!-- Kontent -->
-                    <div class="blog-content p-4 d-flex flex-column">
-
-                        <!-- Meta -->
-                        <div class="blog-comment d-flex justify-content-between mb-3">
-                            <div class="small">
-                                <span class="fa fa-calendar text-primary"></span>
-                                {{ post.published_date|date:"d M Y" }}
-                            </div>
-                            <div class="small">
-                                <span class="fa fa-eye text-primary"></span>
-                                {{ post.views }}
-                            </div>
-                        </div>
-
-                        <!-- Sarlavha -->
-                        <a href="{{ post.get_absolute_url }}" class="h4 d-inline-block mb-3">
-                            {{ post.title|truncatewords:8 }}
-                        </a>
-
-                        <!-- Qisqa matn -->
-                        <p class="mb-4">
-                            {{ post.excerpt|truncatewords:15 }}
-                        </p>
-
-                        <!-- Batafsil -->
-                        <a href="{{ post.get_absolute_url }}" class="btn p-0 mt-auto" style="text-align: left;">
-                            Batafsil <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
+<div class="row g-4 mt-2" id="postsGrid">
+    {% for post in posts %}
+    <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="0.{{ forloop.counter }}s">
+        <div class="news-card">
+            <div class="card-img-wrap">
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" loading="lazy">
+                <span class="card-cat">{{ post.category.name }}</span>
             </div>
-            {% endfor %}
+            <div class="card-body-inner">
+                <div class="card-meta">
+                    <span><i class="fas fa-calendar-alt"></i> {{ post.published_date|date:"d.m.Y" }}</span>
+                    <span><i class="fas fa-eye"></i> {{ post.views }}</span>
+                </div>
+                <h5><a href="{{ post.get_absolute_url }}" class="text-decoration-none text-dark">{{ post.title|truncatewords:9 }}</a></h5>
+                <p class="card-excerpt">{{ post.excerpt|truncatewords:18 }}</p>
+                <a href="{{ post.get_absolute_url }}" class="read-more">Batafsil <i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
-
     </div>
+    {% empty %}
+    <div class="col-12">
+        <div class="empty-state-box">
+            <div class="empty-icon"><i class="fas fa-newspaper"></i></div>
+            <h5>Bu kategoriyada yangiliklar yo'q</h5>
+        </div>
+    </div>
+    {% endfor %}
 </div>
-
-
-    <!-- Pagination -->
+<!-- Pagination -->
     {% if page_obj.has_other_pages %}
     <div class="pagination-container">
         <nav aria-label="Page navigation">

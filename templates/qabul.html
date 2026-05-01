@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+﻿{% extends "index.html" %}
 {% load static %}
 
 {% block content %}
@@ -488,55 +488,52 @@
     }
 </style>
 
+<section class="page-hero">
+    <div class="container">
+        <div class="hero-badge"><i class="fas fa-calendar-alt me-2"></i>Qabul bo'limi</div>
+        <h1>Qabul jadvali</h1>
+        <p>Qabul bo'limi xodimlari va ularning qabul kunlari haqida ma'lumot</p>
+        <nav aria-label="breadcrumb"><ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Bosh sahifa</a></li>
+            <li class="breadcrumb-item active">Qabul jadvali</li>
+        </ol></nav>
+    </div>
+</section>
+<section class="section-gap-sm" style="background:var(--gray-100);">
 <div class="container">
-    <div class="page-header">
-        <div class="page-header-content">
-            <h1>So'nggi yangiliklar va e'lonlar</h1>
-            <p>Sharof Rashidov nomidagi Samarqand davlat universitetining Urgut filialining eng so'nggi yangiliklari, muhim e'lonlari va tadbirlari haqida ma'lumotlar</p>
-            <div class="university-badge">
-                <i class="fas fa-university"></i>
-                <span>SamDU Urgut filiali</span>
+    <div class="row g-3">
+        <div class="col-6 col-md-3">
+            <div class="stat-card-modern">
+                <div class="stat-icon-wrap"><i class="fas fa-users"></i></div>
+                <div class="stat-num">{{ qabul_list|length }}</div>
+                <div class="stat-lbl">Jami xodimlar</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="stat-card-modern">
+                <div class="stat-icon-wrap"><i class="fas fa-clock"></i></div>
+                <div class="stat-num">5</div>
+                <div class="stat-lbl">Ish kunlari</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="stat-card-modern">
+                <div class="stat-icon-wrap"><i class="fas fa-door-open"></i></div>
+                <div class="stat-num">6</div>
+                <div class="stat-lbl">Qabul xonalari</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="stat-card-modern">
+                <div class="stat-icon-wrap"><i class="fas fa-phone-volume"></i></div>
+                <div class="stat-num">24/7</div>
+                <div class="stat-lbl">Aloqa</div>
             </div>
         </div>
     </div>
 </div>
-
-    <!-- Stats Cards -->
-    <div class="stats-container">
-        <div class="stat-card">
-            <div class="stat-icon">
-                <i class="fas fa-users"></i>
-            </div>
-            <div class="stat-number">{{ qabul_list|length }}</div>
-            <div class="stat-label">Jami xodimlar</div>
-        </div>
-        
-        <div class="stat-card">
-            <div class="stat-icon">
-                <i class="fas fa-clock"></i>
-            </div>
-            <div class="stat-number">5</div>
-            <div class="stat-label">Ish kunlari</div>
-        </div>
-        
-        <div class="stat-card">
-            <div class="stat-icon">
-                <i class="fas fa-door-open"></i>
-            </div>
-            <div class="stat-number">6</div>
-            <div class="stat-label">Qabul xonalari</div>
-        </div>
-        
-        <div class="stat-card">
-            <div class="stat-icon">
-                <i class="fas fa-phone-volume"></i>
-            </div>
-            <div class="stat-number">24/7</div>
-            <div class="stat-label">Aloqa</div>
-        </div>
-    </div>
-
-    <!-- Qabul Jadvali -->
+</section>
+<!-- Qabul Jadvali -->
     <div class="table-container">
         <div class="table-title">
             <i class="fas fa-table"></i>

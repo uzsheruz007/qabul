@@ -1,97 +1,44 @@
-{% extends "index.html" %}
+﻿{% extends "index.html" %}
 
 {% block content %}
-<div>
-    
-<div class="container py-5">
+
+<section class="page-hero">
+    <div class="container">
+        <div class="hero-badge"><i class="fas fa-graduation-cap me-2"></i>Bakalavriat</div>
+        <h1>Bakalavriat ta'lim yo'nalishlari</h1>
+        <p>Qabul kvotasi va mavjud ta'lim yo'nalishlari haqida batafsil ma'lumot</p>
+        <nav aria-label="breadcrumb"><ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Bosh sahifa</a></li>
+            <li class="breadcrumb-item active">Bakalavriat</li>
+        </ol></nav>
+    </div>
+</section>
+
+<section class="section-gap">
+<div class="container">
     <div class="row justify-content-center">
-        <div class="col-lg-10 col-xl-9">
-            
-            <!-- Kvota sarlavhasi -->
+        <div class="col-lg-10">
             {% if kvota %}
-            <div class="mb-5">
-                <h1 class="display-5 fw-bold text-dark text-center mb-4">
-                    {{ kvota.title }}
-                </h1>
-                <div class="text-center">
-                    <span class="badge bg-primary rounded-pill px-3 py-2 fs-6">Qabul kvotasi</span>
-                </div>
+            <div class="text-center mb-5">
+                <h2 class="sec-title">{{ kvota.title }}</h2>
+                <div class="sec-line center"></div>
+                <span class="sec-badge">Qabul kvotasi</span>
             </div>
-
-            <!-- Asosiy kontent -->
-            <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
                 <div class="card-body p-4 p-md-5">
-                    <div class="kvota-content fs-5 lh-lg text-dark">
-                        {{ kvota.content|safe }}
-                    </div>
-                    
-                    <!-- Yana bir belgi -->
-                    <div class="text-center mt-5 pt-4 border-top">
-                        <i class="fas fa-file-alt text-primary fs-1 opacity-75"></i>
-                    </div>
+                    <div class="kvota-content">{{ kvota.content|safe }}</div>
                 </div>
             </div>
-
             {% else %}
-            <!-- Ma'lumot yo'q holati -->
-            <div class="text-center py-5 my-5">
-                <div class="mb-4">
-                    <i class="fas fa-inbox fa-4x text-light bg-secondary p-4 rounded-circle"></i>
-                </div>
-                <h3 class="fw-semibold text-secondary mb-3">
-                    Ma'lumot kiritilmagan
-                </h3>
-                <p class="text-muted fs-5">
-                    Qabul kvotasi hozircha mavjud emas. Iltimos, keyinroq tekshiring.
-                </p>
+            <div class="empty-state-box">
+                <div class="empty-icon"><i class="fas fa-inbox"></i></div>
+                <h5>Ma'lumot kiritilmagan</h5>
+                <p>Qabul kvotasi hozircha mavjud emas. Iltimos, keyinroq tekshiring.</p>
             </div>
             {% endif %}
-
         </div>
     </div>
 </div>
+</section>
 
-<style>
-    .kvota-content {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    
-    .kvota-content h2, 
-    .kvota-content h3, 
-    .kvota-content h4 {
-        color: #2c3e50;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
-    }
-    
-    .kvota-content p {
-        margin-bottom: 1.2rem;
-        text-align: justify;
-    }
-    
-    .kvota-content ul, 
-    .kvota-content ol {
-        padding-left: 1.5rem;
-        margin-bottom: 1.2rem;
-    }
-    
-    .kvota-content table {
-        width: 100%;
-        margin: 1.5rem 0;
-        border-collapse: collapse;
-    }
-    
-    .kvota-content table th,
-    .kvota-content table td {
-        padding: 0.75rem;
-        border: 1px solid #dee2e6;
-    }
-    
-    .kvota-content table th {
-        background-color: #f8f9fa;
-        font-weight: 600;
-    }
-</style>
-</div>
-<br><br><br><br><br><br><br><br>
 {% endblock %}

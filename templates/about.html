@@ -1,117 +1,96 @@
-{% extends "index.html" %}
+﻿{% extends "index.html" %}
 {% load static %}
 
 {% block content %}
-<style>
-    :root {
-        --nuu-blue: #0a3d6d;
-        --nuu-light-blue: #1a6ca1;
-        --nuu-gold: #d4af37;
-        --nuu-white: #ffffff;
-        --nuu-light-gray: #f5f7fa;
-        --nuu-dark-gray: #333333;
-        --nuu-green: #2e7d32;
-        --nuu-red: #c62828;
-        --nuu-purple: #6a1b9a;
-        --nuu-gradient: linear-gradient(135deg, #0a3d6d 0%, #1a6ca1 100%);
-        --nuu-gradient-hover: linear-gradient(135deg, #1a6ca1 0%, #2c8bc8 100%);
-        --shadow-sm: 0 4px 12px rgba(10, 61, 109, 0.08);
-        --shadow-md: 0 8px 24px rgba(10, 61, 109, 0.12);
-        --shadow-lg: 0 12px 36px rgba(10, 61, 109, 0.15);
-        --border-radius: 16px;
-        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    /* Page Header */
-    .page-header {
-        background: var(--nuu-gradient);
-        color: var(--nuu-white);
-        padding: 60px 0;
-        margin-bottom: 60px;
-        position: relative;
-        overflow: hidden;
-        border-radius: var(--border-radius);
-    }
-    
-    .page-header::before {
-        content: "";
-        position: absolute;
-        width: 200%;
-        height: 200%;
-        top: -50%;
-        left: -50%;
-        background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-        background-size: 40px 40px;
-        animation: float 20s linear infinite;
-        z-index: 0;
-    }
-    
-    .page-header-content {
-        position: relative;
-        z-index: 2;
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-    
-    .page-header h1 {
-        font-size: 3.5rem;
-        font-weight: 800;
-        margin-bottom: 25px;
-        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(to right, #ffffff, #f0f7ff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        letter-spacing: -0.5px;
-    }
-    
-    .page-header p {
-        font-size: 1.25rem;
-        opacity: 0.95;
-        line-height: 1.8;
-        margin-bottom: 30px;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    .university-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(10px);
-        padding: 12px 25px;
-        border-radius: 50px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    @keyframes float {
-        0% { transform: translate(0, 0) rotate(0deg); }
-        100% { transform: translate(20px, 20px) rotate(360deg); }
-    }
-</style>
 
-<div class="container">
-    <div class="page-header">
-        <div class="page-header-content">
-            <h1>So'nggi yangiliklar va e'lonlar</h1>
-            <p>Sharof Rashidov nomidagi Samarqand davlat universitetining Urgut filialining eng so'nggi yangiliklari, muhim e'lonlari va tadbirlari haqida ma'lumotlar</p>
-            <div class="university-badge">
-                <i class="fas fa-university"></i>
-                <span>SamDU Urgut filiali</span>
+<section class="page-hero">
+    <div class="container">
+        <div class="hero-badge"><i class="fas fa-university me-2"></i>SamDU Urgut filiali</div>
+        <h1>Filial haqida</h1>
+        <p>Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali haqida umumiy ma'lumotlar</p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Bosh sahifa</a></li>
+                <li class="breadcrumb-item active">Filial haqida</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<section class="section-gap">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5">
+                    <span class="sec-badge mb-3">Universitet</span>
+                    <h2 class="sec-title mb-2">Sharof Rashidov nomidagi SamDU Urgut filiali</h2>
+                    <div class="sec-line"></div>
+                    <p class="text-secondary">Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali O'zbekiston Respublikasining yetakchi oliy ta'lim muassasalaridan biri hisoblanadi. Filial bakalavriat va magistratura yo'nalishlari bo'yicha yuqori malakali mutaxassislar tayyorlaydi.</p>
+                    <p class="text-secondary">Urgut filiali zamonaviy o'quv-laboratoriya binolari, kutubxona, sport majmuasi va yotoqxona imkoniyatlari bilan ta'minlangan. Talabalar uchun qulay muhit yaratilgan va ilmiy-tadqiqot faoliyati faol olib boriladi.</p>
+                    <div class="row g-3 mt-2">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-start gap-3 p-3 rounded-3" style="background:var(--primary-light);">
+                                <i class="fas fa-graduation-cap text-primary mt-1"></i>
+                                <div>
+                                    <div class="fw-bold text-dark" style="font-size:.9rem;">Ta'lim yo'nalishlari</div>
+                                    <div class="text-secondary" style="font-size:.82rem;">Bakalavriat va magistratura</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-start gap-3 p-3 rounded-3" style="background:var(--primary-light);">
+                                <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                                <div>
+                                    <div class="fw-bold text-dark" style="font-size:.9rem;">Manzil</div>
+                                    <div class="text-secondary" style="font-size:.82rem;">Urgut shahri, Universitet ko'chasi</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-start gap-3 p-3 rounded-3" style="background:var(--primary-light);">
+                                <i class="fas fa-phone-alt text-primary mt-1"></i>
+                                <div>
+                                    <div class="fw-bold text-dark" style="font-size:.9rem;">Telefon</div>
+                                    <div class="text-secondary" style="font-size:.82rem;">+998 93 333 20 14</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-start gap-3 p-3 rounded-3" style="background:var(--primary-light);">
+                                <i class="fas fa-envelope text-primary mt-1"></i>
+                                <div>
+                                    <div class="fw-bold text-dark" style="font-size:.9rem;">Email</div>
+                                    <div class="text-secondary" style="font-size:.82rem;">devonxona@samduuf.uz</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="{% static 'img/about-1.png' %}" alt="Filial" class="w-100" style="height:220px;object-fit:cover;">
+                    <div class="p-4">
+                        <h5 class="fw-bold text-dark mb-3">Tezkor havolalar</h5>
+                        <div class="d-flex flex-column gap-2">
+                            <a href="{% url 'komissiya' %}" class="d-flex align-items-center gap-2 text-decoration-none p-2 rounded-3" style="background:var(--gray-100);color:var(--gray-700);">
+                                <i class="fas fa-users text-primary" style="width:20px;"></i> Qabul komissiyasi
+                            </a>
+                            <a href="{% url 'hujjatlar' %}" class="d-flex align-items-center gap-2 text-decoration-none p-2 rounded-3" style="background:var(--gray-100);color:var(--gray-700);">
+                                <i class="fas fa-folder text-primary" style="width:20px;"></i> Hujjatlar to'plami
+                            </a>
+                            <a href="{% url 'qabul' %}" class="d-flex align-items-center gap-2 text-decoration-none p-2 rounded-3" style="background:var(--gray-100);color:var(--gray-700);">
+                                <i class="fas fa-calendar text-primary" style="width:20px;"></i> Qabul jadvali
+                            </a>
+                            <a href="{% url 'post_list' %}" class="d-flex align-items-center gap-2 text-decoration-none p-2 rounded-3" style="background:var(--gray-100);color:var(--gray-700);">
+                                <i class="fas fa-newspaper text-primary" style="width:20px;"></i> Yangiliklar
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
+</section>
 
 {% endblock %}
