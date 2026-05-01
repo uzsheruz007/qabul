@@ -5,7 +5,7 @@
 <style>
     :root {
         --nuu-blue: #1d4ed8;
-        --nuu-light-blue: #1a6ca1;
+        --nuu-light-blue: #3b82f6;
         --nuu-gold: #d4af37;
         --nuu-white: #ffffff;
         --nuu-light-gray: #f5f7fa;
@@ -16,15 +16,15 @@
         --nuu-orange: #f57c00;
         --nuu-teal: #00796b;
         
-        --gradient-primary: linear-gradient(135deg, #1d4ed8 0%, #1a6ca1 100%);
+        --gradient-primary: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
         --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f7d469 100%);
         --gradient-success: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
         --gradient-purple: linear-gradient(135deg, #6a1b9a 0%, #9c27b0 100%);
         
-        --shadow-sm: 0 4px 12px rgba(10, 61, 109, 0.08);
-        --shadow-md: 0 8px 24px rgba(10, 61, 109, 0.12);
-        --shadow-lg: 0 12px 36px rgba(10, 61, 109, 0.15);
-        --shadow-xl: 0 20px 50px rgba(10, 61, 109, 0.2);
+        --shadow-sm: 0 4px 12px rgba(29, 78, 216, 0.08);
+        --shadow-md: 0 8px 24px rgba(29, 78, 216, 0.12);
+        --shadow-lg: 0 12px 36px rgba(29, 78, 216, 0.15);
+        --shadow-xl: 0 20px 50px rgba(29, 78, 216, 0.2);
         
         --border-radius: 16px;
         --border-radius-sm: 8px;
@@ -42,7 +42,7 @@
         border-radius: var(--border-radius);
         box-shadow: var(--shadow-md);
         margin-bottom: 50px;
-        border: 1px solid rgba(10, 61, 109, 0.1);
+        border: 1px solid rgba(29, 78, 216, 0.1);
         position: sticky;
         top: auto !important;
         z-index: 100;
@@ -58,7 +58,7 @@
         padding: 18px 25px;
         border: none;
         border-radius: var(--border-radius-sm);
-        background: rgba(10, 61, 109, 0.05);
+        background: rgba(29, 78, 216, 0.05);
         color: var(--nuu-blue);
         font-weight: 600;
         font-size: 1.1rem;
@@ -114,7 +114,7 @@
         background: var(--nuu-white);
         border-radius: var(--border-radius);
         overflow: hidden;
-        border: 1px solid rgba(10, 61, 109, 0.1);
+        border: 1px solid rgba(29, 78, 216, 0.1);
         transition: var(--transition);
         box-shadow: var(--shadow-sm);
         height: 100%;
@@ -147,7 +147,7 @@
         justify-content: center;
         font-weight: 900;
         font-size: 1.5rem;
-        box-shadow: 0 4px 12px rgba(10, 61, 109, 0.3);
+        box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
         z-index: 2;
     }
 
@@ -189,7 +189,7 @@
     }
 
     .privilege-details {
-        background: rgba(10, 61, 109, 0.03);
+        background: rgba(29, 78, 216, 0.03);
         padding: 20px;
         border-radius: var(--border-radius-sm);
         margin-top: auto; /* BU PASTGA SURADI */
@@ -224,7 +224,7 @@
             padding: 40px;
             border-radius: var(--border-radius);
             margin-bottom: 60px;
-            border: 1px solid rgba(10, 61, 109, 0.1);
+            border: 1px solid rgba(29, 78, 216, 0.1);
         }
         
         .document-header {
@@ -355,7 +355,7 @@
             background: var(--nuu-white);
             border-radius: var(--border-radius-sm);
             margin-bottom: 15px;
-            border: 1px solid rgba(10, 61, 109, 0.1);
+            border: 1px solid rgba(29, 78, 216, 0.1);
             overflow: hidden;
             transition: var(--transition);
         }
@@ -378,7 +378,7 @@
         }
         
         .faq-question:hover {
-            background: rgba(10, 61, 109, 0.02);
+            background: rgba(29, 78, 216, 0.02);
         }
         
         .faq-answer {
@@ -601,7 +601,7 @@
         background: #1d4ed8;
         color: white;
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(10, 61, 109, 0.15);
+        box-shadow: 0 6px 20px rgba(29, 78, 216, 0.15);
     }
 
     .pagination-btn.disabled {
@@ -646,14 +646,14 @@
         border-color: #1d4ed8;
         color: #1d4ed8;
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(10, 61, 109, 0.1);
+        box-shadow: 0 4px 12px rgba(29, 78, 216, 0.1);
     }
 
     .page-number.active {
-        background: linear-gradient(135deg, #1d4ed8, #1a6ca1);
+        background: linear-gradient(135deg, #1d4ed8, #3b82f6);
         color: white;
         border-color: transparent;
-        box-shadow: 0 4px 12px rgba(10, 61, 109, 0.2);
+        box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
         transform: scale(1.05);
     }
 
@@ -760,7 +760,7 @@
                     ripple.style.cssText = `
                         position: absolute;
                         border-radius: 50%;
-                        background: rgba(10, 61, 109, 0.3);
+                        background: rgba(29, 78, 216, 0.3);
                         transform: scale(0);
                         animation: ripple 0.6s linear;
                         width: ${size}px;
@@ -783,12 +783,12 @@
         paginationBtns.forEach(btn => {
             btn.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-3px)';
-                this.style.boxShadow = '0 8px 25px rgba(10, 61, 109, 0.2)';
+                this.style.boxShadow = '0 8px 25px rgba(29, 78, 216, 0.2)';
             });
             
             btn.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0)';
-                this.style.boxShadow = '0 6px 20px rgba(10, 61, 109, 0.15)';
+                this.style.boxShadow = '0 6px 20px rgba(29, 78, 216, 0.15)';
             });
         });
 
