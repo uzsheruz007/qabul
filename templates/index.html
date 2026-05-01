@@ -362,20 +362,105 @@
         <!-- FAQs End -->
             {% endblock  %}
 
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-end mb-md-0">
-                        <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Sharof Rashidov nomidagi Samarqand davlat universitetining Urgut filiali</a></span>
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5" style="background: #0d1b2a;">
+            <div class="container py-3">
+                <div class="row g-5">
+                    <!-- About -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-item">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="{% static 'img/Logo.png' %}" alt="Logo" style="width:40px;height:40px;object-fit:contain;border-radius:50%;" class="me-2">
+                                <span class="text-white fs-5 fw-bold">Qabul</span>
+                            </div>
+                            <p class="text-secondary mb-3" style="font-size:0.9rem; line-height:1.7;">
+                                Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali qabul bo'limi. Bakalavriat va magistratura yo'nalishlari bo'yicha qabul jarayonini amalga oshiradi.
+                            </p>
+                            <div class="d-flex gap-2">
+                                <a href="https://m.facebook.com/100082944945888/" class="btn btn-sm btn-outline-secondary rounded-circle" style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://t.me/samdu_urgut_filial" class="btn btn-sm btn-outline-secondary rounded-circle" style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;" target="_blank"><i class="fab fa-telegram"></i></a>
+                                <a href="https://www.instagram.com/samduuf.education/" class="btn btn-sm btn-outline-secondary rounded-circle" style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/channel/UC7UOeHPrOv6HBQPUSTgBrcQ" class="btn btn-sm btn-outline-secondary rounded-circle" style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;" target="_blank"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 text-center text-md-start text-body">
-                         <a class="border-bottom text-white" href="https://htmlcodex.com"></a> <a class="border-bottom text-white" href="https://themewagon.com">Qabul bo'limi</a>
+                    <!-- Quick Links -->
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-item">
+                            <h5 class="text-white mb-4 fw-bold" style="border-bottom:2px solid #0d6efd;padding-bottom:8px;display:inline-block;">Tezkor havolalar</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="/" class="text-secondary text-decoration-none footer-link"><i class="fas fa-angle-right text-primary me-2"></i>Bosh sahifa</a></li>
+                                <li class="mb-2"><a href="/about/" class="text-secondary text-decoration-none footer-link"><i class="fas fa-angle-right text-primary me-2"></i>Filial haqida</a></li>
+                                <li class="mb-2"><a href="/qabul/" class="text-secondary text-decoration-none footer-link"><i class="fas fa-angle-right text-primary me-2"></i>Qabul jadvali</a></li>
+                                <li class="mb-2"><a href="/hujjatlar/" class="text-secondary text-decoration-none footer-link"><i class="fas fa-angle-right text-primary me-2"></i>Hujjatlar</a></li>
+                                <li class="mb-2"><a href="/komissiya/" class="text-secondary text-decoration-none footer-link"><i class="fas fa-angle-right text-primary me-2"></i>Qabul komissiyasi</a></li>
+                                <li class="mb-2"><a href="/meyor/" class="text-secondary text-decoration-none footer-link"><i class="fas fa-angle-right text-primary me-2"></i>Me'yoriy hujjatlar</a></li>
+                                <li class="mb-2"><a href="/news/" class="text-secondary text-decoration-none footer-link"><i class="fas fa-angle-right text-primary me-2"></i>Yangiliklar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Ta'lim yo'nalishlari -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-item">
+                            <h5 class="text-white mb-4 fw-bold" style="border-bottom:2px solid #0d6efd;padding-bottom:8px;display:inline-block;">Ta'lim yo'nalishlari</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="/bakalaver/" class="text-secondary text-decoration-none footer-link"><i class="fas fa-graduation-cap text-primary me-2"></i>Bakalavriat</a></li>
+                                <li class="mb-2"><a href="/magistratura/" class="text-secondary text-decoration-none footer-link"><i class="fas fa-graduation-cap text-primary me-2"></i>Magistratura</a></li>
+                                <li class="mb-2"><a href="/hujjatlar_tuplami/" class="text-secondary text-decoration-none footer-link"><i class="fas fa-file-alt text-primary me-2"></i>Magistratura hujjatlari</a></li>
+                                <li class="mb-2"><a href="/kontrakt/" class="text-secondary text-decoration-none footer-link"><i class="fas fa-file-contract text-primary me-2"></i>Kontrakt miqdori</a></li>
+                                <li class="mb-2"><a href="/imtiyoz/" class="text-secondary text-decoration-none footer-link"><i class="fas fa-star text-primary me-2"></i>Imtiyozlar</a></li>
+                                <li class="mb-2"><a href="/qabul_rejasi/" class="text-secondary text-decoration-none footer-link"><i class="fas fa-list-ol text-primary me-2"></i>Qabul rejasi</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Contact -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-item">
+                            <h5 class="text-white mb-4 fw-bold" style="border-bottom:2px solid #0d6efd;padding-bottom:8px;display:inline-block;">Aloqa ma'lumotlari</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-3 d-flex">
+                                    <i class="fas fa-map-marker-alt text-primary mt-1 me-3" style="min-width:16px;"></i>
+                                    <a href="https://www.google.com/maps?ll=39.421042,67.17769&z=17&t=h&hl=en&gl=US&mapclient=embed&cid=10201499298358941891" class="text-secondary text-decoration-none footer-link" target="_blank">O'zbekiston, Samarqand viloyati, Urgut shahri, Universitet ko'chasi</a>
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="fas fa-phone-alt text-primary me-3" style="min-width:16px;"></i>
+                                    <a href="tel:+998933332014" class="text-secondary text-decoration-none footer-link">+998 93 333 20 14</a>
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="fas fa-envelope text-primary me-3" style="min-width:16px;"></i>
+                                    <a href="mailto:devonxona@samduuf.uz" class="text-secondary text-decoration-none footer-link">devonxona@samduuf.uz</a>
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="fas fa-globe text-primary me-3" style="min-width:16px;"></i>
+                                    <a href="https://samduuf.uz" class="text-secondary text-decoration-none footer-link" target="_blank">samduuf.uz</a>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <i class="fas fa-clock text-primary me-3" style="min-width:16px;"></i>
+                                    <span class="text-secondary">Du–Ju: 9:00–18:00 | Shanba: 9:00–14:00</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright Start -->
+        <div class="container-fluid py-3" style="background: #080e18;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 text-center text-md-start mb-2 mb-md-0">
+                        <span class="text-secondary small"><i class="fas fa-copyright text-primary me-1"></i> 2024 Sharof Rashidov nomidagi SamDU Urgut filiali. Barcha huquqlar himoyalangan.</span>
+                    </div>
+                    <div class="col-md-4 text-center text-md-end">
+                        <span class="text-secondary small">Qabul bo'limi rasmiy sayti</span>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Copyright End -->
+        <style>
+        .footer-link:hover { color: #fff !important; }
+        </style>
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
