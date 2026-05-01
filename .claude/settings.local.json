@@ -13,7 +13,10 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8000/static/css/style.css)",
       "Bash(python manage.py collectstatic --noinput)",
       "WebFetch(domain:samduuf.uz)",
-      "PowerShell(git -C \"c:\\\\Users\\\\User\\\\qabul_project\" diff --stat)"
+      "PowerShell(git -C \"c:\\\\Users\\\\User\\\\qabul_project\" diff --stat)",
+      "PowerShell(git -C \"c:\\\\Users\\\\User\\\\qabul_project\" add templates/)",
+      "PowerShell(git -C \"c:\\\\Users\\\\User\\\\qabul_project\" add templates/index.html static/css/style.css)",
+      "PowerShell(git -C \"c:\\\\Users\\\\User\\\\qabul_project\" add static/css/style.css templates/index.html)"
     ]
   }
 }
