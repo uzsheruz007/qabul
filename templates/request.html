@@ -1,623 +1,133 @@
-{% extends "index.html" %}
+﻿{% extends "index.html" %}
 {% load static %}
 
 {% block content %}
 
-  <style>
-        :root {
-            --nuu-blue: #0a3d6d;
-            --nuu-light-blue: #1a6ca1;
-            --nuu-gold: #d4af37;
-            --nuu-white: #ffffff;
-            --nuu-light-gray: #f5f7fa;
-            --nuu-dark-gray: #2d3748;
-            --gradient-primary: linear-gradient(135deg, #0a3d6d 0%, #1a6ca1 100%);
-            --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f7d469 100%);
-            --shadow-sm: 0 4px 12px rgba(10, 61, 109, 0.08);
-            --shadow-md: 0 8px 24px rgba(10, 61, 109, 0.12);
-            --shadow-lg: 0 12px 36px rgba(10, 61, 109, 0.15);
-            --border-radius: 16px;
-            --border-radius-sm: 8px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--nuu-dark-gray);
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Header Section */
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .header-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: var(--gradient-primary);
-            color: white;
-            padding: 12px 28px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            box-shadow: var(--shadow-md);
-        }
-
-        .header h1 {
-            font-size: 3.2rem;
-            font-weight: 900;
-            margin-bottom: 20px;
-            color: var(--nuu-blue);
-            line-height: 1.2;
-            position: relative;
-            display: inline-block;
-        }
-
-        .header h1::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
-            height: 4px;
-            background: var(--gradient-gold);
-            border-radius: 2px;
-        }
-
-        .header p {
-            font-size: 1.3rem;
-            color: #4a5568;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-
-        /* Main Content */
-        .main-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-bottom: 50px;
-        }
-
-        /* Info Card */
-        .info-card {
-            background: var(--nuu-white);
-            border-radius: var(--border-radius);
-            padding: 40px;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid rgba(10, 61, 109, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .info-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: var(--gradient-gold);
-        }
-
-        .info-title {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--nuu-blue);
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .info-title i {
-            color: var(--nuu-gold);
-        }
-
-        .info-list {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-
-        .info-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .info-list li:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .list-icon {
-            width: 24px;
-            height: 24px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 0.8rem;
-            flex-shrink: 0;
-            margin-top: 3px;
-        }
-
-        .list-content h4 {
-            color: var(--nuu-blue);
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-
-        .list-content p {
-            color: #4a5568;
-            font-size: 1rem;
-        }
-
-        .contact-info {
-            background: rgba(10, 61, 109, 0.05);
-            padding: 25px;
-            border-radius: var(--border-radius-sm);
-            border-left: 4px solid var(--nuu-gold);
-        }
-
-        .contact-info h4 {
-            color: var(--nuu-blue);
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .contact-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.1rem;
-        }
-
-        .contact-text {
-            color: #4a5568;
-            font-size: 1.1rem;
-        }
-
-        .contact-text strong {
-            color: var(--nuu-blue);
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        /* Form Card */
-        .form-card {
-            background: var(--nuu-white);
-            border-radius: var(--border-radius);
-            padding: 40px;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid rgba(10, 61, 109, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .form-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: var(--gradient-primary);
-        }
-
-        .form-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .form-header h3 {
-            font-size: 2rem;
-            color: var(--nuu-blue);
-            margin-bottom: 10px;
-            font-weight: 800;
-        }
-
-        .form-header p {
-            color: #718096;
-            font-size: 1.1rem;
-        }
-
-        /* Form Styles */
-        .form-group {
-            margin-bottom: 25px;
-            position: relative;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 10px;
-            color: var(--nuu-blue);
-            font-weight: 600;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .form-label i {
-            color: var(--nuu-gold);
-            width: 20px;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 16px 20px;
-            border: 2px solid #e2e8f0;
-            border-radius: var(--border-radius-sm);
-            font-size: 1rem;
-            color: var(--nuu-dark-gray);
-            transition: var(--transition);
-            background: #f8fafc;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: var(--nuu-light-blue);
-            background: white;
-            box-shadow: 0 0 0 3px rgba(10, 61, 109, 0.1);
-        }
-
-        .form-input.error {
-            border-color: #e53e3e;
-        }
-
-        .error-message {
-            color: #e53e3e;
-            font-size: 0.9rem;
-            margin-top: 8px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .form-textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .form-select {
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%230a3d6d' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 20px center;
-            background-size: 16px;
-            padding-right: 50px;
-        }
-
-        /* Submit Button */
-        .submit-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            width: 100%;
-            padding: 18px;
-            background: var(--gradient-primary);
-            color: white;
-            border: none;
-            border-radius: var(--border-radius-sm);
-            font-size: 1.2rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: var(--transition);
-            margin-top: 30px;
-        }
-
-        .submit-btn:hover {
-            background: linear-gradient(135deg, #1a6ca1 0%, #2c8bc8 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(10, 61, 109, 0.2);
-        }
-
-        .submit-btn:active {
-            transform: translateY(-1px);
-        }
-
-        /* Success Message */
-        .success-message {
-            background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
-            color: white;
-            padding: 25px;
-            border-radius: var(--border-radius-sm);
-            text-align: center;
-            margin-top: 30px;
-            display: none;
-            animation: fadeIn 0.5s ease;
-        }
-
-        .success-message.show {
-            display: block;
-        }
-
-        .success-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 1px solid #e2e8f0;
-            color: #718096;
-            font-size: 0.95rem;
-            width: 100%;
-            max-width: 800px;
-        }
-
-        .university-logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            color: var(--nuu-blue);
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .main-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .header h1 {
-                font-size: 2.8rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-
-            .header h1 {
-                font-size: 2.3rem;
-            }
-
-            .header p {
-                font-size: 1.1rem;
-            }
-
-            .info-card,
-            .form-card {
-                padding: 30px 25px;
-            }
-
-            .info-title {
-                font-size: 1.6rem;
-            }
-
-            .form-header h3 {
-                font-size: 1.8rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            .header-badge {
-                padding: 10px 20px;
-                font-size: 1rem;
-            }
-
-            .info-list li {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .contact-item {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-
-            .contact-icon {
-                width: 35px;
-                height: 35px;
-                font-size: 1rem;
-            }
-
-            .submit-btn {
-                padding: 16px;
-                font-size: 1.1rem;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .info-card, .form-card {
-            animation: fadeIn 0.6s ease;
-        }
-
-        /* Form validation styles */
-        .form-input.valid {
-            border-color: #38a169;
-        }
-
-        /* Loading state */
-        .submit-btn.loading {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-
-        .submit-btn.loading::after {
-            content: '';
-            width: 20px;
-            height: 20px;
-            border: 2px solid white;
-            border-radius: 50%;
-            border-top-color: transparent;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-    </style>
-
 <style>
-    :root {
-        --nuu-blue: #0a3d6d;
-        --nuu-light-blue: #1a6ca1;
-        --nuu-gold: #d4af37;
-        --nuu-white: #ffffff;
-        --nuu-light-gray: #f5f7fa;
-        --nuu-dark-gray: #333333;
-        --nuu-green: #2e7d32;
-        --nuu-red: #c62828;
-        --nuu-purple: #6a1b9a;
-        --nuu-gradient: linear-gradient(135deg, #0a3d6d 0%, #1a6ca1 100%);
-        --nuu-gradient-hover: linear-gradient(135deg, #1a6ca1 0%, #2c8bc8 100%);
-        --shadow-sm: 0 4px 12px rgba(10, 61, 109, 0.08);
-        --shadow-md: 0 8px 24px rgba(10, 61, 109, 0.12);
-        --shadow-lg: 0 12px 36px rgba(10, 61, 109, 0.15);
-        --border-radius: 16px;
-        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Murojaat page styles */
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        margin-bottom: 50px;
     }
-    
-    /* Page Header */
-    .page-header {
-        background: var(--nuu-gradient);
-        color: var(--nuu-white);
-        padding: 60px 0;
-        margin-bottom: 60px;
+    .info-card, .form-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 8px 24px rgba(15,23,42,0.1);
+        border: 1px solid #e2e8f0;
         position: relative;
         overflow: hidden;
-        border-radius: var(--border-radius);
     }
-    
-    .page-header::before {
-        content: "";
+    .info-card::before, .form-card::before {
+        content: '';
         position: absolute;
-        width: 200%;
-        height: 200%;
-        top: -50%;
-        left: -50%;
-        background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-        background-size: 40px 40px;
-        animation: float 20s linear infinite;
-        z-index: 0;
+        top: 0; left: 0; right: 0;
+        height: 4px;
+        background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
     }
-    
-    .page-header-content {
-        position: relative;
-        z-index: 2;
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 0 20px;
+    .info-title {
+        font-size: 1.5rem; font-weight: 700;
+        color: var(--primary-dark); margin-bottom: 24px;
+        display: flex; align-items: center; gap: 12px;
     }
-    
-    .page-header h1 {
-        font-size: 3.5rem;
-        font-weight: 800;
-        margin-bottom: 25px;
-        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(to right, #ffffff, #f0f7ff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        letter-spacing: -0.5px;
+    .info-title i { color: var(--accent); }
+    .info-list { list-style: none; margin-bottom: 28px; padding: 0; }
+    .info-list li {
+        display: flex; align-items: flex-start; gap: 14px;
+        margin-bottom: 18px; padding-bottom: 18px;
+        border-bottom: 1px solid #e2e8f0;
     }
-    
-    .page-header p {
-        font-size: 1.25rem;
-        opacity: 0.95;
-        line-height: 1.8;
-        margin-bottom: 30px;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    .info-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .list-icon {
+        width: 28px; height: 28px;
+        background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+        border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        color: white; font-size: 0.75rem; flex-shrink: 0; margin-top: 2px;
     }
-    
-    .university-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(10px);
-        padding: 12px 25px;
-        border-radius: 50px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+    .list-content h4 { color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 4px; font-weight: 600; }
+    .list-content p { color: #64748b; font-size: 0.95rem; margin: 0; }
+    .contact-info {
+        background: var(--primary-light); padding: 22px;
+        border-radius: 10px; border-left: 4px solid var(--accent);
     }
-    
-    @keyframes float {
-        0% { transform: translate(0, 0) rotate(0deg); }
-        100% { transform: translate(20px, 20px) rotate(360deg); }
+    .contact-info h4 { color: var(--primary-dark); margin-bottom: 14px; font-size: 1.1rem; font-weight: 700; }
+    .contact-item { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+    .contact-item:last-child { margin-bottom: 0; }
+    .contact-icon {
+        width: 40px; height: 40px;
+        background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+        border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        color: white; font-size: 1rem;
+    }
+    .contact-text { color: #475569; font-size: 1rem; }
+    .contact-text strong { color: var(--primary-dark); display: block; margin-bottom: 2px; }
+    .form-header { text-align: center; margin-bottom: 28px; }
+    .form-header h3 { font-size: 1.6rem; color: var(--primary-dark); margin-bottom: 8px; font-weight: 700; }
+    .form-header p { color: #64748b; font-size: 1rem; }
+    .form-group { margin-bottom: 22px; position: relative; }
+    .form-label {
+        display: flex; align-items: center; gap: 8px; margin-bottom: 8px;
+        color: var(--primary-dark); font-weight: 600; font-size: 0.95rem;
+    }
+    .form-label i { color: var(--accent); width: 18px; }
+    .form-input {
+        width: 100%; padding: 14px 18px;
+        border: 2px solid #e2e8f0; border-radius: 10px;
+        font-size: 1rem; color: #334155;
+        transition: border-color 0.2s, box-shadow 0.2s; background: #f8fafc;
+    }
+    .form-input:focus {
+        outline: none; border-color: var(--primary); background: white;
+        box-shadow: 0 0 0 3px rgba(29,78,216,0.08);
+    }
+    .form-input.error { border-color: #dc2626; }
+    .form-input.valid { border-color: #16a34a; }
+    .form-textarea { min-height: 140px; resize: vertical; }
+    .form-select {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%231d4ed8' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat; background-position: right 18px center; background-size: 14px; padding-right: 46px;
+    }
+    .submit-btn {
+        display: flex; align-items: center; justify-content: center; gap: 12px;
+        width: 100%; padding: 16px;
+        background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+        color: white; border: none; border-radius: 10px;
+        font-size: 1.1rem; font-weight: 700; cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s; margin-top: 24px;
+    }
+    .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(29,78,216,0.25); }
+    .success-message {
+        background: linear-gradient(135deg, #16a34a, #22c55e);
+        color: white; padding: 22px; border-radius: 10px;
+        text-align: center; margin-top: 24px; display: none;
+    }
+    .success-message.show { display: block; }
+    .success-icon { font-size: 2.5rem; margin-bottom: 12px; }
+    @media (max-width: 992px) { .main-content { grid-template-columns: 1fr; gap: 32px; } }
+    @media (max-width: 576px) {
+        .info-card, .form-card { padding: 24px 18px; }
+        .info-title { font-size: 1.25rem; }
+        .form-header h3 { font-size: 1.4rem; }
     }
 </style>
 
-<br>
+<section class="page-hero">
     <div class="container">
-    <div class="page-header">
-        <div class="page-header-content">
-            <h1>Talabalar Murojaati</h1>
-            <p>Ma'lumot olish uchun murojaatingizni qoldiring. Biz sizga tez orada javob beramiz va O'zbekistonda ta'lim olish imkoniyatlari haqida batafsil ma'lumot beramiz.</p>
-            <div class="university-badge">
-                <i class="fas fa-university"></i>
-                <span>SamDU Urgut filiali</span>
-            </div>
-        </div>
+        <div class="hero-badge"><i class="fas fa-envelope me-2"></i>Murojaat</div>
+        <h1>Talabalar Murojaati</h1>
+        <p>Ma'lumot olish uchun murojaatingizni qoldiring. Biz sizga tez orada javob beramiz.</p>
+        <nav aria-label="breadcrumb"><ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Bosh sahifa</a></li>
+            <li class="breadcrumb-item active">Murojaat</li>
+        </ol></nav>
     </div>
-</div>
+</section>
+
+<div class="container py-5">
+
         <!-- Main Content -->
         <div class="main-content">
             <!-- Info Card -->
@@ -768,9 +278,7 @@
             </div>
         </div>
 
-        <!-- Footer -->
-        
-    </div>
+</div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

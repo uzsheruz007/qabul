@@ -25,72 +25,6 @@
     
     
     
-    /* Page Header */
-    .page-header {
-        background: var(--nuu-gradient);
-        color: var(--nuu-white);
-        padding: 60px 0;
-        margin-bottom: 60px;
-        position: relative;
-        overflow: hidden;
-        border-radius: var(--border-radius);
-    }
-    
-    .page-header::before {
-        content: "";
-        position: absolute;
-        width: 200%;
-        height: 200%;
-        top: -50%;
-        left: -50%;
-        background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-        background-size: 40px 40px;
-        animation: float 20s linear infinite;
-        z-index: 0;
-    }
-    
-    .page-header-content {
-        position: relative;
-        z-index: 2;
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-    
-    .page-header h1 {
-        font-size: 3.5rem;
-        font-weight: 800;
-        margin-bottom: 25px;
-        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(to right, #ffffff, #f0f7ff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        letter-spacing: -0.5px;
-    }
-    
-    .page-header p {
-        font-size: 1.25rem;
-        opacity: 0.95;
-        line-height: 1.8;
-        margin-bottom: 30px;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    .university-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(10px);
-        padding: 12px 25px;
-        border-radius: 50px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    @keyframes float {
-        0% { transform: translate(0, 0) rotate(0deg); }
-        100% { transform: translate(20px, 20px) rotate(360deg); }
-    }
     /* Search and Filter */
     .search-filter-section {
         background: white;
@@ -811,22 +745,6 @@
         </ol></nav>
     </div>
 </section>
-<div class="container">
-    <div class="page-header">
-        <div class="page-header-content">
-            <h1>Me'yoriy hujjatlar</h1>
-            <p> Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filialiga qabul qilish 
-            bo'yicha barcha rasmiy hujjatlar va qoidalar to'plami. 
-            Barcha hujjatlarni yuklab olishingiz  mumkin.</p>
-            <div class="university-badge">
-                <i class="fas fa-university"></i>
-                <span>SamDU Urgut filiali</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 <div class="container">
     <!-- Search and Filter -->
     <div class="search-filter-section fade-in stagger-delay-1">
