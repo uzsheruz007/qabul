@@ -4,7 +4,11 @@
       "Bash(git commit -m ' *)",
       "Bash(.\\\\venv\\\\Scripts\\\\python.exe manage.py collectstatic --noinput)",
       "Bash(git add *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8000/)",
+      "Bash(curl -s http://127.0.0.1:8000/static/css/style.css)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8000/static/img/41.png)",
+      "Bash(curl -s http://127.0.0.1:8000/)"
     ]
   }
 }
