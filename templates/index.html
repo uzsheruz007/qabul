@@ -1,4 +1,4 @@
-{% load static %}
+﻿{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,137 +49,101 @@
         <!-- Spinner End -->
 
         <!-- Topbar Start -->
-        <div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
+        <div class="topbar d-none d-lg-block">
             <div class="container">
-                <div class="row gx-0 align-items-center">
-                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-                        <div class="d-flex flex-wrap">
-                            <div class="border-end border-primary pe-3">
-                                <a href="https://www.google.com/maps?ll=39.421042,67.17769&z=17&t=h&hl=en&gl=US&mapclient=embed&cid=10201499298358941891" class="text-muted small"><i class="fas fa-map-marker-alt text-primary me-2"></i>Bizning manzil</a>
-                            </div>
-                            <div class="ps-3">
-                                <a href="mailto:devonxona@samduuf.uz" class="text-muted small"><i class="fas fa-envelope text-primary me-2"></i>devonxona@samduuf.uz</a>
-                            </div>
-                        </div>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-3 topbar-info">
+                        <a href="https://www.google.com/maps?ll=39.421042,67.17769&z=17&t=h&hl=en&gl=US&mapclient=embed&cid=10201499298358941891" target="_blank">
+                            <i class="fas fa-map-marker-alt"></i> Urgut shahri, Universitet ko'chasi
+                        </a>
+                        <span class="text-secondary" style="opacity:.3;">|</span>
+                        <a href="mailto:devonxona@samduuf.uz">
+                            <i class="fas fa-envelope"></i> devonxona@samduuf.uz
+                        </a>
                     </div>
-                    <div class="col-lg-4 text-center text-lg-end">
-                        <div class="d-flex justify-content-end">
-                            <div class="d-flex border-end border-primary pe-3">
-                                <a class="btn p-0 text-primary me-3" href="https://m.facebook.com/100082944945888/"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn p-0 text-primary me-3" href="https://t.me/samdu_urgut_filial"><i class="fab fa-telegram"></i></a>
-                                <a class="btn p-0 text-primary me-3" href="https://www.instagram.com/samduuf.education/"><i class="fab fa-instagram"></i></a>
-                                <a class="btn p-0 text-primary me-0" href="https://www.youtube.com/channel/UC7UOeHPrOv6HBQPUSTgBrcQ"><i class="fab fa-youtube"></i></a>
-				<a href="https://samduuf.uz/" class="d-flex align-items-center text-decoration-none">
-                                    <img src="{% static 'img/favicon.ico' %}" style="height:20px; padding: 1px 10px;" >
-                                </a>
-
-                            </div>
-                            <div class="dropdown ms-3">
-                                <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i class="fas fa-globe-europe text-primary me-2"></i> O'zbek</small></a>
-                                    <!-- <div class="dropdown-menu rounded">
-                                        <a href="#" class="dropdown-item"></a>
-                                    </div> -->
-                            </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="social-links">
+                            <a href="https://m.facebook.com/100082944945888/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://t.me/samdu_urgut_filial" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                            <a href="https://www.instagram.com/samduuf.education/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UC7UOeHPrOv6HBQPUSTgBrcQ" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://samduuf.uz/" target="_blank" title="samduuf.uz"><i class="fas fa-globe"></i></a>
                         </div>
+                        <span class="lang-btn ms-1"><i class="fas fa-language me-1"></i> O'zbek</span>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Topbar End -->
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+        <!-- Navbar Start -->
+        <div class="nav-bar">
             <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light"> 
-                    <a href="{% url 'home' %}" class="navbar-brand p-0">
-                        <span class="text-primary mb-0 fs-4 fw-bold"><img src="{% static 'img/Logo.png' %}" alt="Logo"> Qabul</span>
-                        
+                <nav class="navbar navbar-expand-lg">
+                    <a href="{% url 'home' %}" class="navbar-brand">
+                        <img src="{% static 'img/Logo.png' %}" alt="Logo"> Qabul
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars"></span>
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <i class="fa fa-bars" style="color: var(--primary);"></i>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div class="navbar-nav mx-0 mx-lg-auto">
-                            
-
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                                    <span class="dropdown-toggle">Qabul komissiyasi</span>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a href="{% url 'komissiya' %}" class="dropdown-item">Qabul komissiyasi tarkibi</a>
-                                    <a href="{% url 'meyor' %}" class="dropdown-item">Me'yoriy hujjatlar</a>
-                                    <a href="{% url 'qabul'%}" class="dropdown-item">Qabul kunlari</a>
-                                </div>
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle">Qabul komissiyasi</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'komissiya' %}" class="dropdown-item"><i class="fas fa-users me-2 text-primary opacity-75"></i>Komissiya tarkibi</a></li>
+                                    <li><a href="{% url 'meyor' %}" class="dropdown-item"><i class="fas fa-file-alt me-2 text-primary opacity-75"></i>Me'yoriy hujjatlar</a></li>
+                                    <li><a href="{% url 'qabul' %}" class="dropdown-item"><i class="fas fa-calendar me-2 text-primary opacity-75"></i>Qabul kunlari</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle">Abituriyent</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://www.youtube.com/watch?si=HAjBuiDMgm9wCDXm&v=DSYxocb7dTA&feature=youtu.be" class="dropdown-item" target="_blank"><i class="fas fa-play-circle me-2 text-primary opacity-75"></i>Qo'llanma (video)</a></li>
+                                    <li><a href="{% url 'privileges' %}" class="dropdown-item"><i class="fas fa-star me-2 text-primary opacity-75"></i>Imtiyozlar</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle">Bakalavriat</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'hujjatlar' %}" class="dropdown-item"><i class="fas fa-folder me-2 text-primary opacity-75"></i>Hujjatlar to'plami</a></li>
+                                    <li><a href="{% url 'qabul_kvotasi' %}" class="dropdown-item"><i class="fas fa-list-ol me-2 text-primary opacity-75"></i>Qabul kvotasi</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle">Xorijiy talabalar</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'foreign_request' %}" class="dropdown-item"><i class="fas fa-paper-plane me-2 text-primary opacity-75"></i>Ariza yuborish</a></li>
+                                    <li><a href="{% url 'bakalaver' %}" class="dropdown-item"><i class="fas fa-graduation-cap me-2 text-primary opacity-75"></i>Bakalavriat yo'nalishlari</a></li>
+                                    <li><a href="{% url 'magistr' %}" class="dropdown-item"><i class="fas fa-university me-2 text-primary opacity-75"></i>Magistratura yo'nalishlari</a></li>
+                                    <li><a href="{% url 'shartnoma' %}" class="dropdown-item"><i class="fas fa-file-contract me-2 text-primary opacity-75"></i>Shartnomalar</a></li>
+                                    <li><a href="{% url 'kontrakt' %}" class="dropdown-item"><i class="fas fa-dollar-sign me-2 text-primary opacity-75"></i>Kontrakt narxlari</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle">Magistratura</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'Qabul_Rijasi' %}" class="dropdown-item"><i class="fas fa-clipboard-list me-2 text-primary opacity-75"></i>Qabul rejasi</a></li>
+                                    <li><a href="https://my.edu.uz/" class="dropdown-item" target="_blank"><i class="fas fa-upload me-2 text-primary opacity-75"></i>Hujjat topshirish</a></li>
+                                    <li><a href="{% url 'hujjatlar_t' %}" class="dropdown-item"><i class="fas fa-folder-open me-2 text-primary opacity-75"></i>Hujjatlar to'plami</a></li>
+                                    <li><a href="{% url 'Magistratura_Natijalari' %}" class="dropdown-item"><i class="fas fa-trophy me-2 text-primary opacity-75"></i>Natijalar</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'post_list' %}" class="nav-link">Yangiliklar</a>
+                            </li>
+                        </ul>
+                        <div class="d-none d-xl-flex align-items-center gap-3 ms-3">
+                            <div class="navbar-contact-block">
+                                <div class="label"><i class="fas fa-phone-alt text-primary me-1"></i> Bog'lanish</div>
+                                <a href="tel:+998933332014" class="phone text-decoration-none">+998 93 333 20 14</a>
                             </div>
-
-
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                                    <span class="dropdown-toggle">Abituriyent</span>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a href="https://www.youtube.com/watch?si=HAjBuiDMgm9wCDXm&v=DSYxocb7dTA&feature=youtu.be" class="dropdown-item">Abituriyentlar uchun qo'llanma</a>
-                                    <a href="{% url 'privileges' %}" class="dropdown-item">Imtiyozlar</a>
-                                </div>
-                            </div>
-
-
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                                    <span class="dropdown-toggle">Bakalavriat</span>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a href="{% url 'hujjatlar'%}" class="dropdown-item">Hujjatlar To'plami</a>
-                                    <a href="{% url 'qabul_kvotasi'%}" class="dropdown-item">Qabul kvotasi</a>
-                                </div>
-                            </div>
-
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                                    <span class="dropdown-toggle">Xorijiy talabalar</span>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a href="{% url 'foreign_request' %}" class="dropdown-item">Ariza yuborish</a>
-                                    <a href="{% url 'bakalaver' %}" class="dropdown-item">Bakalavriat ta'lim yo'nalishi</a>
-                                    <a href="{% url 'magistr' %}" class="dropdown-item">Magistratura ta'lim yo'nalishi</a>
-                                    <a href="{% url 'shartnoma' %}" class="dropdown-item">Shartnomalar</a>
-                                    <a href="{% url 'kontrakt' %}" class="dropdown-item">Kontrakt narxlari</a>
-                                </div>
-                            </div>
-
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                                    <span class="dropdown-toggle">Magistratura</span>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a href="{% url 'Qabul_Rijasi'%}" class="dropdown-item">Qabul rejasi</a>
-                                    <a href="https://my.edu.uz/" class="dropdown-item">Hujjat topshirish</a>
-                                    <a href="{% url 'hujjatlar_t'%}" class="dropdown-item">Hujjatlar to'plami</a>
-                                    <a href="{% url 'Magistratura_Natijalari' %}" class="dropdown-item">Magistratura natijalari</a>
-                                </div>
-                            </div>
-
-                            <a href="{% url 'post_list'%}" class="nav-item nav-link active">Yangiliklar</a>
-                            
-                        </div>
-                    </div>
-                    <div class="d-none d-xl-flex flex-shrink-0 ps-4">
-                        <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
-                            <i class="fa fa-phone-alt fa-2x"></i>
-                            <div class="position-absolute" style="top: 7px; right: 12px;">
-                                <span><i class="fa fa-comment-dots text-secondary"></i></span>
-                            </div>
-                        </a>
-                        <div class="d-flex flex-column ms-3">
-                            <span>Bog'lanish uchun</span>
-                            <a href="tel:+998 93 333 20 14"><span class="text-dark">TEL: +998 93 333 20 14</span></a>
                         </div>
                     </div>
                 </nav>
             </div>
         </div>
-        <!-- Navbar & Hero End -->
+        <!-- Navbar End -->
                      {% block  content %}
 
         <!-- Modal Search Start -->
@@ -202,12 +166,18 @@
         <!-- Modal Search End -->
 
         <div class="header-carousel owl-carousel">
-            <div class="header-carousel-item" style="background-image: url('{% static 'img/41.png' %}'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
-                <div class="overlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.2);z-index:1;"></div>
-                <div class="carousel-caption" style="position:relative;z-index:2;">
+            <div class="header-carousel-item" style="background-image: url('{% static 'img/41.png' %}');">
+                <div class="carousel-caption">
                     <div class="container">
                         <div class="row align-items-center">
-                            <div class="col-lg-7 text-white">
+                            <div class="col-lg-7 col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                                <span class="badge-label">SamDU Urgut filiali</span>
+                                <h1>Qabul bo'limi<br><span style="color:#fbbf24;">Admissions Department</span></h1>
+                                <p>Bakalavriat va magistratura yo'nalishlari bo'yicha professional ta'lim olish imkoniyati. Hujjatlarni topshiring va kelajagingizni bizimiz bilan qurang.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a href="{% url 'hujjatlar' %}" class="btn-hero">Hujjatlarni ko'rish</a>
+                                    <a href="{% url 'komissiya' %}" class="btn-hero-outline">Komissiya tarkibi</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -215,151 +185,122 @@
             </div>
         </div>
 
-       <!-- Service Start - Yangiliklar bo'limi -->
-<!-- index.html faylining blog qismiga o'zgartirish kiriting -->
-<div class="container-fluid blog py-5">
-    <div class="container py-5">
-        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-            <h1 class="display-4 mb-4">So'nggi yangiliklar va e'lonlar</h1>
-            <p class="mb-0">
-                Sharof Rashidov nomidagi Samarqand davlat universitetining  Urgut filialining eng so'nggi yangiliklari va muhim e'lonlari
-            </p>
-        </div>
-
-        
-        <div class="row g-4 justify-content-center">
-            {% for post in featured_posts %}
-            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.{{ forloop.counter }}s">
-                <div class="blog-item">
-                    <div class="blog-img position-relative">
-                        <img src="{{ post.image.url }}"
-                             class="img-fluid rounded-top w-100"
-                             alt="{{ post.title }}"
-                             style="height: 250px; object-fit: cover;">
-
-                        <div class="blog-categiry py-2 px-4">
-                            <span>{{ post.category.name }}</span>
-                        </div>
-                    </div>
-
-                    <div class="blog-content p-4">
-                        <div class="blog-comment d-flex justify-content-between mb-3">
-                            <div class="small">
-                                <span class="fa fa-user text-primary"></span> {{ post.author.username }}
+        <!-- News Section Start -->
+        <section class="news-section section-gap">
+            <div class="container">
+                <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <span class="sec-badge">So'nggi yangiliklar</span>
+                    <h2 class="sec-title">Yangiliklar va e'lonlar</h2>
+                    <div class="sec-line center"></div>
+                    <p class="sec-desc mx-auto">SamDU Urgut filiali qabul bo'limining eng so'nggi yangiliklari va muhim e'lonlari</p>
+                </div>
+                <div class="row g-4">
+                    {% for post in featured_posts %}
+                    <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="0.{{ forloop.counter }}s">
+                        <div class="news-card">
+                            <div class="card-img-wrap">
+                                <img src="{{ post.image.url }}" alt="{{ post.title }}">
+                                <span class="card-cat">{{ post.category.name }}</span>
                             </div>
-                            <div class="small">
-                                <span class="fa fa-calendar text-primary"></span> {{ post.published_date|date:"d M Y" }}
-                            </div>
-                            <div class="small">
-                                <span class="fa fa-eye text-primary"></span> {{ post.views }}
+                            <div class="card-body-inner">
+                                <div class="card-meta">
+                                    <span><i class="fas fa-calendar-alt"></i> {{ post.published_date|date:"d.m.Y" }}</span>
+                                    <span><i class="fas fa-eye"></i> {{ post.views }}</span>
+                                </div>
+                                <h5><a href="{{ post.get_absolute_url }}" class="text-decoration-none text-dark">{{ post.title|truncatewords:9 }}</a></h5>
+                                <p class="card-excerpt">{{ post.excerpt|truncatewords:18 }}</p>
+                                <a href="{{ post.get_absolute_url }}" class="read-more">Batafsil <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
-
-                        <a href="{{ post.get_absolute_url }}" class="h4 d-inline-block mb-3">
-                            {{ post.title|truncatewords:8 }}
-                        </a>
-
-                        <p class="mb-3">
-                            {{ post.excerpt|truncatewords:15 }}
-                        </p>
-
-                        <a href="{{ post.get_absolute_url }}" class="btn p-0">
-                            Batafsil <i class="fa fa-arrow-right"></i>
-                        </a>
                     </div>
+                    {% empty %}
+                    <div class="col-12">
+                        <div class="empty-state-box">
+                            <div class="empty-icon"><i class="fas fa-newspaper"></i></div>
+                            <h5>Hozircha yangiliklar mavjud emas</h5>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.4s">
+                    <a href="{% url 'post_list' %}" class="btn btn-primary px-4 py-2 rounded-pill">Barcha yangiliklar <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
-            {% empty %}
-            <div class="col-12 text-center py-4">
-                <p class="text-muted">Hozircha yangiliklar mavjud emas</p>
-            </div>
-            {% endfor %}
-        </div>
+        </section>
+        <!-- News Section End -->
 
-        <!-- Barcha yangiliklarni ko'rish tugmasi -->
-        <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.5s">
-            <a href="{% url 'post_list' %}" class="btn btn-primary btn-lg px-5 py-3">
-                Barcha yangiliklarni ko'rish
-            </a>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-        <!-- Service End -->
-
-        <!-- FAQs Start -->
-        <div class="container-fluid faq-section text-dark py-5">
-            <div class="container py-5">
+        <!-- FAQ Section Start -->
+        <section class="faq-section section-gap" style="background: var(--gray-100);">
+            <div class="container">
                 <div class="row g-5 align-items-center">
-                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
-                        <div class="h-100">
-                            <div class="mb-5">
-                                <h1 class="display-4 mb-0">Tez-tez so‘raladigan savollar</h1>
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <span class="sec-badge">Savol-javob</span>
+                        <h2 class="sec-title">Tez-tez so'raladigan savollar</h2>
+                        <div class="sec-line"></div>
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item mb-2">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        Qabul jarayoni qachon va qanday tartibda o'tkaziladi?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Samarqand davlat universiteti Urgut filialiga qabul jarayoni Oliy ta'lim vazirligi belgilagan muddatlarda amalga oshiriladi. Abituriyentlar belgilangan platformalar orqali onlayn ro'yxatdan o'tib, zarur hujjatlarni taqdim etishlari lozim.
+                                    </div>
+                                </div>
                             </div>
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Savol: Qabul jarayoni qachon va qanday tartibda o‘tkaziladi❓
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show active" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body rounded">
-                                            Javob:
-                                                Samarqand davlat universiteti Urgut filialiga qabul jarayoni O‘zbekiston Respublikasi Oliy ta’lim, fan va innovatsiyalar vazirligi tomonidan belgilangan muddatlarda amalga oshiriladi. Abituriyentlar belgilangan platformalar orqali onlayn ro‘yxatdan o‘tib, zarur hujjatlarni taqdim etishlari lozim.
-                                        </div>
+                            <div class="accordion-item mb-2">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        Qabul uchun qanday hujjatlar talab etiladi?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Pasport yoki ID-karta, ta'lim to'g'risidagi hujjat (attestat yoki diplom), elektron ariza va belgilangan tartibda yuklangan hujjatlar talab etiladi. Aniq ro'yxat qabul davrida rasmiy e'lonlarda keltiriladi.
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Savol: Qabul uchun qanday hujjatlar talab etiladi❓
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Javob:
-                                                Qabul jarayonida quyidagi hujjatlar talab etiladi:
-
-                                                Pasport yoki ID-karta
-
-                                                Umumiy o‘rta / o‘rta maxsus / professional ta’lim to‘g‘risidagi hujjat
-
-                                                Elektron ariza
-
-                                                Belgilangan tartibda yuklangan hujjatlar
-
-                                                Aniq ro‘yxat qabul davrida rasmiy e’lonlarda keltiriladi.
-                                        </div>
+                            </div>
+                            <div class="accordion-item mb-2">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        Ta'lim shakllari va yo'nalishlari qanday?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Urgut filialida kunduzgi ta'lim shakli bo'yicha zamonaviy va mehnat bozoriga mos bakalavriat yo'nalishlari mavjud. Har bir yo'nalish bo'yicha qabul kvotalari alohida belgilanadi.
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            Savol: Ta’lim shakllari va yo‘nalishlari qanday ❓
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                           Javob:
-                                            Urgut filialida kunduzgi ta’lim shakli bo‘yicha zamonaviy va mehnat bozoriga mos bakalavriat yo‘nalishlari mavjud. Har bir yo‘nalish bo‘yicha qabul kvotalari alohida belgilanadi.
-                                        </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                        Kontrakt to'lovi qancha va qanday to'lanadi?
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Kontrakt narxlari yo'nalishga qarab farq qiladi. To'lov bank orqali yoki elektron tizimlar orqali amalga oshiriladi. Batafsil: <a href="{% url 'kontrakt' %}" class="text-primary fw-bold">kontrakt narxlari</a> sahifasini ko'ring.
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
-                        <img src="{% static 'img/carousel-2.png' %}" class="img-fluid w-100" alt="">
+                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                        <div class="position-relative">
+                            <img src="{% static 'img/carousel-2.png' %}" class="img-fluid w-100 shadow" alt="FAQ rasm" style="border-radius: var(--radius-lg) !important;">
+                            <div class="position-absolute" style="bottom:-20px;left:-20px;background:var(--primary);color:#fff;border-radius:var(--radius);padding:18px 24px;box-shadow:var(--shadow-lg);z-index:2;">
+                                <div style="font-size:1.8rem;font-weight:900;line-height:1;">24/7</div>
+                                <div style="font-size:0.8rem;opacity:.85;">Onlayn ma'lumot</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- FAQs End -->
+        </section>
+        <!-- FAQ Section End -->
             {% endblock  %}
 
         <!-- Footer Start -->
