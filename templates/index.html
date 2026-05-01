@@ -5,16 +5,16 @@
 
     <head>
         <meta charset="utf-8">
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> 4ba2eb2e4bf6df75e4209c40065f9686cd792775
         <title>Qabul SamDUUF</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
+	<meta name="description" content="Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali qabul bo‘limi. Bakalavriat va magistratura uchun qabul jarayoni, hujjatlar va talablar.">
 
+	<link rel="canonical" href="https://qabul.samduuf.uz/">
+	
+	<meta name="robots" content="index, follow">
         <!-- Google Web Fonts -->
         <link rel="icon" type="image/png" href="{% static 'img/favicon.ico' %}">
 
@@ -55,7 +55,7 @@
                     <div class="col-lg-8 text-center text-lg-start mb-lg-0">
                         <div class="d-flex flex-wrap">
                             <div class="border-end border-primary pe-3">
-                                <a href="#" class="text-muted small"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
+                                <a href="https://www.google.com/maps?ll=39.421042,67.17769&z=17&t=h&hl=en&gl=US&mapclient=embed&cid=10201499298358941891" class="text-muted small"><i class="fas fa-map-marker-alt text-primary me-2"></i>Bizning manzil</a>
                             </div>
                             <div class="ps-3">
                                 <a href="mailto:devonxona@samduuf.uz" class="text-muted small"><i class="fas fa-envelope text-primary me-2"></i>devonxona@samduuf.uz</a>
@@ -65,10 +65,14 @@
                     <div class="col-lg-4 text-center text-lg-end">
                         <div class="d-flex justify-content-end">
                             <div class="d-flex border-end border-primary pe-3">
-                                <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-instagram"></i></a>
-                                <a class="btn p-0 text-primary me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn p-0 text-primary me-3" href="https://m.facebook.com/100082944945888/"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn p-0 text-primary me-3" href="https://t.me/samdu_urgut_filial"><i class="fab fa-telegram"></i></a>
+                                <a class="btn p-0 text-primary me-3" href="https://www.instagram.com/samduuf.education/"><i class="fab fa-instagram"></i></a>
+                                <a class="btn p-0 text-primary me-0" href="https://www.youtube.com/channel/UC7UOeHPrOv6HBQPUSTgBrcQ"><i class="fab fa-youtube"></i></a>
+				<a href="https://samduuf.uz/" class="d-flex align-items-center text-decoration-none">
+                                    <img src="{% static 'img/favicon.ico' %}" style="height:20px; padding: 1px 10px;" >
+                                </a>
+
                             </div>
                             <div class="dropdown ms-3">
                                 <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i class="fas fa-globe-europe text-primary me-2"></i> O'zbek</small></a>
@@ -88,7 +92,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light"> 
                     <a href="{% url 'home' %}" class="navbar-brand p-0">
-                        <h1 class="text-primary mb-0"><img src="{% static 'img/Logo.png' %}" alt="Logo"> <i ></i> QaBuL</h1>
+                        <span class="text-primary mb-0 fs-4 fw-bold"><img src="{% static 'img/Logo.png' %}" alt="Logo"> Qabul</span>
                         
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -126,8 +130,8 @@
                                     <span class="dropdown-toggle">Bakalavriat</span>
                                 </a>
                                 <div class="dropdown-menu">
-                                    <a href="{% url 'hujjatlar'%}" class="dropdown-item">Hujjatlar Tuplami</a>
-                                    <a href="{% url 'qabul_kvotasi'%}" class="dropdown-item">Qabul Kvotasi</a>
+                                    <a href="{% url 'hujjatlar'%}" class="dropdown-item">Hujjatlar To'plami</a>
+                                    <a href="{% url 'qabul_kvotasi'%}" class="dropdown-item">Qabul kvotasi</a>
                                 </div>
                             </div>
 
@@ -138,7 +142,7 @@
                                 <div class="dropdown-menu">
                                     <a href="{% url 'foreign_request' %}" class="dropdown-item">Ariza yuborish</a>
                                     <a href="{% url 'bakalaver' %}" class="dropdown-item">Bakalavriat ta'lim yo'nalishi</a>
-                                    <a href="{% url 'magistr' %}" class="dropdown-item">Magistartura ta'lim yo'nalishi</a>
+                                    <a href="{% url 'magistr' %}" class="dropdown-item">Magistratura ta'lim yo'nalishi</a>
                                     <a href="{% url 'shartnoma' %}" class="dropdown-item">Shartnomalar</a>
                                     <a href="{% url 'kontrakt' %}" class="dropdown-item">Kontrakt narxlari</a>
                                 </div>
@@ -146,13 +150,13 @@
 
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                                    <span class="dropdown-toggle">Magistartura</span>
+                                    <span class="dropdown-toggle">Magistratura</span>
                                 </a>
                                 <div class="dropdown-menu">
                                     <a href="{% url 'Qabul_Rijasi'%}" class="dropdown-item">Qabul rejasi</a>
                                     <a href="https://my.edu.uz/" class="dropdown-item">Hujjat topshirish</a>
-                                    <a href="{% url 'hujjatlar_t'%}" class="dropdown-item">hujjatlar to'plami</a>
-                                    <a href="{% url 'Magistratura_Natijalari' %}" class="dropdown-item">Magistartura natijalari</a>
+                                    <a href="{% url 'hujjatlar_t'%}" class="dropdown-item">Hujjatlar to'plami</a>
+                                    <a href="{% url 'Magistratura_Natijalari' %}" class="dropdown-item">Magistratura natijalari</a>
                                 </div>
                             </div>
 
@@ -219,7 +223,7 @@
 <div class="container-fluid blog py-5">
     <div class="container py-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-            <h1 class="display-4 mb-4">So'nggi Yangiliklar va E'lonlar</h1>
+            <h1 class="display-4 mb-4">So'nggi yangiliklar va e'lonlar</h1>
             <p class="mb-0">
                 Sharof Rashidov nomidagi Samarqand davlat universitetining  Urgut filialining eng so'nggi yangiliklari va muhim e'lonlari
             </p>
@@ -278,7 +282,7 @@
         <!-- Barcha yangiliklarni ko'rish tugmasi -->
         <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.5s">
             <a href="{% url 'post_list' %}" class="btn btn-primary btn-lg px-5 py-3">
-                Barcha Yangiliklarni Ko'rish
+                Barcha yangiliklarni ko'rish
             </a>
         </div>
     </div>
@@ -369,7 +373,7 @@
                         <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Sharof Rashidov nomidagi Samarqand davlat universitetining Urgut filiali</a></span>
                     </div>
                     <div class="col-md-6 text-center text-md-start text-body">
-                         <a class="border-bottom text-white" href="https://htmlcodex.com"></a> <a class="border-bottom text-white" href="https://themewagon.com">Qabul bulimi</a>
+                         <a class="border-bottom text-white" href="https://htmlcodex.com"></a> <a class="border-bottom text-white" href="https://themewagon.com">Qabul bo'limi</a>
                     </div>
                 </div>
             </div>

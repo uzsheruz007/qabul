@@ -804,13 +804,13 @@
 <div class="container">
     <div class="page-header">
         <div class="page-header-content">
-            <h1>ME'YORIY HUJJATLAR</h1>
+            <h1>Me'yoriy hujjatlar</h1>
             <p> Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filialiga qabul qilish 
             bo'yicha barcha rasmiy hujjatlar va qoidalar to'plami. 
             Barcha hujjatlarni yuklab olishingiz  mumkin.</p>
             <div class="university-badge">
                 <i class="fas fa-university"></i>
-                <span>SAMDU Urgut Filiali</span>
+                <span>SamDU Urgut filiali</span>
             </div>
         </div>
     </div>
@@ -850,7 +850,7 @@
     <div class="documents-section fade-in stagger-delay-2">
         <div class="section-header">
             <h2 class="section-title">
-                <i class="fas fa-file-alt"></i> Zarur Hujjatlar Ro'yxati
+                <i class="fas fa-file-alt"></i> Zarur hujjatlar ro'yxati
             </h2>
             <div class="documents-count">
                 <i class="fas fa-database"></i> {{ documents|length }} ta hujjat
@@ -944,7 +944,7 @@
             <div class="rules-icon">
                 <i class="fas fa-graduation-cap"></i>
             </div>
-            <h2 class="rules-title">Qabul Qoidalari va Talablar</h2>
+            <h2 class="rules-title">Qabul qoidalari va talablar</h2>
         </div>
 
         <div class="rules-grid">
@@ -954,7 +954,7 @@
                     <div class="rule-card-icon">
                         <i class="fas fa-user-graduate"></i>
                     </div>
-                    <h3 class="rule-card-title">Bakalavriat Yo'nalishlari</h3>
+                    <h3 class="rule-card-title">Bakalavriat yo'nalishlari</h3>
                 </div>
                 <ul class="rule-list">
                     {% for rule in bachelor_rules %}
@@ -971,7 +971,7 @@
                     <div class="rule-card-icon">
                         <i class="fas fa-user-tie"></i>
                     </div>
-                    <h3 class="rule-card-title">Magistratura Yo'nalishlari</h3>
+                    <h3 class="rule-card-title">Magistratura yo'nalishlari</h3>
                 </div>
                 <ul class="rule-list">
                     {% for rule in master_rules %}
@@ -984,23 +984,7 @@
         </div>
     </div>
 
-    <!-- Admission Steps -->
-    <div class="steps-section fade-in stagger-delay-4">
-        <h2 class="steps-title">Qabul Bosqichlari</h2>
-        <div class="steps-container">
-            <div class="steps-line"></div>
-            <div class="steps-grid">
-                {% for step in admission_steps %}
-                <div class="step-card">
-                    <div class="step-number">{{ step.step_number }}</div>
-                    <h4>{{ step.title }}</h4>
-                    <p>{{ step.description }}</p>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-
+    
     <!-- Important Notes -->
     <div class="important-notes fade-in">
         <div class="notes-header">
