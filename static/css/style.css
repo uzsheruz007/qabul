@@ -284,7 +284,10 @@
 
 /*** Carousel Hero Header Start ***/
 .header-carousel .header-carousel-item {
-    height: 700px;
+    height: 600px;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
 
 .header-carousel .owl-nav .owl-prev,
@@ -336,29 +339,21 @@
     .header-carousel .header-carousel-item .carousel-caption {
         padding-top: 45px;
     }
-
     .header-carousel .header-carousel-item {
-        height: 550px;
+        height: 450px;
     }
 }
 
 @media (max-width: 767px) {
     .header-carousel .header-carousel-item {
-        height: 420px;
+        height: 320px !important;
     }
-
-    .samduuf-bg {
-        min-height: 420px;
-        background-position: center center;
-    }
-
     .header-carousel .owl-nav .owl-prev {
         bottom: -30px;
         left: 50%;
         transform: translateX(-50%);
         margin-left: -45px;
     }
-
     .header-carousel .owl-nav .owl-next {
         bottom: -30px;
         left: 50%;
@@ -369,11 +364,7 @@
 
 @media (max-width: 480px) {
     .header-carousel .header-carousel-item {
-        height: 320px;
-    }
-
-    .samduuf-bg {
-        min-height: 320px;
+        height: 260px !important;
     }
 }
 /*** Carousel Hero Header End ***/
