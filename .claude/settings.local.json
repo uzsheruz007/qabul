@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit -m ' *)",
+      "Bash(.\\\\venv\\\\Scripts\\\\python.exe manage.py collectstatic --noinput)",
+      "Bash(git add *)",
+      "Bash(git push *)"
+    ]
+  }
+}
