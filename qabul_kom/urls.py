@@ -3,7 +3,7 @@ from . import views
 from magister.views import hujjatlar_t,  Qabul_Rijasi, Magistratura_Natijalari
 from news.views import PostListView, post_detail, index
 from Abituriyent.views import PrivilegeListView, qabul_kvotasi
-from employees.views import KomissiyaView
+from employees.views import KomissiyaView, ish_ariza, ish_ariza_success, telegram_webhook
 from xorijiy.views import foreign_student_request, bakalaver, magistr, shartnoma, kontrakt
 
 urlpatterns = [
@@ -24,6 +24,11 @@ urlpatterns = [
     path('komissiya/', KomissiyaView.as_view(), name='komissiya'),
     path('privileges/', PrivilegeListView.as_view(), name='privileges'),
     path('hujjatlar/', views.hujjatlar, name='hujjatlar'),
+
+    # ISH O'RNI ARIZASI
+    path('ish-orni/', ish_ariza, name='ish_ariza'),
+    path('ish-orni/success/', ish_ariza_success, name='ish_ariza_success'),
+    path('bot/webhook/', telegram_webhook, name='telegram_webhook'),
 
     # XORIJIY TALABALAR
     path('foreign/', foreign_student_request, name='foreign_request'),

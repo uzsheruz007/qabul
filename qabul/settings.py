@@ -186,6 +186,24 @@ CKEDITOR_5_CONFIGS = {
 }
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# =========================
+# EMAIL
+# =========================
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'sherqobilishqobilov074@gmail.com'
+EMAIL_HOST_PASSWORD = ''          # Gmail App Password shu yerga
+DEFAULT_FROM_EMAIL = 'SamDUUF Qabul <sherqobilishqobilov074@gmail.com>'
+NOTIFICATION_EMAIL = 'erkinusmonov1822@gmail.com'
+
+# =========================
+# TELEGRAM BOT
+# =========================
+TELEGRAM_BOT_TOKEN = '8844001126:AAGRTS5JRJa1ByBFeo-G7F4Ij9s4mlwW3VA'
+TELEGRAM_CHAT_ID = '8560650668'
+
 CSRF_TRUSTED_ORIGINS = [
     "https://qabul.samduuf.uz",
     "https://www.qabul.samduuf.uz",

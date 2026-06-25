@@ -1,0 +1,423 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+/* ── page layout ── */
+.ish-page { background: #f1f5f9; padding: 60px 0 80px; }
+.page-header {
+    background: linear-gradient(135deg, #0a3d6d 0%, #1d4ed8 100%);
+    padding: 48px 0 40px;
+    margin-bottom: 0;
+}
+.page-header h1 { color: #fff; font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+.page-header p  { color: rgba(255,255,255,.75); font-size: 1rem; margin: 0; }
+.breadcrumb-item a { color: rgba(255,255,255,.7); text-decoration: none; }
+.breadcrumb-item.active { color: rgba(255,255,255,.95); }
+.breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,.5); }
+
+/* ── two-column grid ── */
+.ish-grid { display: grid; grid-template-columns: 340px 1fr; gap: 32px; align-items: start; }
+@media(max-width:900px){ .ish-grid { grid-template-columns: 1fr; } }
+
+/* ── info card ── */
+.info-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(15,23,42,.08);
+    overflow: hidden;
+    position: sticky;
+    top: 90px;
+}
+.info-card-head {
+    background: linear-gradient(135deg,#0a3d6d,#1d4ed8);
+    padding: 28px 24px;
+    color: #fff;
+}
+.info-card-head h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+.info-card-head p  { font-size: .85rem; opacity: .8; margin: 0; }
+.info-card-body { padding: 24px; }
+.req-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 12px 0; border-bottom: 1px solid #f1f5f9;
+}
+.req-item:last-child { border-bottom: none; padding-bottom: 0; }
+.req-icon {
+    width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0;
+    background: linear-gradient(135deg,#0a3d6d,#1d4ed8);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: .8rem;
+}
+.req-text strong { display: block; font-size: .9rem; color: #1e293b; font-weight: 600; }
+.req-text span   { font-size: .8rem; color: #64748b; }
+
+.contact-strip {
+    margin: 20px 0 0;
+    background: #f8faff;
+    border-radius: 12px;
+    padding: 16px;
+    border-left: 4px solid #1d4ed8;
+}
+.contact-strip p { margin: 0; font-size: .85rem; color: #475569; }
+.contact-strip a { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+
+/* ── form card ── */
+.form-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(15,23,42,.08);
+    overflow: hidden;
+}
+.form-section {
+    padding: 28px 32px;
+    border-bottom: 1px solid #f1f5f9;
+}
+.form-section:last-child { border-bottom: none; }
+.section-title {
+    font-size: 1rem; font-weight: 700; color: #0a3d6d;
+    display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
+    padding-bottom: 12px; border-bottom: 2px solid #e2e8f0;
+}
+.section-title .step-badge {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: linear-gradient(135deg,#0a3d6d,#1d4ed8);
+    color: #fff; font-size: .8rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media(max-width:640px){ .form-grid-2 { grid-template-columns: 1fr; } }
+
+.form-label { font-size: .875rem; font-weight: 600; color: #374151; margin-bottom: 6px; }
+.required-star { color: #ef4444; margin-left: 3px; }
+.form-control, .form-select {
+    border: 1.5px solid #e2e8f0; border-radius: 10px;
+    padding: 10px 14px; font-size: .9rem; color: #1e293b;
+    transition: border-color .2s, box-shadow .2s;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #1d4ed8; box-shadow: 0 0 0 3px rgba(29,78,216,.1); outline: none;
+}
+.form-text { font-size: .78rem; color: #94a3b8; margin-top: 4px; }
+
+/* file upload */
+.file-upload-wrap { position: relative; }
+.file-upload-wrap .form-control[type=file] {
+    padding: 8px 12px; cursor: pointer;
+}
+.file-badge {
+    display: inline-block; background: #eff6ff; color: #1d4ed8;
+    font-size: .75rem; font-weight: 600; padding: 3px 8px;
+    border-radius: 6px; margin-bottom: 6px;
+}
+
+/* optional section dimmed */
+.optional-section { background: #fafbff; }
+.optional-label { color: #94a3b8; font-size: .78rem; font-weight: 500; margin-left: 6px; }
+
+/* other nationality toggle */
+#other-nationality-wrap { display: none; margin-top: 12px; }
+
+/* submit */
+.form-footer {
+    padding: 28px 32px;
+    background: #f8faff;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+@media(max-width:600px){ .form-footer { flex-direction: column; } }
+.submit-btn {
+    background: linear-gradient(135deg,#0a3d6d,#1d4ed8);
+    color: #fff; border: none; border-radius: 12px;
+    padding: 14px 40px; font-size: 1rem; font-weight: 700;
+    cursor: pointer; transition: opacity .2s, transform .2s;
+    display: flex; align-items: center; gap: 10px;
+}
+.submit-btn:hover { opacity: .9; transform: translateY(-1px); }
+.submit-note { font-size: .8rem; color: #94a3b8; }
+
+/* errors */
+.errorlist { list-style: none; padding: 0; margin: 6px 0 0; }
+.errorlist li {
+    font-size: .8rem; color: #ef4444;
+    background: #fef2f2; border-radius: 6px;
+    padding: 4px 10px; margin-top: 4px;
+}
+</style>
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-3">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Bosh sahifa</a></li>
+                <li class="breadcrumb-item active">Ish o'rinlari</li>
+            </ol>
+        </nav>
+        <h1><i class="fas fa-briefcase me-3"></i>Bo'sh ish o'rinlari</h1>
+        <p>Sharof Rashidov nomidagi SamDU Urgut filiali — onlayn hujjat topshirish platformasi</p>
+    </div>
+</div>
+
+<div class="ish-page">
+    <div class="container">
+        <div class="ish-grid">
+
+            <!-- Info card (chap) -->
+            <div>
+                <div class="info-card">
+                    <div class="info-card-head">
+                        <h3><i class="fas fa-info-circle me-2"></i>Ariza haqida</h3>
+                        <p>Hujjatlarni to'liq va aniq to'ldiring</p>
+                    </div>
+                    <div class="info-card-body">
+                        <div class="req-item">
+                            <div class="req-icon"><i class="fas fa-user"></i></div>
+                            <div class="req-text">
+                                <strong>Shaxsiy ma'lumotlar</strong>
+                                <span>F.I.Sh, millat, yashash manzili, tug'ilgan sana</span>
+                            </div>
+                        </div>
+                        <div class="req-item">
+                            <div class="req-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="req-text">
+                                <strong>Ta'lim ma'lumotlari</strong>
+                                <span>Diplom nusxasi bilan (PDF, JPG, PNG — maks 10 MB)</span>
+                            </div>
+                        </div>
+                        <div class="req-item">
+                            <div class="req-icon"><i class="fas fa-award"></i></div>
+                            <div class="req-text">
+                                <strong>Ilmiy unvon / daraja</strong>
+                                <span>Mavjud bo'lsa diplom fayllari bilan (ixtiyoriy)</span>
+                            </div>
+                        </div>
+                        <div class="req-item">
+                            <div class="req-icon"><i class="fas fa-language"></i></div>
+                            <div class="req-text">
+                                <strong>Xorijiy til</strong>
+                                <span>Sertifikat mavjud bo'lsa ilova qiling (ixtiyoriy)</span>
+                            </div>
+                        </div>
+                        <div class="req-item">
+                            <div class="req-icon"><i class="fas fa-file-alt"></i></div>
+                            <div class="req-text">
+                                <strong>Mehnat faoliyati</strong>
+                                <span>Ma'lumotnoma (ixtiyoriy, 5 tagacha fayl)</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-strip">
+                            <p><i class="fas fa-phone-alt me-2 text-primary"></i>
+                                Savol bo'lsa: <a href="tel:+998933332014">+998 93 333 20 14</a>
+                            </p>
+                            <p class="mt-2"><i class="fas fa-envelope me-2 text-primary"></i>
+                                <a href="mailto:devonxona@samduuf.uz">devonxona@samduuf.uz</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form card (o'ng) -->
+            <div>
+                <form method="post" enctype="multipart/form-data" novalidate>
+                    {% csrf_token %}
+                    <div class="form-card">
+
+                        <!-- 1. Shaxsiy ma'lumotlar -->
+                        <div class="form-section">
+                            <div class="section-title">
+                                <span class="step-badge">1</span>
+                                Shaxsiy ma'lumotlar
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">{{ form.full_name.label }}<span class="required-star">*</span></label>
+                                {{ form.full_name }}
+                                {{ form.full_name.errors }}
+                            </div>
+
+                            <div class="form-grid-2">
+                                <div>
+                                    <label class="form-label">{{ form.phone.label }}<span class="required-star">*</span></label>
+                                    {{ form.phone }}
+                                    {{ form.phone.errors }}
+                                </div>
+                                <div>
+                                    <label class="form-label">{{ form.email.label }}<span class="required-star">*</span></label>
+                                    {{ form.email }}
+                                    {{ form.email.errors }}
+                                </div>
+                            </div>
+
+                            <div class="form-grid-2 mt-3">
+                                <div>
+                                    <label class="form-label">{{ form.nationality.label }}<span class="required-star">*</span></label>
+                                    {{ form.nationality }}
+                                    {{ form.nationality.errors }}
+                                </div>
+                                <div>
+                                    <label class="form-label">{{ form.birth_date.label }}<span class="required-star">*</span></label>
+                                    {{ form.birth_date }}
+                                    {{ form.birth_date.errors }}
+                                </div>
+                            </div>
+
+                            <div id="other-nationality-wrap">
+                                <label class="form-label">{{ form.nationality_other.label }}</label>
+                                {{ form.nationality_other }}
+                            </div>
+
+                            <div class="mt-3">
+                                <label class="form-label">{{ form.address.label }}<span class="required-star">*</span></label>
+                                {{ form.address }}
+                                {{ form.address.errors }}
+                            </div>
+                        </div>
+
+                        <!-- 2. Ta'lim ma'lumotlari -->
+                        <div class="form-section">
+                            <div class="section-title">
+                                <span class="step-badge">2</span>
+                                Ta'lim ma'lumotlari
+                            </div>
+
+                            <div class="form-grid-2">
+                                <div>
+                                    <label class="form-label">{{ form.education_level.label }}<span class="required-star">*</span></label>
+                                    {{ form.education_level }}
+                                    {{ form.education_level.errors }}
+                                </div>
+                                <div>
+                                    <label class="form-label">{{ form.institution.label }}<span class="required-star">*</span></label>
+                                    {{ form.institution }}
+                                    {{ form.institution.errors }}
+                                </div>
+                            </div>
+
+                            <div class="mt-3">
+                                <label class="form-label">
+                                    {{ form.education_diploma.label }}<span class="required-star">*</span>
+                                </label>
+                                <span class="file-badge">Maks 10 MB · PDF, DOC, JPG, PNG</span>
+                                <div class="file-upload-wrap">{{ form.education_diploma }}</div>
+                                {{ form.education_diploma.errors }}
+                            </div>
+                        </div>
+
+                        <!-- 3. Ilmiy unvon (ixtiyoriy) -->
+                        <div class="form-section optional-section">
+                            <div class="section-title">
+                                <span class="step-badge">3</span>
+                                Ilmiy unvon
+                                <span class="optional-label">(ixtiyoriy)</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">{{ form.academic_title.label }}</label>
+                                {{ form.academic_title }}
+                            </div>
+
+                            <div>
+                                <label class="form-label">Ilmiy unvon diplom fayllari</label>
+                                <span class="file-badge">5 tagacha · Maks 10 MB</span>
+                                <input type="file" name="academic_title_diplomas" multiple
+                                       accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                                       class="form-control">
+                                <div class="form-text">Bir nechta fayl tanlash mumkin</div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Ilmiy daraja (ixtiyoriy) -->
+                        <div class="form-section optional-section">
+                            <div class="section-title">
+                                <span class="step-badge">4</span>
+                                Ilmiy daraja
+                                <span class="optional-label">(ixtiyoriy)</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">{{ form.academic_degree.label }}</label>
+                                {{ form.academic_degree }}
+                            </div>
+
+                            <div>
+                                <label class="form-label">Ilmiy daraja diplom fayllari</label>
+                                <span class="file-badge">5 tagacha · Maks 10 MB</span>
+                                <input type="file" name="academic_degree_diplomas" multiple
+                                       accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                                       class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- 5. Xorijiy til (ixtiyoriy) -->
+                        <div class="form-section optional-section">
+                            <div class="section-title">
+                                <span class="step-badge">5</span>
+                                Xorijiy til bilish darajasi
+                                <span class="optional-label">(ixtiyoriy)</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">{{ form.foreign_language.label }}</label>
+                                {{ form.foreign_language }}
+                            </div>
+
+                            <div>
+                                <label class="form-label">Til sertifikatlari</label>
+                                <span class="file-badge">5 tagacha · Maks 10 MB</span>
+                                <input type="file" name="language_certs" multiple
+                                       accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                                       class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- 6. Mehnat faoliyati (ixtiyoriy) -->
+                        <div class="form-section optional-section">
+                            <div class="section-title">
+                                <span class="step-badge">6</span>
+                                Mehnat faoliyati (ma'lumotnoma)
+                                <span class="optional-label">(ixtiyoriy)</span>
+                            </div>
+
+                            <div>
+                                <label class="form-label">Ma'lumotnoma fayllari</label>
+                                <span class="file-badge">5 tagacha · Maks 10 MB</span>
+                                <input type="file" name="work_references" multiple
+                                       accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                                       class="form-control">
+                                <div class="form-text">Avvalgi ish joylaringizdan ma'lumotnoma yoki mehnat daftarchasi nusxasi</div>
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="form-footer">
+                            <div class="submit-note">
+                                <i class="fas fa-lock me-1 text-primary"></i>
+                                Ma'lumotlaringiz xavfsiz saqlanadi
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Ariza yuborish
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+(function(){
+    var nat = document.getElementById('id_nationality');
+    var wrap = document.getElementById('other-nationality-wrap');
+    function toggle(){ wrap.style.display = nat.value === 'other' ? 'block' : 'none'; }
+    nat.addEventListener('change', toggle);
+    toggle();
+})();
+</script>
+
+{% endblock %}
