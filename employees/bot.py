@@ -6,289 +6,348 @@ from datetime import datetime
 from django.conf import settings
 from django.core.files.base import ContentFile
 
-TOKEN   = settings.TELEGRAM_BOT_TOKEN
-API     = f"https://api.telegram.org/bot{TOKEN}"
+TOKEN    = settings.TELEGRAM_BOT_TOKEN
+API      = f"https://api.telegram.org/bot{TOKEN}"
 FILE_API = f"https://api.telegram.org/file/bot{TOKEN}"
-
-# ── helpers ──────────────────────────────────────────────────────────────────
-
-def _post(method, **kwargs):
-    try:
-        requests.post(f"{API}/{method}", timeout=10, **kwargs)
-    except Exception:
-        pass
-
-
-def send(chat_id, text, markup=None):
-    payload = {'chat_id': chat_id, 'text': text, 'parse_mode': 'HTML'}
-    if markup:
-        payload['reply_markup'] = json.dumps(markup)
-    _post('sendMessage', data=payload)
-
-
-def answer_cb(cb_id):
-    _post('answerCallbackQuery', data={'callback_query_id': cb_id})
-
-
-def inline(*rows):
-    return {'inline_keyboard': list(rows)}
-
-
-def btn(label, cb):
-    return {'text': label, 'callback_data': cb}
-
-
-NAT_KB = inline(
-    [btn("O'zbek", 'nat:uzbek'), btn("Boshqa", 'nat:other')]
-)
-
-EDU_KB = inline(
-    [btn("O'rta", 'edu:urta'), btn("O'rta maxsus", 'edu:urta_maxsus')],
-    [btn("Oliy — bakalavr", 'edu:oliy_bakalavr')],
-    [btn("Oliy — magistr",  'edu:oliy_magistr')],
-    [btn("Oliy — doktorant/PhD", 'edu:oliy_doktorant')],
-)
 
 EDU_LABELS = {
     'urta':           "O'rta",
     'urta_maxsus':    "O'rta maxsus / kasb-hunar",
     'oliy_bakalavr':  "Oliy (bakalavr)",
     'oliy_magistr':   "Oliy (magistr)",
-    'oliy_doktorant': "Oliy (doktorant/PhD)",
+    'oliy_doktorant': "Oliy (doktorant / PhD)",
 }
 
-PROMPTS = {
-    'full_name':           "👤 <b>1/9 · F.I.Sh ni kiriting:</b>\n<i>Masalan: Usmonov Erkin Baxtiyorovich</i>",
-    'phone':               "📞 <b>2/9 · Telefon raqamingiz:</b>\n<i>Masalan: +998901234567</i>",
-    'email':               "📧 <b>3/9 · Email manzilingiz:</b>",
-    'nationality':         "🌍 <b>4/9 · Millatingizni tanlang:</b>",
-    'address':             "🏠 <b>5/9 · Yashash manzilingiz:</b>\n<i>Viloyat, tuman, ko'cha, uy raqami</i>",
-    'birth_date':          "🎂 <b>6/9 · Tug'ilgan sanangiz:</b>\n<i>Format: KK.OO.YYYY — masalan 15.06.1990</i>",
-    'education_level':     "🎓 <b>7/9 · Ma'lumotingizni tanlang:</b>",
-    'institution':         "🏛 <b>8/9 · Ta'lim muassasasi nomi:</b>",
-    'education_diploma':   "📄 <b>9/9 · Ta'lim diplomi faylini yuboring</b>\n<i>PDF, JPG yoki PNG · maks 10 MB</i>",
-    'academic_title':      "🏅 <b>Ilmiy unvoningiz</b> (ixtiyoriy):\n<i>Masalan: Dotsent</i>\n👉 /skip — o'tkazib yuborish",
-    'academic_title_file': "📎 <b>Ilmiy unvon diplomi</b> faylini yuboring\n👉 /skip — o'tkazib yuborish",
-    'academic_degree':     "🔬 <b>Ilmiy darajangiz</b> (ixtiyoriy):\n<i>Masalan: Falsafa doktori (PhD)</i>\n👉 /skip — o'tkazib yuborish",
-    'academic_degree_file':"📎 <b>Ilmiy daraja diplomi</b> faylini yuboring\n👉 /skip — o'tkazib yuborish",
-    'foreign_language':    "🌐 <b>Xorijiy til bilish darajasi</b> (ixtiyoriy):\n<i>Masalan: Ingliz tili — B2 (IELTS 6.0)</i>\n👉 /skip — o'tkazib yuborish",
-    'language_cert_file':  "📎 <b>Til sertifikati</b> faylini yuboring\n👉 /skip — o'tkazib yuborish",
-    'work_reference_file': "📁 <b>Mehnat faoliyati ma'lumotnomasi</b> (ixtiyoriy):\n<i>Avvalgi ish joyi ma'lumotnomasi</i>\n👉 /skip — o'tkazib yuborish",
+NAT_LABELS = {
+    'uzbek': "O'zbek",
+    'other': "Boshqa",
 }
 
-FILE_STEPS = {
-    'education_diploma',
-    'academic_title_file',
-    'academic_degree_file',
-    'language_cert_file',
-    'work_reference_file',
-}
+# ── pastki darajali yuboruvchi ─────────────────────────────────────────────
 
-# ── main entry point ─────────────────────────────────────────────────────────
+def _send(chat_id, text, markup=None):
+    payload = {
+        'chat_id':    chat_id,
+        'text':       text,
+        'parse_mode': 'HTML',
+    }
+    if markup:
+        payload['reply_markup'] = json.dumps(markup, ensure_ascii=False)
+    try:
+        r = requests.post(f"{API}/sendMessage", json=payload, timeout=15)
+        return r.json()
+    except Exception as e:
+        print(f"[BOT] send xatosi: {e}")
+        return None
+
+
+def _kb(*rows):
+    """Inline keyboard yaratish."""
+    return {'inline_keyboard': [list(row) for row in rows]}
+
+
+def _btn(text, data):
+    return {'text': text, 'callback_data': data}
+
+
+SKIP_KB = _kb([_btn("O'tkazib yuborish >>", 'skip')])
+
+NAT_KB = _kb(
+    [_btn("O'zbek", 'nat:uzbek'), _btn("Boshqa", 'nat:other')]
+)
+
+EDU_KB = _kb(
+    [_btn("O'rta", 'edu:urta')],
+    [_btn("O'rta maxsus / kasb-hunar", 'edu:urta_maxsus')],
+    [_btn("Oliy — bakalavr", 'edu:oliy_bakalavr')],
+    [_btn("Oliy — magistr",  'edu:oliy_magistr')],
+    [_btn("Oliy — doktorant / PhD", 'edu:oliy_doktorant')],
+)
+
+# ── savol matni ────────────────────────────────────────────────────────────
+
+def _ask(chat_id, step):
+    msgs = {
+        'full_name': (
+            "👤 <b>1-qadam · F.I.Sh</b>\n"
+            "Familiya, ism, sharifingizni to'liq kiriting:\n"
+            "<i>Masalan: Usmonov Erkin Baxtiyorovich</i>",
+            None
+        ),
+        'phone': (
+            "📞 <b>2-qadam · Telefon raqam</b>\n"
+            "<i>Masalan: +998901234567</i>",
+            None
+        ),
+        'email': (
+            "📧 <b>3-qadam · Email manzil</b>\n"
+            "<i>Masalan: ism@gmail.com</i>",
+            None
+        ),
+        'nationality': (
+            "🌍 <b>4-qadam · Millat</b>\n"
+            "Quyidagi tugmadan tanlang:",
+            NAT_KB
+        ),
+        'nationality_other': (
+            "🌍 Millatingizni yozing:",
+            None
+        ),
+        'address': (
+            "🏠 <b>5-qadam · Yashash manzili</b>\n"
+            "<i>Viloyat, tuman, ko'cha, uy raqami</i>",
+            None
+        ),
+        'birth_date': (
+            "🎂 <b>6-qadam · Tug'ilgan sana</b>\n"
+            "<i>Format: KK.OO.YYYY — masalan: 15.06.1990</i>",
+            None
+        ),
+        'education_level': (
+            "🎓 <b>7-qadam · Ma'lumot darajasi</b>\n"
+            "Quyidagi tugmadan tanlang:",
+            EDU_KB
+        ),
+        'institution': (
+            "🏛 <b>8-qadam · Ta'lim muassasasi</b>\n"
+            "Olgan ta'lim muassasangiz nomini kiriting:",
+            None
+        ),
+        'education_diploma': (
+            "📄 <b>9-qadam · Ta'lim diplomi</b>\n"
+            "Diplom faylini yuboring (PDF, JPG, PNG · maks 10 MB):",
+            None
+        ),
+        'academic_title': (
+            "🏅 <b>Ilmiy unvon</b> <i>(ixtiyoriy)</i>\n"
+            "Ilmiy unvoningiz bo'lsa kiriting:\n"
+            "<i>Masalan: Dotsent, Professor</i>",
+            SKIP_KB
+        ),
+        'academic_title_file': (
+            "📎 <b>Ilmiy unvon diplomi</b>\n"
+            "Diplom faylini yuboring (PDF, JPG, PNG):",
+            SKIP_KB
+        ),
+        'academic_degree': (
+            "🔬 <b>Ilmiy daraja</b> <i>(ixtiyoriy)</i>\n"
+            "Ilmiy darajangiz bo'lsa kiriting:\n"
+            "<i>Masalan: Falsafa doktori (PhD), Fan nomzodi</i>",
+            SKIP_KB
+        ),
+        'academic_degree_file': (
+            "📎 <b>Ilmiy daraja diplomi</b>\n"
+            "Diplom faylini yuboring (PDF, JPG, PNG):",
+            SKIP_KB
+        ),
+        'foreign_language': (
+            "🌐 <b>Xorijiy til</b> <i>(ixtiyoriy)</i>\n"
+            "Xorijiy til bilish darajangizni kiriting:\n"
+            "<i>Masalan: Ingliz tili — B2 (IELTS 6.0)</i>",
+            SKIP_KB
+        ),
+        'language_cert_file': (
+            "📎 <b>Til sertifikati</b>\n"
+            "Sertifikat faylini yuboring (PDF, JPG, PNG):",
+            SKIP_KB
+        ),
+        'work_reference_file': (
+            "📁 <b>Mehnat faoliyati ma'lumotnomasi</b> <i>(ixtiyoriy)</i>\n"
+            "Avvalgi ish joyidan ma'lumotnoma faylini yuboring:",
+            SKIP_KB
+        ),
+    }
+    text, markup = msgs.get(step, ("Noma'lum qadam.", None))
+    _send(chat_id, text, markup)
+
+
+# ── asosiy handler ─────────────────────────────────────────────────────────
 
 def handle_update(update):
-    if 'callback_query' in update:
-        _handle_callback(update['callback_query'])
-    elif 'message' in update:
-        _handle_message(update['message'])
+    try:
+        if 'callback_query' in update:
+            _handle_callback(update['callback_query'])
+        elif 'message' in update:
+            _handle_message(update['message'])
+    except Exception as e:
+        print(f"[BOT] handle_update xatosi: {e}")
 
 
-# ── callback (inline keyboard) ───────────────────────────────────────────────
+# ── callback ───────────────────────────────────────────────────────────────
 
 def _handle_callback(cq):
     from .models import BotSession
     chat_id = str(cq['message']['chat']['id'])
     data    = cq['data']
-    answer_cb(cq['id'])
+
+    # callback spinnerini olib tashlash
+    try:
+        requests.post(f"{API}/answerCallbackQuery",
+                      json={'callback_query_id': cq['id']}, timeout=5)
+    except Exception:
+        pass
 
     session, _ = BotSession.objects.get_or_create(chat_id=chat_id)
+    step = session.step
 
-    if data.startswith('nat:') and session.step == 'nationality':
+    # millat tanlash
+    if data.startswith('nat:') and step == 'nationality':
         val = data.split(':', 1)[1]
         session.data['nationality'] = val
         if val == 'other':
             session.step = 'nationality_other'
             session.save()
-            send(chat_id, "🌍 Millatingizni yozing:")
+            _ask(chat_id, 'nationality_other')
         else:
             session.step = 'address'
             session.save()
-            send(chat_id, PROMPTS['address'])
+            _ask(chat_id, 'address')
+        return
 
-    elif data.startswith('edu:') and session.step == 'education_level':
+    # ta'lim darajasi tanlash
+    if data.startswith('edu:') and step == 'education_level':
         val = data.split(':', 1)[1]
         session.data['education_level'] = val
         session.step = 'institution'
         session.save()
-        send(chat_id, PROMPTS['institution'])
+        _ask(chat_id, 'institution')
+        return
+
+    # "Ariza boshlash" tugmasi (/start ekranidan)
+    if data == 'start_ariza':
+        session.step = 'full_name'
+        session.data = {}
+        session.save()
+        _send(chat_id,
+              "<b>Ariza boshlandi!</b>\n"
+              "Har bir savolga ketma-ket javob bering.\n"
+              "Bekor qilish: /cancel\n"
+              "─────────────────")
+        _ask(chat_id, 'full_name')
+        return
+
+    # "O'tkazib yuborish" tugmasi
+    if data == 'skip':
+        _handle_skip(chat_id, session)
+        return
 
 
-# ── message ──────────────────────────────────────────────────────────────────
+def _handle_skip(chat_id, session):
+    step = session.step
+    skip_map = {
+        'academic_title':      ('academic_title', '',   'academic_degree'),
+        'academic_title_file': (None,             None, 'academic_degree'),
+        'academic_degree':     ('academic_degree', '',  'foreign_language'),
+        'academic_degree_file':(None,             None, 'foreign_language'),
+        'foreign_language':    ('foreign_language', '', 'work_reference_file'),
+        'language_cert_file':  (None,             None, 'work_reference_file'),
+        'work_reference_file': (None,             None, 'done'),
+    }
+    if step not in skip_map:
+        return
+    field, val, nxt = skip_map[step]
+    if field:
+        session.data[field] = val
+    if nxt == 'done':
+        data_copy = dict(session.data)
+        session.step = 'full_name'
+        session.data = {}
+        session.save()
+        _finalize(chat_id, data_copy)
+    else:
+        session.step = nxt
+        session.save()
+        _ask(chat_id, nxt)
+
+
+# ── xabar ─────────────────────────────────────────────────────────────────
 
 def _handle_message(message):
     from .models import BotSession
-    chat_id  = str(message['chat']['id'])
-    text     = message.get('text', '').strip()
-    doc      = (message.get('document') or
-                (message.get('photo') and message['photo'][-1]))
+    chat_id = str(message['chat']['id'])
+    text    = message.get('text', '').strip()
+    doc     = (message.get('document') or
+               (message.get('photo') and message['photo'][-1]))
 
     session, _ = BotSession.objects.get_or_create(chat_id=chat_id)
 
-    # ── commands ──
-    if text == '/start':
-        session.step = 'full_name'
-        session.data = {}
-        session.save()
-        send(chat_id,
-             "👋 <b>Salom! SamDU Urgut filiali — Ish o'rinlari boti</b>\n\n"
-             "Bu bot orqali bo'sh ish o'rinlari uchun hujjat topshirishingiz mumkin.\n\n"
-             "▶️ Ariza boshlash: /ariza\n"
-             "❌ Bekor qilish: /cancel")
-        return
-
-    if text == '/ariza':
-        session.step = 'full_name'
-        session.data = {}
-        session.save()
-        send(chat_id, "📋 <b>Ariza boshlandi!</b>\nSavollarga ketma-ket javob bering.\n"
-                      "Istalgan vaqt bekor qilish: /cancel\n\n" + PROMPTS['full_name'])
-        return
-
-    if text == '/cancel':
-        session.step = 'full_name'
-        session.data = {}
-        session.save()
-        send(chat_id, "❌ Ariza bekor qilindi.\n▶️ Qayta boshlash: /ariza")
+    # buyruqlar
+    if text in ('/start', '/ariza', '/cancel'):
+        _handle_command(chat_id, text, session)
         return
 
     step = session.step
 
-    # ── file steps ──
+    # fayl talab qiluvchi qadamlar
+    FILE_STEPS = {
+        'education_diploma', 'academic_title_file',
+        'academic_degree_file', 'language_cert_file', 'work_reference_file',
+    }
+
     if step in FILE_STEPS:
-        is_skip = (text == '/skip' and step != 'education_diploma')
-
-        if is_skip:
-            _advance_from_file_step(chat_id, session, step, skipped=True)
-            return
-
         if not doc:
-            send(chat_id, "⚠️ Iltimos, <b>fayl yuboring</b> (PDF, JPG, PNG)."
-                          + ("\n👉 /skip — o'tkazib yuborish" if step != 'education_diploma' else ""))
+            msg = "Iltimos, fayl yuboring (PDF, JPG yoki PNG)."
+            if step != 'education_diploma':
+                _send(chat_id, msg, SKIP_KB)
+            else:
+                _send(chat_id, msg)
             return
 
         fid   = doc.get('file_id')
         fname = doc.get('file_name', 'fayl.pdf')
-
-        if step == 'education_diploma':
-            session.data['education_diploma_file_id']   = fid
-            session.data['education_diploma_filename']  = fname
-        elif step == 'academic_title_file':
-            session.data.setdefault('academic_title_file_ids', []).append(fid)
-        elif step == 'academic_degree_file':
-            session.data.setdefault('academic_degree_file_ids', []).append(fid)
-        elif step == 'language_cert_file':
-            session.data.setdefault('language_cert_file_ids', []).append(fid)
-        elif step == 'work_reference_file':
-            session.data.setdefault('work_reference_file_ids', []).append(fid)
-
+        _store_file(session, step, fid, fname)
         session.save()
-        _advance_from_file_step(chat_id, session, step, skipped=False)
+        _next_after_file(chat_id, session, step)
         return
 
-    # ── text steps ──
+    # matn qadamlar
     if not text:
         return
+    _handle_text(chat_id, session, step, text)
 
-    if step == 'full_name':
-        session.data['full_name'] = text
-        session.step = 'phone'
+
+def _handle_command(chat_id, cmd, session):
+    if cmd == '/start':
+        session.step = 'full_name'
+        session.data = {}
         session.save()
-        send(chat_id, PROMPTS['phone'])
-
-    elif step == 'phone':
-        if not re.match(r'^\+?[\d\s\-]{7,20}$', text):
-            send(chat_id, "⚠️ Telefon raqamni to'g'ri kiriting.\n<i>Masalan: +998901234567</i>")
-            return
-        session.data['phone'] = text
-        session.step = 'email'
+        _send(chat_id,
+              "<b>Salom! SamDU Urgut filiali — Ish o'rinlari boti</b>\n\n"
+              "Bu bot orqali bo'sh ish o'rinlari uchun hujjat topshirishingiz mumkin.\n\n"
+              "Ariza boshlash uchun /ariza ni yuboring.",
+              _kb([_btn("Ariza boshlash", 'start_ariza')]))
+    elif cmd == '/ariza':
+        session.step = 'full_name'
+        session.data = {}
         session.save()
-        send(chat_id, PROMPTS['email'])
-
-    elif step == 'email':
-        if '@' not in text or '.' not in text.split('@')[-1]:
-            send(chat_id, "⚠️ Email manzilni to'g'ri kiriting.\n<i>Masalan: ism@gmail.com</i>")
-            return
-        session.data['email'] = text
-        session.step = 'nationality'
+        _send(chat_id,
+              "<b>Ariza boshlandi!</b>\n"
+              "Har bir savolga ketma-ket javob bering.\n"
+              "Bekor qilish: /cancel\n"
+              "─────────────────")
+        _ask(chat_id, 'full_name')
+    elif cmd == '/cancel':
+        session.step = 'full_name'
+        session.data = {}
         session.save()
-        send(chat_id, PROMPTS['nationality'], NAT_KB)
-
-    elif step == 'nationality_other':
-        session.data['nationality_other'] = text
-        session.step = 'address'
-        session.save()
-        send(chat_id, PROMPTS['address'])
-
-    elif step == 'address':
-        session.data['address'] = text
-        session.step = 'birth_date'
-        session.save()
-        send(chat_id, PROMPTS['birth_date'])
-
-    elif step == 'birth_date':
-        try:
-            dt = datetime.strptime(text, '%d.%m.%Y')
-            session.data['birth_date'] = dt.strftime('%Y-%m-%d')
-        except ValueError:
-            send(chat_id, "⚠️ Sana formatini to'g'ri kiriting.\n<i>Masalan: 15.06.1990</i>")
-            return
-        session.step = 'education_level'
-        session.save()
-        send(chat_id, PROMPTS['education_level'], EDU_KB)
-
-    elif step == 'institution':
-        session.data['institution'] = text
-        session.step = 'education_diploma'
-        session.save()
-        send(chat_id, PROMPTS['education_diploma'])
-
-    elif step == 'academic_title':
-        if text == '/skip':
-            session.data['academic_title'] = ''
-            session.step = 'academic_degree'
-        else:
-            session.data['academic_title'] = text
-            session.step = 'academic_title_file'
-        session.save()
-        send(chat_id, PROMPTS[session.step])
-
-    elif step == 'academic_degree':
-        if text == '/skip':
-            session.data['academic_degree'] = ''
-            session.step = 'foreign_language'
-        else:
-            session.data['academic_degree'] = text
-            session.step = 'academic_degree_file'
-        session.save()
-        send(chat_id, PROMPTS[session.step])
-
-    elif step == 'foreign_language':
-        if text == '/skip':
-            session.data['foreign_language'] = ''
-            session.step = 'work_reference_file'
-        else:
-            session.data['foreign_language'] = text
-            session.step = 'language_cert_file'
-        session.save()
-        send(chat_id, PROMPTS[session.step])
-
-    else:
-        send(chat_id, "▶️ Boshlash uchun /ariza yuboring.")
+        _send(chat_id, "Ariza bekor qilindi.\nQayta boshlash: /ariza")
 
 
-# ── file step transitions ─────────────────────────────────────────────────────
+def _store_file(session, step, fid, fname):
+    if step == 'education_diploma':
+        session.data['education_diploma_file_id']  = fid
+        session.data['education_diploma_filename'] = fname
+    elif step == 'academic_title_file':
+        session.data.setdefault('academic_title_file_ids', []).append(fid)
+    elif step == 'academic_degree_file':
+        session.data.setdefault('academic_degree_file_ids', []).append(fid)
+    elif step == 'language_cert_file':
+        session.data.setdefault('language_cert_file_ids', []).append(fid)
+    elif step == 'work_reference_file':
+        session.data.setdefault('work_reference_file_ids', []).append(fid)
 
-def _advance_from_file_step(chat_id, session, step, skipped):
+
+def _next_after_file(chat_id, session, step):
     next_map = {
         'education_diploma':    'academic_title',
         'academic_title_file':  'academic_degree',
@@ -298,66 +357,175 @@ def _advance_from_file_step(chat_id, session, step, skipped):
     }
     nxt = next_map[step]
     if nxt == 'done':
-        session.step = 'full_name'
-        session.data_snapshot = dict(session.data)
         data_copy = dict(session.data)
+        session.step = 'full_name'
         session.data = {}
         session.save()
         _finalize(chat_id, data_copy)
     else:
         session.step = nxt
         session.save()
-        send(chat_id, PROMPTS[nxt])
+        _ask(chat_id, nxt)
 
 
-# ── finalize: save to DB + notify ────────────────────────────────────────────
+def _handle_text(chat_id, session, step, text):
+    if step == 'full_name':
+        session.data['full_name'] = text
+        session.step = 'phone'
+        session.save()
+        _ask(chat_id, 'phone')
+
+    elif step == 'phone':
+        if not re.match(r'^\+?[\d\s\-\(\)]{7,20}$', text):
+            _send(chat_id, "Telefon raqamni to'g'ri kiriting.\nMasalan: +998901234567")
+            return
+        session.data['phone'] = text
+        session.step = 'email'
+        session.save()
+        _ask(chat_id, 'email')
+
+    elif step == 'email':
+        if '@' not in text or '.' not in text.split('@')[-1]:
+            _send(chat_id, "Email manzilni to'g'ri kiriting.\nMasalan: ism@gmail.com")
+            return
+        session.data['email'] = text
+        session.step = 'nationality'
+        session.save()
+        _ask(chat_id, 'nationality')
+
+    elif step == 'nationality_other':
+        session.data['nationality'] = 'other'
+        session.data['nationality_other'] = text
+        session.step = 'address'
+        session.save()
+        _ask(chat_id, 'address')
+
+    elif step == 'address':
+        session.data['address'] = text
+        session.step = 'birth_date'
+        session.save()
+        _ask(chat_id, 'birth_date')
+
+    elif step == 'birth_date':
+        try:
+            dt = datetime.strptime(text, '%d.%m.%Y')
+            session.data['birth_date'] = dt.strftime('%Y-%m-%d')
+        except ValueError:
+            _send(chat_id, "Sana formatini to'g'ri kiriting.\nMasalan: 15.06.1990")
+            return
+        session.step = 'education_level'
+        session.save()
+        _ask(chat_id, 'education_level')
+
+    elif step == 'institution':
+        session.data['institution'] = text
+        session.step = 'education_diploma'
+        session.save()
+        _ask(chat_id, 'education_diploma')
+
+    elif step == 'academic_title':
+        session.data['academic_title'] = text
+        session.step = 'academic_title_file'
+        session.save()
+        _ask(chat_id, 'academic_title_file')
+
+    elif step == 'academic_degree':
+        session.data['academic_degree'] = text
+        session.step = 'academic_degree_file'
+        session.save()
+        _ask(chat_id, 'academic_degree_file')
+
+    elif step == 'foreign_language':
+        session.data['foreign_language'] = text
+        session.step = 'language_cert_file'
+        session.save()
+        _ask(chat_id, 'language_cert_file')
+
+    else:
+        _send(chat_id, "Ariza boshlash uchun /ariza yuboring.")
+
+
+# ── yakunlash ──────────────────────────────────────────────────────────────
 
 def _finalize(chat_id, d):
     from .models import IshAriza, IshArizaFile
     from .views import _send_telegram, _send_email
 
-    ariza = IshAriza(
-        full_name       = d.get('full_name', ''),
-        phone           = d.get('phone', ''),
-        email           = d.get('email', ''),
-        nationality     = d.get('nationality', 'uzbek'),
-        nationality_other = d.get('nationality_other', ''),
-        address         = d.get('address', ''),
-        birth_date      = d.get('birth_date'),
-        education_level = d.get('education_level', 'oliy_bakalavr'),
-        institution     = d.get('institution', ''),
-        academic_title  = d.get('academic_title', ''),
-        academic_degree = d.get('academic_degree', ''),
-        foreign_language= d.get('foreign_language', ''),
+    # DB ga saqlash
+    try:
+        nat = d.get('nationality', 'uzbek')
+        nat_label = d.get('nationality_other') if nat == 'other' else NAT_LABELS.get(nat, nat)
+
+        ariza = IshAriza(
+            full_name        = d.get('full_name', ''),
+            phone            = d.get('phone', ''),
+            email            = d.get('email', ''),
+            nationality      = nat,
+            nationality_other= d.get('nationality_other', ''),
+            address          = d.get('address', ''),
+            birth_date       = d.get('birth_date'),
+            education_level  = d.get('education_level', 'oliy_bakalavr'),
+            institution      = d.get('institution', ''),
+            academic_title   = d.get('academic_title', ''),
+            academic_degree  = d.get('academic_degree', ''),
+            foreign_language = d.get('foreign_language', ''),
+        )
+
+        fid   = d.get('education_diploma_file_id')
+        fname = d.get('education_diploma_filename', 'diplom.pdf')
+        if fid:
+            content, real_name = _download(fid)
+            if content:
+                ariza.education_diploma.save(real_name or fname, ContentFile(content), save=False)
+
+        ariza.save()
+
+        _save_files(ariza, d.get('academic_title_file_ids', []),  'academic_title')
+        _save_files(ariza, d.get('academic_degree_file_ids', []), 'academic_degree')
+        _save_files(ariza, d.get('language_cert_file_ids', []),   'language_cert')
+        _save_files(ariza, d.get('work_reference_file_ids', []),  'work_reference')
+
+        _send_telegram(ariza)
+        _send_email(ariza)
+
+    except Exception as e:
+        print(f"[BOT] _finalize xatosi: {e}")
+        _send(chat_id, "Xatolik yuz berdi. Iltimos qayta urinib ko'ring: /ariza")
+        return
+
+    # Foydalanuvchiga to'liq xulosa
+    edu_label = EDU_LABELS.get(d.get('education_level', ''), d.get('education_level', '—'))
+    nat_disp  = d.get('nationality_other') if d.get('nationality') == 'other' else NAT_LABELS.get(d.get('nationality', ''), '—')
+    birth_fmt = ''
+    try:
+        birth_fmt = datetime.strptime(d.get('birth_date', ''), '%Y-%m-%d').strftime('%d.%m.%Y')
+    except Exception:
+        birth_fmt = d.get('birth_date', '—')
+
+    summary = (
+        "<b>Arizangiz qabul qilindi!</b>\n"
+        "─────────────────────\n"
+        f"<b>F.I.Sh:</b> {d.get('full_name', '—')}\n"
+        f"<b>Telefon:</b> {d.get('phone', '—')}\n"
+        f"<b>Email:</b> {d.get('email', '—')}\n"
+        f"<b>Millat:</b> {nat_disp}\n"
+        f"<b>Manzil:</b> {d.get('address', '—')}\n"
+        f"<b>Tug'ilgan sana:</b> {birth_fmt}\n"
+        f"<b>Ma'lumot:</b> {edu_label}\n"
+        f"<b>Ta'lim muassasasi:</b> {d.get('institution', '—')}\n"
     )
-
-    # Download main diploma
-    fid   = d.get('education_diploma_file_id')
-    fname = d.get('education_diploma_filename', 'diplom.pdf')
-    if fid:
-        content, real_name = _download(fid)
-        if content:
-            ariza.education_diploma.save(real_name or fname, ContentFile(content), save=False)
-
-    ariza.save()
-
-    # Additional files
-    _save_files(ariza, d.get('academic_title_file_ids', []),   'academic_title')
-    _save_files(ariza, d.get('academic_degree_file_ids', []),  'academic_degree')
-    _save_files(ariza, d.get('language_cert_file_ids', []),    'language_cert')
-    _save_files(ariza, d.get('work_reference_file_ids', []),   'work_reference')
-
-    # Notify admin (Telegram + Email)
-    _send_telegram(ariza)
-    _send_email(ariza)
-
-    # Confirm to user
-    send(chat_id,
-         "✅ <b>Arizangiz muvaffaqiyatli qabul qilindi!</b>\n\n"
-         f"<b>Ism:</b> {ariza.full_name}\n"
-         f"<b>Telefon:</b> {ariza.phone}\n\n"
-         "📞 Tez orada siz bilan bog'lanamiz.\n"
-         "❓ Savol: <b>+998 93 333 20 14</b>")
+    if d.get('academic_title'):
+        summary += f"<b>Ilmiy unvon:</b> {d['academic_title']}\n"
+    if d.get('academic_degree'):
+        summary += f"<b>Ilmiy daraja:</b> {d['academic_degree']}\n"
+    if d.get('foreign_language'):
+        summary += f"<b>Xorijiy til:</b> {d['foreign_language']}\n"
+    summary += (
+        "─────────────────────\n"
+        "Tez orada siz bilan bog'lanamiz!\n"
+        "Savol: <b>+998 93 333 20 14</b>"
+    )
+    _send(chat_id, summary)
 
 
 def _save_files(ariza, file_ids, file_type):
@@ -377,5 +545,6 @@ def _download(file_id):
         fname = os.path.basename(file_path)
         content = requests.get(f"{FILE_API}/{file_path}", timeout=30).content
         return content, fname
-    except Exception:
+    except Exception as e:
+        print(f"[BOT] _download xatosi: {e}")
         return None, None
