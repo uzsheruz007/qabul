@@ -202,7 +202,11 @@ NOTIFICATION_EMAIL = 'erkinusmonov1822@gmail.com'
 # TELEGRAM BOT
 # =========================
 TELEGRAM_BOT_TOKEN = '8844001126:AAGRTS5JRJa1ByBFeo-G7F4Ij9s4mlwW3VA'
-TELEGRAM_CHAT_ID = '8560650668'
+TELEGRAM_CHAT_ID = '8560650668'          # asosiy admin
+TELEGRAM_ADMIN_IDS = [
+    '8560650668',   # Sherqobil (siz)
+    '349121364',    # Boshlig'ingiz
+]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://qabul.samduuf.uz",

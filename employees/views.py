@@ -68,8 +68,9 @@ def telegram_webhook(request):
 
 def _send_telegram(ariza):
     token = getattr(settings, 'TELEGRAM_BOT_TOKEN', None)
-    chat_id = getattr(settings, 'TELEGRAM_CHAT_ID', None)
-    if not token or not chat_id:
+    admin_ids = getattr(settings, 'TELEGRAM_ADMIN_IDS', None) or [getattr(settings, 'TELEGRAM_CHAT_ID', None)]
+    admin_ids = [cid for cid in admin_ids if cid]
+    if not token or not admin_ids:
         return
 
     millat = ariza.get_nationality_display()
@@ -96,33 +97,33 @@ def _send_telegram(ariza):
     text += f"\n🕐 *Vaqt:* {ariza.created_at.strftime('%d.%m.%Y %H:%M')}"
 
     base = f"https://api.telegram.org/bot{token}"
-    try:
-        requests.post(f"{base}/sendMessage", data={
-            'chat_id': chat_id,
-            'text': text,
-            'parse_mode': 'Markdown',
-        }, timeout=10)
 
-        # Asosiy diplom faylini yuborish
-        if ariza.education_diploma:
-            with open(ariza.education_diploma.path, 'rb') as f:
-                requests.post(f"{base}/sendDocument", files={'document': f}, data={
-                    'chat_id': chat_id,
-                    'caption': f"📄 Ta'lim diplomi — {ariza.full_name}",
-                }, timeout=30)
+    for chat_id in admin_ids:
+        try:
+            requests.post(f"{base}/sendMessage", data={
+                'chat_id': chat_id,
+                'text': text,
+                'parse_mode': 'Markdown',
+            }, timeout=10)
 
-        # Qo'shimcha fayllar
-        for afile in ariza.files.all():
-            try:
-                with open(afile.file.path, 'rb') as f:
+            if ariza.education_diploma:
+                with open(ariza.education_diploma.path, 'rb') as f:
                     requests.post(f"{base}/sendDocument", files={'document': f}, data={
                         'chat_id': chat_id,
-                        'caption': f"📎 {afile.get_file_type_display()} — {ariza.full_name}",
+                        'caption': f"Ta'lim diplomi — {ariza.full_name}",
                     }, timeout=30)
-            except Exception:
-                pass
-    except Exception:
-        pass
+
+            for afile in ariza.files.all():
+                try:
+                    with open(afile.file.path, 'rb') as f:
+                        requests.post(f"{base}/sendDocument", files={'document': f}, data={
+                            'chat_id': chat_id,
+                            'caption': f"{afile.get_file_type_display()} — {ariza.full_name}",
+                        }, timeout=30)
+                except Exception:
+                    pass
+        except Exception:
+            pass
 
 
 def _send_email(ariza):
