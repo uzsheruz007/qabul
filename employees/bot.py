@@ -523,7 +523,7 @@ def _finalize(chat_id, d):
     summary += (
         "─────────────────────\n"
         "Tez orada siz bilan bog'lanamiz!\n"
-        "Savol: <b>+998 93 333 20 14</b>"
+        "Savol: <b>+998 93 352 35 87</b>"
     )
     _send(chat_id, summary)
 
