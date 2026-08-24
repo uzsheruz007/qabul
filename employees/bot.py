@@ -312,7 +312,7 @@ def _handle_command(chat_id, cmd, session):
         session.data = {}
         session.save()
         _send(chat_id,
-              "<b>Salom! SamDU Urgut filiali — Ish o'rinlari boti</b>\n\n"
+              "<b>Salom! SAMARQAND DAVLAT PEDAGOGIKA INSTITUTI URGUT FAKULTETI — Ish o'rinlari boti</b>\n\n"
               "Bu bot orqali bo'sh ish o'rinlari uchun hujjat topshirishingiz mumkin.\n\n"
               "Ariza boshlash uchun /ariza ni yuboring.",
               _kb([_btn("Ariza boshlash", 'start_ariza')]))

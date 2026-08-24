@@ -195,7 +195,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'sherqobilishqobilov074@gmail.com'
 EMAIL_HOST_PASSWORD = ''          # Gmail App Password shu yerga
-DEFAULT_FROM_EMAIL = 'SamDUUF Qabul <sherqobilishqobilov074@gmail.com>'
+DEFAULT_FROM_EMAIL = 'SAMARQAND DAVLAT PEDAGOGIKA INSTITUTI URGUT FAKULTETI Qabul <sherqobilishqobilov074@gmail.com>'
 NOTIFICATION_EMAIL = 'erkinusmonov1822@gmail.com'
 
 # =========================
