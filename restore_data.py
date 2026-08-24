@@ -64,9 +64,10 @@ for p_item in posts_data:
             'published_date': fields.get('published_date')
         }
     )
-    if not created:
+    if not created or True:
         post.title = fields.get('title')
         post.content = fields.get('content')
+        post.image = fields.get('image', '')
         post.author = main_user
         post.status = fields.get('status', 'published')
         post.save()
@@ -88,4 +89,4 @@ for item in data:
     except Exception as e:
         pass
 
-print(f"SUCCESS! News restored: {Post.objects.count()} posts, {Category.objects.count()} categories. Other records restored: {restored_count}.")
+print(f"SUCCESS! News restored: {Post.objects.count()} posts with fresh HD images. Other records restored: {restored_count}.")
