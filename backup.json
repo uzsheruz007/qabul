@@ -1979,37 +1979,37 @@
   "model": "admin.logentry",
   "pk": 153,
   "fields": {
-    "action_time": "2026-01-08T18:13:30.208Z",
+    "action_time": "2026-01-08T05:09:11.665Z",
     "user": 1,
     "content_type": 19,
-    "object_id": "3",
-    "object_repr": "sdjasnd asdasj asdsdssada (Nobis est odit et dolore dolore rem magni corrupti)",
-    "action_flag": 3,
-    "change_message": ""
+    "object_id": "6",
+    "object_repr": "salommm salom (Est nostrud excepteur qui id impedit)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rasm\"]}}]"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 154,
   "fields": {
-    "action_time": "2026-01-08T18:13:30.208Z",
+    "action_time": "2026-01-08T05:09:24.858Z",
     "user": 1,
     "content_type": 19,
-    "object_id": "1",
-    "object_repr": "salommm ssdsdswsw (Dolore dignissimos et pariatur Voluptate)",
-    "action_flag": 3,
-    "change_message": ""
+    "object_id": "8",
+    "object_repr": "Et Nam eum similique sit incidunt id A dolore molestiae esse fugit illo non labore dolores itaque assumenda tempor voluptate voluptates (Veritatis quia aperiam id ab excepturi sit id)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 155,
   "fields": {
-    "action_time": "2026-01-08T18:16:19.000Z",
+    "action_time": "2026-01-08T05:10:15.336Z",
     "user": 1,
     "content_type": 19,
     "object_id": "10",
-    "object_repr": "Omonov Sherzod (SAMARQAND DAVLAT PEDAGOGIKA INSTITUTI URGUT FAKULTETI Bizne)",
+    "object_repr": "salommm salom (asdffgffdasfd)",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -2018,47 +2018,1379 @@
   "model": "admin.logentry",
   "pk": 156,
   "fields": {
-    "action_time": "2026-01-08T18:26:42.818Z",
+    "action_time": "2026-01-08T10:11:33.277Z",
     "user": 1,
-    "content_type": 13,
-    "object_id": "2",
-    "object_repr": "Alias fugit delectus ut doloribus excepteur eius eum qui est quidem ut asperiores delectus fugit – Enim totam molestias natus aut nisi qui temporibus corrupti",
-    "action_flag": 3,
-    "change_message": ""
+    "content_type": 28,
+    "object_id": "1",
+    "object_repr": "Bakalaver",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 157,
   "fields": {
-    "action_time": "2026-01-08T18:26:42.818Z",
+    "action_time": "2026-01-08T10:11:39.246Z",
     "user": 1,
-    "content_type": 13,
-    "object_id": "3",
-    "object_repr": "Quia a ea esse architecto iusto et – Sed dolor velit labore do laboriosam dolores sint sunt sunt qui asperiores numquam minima id dolore a est non ut",
-    "action_flag": 3,
-    "change_message": ""
+    "content_type": 28,
+    "object_id": "1",
+    "object_repr": "Bakalaver",
+    "action_flag": 2,
+    "change_message": "[]"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 158,
   "fields": {
-    "action_time": "2026-01-08T18:28:02.902Z",
+    "action_time": "2026-08-24T08:18:08.847Z",
     "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "sherqobilishqobilov074",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 3,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 3,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 3,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 3,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 2,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 2,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 2,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 2,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add team member",
+    "content_type": 7,
+    "codename": "add_teammember"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change team member",
+    "content_type": 7,
+    "codename": "change_teammember"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete team member",
+    "content_type": 7,
+    "codename": "delete_teammember"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view team member",
+    "content_type": 7,
+    "codename": "view_teammember"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Qabul qoidasi",
+    "content_type": 8,
+    "codename": "add_admissionrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Qabul qoidasi",
+    "content_type": 8,
+    "codename": "change_admissionrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Qabul qoidasi",
+    "content_type": 8,
+    "codename": "delete_admissionrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Qabul qoidasi",
+    "content_type": 8,
+    "codename": "view_admissionrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add Muddat",
+    "content_type": 9,
+    "codename": "add_deadline"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change Muddat",
+    "content_type": 9,
+    "codename": "change_deadline"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete Muddat",
+    "content_type": 9,
+    "codename": "delete_deadline"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view Muddat",
+    "content_type": 9,
+    "codename": "view_deadline"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add Muhim eslatma",
+    "content_type": 12,
+    "codename": "add_importantnote"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change Muhim eslatma",
+    "content_type": 12,
+    "codename": "change_importantnote"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete Muhim eslatma",
+    "content_type": 12,
+    "codename": "delete_importantnote"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view Muhim eslatma",
+    "content_type": 12,
+    "codename": "view_importantnote"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add Hujjat",
+    "content_type": 10,
+    "codename": "add_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change Hujjat",
+    "content_type": 10,
+    "codename": "change_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete Hujjat",
+    "content_type": 10,
+    "codename": "delete_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view Hujjat",
+    "content_type": 10,
+    "codename": "view_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add Hujjat kategoriyasi",
+    "content_type": 11,
+    "codename": "add_documentcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change Hujjat kategoriyasi",
+    "content_type": 11,
+    "codename": "change_documentcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete Hujjat kategoriyasi",
+    "content_type": 11,
+    "codename": "delete_documentcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view Hujjat kategoriyasi",
+    "content_type": 11,
+    "codename": "view_documentcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add Qabul jadvali",
     "content_type": 13,
-    "object_id": "1",
-    "object_repr": "Qabul komissiyasi raisi – OMONOV SHERZOD BAXTIYOR O‘G‘LI",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"F.I.Sh\", \"Telefon raqami\", \"Vaqt\"]}}]"
+    "codename": "add_qabuljadvali"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change Qabul jadvali",
+    "content_type": 13,
+    "codename": "change_qabuljadvali"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete Qabul jadvali",
+    "content_type": 13,
+    "codename": "delete_qabuljadvali"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view Qabul jadvali",
+    "content_type": 13,
+    "codename": "view_qabuljadvali"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add Yangiliklar kategoriyasi",
+    "content_type": 15,
+    "codename": "add_newscategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change Yangiliklar kategoriyasi",
+    "content_type": 15,
+    "codename": "change_newscategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete Yangiliklar kategoriyasi",
+    "content_type": 15,
+    "codename": "delete_newscategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view Yangiliklar kategoriyasi",
+    "content_type": 15,
+    "codename": "view_newscategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add Yangilik",
+    "content_type": 14,
+    "codename": "add_news"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change Yangilik",
+    "content_type": 14,
+    "codename": "change_news"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete Yangilik",
+    "content_type": 14,
+    "codename": "delete_news"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view Yangilik",
+    "content_type": 14,
+    "codename": "view_news"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add category",
+    "content_type": 16,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change category",
+    "content_type": 16,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete category",
+    "content_type": 16,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view category",
+    "content_type": 16,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add comment",
+    "content_type": 17,
+    "codename": "add_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change comment",
+    "content_type": 17,
+    "codename": "change_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete comment",
+    "content_type": 17,
+    "codename": "delete_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view comment",
+    "content_type": 17,
+    "codename": "view_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add post",
+    "content_type": 18,
+    "codename": "add_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change post",
+    "content_type": 18,
+    "codename": "change_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete post",
+    "content_type": 18,
+    "codename": "delete_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view post",
+    "content_type": 18,
+    "codename": "view_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add Qabul komissiya a’zosi",
+    "content_type": 19,
+    "codename": "add_qabulkomissiya"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change Qabul komissiya a’zosi",
+    "content_type": 19,
+    "codename": "change_qabulkomissiya"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete Qabul komissiya a’zosi",
+    "content_type": 19,
+    "codename": "delete_qabulkomissiya"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view Qabul komissiya a’zosi",
+    "content_type": 19,
+    "codename": "view_qabulkomissiya"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can add Imtiyoz kategoriyasi",
+    "content_type": 21,
+    "codename": "add_privilegecategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can change Imtiyoz kategoriyasi",
+    "content_type": 21,
+    "codename": "change_privilegecategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can delete Imtiyoz kategoriyasi",
+    "content_type": 21,
+    "codename": "delete_privilegecategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can view Imtiyoz kategoriyasi",
+    "content_type": 21,
+    "codename": "view_privilegecategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can add Imtiyoz",
+    "content_type": 20,
+    "codename": "add_privilege"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can change Imtiyoz",
+    "content_type": 20,
+    "codename": "change_privilege"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can delete Imtiyoz",
+    "content_type": 20,
+    "codename": "delete_privilege"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can view Imtiyoz",
+    "content_type": 20,
+    "codename": "view_privilege"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 85,
+  "fields": {
+    "name": "Can add Qabul kvotasi",
+    "content_type": 22,
+    "codename": "add_qabulkvotasi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 86,
+  "fields": {
+    "name": "Can change Qabul kvotasi",
+    "content_type": 22,
+    "codename": "change_qabulkvotasi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 87,
+  "fields": {
+    "name": "Can delete Qabul kvotasi",
+    "content_type": 22,
+    "codename": "delete_qabulkvotasi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 88,
+  "fields": {
+    "name": "Can view Qabul kvotasi",
+    "content_type": 22,
+    "codename": "view_qabulkvotasi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 89,
+  "fields": {
+    "name": "Can add Xorijiy talaba arizasi",
+    "content_type": 23,
+    "codename": "add_foreignstudentapplication"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 90,
+  "fields": {
+    "name": "Can change Xorijiy talaba arizasi",
+    "content_type": 23,
+    "codename": "change_foreignstudentapplication"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 91,
+  "fields": {
+    "name": "Can delete Xorijiy talaba arizasi",
+    "content_type": 23,
+    "codename": "delete_foreignstudentapplication"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 92,
+  "fields": {
+    "name": "Can view Xorijiy talaba arizasi",
+    "content_type": 23,
+    "codename": "view_foreignstudentapplication"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 93,
+  "fields": {
+    "name": "Can add Mamlakat",
+    "content_type": 25,
+    "codename": "add_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 94,
+  "fields": {
+    "name": "Can change Mamlakat",
+    "content_type": 25,
+    "codename": "change_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 95,
+  "fields": {
+    "name": "Can delete Mamlakat",
+    "content_type": 25,
+    "codename": "delete_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 96,
+  "fields": {
+    "name": "Can view Mamlakat",
+    "content_type": 25,
+    "codename": "view_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 97,
+  "fields": {
+    "name": "Can add O'quv dasturi",
+    "content_type": 26,
+    "codename": "add_studyprogram"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 98,
+  "fields": {
+    "name": "Can change O'quv dasturi",
+    "content_type": 26,
+    "codename": "change_studyprogram"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 99,
+  "fields": {
+    "name": "Can delete O'quv dasturi",
+    "content_type": 26,
+    "codename": "delete_studyprogram"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 100,
+  "fields": {
+    "name": "Can view O'quv dasturi",
+    "content_type": 26,
+    "codename": "view_studyprogram"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 101,
+  "fields": {
+    "name": "Can add Ariza",
+    "content_type": 24,
+    "codename": "add_application"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 102,
+  "fields": {
+    "name": "Can change Ariza",
+    "content_type": 24,
+    "codename": "change_application"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 103,
+  "fields": {
+    "name": "Can delete Ariza",
+    "content_type": 24,
+    "codename": "delete_application"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 104,
+  "fields": {
+    "name": "Can view Ariza",
+    "content_type": 24,
+    "codename": "view_application"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 105,
+  "fields": {
+    "name": "Can add Xorijiy talaba murojaati",
+    "content_type": 27,
+    "codename": "add_foreignstudentrequest"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 106,
+  "fields": {
+    "name": "Can change Xorijiy talaba murojaati",
+    "content_type": 27,
+    "codename": "change_foreignstudentrequest"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 107,
+  "fields": {
+    "name": "Can delete Xorijiy talaba murojaati",
+    "content_type": 27,
+    "codename": "delete_foreignstudentrequest"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 108,
+  "fields": {
+    "name": "Can view Xorijiy talaba murojaati",
+    "content_type": 27,
+    "codename": "view_foreignstudentrequest"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 109,
+  "fields": {
+    "name": "Can add Bakalaver",
+    "content_type": 28,
+    "codename": "add_bakalaver"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 110,
+  "fields": {
+    "name": "Can change Bakalaver",
+    "content_type": 28,
+    "codename": "change_bakalaver"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 111,
+  "fields": {
+    "name": "Can delete Bakalaver",
+    "content_type": 28,
+    "codename": "delete_bakalaver"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 112,
+  "fields": {
+    "name": "Can view Bakalaver",
+    "content_type": 28,
+    "codename": "view_bakalaver"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 113,
+  "fields": {
+    "name": "Can add Bakalaver",
+    "content_type": 29,
+    "codename": "add_bakalaver"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 114,
+  "fields": {
+    "name": "Can change Bakalaver",
+    "content_type": 29,
+    "codename": "change_bakalaver"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 115,
+  "fields": {
+    "name": "Can delete Bakalaver",
+    "content_type": 29,
+    "codename": "delete_bakalaver"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 116,
+  "fields": {
+    "name": "Can view Bakalaver",
+    "content_type": 29,
+    "codename": "view_bakalaver"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 117,
+  "fields": {
+    "name": "Can add Kontrakt",
+    "content_type": 30,
+    "codename": "add_kontrakt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 118,
+  "fields": {
+    "name": "Can change Kontrakt",
+    "content_type": 30,
+    "codename": "change_kontrakt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 119,
+  "fields": {
+    "name": "Can delete Kontrakt",
+    "content_type": 30,
+    "codename": "delete_kontrakt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 120,
+  "fields": {
+    "name": "Can view Kontrakt",
+    "content_type": 30,
+    "codename": "view_kontrakt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 121,
+  "fields": {
+    "name": "Can add Magistratura",
+    "content_type": 31,
+    "codename": "add_magistratura"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 122,
+  "fields": {
+    "name": "Can change Magistratura",
+    "content_type": 31,
+    "codename": "change_magistratura"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 123,
+  "fields": {
+    "name": "Can delete Magistratura",
+    "content_type": 31,
+    "codename": "delete_magistratura"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 124,
+  "fields": {
+    "name": "Can view Magistratura",
+    "content_type": 31,
+    "codename": "view_magistratura"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 125,
+  "fields": {
+    "name": "Can add Shartnomalar",
+    "content_type": 32,
+    "codename": "add_shartnomalar"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 126,
+  "fields": {
+    "name": "Can change Shartnomalar",
+    "content_type": 32,
+    "codename": "change_shartnomalar"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 127,
+  "fields": {
+    "name": "Can delete Shartnomalar",
+    "content_type": 32,
+    "codename": "delete_shartnomalar"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 128,
+  "fields": {
+    "name": "Can view Shartnomalar",
+    "content_type": 32,
+    "codename": "view_shartnomalar"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 129,
+  "fields": {
+    "name": "Can add Magistratura",
+    "content_type": 33,
+    "codename": "add_magistraturanatijalari"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 130,
+  "fields": {
+    "name": "Can change Magistratura",
+    "content_type": 33,
+    "codename": "change_magistraturanatijalari"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 131,
+  "fields": {
+    "name": "Can delete Magistratura",
+    "content_type": 33,
+    "codename": "delete_magistraturanatijalari"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 132,
+  "fields": {
+    "name": "Can view Magistratura",
+    "content_type": 33,
+    "codename": "view_magistraturanatijalari"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 133,
+  "fields": {
+    "name": "Can add QabulRijasi",
+    "content_type": 34,
+    "codename": "add_qabulrijasi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 134,
+  "fields": {
+    "name": "Can change QabulRijasi",
+    "content_type": 34,
+    "codename": "change_qabulrijasi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 135,
+  "fields": {
+    "name": "Can delete QabulRijasi",
+    "content_type": 34,
+    "codename": "delete_qabulrijasi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 136,
+  "fields": {
+    "name": "Can view QabulRijasi",
+    "content_type": 34,
+    "codename": "view_qabulrijasi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 137,
+  "fields": {
+    "name": "Can add Ariza fayli",
+    "content_type": 36,
+    "codename": "add_isharizafile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 138,
+  "fields": {
+    "name": "Can change Ariza fayli",
+    "content_type": 36,
+    "codename": "change_isharizafile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 139,
+  "fields": {
+    "name": "Can delete Ariza fayli",
+    "content_type": 36,
+    "codename": "delete_isharizafile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 140,
+  "fields": {
+    "name": "Can view Ariza fayli",
+    "content_type": 36,
+    "codename": "view_isharizafile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 141,
+  "fields": {
+    "name": "Can add Ish o'rni arizasi",
+    "content_type": 35,
+    "codename": "add_ishariza"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 142,
+  "fields": {
+    "name": "Can change Ish o'rni arizasi",
+    "content_type": 35,
+    "codename": "change_ishariza"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 143,
+  "fields": {
+    "name": "Can delete Ish o'rni arizasi",
+    "content_type": 35,
+    "codename": "delete_ishariza"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 144,
+  "fields": {
+    "name": "Can view Ish o'rni arizasi",
+    "content_type": 35,
+    "codename": "view_ishariza"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 145,
+  "fields": {
+    "name": "Can add Bot sessiyasi",
+    "content_type": 37,
+    "codename": "add_botsession"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 146,
+  "fields": {
+    "name": "Can change Bot sessiyasi",
+    "content_type": 37,
+    "codename": "change_botsession"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 147,
+  "fields": {
+    "name": "Can delete Bot sessiyasi",
+    "content_type": 37,
+    "codename": "delete_botsession"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 148,
+  "fields": {
+    "name": "Can view Bot sessiyasi",
+    "content_type": 37,
+    "codename": "view_botsession"
   }
 },
 {
   "model": "auth.user",
   "pk": 1,
   "fields": {
-    "password": "pbkdf2_sha256$1200000$vUFjO5QFyWDNLZwkANXexG$L+oXJrU60chxonIoTURuPEknMvuk+0rM/WoDeZ6u5Og=",
-    "last_login": "2026-01-07T06:13:45.376Z",
+    "password": "pbkdf2_sha256$1200000$dXLLwRMb2pMzL13Ih8tymv$hHnxHAQT92rxK13pKhA6irunDS2kk85XYfVzPjUizs4=",
+    "last_login": "2026-08-24T08:16:23.216Z",
     "is_superuser": true,
     "username": "sam",
     "first_name": "",
@@ -2072,11 +3404,359 @@
   }
 },
 {
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$SBQkHIOvfBWPQF4swAB8Xe$R+P0bydf48kNv4AFPTW1gfT/SMeij+1Y+cslGTUDoWQ=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-08-24T07:20:32.575Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$5hjeOE1B0PaMwdwnvC7nJB$3Tgbz+ObD8OOmqsPrTWvb1esxJn1Zkxj6Ivr38eUdpI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "sherqobilishqobilov074",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-24T08:18:08.335Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "qabul_kom",
+    "model": "teammember"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "qabul_kom",
+    "model": "admissionrule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "qabul_kom",
+    "model": "deadline"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "qabul_kom",
+    "model": "document"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "qabul_kom",
+    "model": "documentcategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "qabul_kom",
+    "model": "importantnote"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "qabul_kom",
+    "model": "qabuljadvali"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "news",
+    "model": "news"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "news",
+    "model": "newscategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "news",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "news",
+    "model": "comment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "news",
+    "model": "post"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "employees",
+    "model": "qabulkomissiya"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "Abituriyent",
+    "model": "privilege"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "Abituriyent",
+    "model": "privilegecategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 22,
+  "fields": {
+    "app_label": "Abituriyent",
+    "model": "qabulkvotasi"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 23,
+  "fields": {
+    "app_label": "xorijiy",
+    "model": "foreignstudentapplication"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 24,
+  "fields": {
+    "app_label": "xorijiy",
+    "model": "application"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 25,
+  "fields": {
+    "app_label": "xorijiy",
+    "model": "country"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 26,
+  "fields": {
+    "app_label": "xorijiy",
+    "model": "studyprogram"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 27,
+  "fields": {
+    "app_label": "xorijiy",
+    "model": "foreignstudentrequest"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 28,
+  "fields": {
+    "app_label": "Abituriyent",
+    "model": "bakalaver"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 29,
+  "fields": {
+    "app_label": "xorijiy",
+    "model": "bakalaver"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 30,
+  "fields": {
+    "app_label": "xorijiy",
+    "model": "kontrakt"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 31,
+  "fields": {
+    "app_label": "xorijiy",
+    "model": "magistratura"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 32,
+  "fields": {
+    "app_label": "xorijiy",
+    "model": "shartnomalar"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 33,
+  "fields": {
+    "app_label": "magister",
+    "model": "magistraturanatijalari"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 34,
+  "fields": {
+    "app_label": "magister",
+    "model": "qabulrijasi"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 35,
+  "fields": {
+    "app_label": "employees",
+    "model": "ishariza"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 36,
+  "fields": {
+    "app_label": "employees",
+    "model": "isharizafile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 37,
+  "fields": {
+    "app_label": "employees",
+    "model": "botsession"
+  }
+},
+{
   "model": "sessions.session",
   "pk": "1eltd8c7chpt0hmv0om6kn7m3ucx2i64",
   "fields": {
     "session_data": ".eJxVjMsOwiAQRf-FtSFMKVNw6d5vIMNjpGogKe3K-O_apAvd3nPOfQlP21r81vPi5yTOAsTpdwsUH7nuIN2p3pqMra7LHOSuyIN2eW0pPy-H-3dQqJdvrdhZMCpCgNGSyYzMbILCESZmS06n7IgIUWHWicBp1DgEMyUYwATx_gDn7zfP:1vcdHW:uhgfbmFMt3t51CMvug1kYmLdSkO364tOc5p0O5u8KbM",
     "expire_date": "2026-01-19T05:37:30.460Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "3gnknckaoqsyz51m11hpkcefu9frkiwr",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP-yZ0PYUrbQo3ffQJbC2qqBpLQn499Nkx70OjOZNwTetznsLa9hSTACwuWXRZ6euRwiPbjcq5pq2dYlqiNRp23qVlN-Xc_2bzBzm2EELd6h1RNG7B3bLCQiNmrqcRBx7E3KnpmJNGWTGL0hQ120Q8IObYTPF-fvN88:1vdiiK:wFTucYADqpvsk4nKG6_N_QhF8s9tlu6jkz11Gy-8vHs",
+    "expire_date": "2026-01-22T05:37:40.605Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "3l2ykcgojqktlrnuyay5q2vy6473pr0u",
+  "fields": {
+    "session_data": ".eJxVjLsOwjAMAP_FM4rqNHXijux8Q5U4DimgVupjQvw7qtQB1rvTvWGI-1aHfdVlGDP0gHD5ZSnKU6dD5Eec7rORedqWMZkjMaddzW3O-rqe7d-gxrVCD4QOyXdElNVqZ0NLrtFQhBl94lKsuBxDExh9wZZ9S8lzkBJRWFng8wW3ezdE:1wyPqx:T29s611Pd-jLUm5_NbplnhQVytwvV8VqSPVStf5ITyA",
+    "expire_date": "2026-09-07T08:16:23.226Z"
   }
 },
 {
@@ -2204,11 +3884,35 @@
   "pk": 1,
   "fields": {
     "lavozim": "Qabul komissiyasi raisi",
-    "fish": "OMONOV SHERZOD BAXTIYOR O‘G‘LI",
-    "telefon": "+998  +(93)333-20-14",
+    "fish": "Madjidov Inomjon Urishevich",
+    "telefon": "+998 88 898 08 22",
     "qabul_kuni": "Dushanba",
-    "vaqt": "9:00 - 16:00",
+    "vaqt": "9:00",
     "xona": "111"
+  }
+},
+{
+  "model": "qabul_kom.qabuljadvali",
+  "pk": 2,
+  "fields": {
+    "lavozim": "Alias fugit delectus ut doloribus excepteur eius eum qui est quidem ut asperiores delectus fugit",
+    "fish": "Enim totam molestias natus aut nisi qui temporibus corrupti",
+    "telefon": "Error deserunt minim",
+    "qabul_kuni": "Juma",
+    "vaqt": "Et id cupiditate illo suscipit",
+    "xona": "Delectus"
+  }
+},
+{
+  "model": "qabul_kom.qabuljadvali",
+  "pk": 3,
+  "fields": {
+    "lavozim": "Quia a ea esse architecto iusto et",
+    "fish": "Sed dolor velit labore do laboriosam dolores sint sunt sunt qui asperiores numquam minima id dolore a est non ut",
+    "telefon": "Laudantium porro et",
+    "qabul_kuni": "Payshanba",
+    "vaqt": "Proident dicta quis eos aut quibusdam enim",
+    "xona": "Veritatis"
   }
 },
 {
@@ -2403,122 +4107,208 @@
   }
 },
 {
-  "model": "employees.qabulkomissiya",
+  "model": "employees.ishariza",
+  "pk": 1,
+  "fields": {
+    "full_name": "Ursula Bartlett",
+    "phone": "",
+    "email": "",
+    "nationality": "uzbek",
+    "nationality_other": "",
+    "address": "Mollit repudiandae est quos perferendis est saepe cum laborum nemo ad eaque cumque corporis proident et id deserunt enim sed",
+    "birth_date": "1980-03-04",
+    "education_level": "oliy_doktorant",
+    "education_diploma": "ish_ariza/diplom/0133387526.pdf",
+    "academic_title": "Iure facilis cupidatat in officia cupidatat voluptate cillum possimus ut ipsam laudantium adipisci labore vel omnis laborum Reprehenderit",
+    "academic_degree": "Fugit pariatur Quidem suscipit repudiandae possimus at et sequi iusto quis rerum",
+    "foreign_language": "Cillum deserunt voluptas laborum Et ea eiusmod veniam a a consequatur magnam",
+    "institution": "Ipsa harum voluptate et assumenda officia aut ea quia dolor rem sit velit in",
+    "status": "new",
+    "created_at": "2026-06-25T10:45:25.386Z"
+  }
+},
+{
+  "model": "employees.ishariza",
   "pk": 2,
   "fields": {
-    "ism": "salom",
-    "familiya": "Valiyev",
-    "lavozim": "Aliqua Eu culpa deleniti quia rerum expedita quo",
-    "lavozim_turi": "rahbar",
-    "email": "rehumov@mailinator.com",
-    "telefon": "Nostrud harum evenie",
-    "rasm": "komissiya/Cain_Sweeney_1_ZNAxFvN.JPG",
-    "tartib": 43,
-    "is_active": true
+    "full_name": "Mechelle Hicks",
+    "phone": "+1 (546) 737-5143",
+    "email": "xemycyjuku@mailinator.com",
+    "nationality": "other",
+    "nationality_other": "",
+    "address": "Repudiandae error quidem omnis debitis enim",
+    "birth_date": "2008-09-04",
+    "education_level": "urta",
+    "education_diploma": "ish_ariza/diplom/ComputerNetworking.pdf",
+    "academic_title": "Eiusmod in sunt quisquam aliqua Dicta consectetur sit numquam est sit nihil illo animi pariatur Qui officia",
+    "academic_degree": "Doloremque similique reiciendis est mollit et ipsam dolore nostrud hic nesciunt quisquam incididunt dolor maxime",
+    "foreign_language": "Consequatur Praesentium quis blanditiis ducimus incididunt at",
+    "institution": "Rem consequat Dignissimos excepteur adipisci dicta qui aute nihil id ducimus doloremque animi consequatur Voluptas laborum",
+    "status": "new",
+    "created_at": "2026-06-25T10:51:29.119Z"
   }
 },
 {
-  "model": "employees.qabulkomissiya",
+  "model": "employees.ishariza",
+  "pk": 3,
+  "fields": {
+    "full_name": "Vera Rosario",
+    "phone": "+1 (131) 732-5485",
+    "email": "mani@mailinator.com",
+    "nationality": "other",
+    "nationality_other": "",
+    "address": "In ipsam nesciunt aut magni ratione anim obcaecati eveniet nihil fuga Et cillum deserunt quae nulla",
+    "birth_date": "1976-02-12",
+    "education_level": "urta_maxsus",
+    "education_diploma": "ish_ariza/diplom/a.pdf",
+    "academic_title": "Quo qui et similique quo quis sit at quo consequuntur et",
+    "academic_degree": "Sunt placeat non amet neque ut eaque quo vel ad excepteur tempore temporibus architecto deserunt",
+    "foreign_language": "Cumque fugit labore dolore quo magni do explicabo Dolore sed ut totam facere",
+    "institution": "Hic sapiente consectetur velit quo rerum modi maiores praesentium provident totam repudiandae",
+    "status": "new",
+    "created_at": "2026-06-25T11:07:50.511Z"
+  }
+},
+{
+  "model": "employees.ishariza",
   "pk": 4,
   "fields": {
-    "ism": "ALI",
-    "familiya": "Valiyev",
-    "lavozim": "Illum do aperiam ducimus ex quis est officia vel",
-    "lavozim_turi": "rahbar",
-    "email": "ziregedo@mailinator.com",
-    "telefon": "Expedita modi non pa",
-    "rasm": "komissiya/team-3.jpg",
-    "tartib": 1,
-    "is_active": true
+    "full_name": "H h h",
+    "phone": "998 94 338 4881",
+    "email": "N@gmail.con",
+    "nationality": "uzbek",
+    "nationality_other": "",
+    "address": "Urgut",
+    "birth_date": "3003-02-12",
+    "education_level": "oliy_magistr",
+    "education_diploma": "ish_ariza/diplom/file_0.jpg",
+    "academic_title": "",
+    "academic_degree": "",
+    "foreign_language": "",
+    "institution": "Samduu",
+    "status": "new",
+    "created_at": "2026-06-25T11:11:24.683Z"
   }
 },
 {
-  "model": "employees.qabulkomissiya",
+  "model": "employees.ishariza",
   "pk": 5,
   "fields": {
-    "ism": "ALI",
-    "familiya": "Valiyev",
-    "lavozim": "Tempore consequatur dolore fuga Sunt alias ullam",
-    "lavozim_turi": "azo",
-    "email": "japa@mailinator.com",
-    "telefon": "Dolores aut eum magn",
-    "rasm": "komissiya/team-4.jpg",
-    "tartib": 19,
-    "is_active": true
+    "full_name": "John Fischer",
+    "phone": "+1 (188) 201-5274",
+    "email": "lajox@mailinator.com",
+    "nationality": "uzbek",
+    "nationality_other": "",
+    "address": "Voluptas id ab magnam qui sit sint ex voluptates aut qui et fugiat quidem saepe dolores enim qui velit proident",
+    "birth_date": "1973-01-29",
+    "education_level": "urta_maxsus",
+    "education_diploma": "ish_ariza/diplom/ComputerNetworking_M6g4bYX.pdf",
+    "academic_title": "Magni assumenda ipsum eaque alias dolore consequatur Dolorum eu ut dolor",
+    "academic_degree": "Vero est et fuga Nihil iste animi adipisci ad",
+    "foreign_language": "Ad nesciunt sed rerum aliquip",
+    "institution": "Sint praesentium consequat In dolore eiusmod nemo et voluptates consequatur velit fuga Minim eius repellendus Nihil possimus nostrud",
+    "status": "new",
+    "created_at": "2026-06-25T11:14:08.763Z"
   }
 },
 {
-  "model": "employees.qabulkomissiya",
+  "model": "employees.ishariza",
   "pk": 6,
   "fields": {
-    "ism": "salom",
-    "familiya": "salommm",
-    "lavozim": "Est nostrud excepteur qui id impedit",
+    "full_name": "John Fischer",
+    "phone": "+1 (188) 201-5274",
+    "email": "lajox@mailinator.com",
+    "nationality": "uzbek",
+    "nationality_other": "",
+    "address": "Voluptas id ab magnam qui sit sint ex voluptates aut qui et fugiat quidem saepe dolores enim qui velit proident",
+    "birth_date": "1973-01-29",
+    "education_level": "urta_maxsus",
+    "education_diploma": "ish_ariza/diplom/ComputerNetworking_qxbdYmj.pdf",
+    "academic_title": "Magni assumenda ipsum eaque alias dolore consequatur Dolorum eu ut dolor",
+    "academic_degree": "Vero est et fuga Nihil iste animi adipisci ad",
+    "foreign_language": "Ad nesciunt sed rerum aliquip",
+    "institution": "Sint praesentium consequat In dolore eiusmod nemo et voluptates consequatur velit fuga Minim eius repellendus Nihil possimus nostrud",
+    "status": "new",
+    "created_at": "2026-06-25T11:14:11.923Z"
+  }
+},
+{
+  "model": "employees.botsession",
+  "pk": 1,
+  "fields": {
+    "chat_id": "8560650668",
+    "step": "full_name",
+    "data": {},
+    "updated_at": "2026-06-25T11:08:47.601Z"
+  }
+},
+{
+  "model": "employees.botsession",
+  "pk": 2,
+  "fields": {
+    "chat_id": "8528440386",
+    "step": "full_name",
+    "data": {},
+    "updated_at": "2026-06-25T11:21:26.363Z"
+  }
+},
+{
+  "model": "employees.qabulkomissiya",
+  "pk": 14,
+  "fields": {
+    "ism": "Ozod",
+    "familiya": "Azimov",
+    "lavozim": "Matematika, Matematika (kechki) yo'nalishlari mas'uli (Urgut fakulteti binosi)",
     "lavozim_turi": "azo",
-    "email": "bimozeca@mailinator.com",
-    "telefon": "Magnam harum digniss",
-    "rasm": "komissiya/team-3_Ll3GCy0.jpg",
-    "tartib": 0,
-    "is_active": true
-  }
-},
-{
-  "model": "employees.qabulkomissiya",
-  "pk": 7,
-  "fields": {
-    "ism": "ALI",
-    "familiya": "Valiyev",
-    "lavozim": "Cumque anim fugit deserunt incidunt sed elit in",
-    "lavozim_turi": "rahbar",
-    "email": "biwuhyzyg@mailinator.com",
-    "telefon": "In non et rem iure a",
-    "rasm": "komissiya/contact-img.png",
-    "tartib": 17,
-    "is_active": true
-  }
-},
-{
-  "model": "employees.qabulkomissiya",
-  "pk": 8,
-  "fields": {
-    "ism": "A dolore molestiae esse fugit illo non labore dolores itaque assumenda tempor voluptate voluptates",
-    "familiya": "Et Nam eum similique sit incidunt id",
-    "lavozim": "Veritatis quia aperiam id ab excepturi sit id",
-    "lavozim_turi": "rahbar",
-    "email": "wyxozode@mailinator.com",
-    "telefon": "Sint nobis sunt sit",
-    "rasm": "komissiya/team-2.jpg",
-    "tartib": 41,
-    "is_active": false
-  }
-},
-{
-  "model": "employees.qabulkomissiya",
-  "pk": 9,
-  "fields": {
-    "ism": "salom",
-    "familiya": "salommm",
-    "lavozim": "Dolore nostrud mollitia quibusdam optio quam anim",
-    "lavozim_turi": "rahbar",
-    "email": "zezebotami@mailinator.com",
-    "telefon": "Amet adipisicing ut",
-    "rasm": "komissiya/team-2_eB0dyRf.jpg",
-    "tartib": 51,
-    "is_active": true
-  }
-},
-{
-  "model": "employees.qabulkomissiya",
-  "pk": 10,
-  "fields": {
-    "ism": "Sherzod",
-    "familiya": "Omonov",
-    "lavozim": "SAMARQAND DAVLAT PEDAGOGIKA INSTITUTI URGUT FAKULTETI Bizne",
-    "lavozim_turi": "rais",
-    "email": "sherzodomonovphd@gmail.com",
-    "telefon": "+998 (93) 333-20-14",
-    "rasm": "komissiya/photo_2026-01-08_11.13.37PM.jpeg",
+    "email": null,
+    "telefon": "+998959275226",
+    "rasm": "",
     "tartib": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "employees.qabulkomissiya",
+  "pk": 15,
+  "fields": {
+    "ism": "Islom",
+    "familiya": "Abdug'aniyev",
+    "lavozim": "Rus tili, O'zbek tili va adabiyoti, Xorijiy til (ingliz tili) yo'nalishlari mas'uli (Urgut fakulteti binosi)",
+    "lavozim_turi": "azo",
+    "email": null,
+    "telefon": "+998904650790",
+    "rasm": "",
+    "tartib": 2,
+    "is_active": true
+  }
+},
+{
+  "model": "employees.qabulkomissiya",
+  "pk": 16,
+  "fields": {
+    "ism": "mas'ul xodimi",
+    "familiya": "Maktabgacha va Boshlang'ich ta'lim",
+    "lavozim": "Maktabgacha ta'lim va Boshlang'ich ta'lim yo'nalishlari mas'uli (Urgut fakulteti binosi)",
+    "lavozim_turi": "azo",
+    "email": null,
+    "telefon": "+998956290203",
+    "rasm": "",
+    "tartib": 3,
+    "is_active": true
+  }
+},
+{
+  "model": "employees.qabulkomissiya",
+  "pk": 17,
+  "fields": {
+    "ism": "Xudoynazar",
+    "familiya": "Axatqulov",
+    "lavozim": "Qabul komissiyasi mas'ul a'zosi",
+    "lavozim_turi": "azo",
+    "email": null,
+    "telefon": "+998933523587",
+    "rasm": "",
+    "tartib": 4,
     "is_active": true
   }
 },
@@ -3096,6 +4886,36 @@
     "title": "Qabul kvotasi",
     "content": "<!DOCTYPE html>\r\n<html lang=\"uz\"><head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>2026/2027 o‘quv yili qabul jadvali</title>\r\n    <style>\r\n        body {\r\n            font-family: \"Times New Roman\", serif;\r\n        }\r\n        h3, h4 {\r\n            text-align: center;\r\n            margin: 5px 0;\r\n        }\r\n        table {\r\n            width: 100%;\r\n            border-collapse: collapse;\r\n            margin-top: 20px;\r\n        }\r\n        th, td {\r\n            border: 1px solid #000;\r\n            padding: 6px;\r\n            text-align: center;\r\n            font-size: 14px;\r\n        }\r\n        th {\r\n            font-weight: bold;\r\n        }\r\n        td.left {\r\n            text-align: left;\r\n        }\r\n    </style>\r\n</head>\r\n<body><h3><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">2026/2027 o‘quv yilida</span></h3><h4><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">SAMARQAND DAVLAT PEDAGOGIKA INSTITUTI URGUT FAKULTETI</span><br><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">bakalavriatining kunduzgi ta’lim shakli bo‘yicha o‘qishga</span><br><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">qabul qilish parametrlarining ta’lim yo‘nalishlari va o‘qitish tillari bo‘yicha</span><br><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\"><strong>TAQSIMLANISHI</strong></span></h4><figure class=\"table\"><table><thead><tr><th><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Shifr</span></th><th><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Ta’lim yo‘nalishlari nomi</span></th><th><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Jami</span></th><th colspan=\"7\"><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">shu jumladan:</span></th></tr></thead><tbody><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">o‘zbek</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">rus</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">qq</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">qoz</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">toj</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">qirg‘</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">tur</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\"><strong>SAMARQAND DAVLAT PEDAGOGIKA INSTITUTI URGUT FAKULTETI bo‘yicha jami:</strong></span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\"><strong>450</strong></span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\"><strong>425</strong></span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\"><strong>25</strong></span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60110200</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Maktabgacha ta’lim</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">75</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">75</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60110400</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Boshlang‘ich ta’lim</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">75</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">75</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60110700</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">O‘zbek tili va adabiyoti</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">75</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">75</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60110800</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Ona tili va adabiyoti (rus tili)</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60110900</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Xorijiy til va adabiyoti (ingliz tili)</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">50</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">50</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60410200</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Buxgalteriya hisobi</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60510100</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Biologiya</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60530100</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Kimyo</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60530200</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Geografiya</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60540100</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Matematika</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">60610100</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">Axborot tizimlari va texnologiyalar</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td><span style=\"background-color:hsl(0, 0%, 100%);color:hsl(0, 0%, 0%);font-family:'Times New Roman', Times, serif;\">25</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure></body></html>",
     "created_at": "2026-01-07T16:25:08.834Z"
+  }
+},
+{
+  "model": "xorijiy.foreignstudentrequest",
+  "pk": 1,
+  "fields": {
+    "full_name": "uzbek s",
+    "country": "Узбекистан",
+    "email": "cuqubix@mailinator.com",
+    "phone": "888980822",
+    "faculty": "dasf",
+    "message": "adssadas",
+    "admin_reply": null,
+    "status": "new",
+    "created_at": "2026-01-08T05:48:56.299Z"
+  }
+},
+{
+  "model": "xorijiy.foreignstudentrequest",
+  "pk": 2,
+  "fields": {
+    "full_name": "uzbek s",
+    "country": "Узбекистан",
+    "email": "cuqubix@mailinator.com",
+    "phone": "888980822",
+    "faculty": "dasf",
+    "message": "adssadas",
+    "admin_reply": null,
+    "status": "new",
+    "created_at": "2026-01-08T06:02:47.778Z"
   }
 }
 ]

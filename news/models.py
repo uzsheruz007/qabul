@@ -32,7 +32,7 @@ class Post(models.Model):
 
     title = models.CharField(max_length=200)
     slug = models.SlugField(unique=True, max_length=200, blank=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
+    author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='blog_posts')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='posts')
     content = models.TextField()
     excerpt = models.TextField(max_length=300, blank=True)
