@@ -2054,6 +2054,123 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 159,
+  "fields": {
+    "action_time": "2026-08-24T09:55:01.314Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "9",
+    "object_repr": "222",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 160,
+  "fields": {
+    "action_time": "2026-08-24T09:55:01.314Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "8",
+    "object_repr": "e1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 161,
+  "fields": {
+    "action_time": "2026-08-24T09:55:01.314Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "7",
+    "object_repr": "11",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 162,
+  "fields": {
+    "action_time": "2026-08-24T09:55:01.314Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "6",
+    "object_repr": "qw1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 163,
+  "fields": {
+    "action_time": "2026-08-24T09:55:01.314Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "5",
+    "object_repr": "sa11",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 164,
+  "fields": {
+    "action_time": "2026-08-24T09:55:01.314Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "4",
+    "object_repr": "sa",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 165,
+  "fields": {
+    "action_time": "2026-08-24T09:55:01.314Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "3",
+    "object_repr": "sal",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 166,
+  "fields": {
+    "action_time": "2026-08-24T09:55:01.314Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "2",
+    "object_repr": "salom1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 167,
+  "fields": {
+    "action_time": "2026-08-24T09:55:01.314Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "1",
+    "object_repr": "salom",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -3939,171 +4056,152 @@
   "model": "news.post",
   "pk": 1,
   "fields": {
-    "title": "salom",
-    "slug": "salom",
+    "title": "Aniq va tabiiy fanlarda zamonaviy muammolar: ilmiy yondashuvlar va yangi yechimlar mavzusida respublika ilmiy-amaliy konferensiyasi",
+    "slug": "aniq-va-tabiiy-fanlarda-zamonaviy-muammolar-ilmiy-yondashuvlar-va-yangi-yechimlar-mavzusida-respublika-ilmiy-amaliy-konferensiyasi",
     "author": 1,
-    "category": 1,
-    "content": "Dolor est nesciunt",
-    "excerpt": "Adipisicing sunt rem nobis omnis et ad qui exercitation sint dolor",
-    "image": "blog/images/carousel-2_G19fuKR.png",
+    "category": 2,
+    "content": "SAMARQAND DAVLAT PEDAGOGIKA INSTITUTI URGUT FAKULTETIDa “Aniq va tabiiy fanlarda zamonaviy muammolar: ilmiy yondashuvlar va yangi yechimlar” mavzusidagi respublika miqyosidagi ilmiy-amaliy konferensiya bo'lib o'tdi.\n\nKonferensiyada respublikamizning yetakchi oliy ta'lim muassasalari va ilmiy-tadqiqot institutlaridan taniqli olimlar, professor-o'qituvchilar hamda yosh tadqiqotchilar ishtirok etdilar.\n\nAnjuman davomida matematika, fizika, kimyo va biologiya fanlarining dolzarb masalalari, o'qitish metodikasi va zamonaviy raqamli texnologiyalarni ta'lim jarayoniga tatbiq etish yuzasidan atroflicha fikr almashindi va tegishli ilmiy tavsiyalar ishlab chiqildi.",
+    "excerpt": "SAMARQAND DAVLAT PEDAGOGIKA INSTITUTI URGUT FAKULTETIDa “Aniq va tabiiy fanlarda zamonaviy muammolar: ilmiy yondashuvlar va yangi yechimlar” mavzusidagi respublika miqyosidagi ilmiy-amaliy konferensiya bo'lib o'tdi.\n\nKonferensiyada respublikamizning yetakchi oliy ta'lim muassasal...",
+    "image": "blog/images/blog-1.png",
     "status": "published",
-    "views": 4,
+    "views": 0,
     "is_main": true,
-    "published_date": "2026-01-05T16:48:16Z",
-    "created_at": "2026-01-05T16:53:09.892Z",
-    "updated_at": "2026-01-05T16:53:43.751Z"
+    "published_date": "2026-06-06T05:00:00Z",
+    "created_at": "2026-08-24T09:55:17.827Z",
+    "updated_at": "2026-08-24T09:55:17.827Z"
   }
 },
 {
   "model": "news.post",
   "pk": 2,
   "fields": {
-    "title": "salom1",
-    "slug": "salom1",
+    "title": "Startap loyihalarni moliyalashtirish va amaliyotga joriy etish masalalariga bagʻishlangan tahliliy yigʻilish",
+    "slug": "startap-loyihalarni-moliyalashtirish-va-amaliyotga-joriy-etish-masalalariga-bagishlangan-tahliliy-yigilish",
     "author": 1,
-    "category": 1,
-    "content": "Pariatur Sit alias",
-    "excerpt": "Et fuga Rerum ipsum veritatis",
+    "category": 2,
+    "content": "Urgut fakultetida talaba-yoshlarning innovatsion va startap loyihalarini moliyalashtirish, ularni amaliyotga joriy etish hamda tijoratlashtirish masalalariga bag'ishlangan uchrashuv o'tkazildi.\n\nYig'ilishda iqtidorli talabalar va yosh olimlar tomonidan tayyorlangan innovatsion ishlanmalar taqdimoti o'tkazildi. Mutaxassislar tomonidan har bir loyihaga amaliy tavsiyalar berildi va ularni moliyalashtirish manbalari muhokama qilindi.\n\nFakultet rahbariyati iqtidorli yoshlarning g'oya va loyihalarini har tomonlama qo'llab-quvvatlash hamda ilmiy izlanishlar uchun zarur sharoitlarni yaratish borasidagi ishlarni izchil davom ettirishini ta'kidladi.",
+    "excerpt": "Urgut fakultetida talaba-yoshlarning innovatsion va startap loyihalarini moliyalashtirish, ularni amaliyotga joriy etish hamda tijoratlashtirish masalalariga bag'ishlangan uchrashuv o'tkazildi.\n\nYig'ilishda iqtidorli talabalar va yosh olimlar tomonidan tayyorlangan innovatsion is...",
     "image": "blog/images/blog-2.png",
     "status": "published",
     "views": 0,
-    "is_main": true,
-    "published_date": "2026-01-05T17:04:31Z",
-    "created_at": "2026-01-05T17:04:49.901Z",
-    "updated_at": "2026-01-05T17:05:38.266Z"
+    "is_main": false,
+    "published_date": "2026-05-26T09:30:00Z",
+    "created_at": "2026-08-24T09:55:17.832Z",
+    "updated_at": "2026-08-24T09:55:17.832Z"
   }
 },
 {
   "model": "news.post",
   "pk": 3,
   "fields": {
-    "title": "sal",
-    "slug": "sal",
+    "title": "Yoshlar kuni doirasida talabalarning innovatsion gʻoyalari va startap loyihalari saralash bosqichi",
+    "slug": "yoshlar-kuni-doirasida-talabalarning-innovatsion-goyalari-va-startap-loyihalari-saralash-bosqichi",
     "author": 1,
     "category": 2,
-    "content": "dsdsddd",
-    "excerpt": "dsdsddd",
-    "image": "blog/images/contact-img.png",
+    "content": "“Yoshlar kuni” munosabati bilan Urgut fakultetida talabalarning innovatsion gʻoyalari va startap proyektlari saralash bosqichi koʻriklari tashkil etildi.\n\nTadbirda fakultet talabalari o'zlarining axborot texnologiyalari, pedagogika, va tabiiy fanlar sohasidagi eng so'nggi ishlanmalari bilan ishtirok etishdi. \n\nHakamlar hay'ati tomonidan eng yaxshi deb topilgan loyihalar respublika va xalqaro tanlovlarga tavsiya etildi hamda g'oliblar qimmatbaho esdalik sovg'alari bilan taqdirlandilar.",
+    "excerpt": "“Yoshlar kuni” munosabati bilan Urgut fakultetida talabalarning innovatsion gʻoyalari va startap proyektlari saralash bosqichi koʻriklari tashkil etildi.\n\nTadbirda fakultet talabalari o'zlarining axborot texnologiyalari, pedagogika, va tabiiy fanlar sohasidagi eng so'nggi ishlanm...",
+    "image": "blog/images/blog-4.png",
     "status": "published",
-    "views": 9,
-    "is_main": true,
-    "published_date": "2026-01-05T17:05:55Z",
-    "created_at": "2026-01-05T17:06:21.955Z",
-    "updated_at": "2026-01-05T17:06:21.955Z"
+    "views": 0,
+    "is_main": false,
+    "published_date": "2026-05-14T06:00:00Z",
+    "created_at": "2026-08-24T09:55:17.836Z",
+    "updated_at": "2026-08-24T09:55:17.836Z"
   }
 },
 {
   "model": "news.post",
   "pk": 4,
   "fields": {
-    "title": "sa",
-    "slug": "sa",
+    "title": "Tambov davlat universiteti bilan hamkorlikda Rus tili — doʻstligimiz tili xalqaro talabalar olimpiadasi",
+    "slug": "tambov-davlat-universiteti-bilan-hamkorlikda-rus-tili-dostligimiz-tili-xalqaro-talabalar-olimpiadasi",
     "author": 1,
     "category": 2,
-    "content": "SDASSFDG",
-    "excerpt": "SDASSFDG",
-    "image": "blog/images/blog-2_1doTLCU.png",
+    "content": "Tambov davlat universiteti hamda Urgut fakulteti hamkorligida “Rus tili — doʻstligimiz tili” mavzusida xalqaro talabalar olimpiadasi muvaffaqiyatli o'tkazildi.\n\nOlimpiadada rus tili va adabiyoti yo'nalishi talabalari til bilish darajasi, adabiy tahlil va muloqot madaniyati bo'yicha o'z bilimlarini namoyish etishdi. \n\nXalqaro hamkorlik doirasida o'tkazilgan ushbu tadbir talabalarning til o'rganishga bo'lgan qiziqishini oshirish hamda xalqaro akademik aloqalarni rivojlantirishga xizmat qiladi.",
+    "excerpt": "Tambov davlat universiteti hamda Urgut fakulteti hamkorligida “Rus tili — doʻstligimiz tili” mavzusida xalqaro talabalar olimpiadasi muvaffaqiyatli o'tkazildi.\n\nOlimpiadada rus tili va adabiyoti yo'nalishi talabalari til bilish darajasi, adabiy tahlil va muloqot madaniyati bo'yic...",
+    "image": "blog/images/carousel-2.png",
     "status": "published",
-    "views": 1,
-    "is_main": true,
-    "published_date": "2026-01-05T17:13:02Z",
-    "created_at": "2026-01-05T17:13:40.942Z",
-    "updated_at": "2026-01-05T17:13:40.942Z"
+    "views": 0,
+    "is_main": false,
+    "published_date": "2026-05-12T10:00:00Z",
+    "created_at": "2026-08-24T09:55:17.840Z",
+    "updated_at": "2026-08-24T09:55:17.840Z"
   }
 },
 {
   "model": "news.post",
   "pk": 5,
   "fields": {
-    "title": "sa11",
-    "slug": "sa11",
+    "title": "9-may Xotira va qadrlash kuni munosabati bilan ma'naviy-ma'rifiy va xotira tadbiri bo'lib o'tdi",
+    "slug": "9-may-xotira-va-qadrlash-kuni-munosabati-bilan-manaviy-marifiy-va-xotira-tadbiri-bolib-otdi",
     "author": 1,
     "category": 2,
-    "content": "adsfdb",
-    "excerpt": "adsfdb",
-    "image": "blog/images/blog-4.png",
+    "content": "9-may — Xotira va qadrlash kuni munosabati bilan Urgut fakultetida “Inson aziz — xotira muqaddas” mavzusida ma'naviy-ma'rifiy tadbir va uchrashuv o'tkazildi.\n\nTadbirda mehnat faxriylari, ustozlar hamda talabalar ishtirok etdilar. Tinch va osuda kunlarimiz uchun kurashgan ajdodlarimiz matonati yod etildi, mehnat veteranlariga hurmat va ehtirom ko'rsatildi.\n\nTalabalar tomonidan tayyorlangan adabiy-badiiy kompozitsiyalar va kuy-qo'shiqlar barchada katta taassurot qoldirdi.",
+    "excerpt": "9-may — Xotira va qadrlash kuni munosabati bilan Urgut fakultetida “Inson aziz — xotira muqaddas” mavzusida ma'naviy-ma'rifiy tadbir va uchrashuv o'tkazildi.\n\nTadbirda mehnat faxriylari, ustozlar hamda talabalar ishtirok etdilar. Tinch va osuda kunlarimiz uchun kurashgan ajdodlar...",
+    "image": "blog/images/contact-img.png",
     "status": "published",
     "views": 0,
-    "is_main": true,
-    "published_date": "2026-01-05T17:14:12Z",
-    "created_at": "2026-01-05T17:14:52.303Z",
-    "updated_at": "2026-01-05T17:14:52.303Z"
+    "is_main": false,
+    "published_date": "2026-05-09T04:30:00Z",
+    "created_at": "2026-08-24T09:55:17.843Z",
+    "updated_at": "2026-08-24T09:55:17.843Z"
   }
 },
 {
   "model": "news.post",
   "pk": 6,
   "fields": {
-    "title": "qw1",
-    "slug": "qw1",
+    "title": "Sport kuni doirasida Yurish marafoni va talabalar o'rtasida sport musobaqalari o'tkazildi",
+    "slug": "sport-kuni-doirasida-yurish-marafoni-va-talabalar-ortasida-sport-musobaqalari-otkazildi",
     "author": 1,
-    "category": 1,
-    "content": "11",
-    "excerpt": "11",
-    "image": "blog/images/blog-1.png",
+    "category": 2,
+    "content": "Sog'lom turmush tarzini targ'ib qilish va talabalar o'rtasida jismoniy tarbiya va sportni ommalashtirish maqsadida “Sport kuni” doirasida ommaviy “Yurish marafoni” o'tkazildi.\n\nMarafonda fakultet rahbariyati, professor-o'qituvchilar va yuzlab talaba-yoshlar faol ishtirok etishdi. Shuningdek, futbol, voleybol va shaxmat bo'yicha fakultet birinchiligi musobaqalari bo'lib o'tdi.\n\nMusobaqa g'oliblariga diplom va esdalik sovg'alari topshirildi.",
+    "excerpt": "Sog'lom turmush tarzini targ'ib qilish va talabalar o'rtasida jismoniy tarbiya va sportni ommalashtirish maqsadida “Sport kuni” doirasida ommaviy “Yurish marafoni” o'tkazildi.\n\nMarafonda fakultet rahbariyati, professor-o'qituvchilar va yuzlab talaba-yoshlar faol ishtirok etishdi....",
+    "image": "blog/images/instagram-footer-1.jpg",
     "status": "published",
-    "views": 1,
-    "is_main": true,
-    "published_date": "2026-01-05T17:21:16Z",
-    "created_at": "2026-01-05T17:21:38.885Z",
-    "updated_at": "2026-01-05T17:21:38.885Z"
+    "views": 0,
+    "is_main": false,
+    "published_date": "2026-05-06T03:00:00Z",
+    "created_at": "2026-08-24T09:55:17.848Z",
+    "updated_at": "2026-08-24T09:55:17.848Z"
   }
 },
 {
   "model": "news.post",
   "pk": 7,
   "fields": {
-    "title": "11",
-    "slug": "11",
+    "title": "OITS, OIV profilaktikasi va sog'lom turmush tarzi mavzusida ma'rifiy davra suhbati",
+    "slug": "oits-oiv-profilaktikasi-va-soglom-turmush-tarzi-mavzusida-marifiy-davra-suhbati",
     "author": 1,
     "category": 1,
-    "content": "1111111",
-    "excerpt": "1111111",
-    "image": "blog/images/instagram-footer-1.jpg",
+    "content": "Talaba-yoshlar o'rtasida sog'lom turmush tarzini qaror toptirish va yuqumli kasalliklarning oldini olish maqsadida mutaxassis shifokorlar ishtirokida ma'rifiy davra suhbati tashkil etildi.\n\nTadbirda Tibbiyot xodimlari va mutaxassislar tomonidan OIV/OITS kasalligining kelib chiqishi, profilaktikasi va undan saqlanish yo'llari haqida atrofli ma'lumotlar berildi hamda talabalarning savollariga javob qaytarildi.",
+    "excerpt": "Talaba-yoshlar o'rtasida sog'lom turmush tarzini qaror toptirish va yuqumli kasalliklarning oldini olish maqsadida mutaxassis shifokorlar ishtirokida ma'rifiy davra suhbati tashkil etildi.\n\nTadbirda Tibbiyot xodimlari va mutaxassislar tomonidan OIV/OITS kasalligining kelib chiqis...",
+    "image": "blog/images/instagram-footer-2.jpg",
     "status": "published",
-    "views": 3,
-    "is_main": true,
-    "published_date": "2026-01-05T17:21:40Z",
-    "created_at": "2026-01-05T17:22:02.476Z",
-    "updated_at": "2026-01-05T17:22:02.476Z"
+    "views": 0,
+    "is_main": false,
+    "published_date": "2026-02-27T09:00:00Z",
+    "created_at": "2026-08-24T09:55:17.853Z",
+    "updated_at": "2026-08-24T09:55:17.853Z"
   }
 },
 {
   "model": "news.post",
   "pk": 8,
   "fields": {
-    "title": "e1",
-    "slug": "e1",
+    "title": "Xalqaro ona tili kuniga bagʻishlangan ma'naviy-ma'rifiy va adabiy-badiiy kecha",
+    "slug": "xalqaro-ona-tili-kuniga-bagishlangan-manaviy-marifiy-va-adabiy-badiiy-kecha",
     "author": 1,
-    "category": 1,
-    "content": "e111e11",
-    "excerpt": "e111e11",
-    "image": "blog/images/instagram-footer-2.jpg",
-    "status": "published",
-    "views": 3,
-    "is_main": true,
-    "published_date": "2026-01-05T17:22:04Z",
-    "created_at": "2026-01-05T17:22:25.996Z",
-    "updated_at": "2026-01-06T17:30:04.387Z"
-  }
-},
-{
-  "model": "news.post",
-  "pk": 9,
-  "fields": {
-    "title": "222",
-    "slug": "222",
-    "author": 1,
-    "category": 1,
-    "content": "gdggfs",
-    "excerpt": "gdggfs",
-    "image": "blog/images/bg-breadcrumb.jpg",
+    "category": 2,
+    "content": "21-fevral — Xalqaro ona tili kuni munosabati bilan Urgut fakultetida “Ona tilim — g'ururim, iftixorim” nomli ma'naviy-ma'rifiy va adabiy-badiiy kecha o'tkazildi.\n\nKechada ona tilimizning boy imkoniyatlari, uning tarixiy ildizlari hamda ma'naviyatimizdagi o'rni haqida ma'ruzalar tinglandi. Talabalar ijrosidagi g'azal va sherlar kechaga o'zgacha shukuh bag'ishladi.",
+    "excerpt": "21-fevral — Xalqaro ona tili kuni munosabati bilan Urgut fakultetida “Ona tilim — g'ururim, iftixorim” nomli ma'naviy-ma'rifiy va adabiy-badiiy kecha o'tkazildi.\n\nKechada ona tilimizning boy imkoniyatlari, uning tarixiy ildizlari hamda ma'naviyatimizdagi o'rni haqida ma'ruzalar t...",
+    "image": "blog/images/blog-3.png",
     "status": "published",
     "views": 0,
     "is_main": false,
-    "published_date": "2026-01-05T17:23:51Z",
-    "created_at": "2026-01-05T17:24:11.722Z",
-    "updated_at": "2026-01-06T17:30:04.383Z"
+    "published_date": "2026-02-21T06:30:00Z",
+    "created_at": "2026-08-24T09:55:17.858Z",
+    "updated_at": "2026-08-24T09:55:17.858Z"
   }
 },
 {
