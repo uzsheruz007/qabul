@@ -1,4 +1,4 @@
-﻿{% extends "index.html" %}
+{% extends "index.html" %}
 {% load static %}
 
 {% block content %}
@@ -597,54 +597,7 @@
 </section>
 <div class="container">
 <br>
-    <!-- Chairman Section -->
-    <div class="chairman-section reveal">
-        <div class="section-label">
-            <div class="label-icon">
-                <i class="fas fa-user-tie"></i>
-            </div>
-            <h2 class="label-text">Komissiya raisi</h2>
-        </div>
 
-        {% if rais %}
-        <div class="chairman-card">
-            <div class="chairman-content">
-                <div class="chairman-photo">
-                    {% if rais.rasm %}
-                        <img src="{{ rais.rasm.url }}" alt="{{ rais.familiya }} {{ rais.ism }}" loading="lazy">
-                    {% else %}
-                        <img src="{% static 'img/default-avatar.png' %}" alt="Default Avatar" loading="lazy">
-                    {% endif %}
-                </div>
-                <div class="chairman-info">
-                    <h3 class="chairman-name">{{ rais.familiya }} {{ rais.ism }}</h3>
-                    <div class="chairman-position">
-                        <i class="fas fa-crown me-2"></i> {{ rais.lavozim }}
-                    </div>
-                   
-                    <div class="chairman-contacts">
-                        {% if rais.email %}
-                        <a href="mailto:{{ rais.email }}" class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">{{ rais.email }}</div>
-                        </a>
-                        {% endif %}
-                        {% if rais.telefon %}
-                        <a href="tel:{{ rais.telefon }}" class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-text">{{ rais.telefon }}</div>
-                        </a>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endif %}
-    </div>
 
     <!-- Members Section -->
     <div class="members-section reveal">
