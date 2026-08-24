@@ -89,4 +89,4 @@ for item in data:
     except Exception as e:
         pass
 
-print(f"SUCCESS! News restored: {Post.objects.count()} posts with fresh HD images. Other records restored: {restored_count}.")
+print(f"SUCCESS! News restored: {Post.objects.count()} posts with original site images. Other records restored: {restored_count}.")
