@@ -57,7 +57,7 @@ for p_item in posts_data:
             'category': category,
             'content': fields.get('content'),
             'excerpt': fields.get('excerpt', ''),
-            'image': fields.get('image', ''),
+            'image': fields.get('image', 'Logo.png'),
             'status': fields.get('status', 'published'),
             'views': fields.get('views', 0),
             'is_main': fields.get('is_main', False),
@@ -67,7 +67,7 @@ for p_item in posts_data:
     if not created or True:
         post.title = fields.get('title')
         post.content = fields.get('content')
-        post.image = fields.get('image', '')
+        post.image = fields.get('image', 'Logo.png')
         post.author = main_user
         post.status = fields.get('status', 'published')
         post.save()
@@ -89,4 +89,4 @@ for item in data:
     except Exception as e:
         pass
 
-print(f"SUCCESS! News restored: {Post.objects.count()} posts with original site images. Other records restored: {restored_count}.")
+print(f"SUCCESS! News restored: {Post.objects.count()} posts. Other records restored: {restored_count}.")
