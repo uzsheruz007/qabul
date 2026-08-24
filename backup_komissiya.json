@@ -1,166 +1,61 @@
 [
 {
   "model": "employees.qabulkomissiya",
-  "pk": 1,
+  "pk": 14,
   "fields": {
-    "ism": "ssdsdswsw",
-    "familiya": "salommm",
-    "lavozim": "Dolore dignissimos et pariatur Voluptate",
-    "lavozim_turi": "rais",
-    "email": "vonubuk@mailinator.com",
-    "telefon": "Dolore aut dolore ea",
-    "rasm": "komissiya/Cain_Sweeney_1.JPG",
-    "tartib": 30,
-    "is_active": true
-  }
-},
-{
-  "model": "employees.qabulkomissiya",
-  "pk": 2,
-  "fields": {
-    "ism": "salom",
-    "familiya": "Valiyev",
-    "lavozim": "Aliqua Eu culpa deleniti quia rerum expedita quo",
-    "lavozim_turi": "rahbar",
-    "email": "rehumov@mailinator.com",
-    "telefon": "Nostrud harum evenie",
-    "rasm": "komissiya/Cain_Sweeney_1_ZNAxFvN.JPG",
-    "tartib": 43,
-    "is_active": true
-  }
-},
-{
-  "model": "employees.qabulkomissiya",
-  "pk": 3,
-  "fields": {
-    "ism": "asdsdssada",
-    "familiya": "sdjasnd asdasj",
-    "lavozim": "Nobis est odit et dolore dolore rem magni corrupti",
-    "lavozim_turi": "rais",
-    "email": "wuhufiqyfu@mailinator.com",
-    "telefon": "Ea et qui quia sequi",
-    "rasm": "komissiya/instagram-footer-1.jpg",
-    "tartib": 0,
-    "is_active": true
-  }
-},
-{
-  "model": "employees.qabulkomissiya",
-  "pk": 4,
-  "fields": {
-    "ism": "ALI",
-    "familiya": "Valiyev",
-    "lavozim": "Illum do aperiam ducimus ex quis est officia vel",
-    "lavozim_turi": "rahbar",
-    "email": "ziregedo@mailinator.com",
-    "telefon": "Expedita modi non pa",
-    "rasm": "komissiya/team-3.jpg",
+    "ism": "Ozod",
+    "familiya": "Azimov",
+    "lavozim": "Matematika, Matematika (kechki) yo'nalishlari mas'uli (Urgut fakulteti binosi)",
+    "lavozim_turi": "azo",
+    "email": null,
+    "telefon": "+998959275226",
+    "rasm": "",
     "tartib": 1,
     "is_active": true
   }
 },
 {
   "model": "employees.qabulkomissiya",
-  "pk": 5,
+  "pk": 15,
   "fields": {
-    "ism": "ALI",
-    "familiya": "Valiyev",
-    "lavozim": "Tempore consequatur dolore fuga Sunt alias ullam",
+    "ism": "Islom",
+    "familiya": "Abdug'aniyev",
+    "lavozim": "Rus tili, O'zbek tili va adabiyoti, Xorijiy til (ingliz tili) yo'nalishlari mas'uli (Urgut fakulteti binosi)",
     "lavozim_turi": "azo",
-    "email": "japa@mailinator.com",
-    "telefon": "Dolores aut eum magn",
-    "rasm": "komissiya/team-4.jpg",
-    "tartib": 19,
-    "is_active": true
-  }
-},
-{
-  "model": "employees.qabulkomissiya",
-  "pk": 6,
-  "fields": {
-    "ism": "salom",
-    "familiya": "salommm",
-    "lavozim": "Est nostrud excepteur qui id impedit",
-    "lavozim_turi": "azo",
-    "email": "bimozeca@mailinator.com",
-    "telefon": "Magnam harum digniss",
-    "rasm": "",
-    "tartib": 0,
-    "is_active": true
-  }
-},
-{
-  "model": "employees.qabulkomissiya",
-  "pk": 7,
-  "fields": {
-    "ism": "ALI",
-    "familiya": "Valiyev",
-    "lavozim": "Cumque anim fugit deserunt incidunt sed elit in",
-    "lavozim_turi": "rahbar",
-    "email": "biwuhyzyg@mailinator.com",
-    "telefon": "In non et rem iure a",
-    "rasm": "komissiya/contact-img.png",
-    "tartib": 17,
-    "is_active": true
-  }
-},
-{
-  "model": "employees.qabulkomissiya",
-  "pk": 8,
-  "fields": {
-    "ism": "A dolore molestiae esse fugit illo non labore dolores itaque assumenda tempor voluptate voluptates",
-    "familiya": "Et Nam eum similique sit incidunt id",
-    "lavozim": "Veritatis quia aperiam id ab excepturi sit id",
-    "lavozim_turi": "rahbar",
-    "email": "wyxozode@mailinator.com",
-    "telefon": "Sint nobis sunt sit",
-    "rasm": "komissiya/team-2.jpg",
-    "tartib": 41,
-    "is_active": true
-  }
-},
-{
-  "model": "employees.qabulkomissiya",
-  "pk": 9,
-  "fields": {
-    "ism": "salom",
-    "familiya": "salommm",
-    "lavozim": "Dolore nostrud mollitia quibusdam optio quam anim",
-    "lavozim_turi": "rahbar",
-    "email": "zezebotami@mailinator.com",
-    "telefon": "Amet adipisicing ut",
-    "rasm": "komissiya/team-2_eB0dyRf.jpg",
-    "tartib": 51,
-    "is_active": true
-  }
-},
-{
-  "model": "employees.qabulkomissiya",
-  "pk": 10,
-  "fields": {
-    "ism": "salom",
-    "familiya": "salommm",
-    "lavozim": "asdffgffdasfd",
-    "lavozim_turi": "rahbar",
     "email": null,
-    "telefon": "11234546778",
-    "rasm": "komissiya/Screenshot_2025-12-26_163105.png",
-    "tartib": 0,
+    "telefon": "+998904650790",
+    "rasm": "",
+    "tartib": 2,
     "is_active": true
   }
 },
 {
   "model": "employees.qabulkomissiya",
-  "pk": 11,
+  "pk": 16,
+  "fields": {
+    "ism": "mas'ul xodimi",
+    "familiya": "Maktabgacha va Boshlang'ich ta'lim",
+    "lavozim": "Maktabgacha ta'lim va Boshlang'ich ta'lim yo'nalishlari mas'uli (Urgut fakulteti binosi)",
+    "lavozim_turi": "azo",
+    "email": null,
+    "telefon": "+998956290203",
+    "rasm": "",
+    "tartib": 3,
+    "is_active": true
+  }
+},
+{
+  "model": "employees.qabulkomissiya",
+  "pk": 17,
   "fields": {
     "ism": "Xudoynazar",
     "familiya": "Axatqulov",
-    "lavozim": "Qabul komissiyasi a'zosi",
+    "lavozim": "Qabul komissiyasi mas'ul a'zosi",
     "lavozim_turi": "azo",
     "email": null,
-    "telefon": null,
+    "telefon": "+998933523587",
     "rasm": "",
-    "tartib": 1,
+    "tartib": 4,
     "is_active": true
   }
 }
